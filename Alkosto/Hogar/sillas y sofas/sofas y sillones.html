@@ -1,0 +1,264 @@
+<style>
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+    
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+    .sin-padding{
+        padding: 0;
+    }
+    @media(min-width:768px){
+        .iconos-categoria a img{
+            width: 19% !important;
+        }
+        .iconos-categoria{
+            width: 25% !important;
+            padding: 5px 0 0 0 !important;
+        }
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtros_tipo {
+        display: flex;
+    }
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+    
+    .filtros_tipo a span {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 4px 0px;
+    }
+    .filtros_tipo div a img {
+        width: 30px;
+    }   
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        .ocultar_mobile {
+            display: none;
+        }
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    .centrar{
+        display: flex;
+        justify-content: center;
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtro_tamano {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 30px;
+    }
+    .filtro_tamano div {
+        width: 17%;
+        text-align: center;
+        padding: 6px 0;
+        margin: 5px;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        }
+    .filtro_tamano div a img{
+        width: 90%;
+    }
+    .filtro_tamano div a {
+        display: block;
+        text-decoration: none;
+        color: #444444;
+        margin: 0 auto;
+    }
+    .filtro_tamano div a span {
+        display: block;
+        padding: 4px 0px;
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 769px) {
+        .filtro_tamano {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        .filtro_tamano {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: unset;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtro_tamano div {
+            width: 50%;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        .filtro_tamano div a img {
+            width: 70px;
+            padding: 5px 0;
+        }
+        .iconos-categoria a img{
+            width: 25px !important;
+            padding: 5px 0 0 0 !important;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    @media(min-width:1080px){
+        .filete{
+            border-right: 1px solid #444444;
+            padding: 0;
+        }
+    }
+    </style>
+    <div class="row">
+        <div class="container">
+            <div class="col-12" style="margin-bottom: 10px;">
+                <!-- AdGlare: AK-Sillas-Sofas-Banner-Categoría-Barra -->
+                <span id=zone837468629></span>
+                <script>
+                    (function(r,d,u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();       
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script',document,'//engine.alkst.co/?837468629');
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="col-xs-12 col-md-12">
+                <div class="col-xs-12 col-md-12 no-padding component__banner">
+                    <div class="carousel__rotativeBanner">
+                        <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK-Sillas-Sofas-Banner-Categoría-P1 -->
+                                <span id=zone705146736></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?705146736');
+                                </script>
+                            </div>
+                        
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK-Sillas-Sofas-Banner-Categoría-P2 -->
+                                <span id=zone702455348></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?702455348');
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--INICIO FILTROS-->
+
+    <div class="row">
+        <div class="container">
+            <div class="col-md-12 filtros">
+                <h3>Filtrar por Ambientes</h3>
+                <div class="filtros_tipo">
+                    <div><a href="/muebles/sofas-sillones/sofa-camas/c/BI_0704_ALKOS"><img alt="Sofá Camas" src="/medias/sofa-camas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDgzNnxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2gzNC9oMmUvMTA1MjY2OTM5NDk0NzAuc3ZnfGNmZDM0Zjg0NDY2NDRlMDFhOWM5NTY1NmM1Y2E1ZDQ2NWVkZWU4YjllNzkzYzQwOGZkOTY5YmE2ZGNjYTA3NTc" /><span>Sofá Camas</span></a></div>
+                    
+                    <div><a href="/muebles/sofas-sillones/esquineros/c/BI_0705_ALKOS"><img alt="Esquineros" src="/medias/esquineros.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDkxM3xpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4MC9oMjgvMTA1MjY2OTE2MjI5NDIuc3ZnfGYwOTE0NTdlYjNhOGU1ZjljYWI0ZGY4MzhiZmMwNGY5YjZmN2FjZGFlN2E2ZTBmMzRiYmQyM2ZjMGRiZWExODI" /><span>Esquineros</span></a></div>
+                    
+                    <div><a href="/muebles/sofas-sillones/sofas/c/BI_0711_ALKOS"><img alt="Sofás" src="/medias/sofas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc0MnxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2hmOS9oODgvMTA1MjY2OTI2Mzg3NTAuc3ZnfGRmYjMzYWY4Y2M0NDNiZGJjMmExM2M1MDQ3Yjg3ODE0ZGRhMTJiYjViY2M4NjBkM2JiNzMyMDE5MDhiZTQxM2Y" /><span>Sofás</span></a></div>
+                    
+                    <div><a href="/muebles/sofas-sillones/puff/c/BI_0707_ALKOS"><img alt="Puff" src="/medias/puff.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc0N3xpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2gwZS9oY2UvMTA1MjY2OTU4ODI3ODIuc3ZnfDY5ODI1ZDM2NjExZGQ3MjM0ZmU5NTBmZmZmY2VhYmY2NTllZGNiZTZjMDBjZWI5ODBjNDhjMDdlMjE0NGU3NTg" /><span>Puff</span></a></div>
+
+                    <div><a href="/muebles/sofas-sillones/poltronas-sillones/c/BI_0706_ALKOS"><img alt="Poltronas" src="/medias/poltronas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEwMDV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjkvaDM1LzEwNTI2Njk5NzE2NjM4LnN2Z3wzNDZiNDhkMzFkZDE3N2UyYjFlNGMxNGM0Y2RiZjgxNzAwMzRhMjg2MzU3ZWQ4MGU2N2NlODFkNWZiOTY3NzIy" /><span>Poltronas</span></a></div>
+
+                    <div><a href="/muebles/sillas/sillas-diseno-comedor/c/BI_0709_ALKOS"><img alt="Sillas de Diseño" src="/medias/sillas-diseno.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDkxMXxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g5MC9oYjgvMTA1NDM0NTg0NTE0ODYuc3ZnfDViM2RmN2Y4ZGZlMzgxNzQwYzBmNWExMzIwMWZhNTUwMGFhZGZkNTcwOGFmNTA3NzhkNTc5NjBhOWNiZGZiY2U" /><span>Sillas de Diseño</span></a></div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,450 @@
+<style>
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+    
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtros_tipo {
+        display: flex;
+    }
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+    
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+    
+    .filtros_tipo a span {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 4px 0px;
+    }
+    
+    .filtros_tipo div a img {
+        width: 30px;
+    }
+        
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        .ocultar_mobile {
+            display: none;
+        }
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    
+    .centrar{
+        display: flex;
+        justify-content: center;
+    }
+        .filtros {
+            margin: 20px 0px;
+        }
+
+        .filtros h3 {
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: #003780;
+        }
+/*filtros edades y marca*/
+    .sin-padding{
+        padding: 0;
+    }
+    .iconos-categoria{
+            display: flex;
+            align-items: center;
+        }
+    @media(min-width:768px){
+        .iconos-categoria a img{
+            width: 20% !important;
+        }
+        .iconos-categoria{
+            width: 20% !important;
+            height: 46px;
+        }
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtros_tipo {
+        display: flex;
+    }
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+    
+    .filtros_tipo a span {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 4px 0px;
+    }
+    .filtros_tipo div a img {
+        width: 30px;
+    }   
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        .ocultar_mobile {
+            display: none;
+        }
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    .centrar{
+        display: flex;
+        justify-content: center;
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtro_tamano {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .filtro_tamano div {
+        width: 19%;
+        text-align: center;
+        padding: 0;
+        margin: 5px;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        }
+    .filtro_tamano div a img{
+        width: 70%;
+    }
+    .filtro_tamano div a {
+        display: block;
+        text-decoration: none;
+        color: #444444;
+        margin: 0 auto;
+    }
+    .filtro_tamano div a span {
+        display: block;
+        padding: 4px 0px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    @media only screen and (max-width: 769px) {
+        .filtro_tamano {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        .filtro_tamano {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: unset;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtro_tamano div {
+            width: 50%;
+            height: 50px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        .filtro_tamano div a img {
+            width: 70px;
+            padding: 5px 0;
+        }
+        .iconos-categoria a img{
+            width: 30px !important;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    @media(min-width:1080px){
+        .filete{
+            border-right: 1px solid #444444;
+            padding: 0 15px;
+        }
+    }
+    </style>
+    <div class="row">
+        <div class="container">
+            <div class="col-12" style="margin-bottom: 10px;">
+                <!-- AdGlare: AK_Barra_Lanzamiento_Juguetes -->
+                <span id=zone817036087></span>
+                <script>
+                    (function(r,d,u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();       
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script',document,'//engine.alkst.co/?817036087');
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="col-xs-12 col-md-12">
+                <div class="col-xs-12 col-md-12 no-padding component__banner">
+                    <div class="carousel__rotativeBanner">
+                        <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Lanzamiento_Juguetes_Banner_1 -->
+                                <span id=zone793987624></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?793987624');
+                                </script>
+                            </div>
+                        
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Lanzamiento_Juguetes_Banner_2 -->
+                                <span id=zone204636944></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?204636944');
+                                </script>
+                            </div>
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Lanzamiento_Juguetes_Banner_3 -->
+                                <span id=zone584721918></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?584721918');
+                                </script>
+                            </div>
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Lanzamiento_Juguetes_Banner_4 -->
+                                <span id=zone431884562></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?431884562');
+                                </script>
+                            </div>
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Lanzamiento_Juguetes_Banner_5 -->
+                                <span id=zone461069203></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?461069203');
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--INICIO FILTROS-->
+    <div class="row">
+        <div class="container">
+            
+            <div class="col-md-12 filtros">
+                <h3>Navega por mundos</h3>
+                <div class="filtros_tipo">
+                    <div>
+                        <a href="/juguetes-ninas/c/juguetes-ninas"><img src="/medias/icon-nin-a.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM4MjB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWIvaDgwLzEwNDkzOTQ4MzMwMDE0LnN2Z3xkNmRkMzZkNjkwZWZlODM4NDg2NzM1NDBiMGYyYjNkMTBkZmE2YzBmZjZlMWIyMzE0Yjg5NDAzNzQ2MGE5Mzgy"
+                                alt="icono mundo niña en alkosto"><span>Mundo Niña</span></a>
+                    </div>
+                    <div>
+                        <a href="/juguetes-ninos/c/juguetes-ninos"><img src="/medias/icon-nin-o.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI5MzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODQvaDg4LzEwNDkzOTQ5MjgwMjg2LnN2Z3wzZDA3MjNlZWJiYTk3Nzg3NTQwY2JlNWEyMmYxMWJjN2UwZWNiNGVmMTcyZTU5NTM3YTcxMmZjM2Y3NjBkMTc5"
+                                alt="icono mundo niño en alkosto"><span>Mundo Niños</span></a>
+                    </div>
+                    <div>
+                        <a href="/juguetes-bebes/c/juguetes-bebes"><img src="/medias/icon-bebe.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE5ODl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjkvaGQ1LzEwNDkzOTQ5ODM3MzQyLnN2Z3wwMDU0YzIwZjVkYWM4NDRlYWJiZWRiZDI1OGY2ZmNkYjcxNzhlMzM5ODQ4YWJmZWMyMDVkYTlkMTJiYjMwYWIw"
+                                alt="icono mundo bebé en alkosto"><span>Mundo Bebé</span></a>
+                    </div>
+                    <div>
+                        <a href="/juguetes/juegos-mesa-rompecabezas/c/BI_612_ALKOS"><img src="/medias/icon-dado.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQzNTN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWEvaDhhLzEwNDkzOTUwOTUxNDU0LnN2Z3xhYWFjMjdjZDdhMGZjZjcwZTliZWIxZTY2ZTJiNmQ0MTFjMGUwN2VjMWVhMjg4NTg3YmIzODkxMGE5OTBkYmU3"
+                                alt="icono juegos de mesa en alkosto"><span>Juegos de Mesa</span></a>
+                    </div>
+                    <div>
+                        <a href="/juguetes/deportes-exterior/c/BI_615_ALKOS"><img src="/medias/icon-patineta.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzNjF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZTMvaGYyLzEwNDkzOTUxNDc1NzQyLnN2Z3w4Y2FmM2U3NGZlNGZkMzk0YTkzYTQyOGRkZjI1ZjZlZmU0YjAyODAzNTBkMzljYzU0ODNjMmQxNWU4NzAwZGIx"
+                                alt="icono deportes y exterior en alkosto"><span>Deportes y Exterior</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="col-md-12 filtros">
+                    <div class="col-xs-12 col-md-6 sin-padding">
+                        <h3>Filtrar por edad</h3>
+                        <div class="filtro_tamano filete">
+                            <div class="iconos-categoria">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A0+a+12+meses">
+                                <span>0 a 12 meses</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A1+a+3+años">
+                                <span>1 a 3 años</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A4+a+6+años">
+                                <span>4 a 6 años</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A7+a+9+años">
+                                <span>7 a 9 años</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A10+a+11+años">
+                                <span>10 a 11 años</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A12+a+13+años">
+                                <span>12 a 13 años</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3AMayor+a+14+años">
+                                <span>+ 14 años</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 sin-padding">
+                        <h3>Filtrar por Marca</h3>
+                        <div class="filtro_tamano">
+                            <div><a href="/marcas/play-doh/c/play-doh"><img src="/medias/play-doh.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE4MjUzfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDM2L2gwMS8xMDM4MzYxMjE4MjU1OC5zdmd8N2JiNmNkZWUzZDhkNmVkZjdjN2U4ZjIxODU5NjEwMGJkMDYwOWIwMzFhYTdiZGIwM2Q1MDBjNjdlYjBlNDhiZQ" alt="logo play-doh en alkosto"></a></div>
+                            <div><a href="/marcas/monopoly/c/monopoly"><img src="/medias/monopoly.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE4NjN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOWQvaDZhLzEwNTI1NTk0MTI0MzE4LnN2Z3xjOWJkYzZlMWM2YmRmZmYwMmIzZmIwZGM0YjBiOWFmN2M5NDRmNTQxN2NkMzAxMGZmNGFlMTZiZDZhZTkzZGVl" alt="logo Monopoly en alkosto"></a></div>
+                            <div><a href="/marcas/barbie/c/barbie"><img src="/medias/barbie.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM0NzV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjgvaDIyLzEwMzgzNjA5NzI0OTU4LnN2Z3w3YTk3MDBkYjQwM2RlNjk2YzU3ZGRkZjI1MTkxODc2MTVlOWE5ZDhlYTE2M2E0ZjZmYmUyM2NlNTcyNWMxM2U2" alt="logo Barbie en alkosto"></a></div>
+                            <div><a href="/marcas/ronda/c/ronda"><img src="/medias/ronda.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2NDkyfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDdjL2g0OC8xMDM5MzQzNjE2MDAzMC5zdmd8YjgyMjI1Y2EzNzc5NWZjZTk1YTEzODUyYjVlMzFhYTQ1MmU5ZjA1NTJlNzZjMzZmMmFlN2M0NTQzNjBiMTkzYQ" alt="logo Ronda en alkosto"></a></div>
+                            <div><a href="/marcas/lego/c/lego"><img src="/medias/logo-lego.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQyMjl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWMvaDhjLzEwNDgzODk4NDgyNzE4LnN2Z3xlNDAzMjllMmI3ZDZiY2RlYWNiNjI2M2U3YTIwZDRhZmQwZDlhN2RjZmE2NTRmYTg5OTFiMWE4NThkZGY0N2E5" alt="logo lego en alkosto"></a></div>
+                            <div><a href="/marcas/nerf/c/nerf"><img src="/medias/nerf-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1NDQxfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGNkL2g5My8xMDM4NDMxMzE4ODM4Mi5zdmd8N2EyNGY2MDIzYjc5YzYzMDYwNzZmYzU2YmIyMGNjMDQ4YzBmZGJiOTBlNDc5ZTQ4MWIxODNiMDcyNGY0MjQwYg" alt="logo Nerf en alkosto"></a></div>
+                            <div><a href="/marcas/lol/c/lol"><img src="/medias/lol.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3Mjk0fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGQxL2g1OC8xMDM4MzYxMTU1OTk2Ni5zdmd8ZWYwOGNkZTdkNjEwZDNiY2YwOTc4N2EzMTZkZWI3NzYyZDQzZDZkMDFjNmYxYmZhNjJlYzhjNWEzMWNhYmQ5NA" alt="logo lol en alkosto"></a></div>
+                            <div><a href="/marcas/hot-wheels/c/hotwheels"><img src="/medias/hotwheels-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU3MTR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oY2QvaGRlLzEwMzg0MzExNzQ2NTkwLnN2Z3xmMGI3YWFkNzRlOTliZTc1ZjY1M2JjZWYyOGJiOWFhZTUyNmQxYTkyZGZhYWM1M2UwZmNhYWU3MWYxNWVjZjI0" alt="logo hotwheels en alkosto"></a></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>

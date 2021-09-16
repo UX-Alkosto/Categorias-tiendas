@@ -1,0 +1,316 @@
+<style>
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+    
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+    .sin-padding{
+        padding: 0;
+    }
+    @media(min-width:768px){
+        .iconos-categoria a img{
+            width: 19% !important;
+        }
+        .iconos-categoria{
+            width: 25% !important;
+            padding: 5px 0 0 0 !important;
+        }
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtros_tipo {
+        display: flex;
+    }
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+    
+    .filtros_tipo a span {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 4px 0px;
+    }
+    .filtros_tipo div a img {
+        width: 30px;
+    }   
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        .ocultar_mobile {
+            display: none;
+        }
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    .centrar{
+        display: flex;
+        justify-content: center;
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtro_tamano {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 30px;
+    }
+    .filtro_tamano div {
+        width: 17%;
+        text-align: center;
+        padding: 6px 0;
+        margin: 5px;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        }
+    .filtro_tamano div a img{
+        width: 90%;
+    }
+    .filtro_tamano div a {
+        display: block;
+        text-decoration: none;
+        color: #444444;
+        margin: 0 auto;
+    }
+    .filtro_tamano div a span {
+        display: block;
+        padding: 4px 0px;
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 769px) {
+        .filtro_tamano {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        .filtro_tamano {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: unset;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtro_tamano div {
+            width: 50%;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        .filtro_tamano div a img {
+            width: 70px;
+            padding: 5px 0;
+        }
+        .iconos-categoria a img{
+            width: 25px !important;
+            padding: 5px 0 0 0 !important;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    @media(min-width:1080px){
+        .filete{
+            border-right: 1px solid #444444;
+            padding: 0;
+        }
+    }
+    </style>
+    <div class="row">
+        <div class="container">
+            <div class="col-12" style="margin-bottom: 10px;">
+                <!-- AdGlare: Barra Lanzamientos Colchones -->
+                <span id=zone498446036></span>
+                <script>
+                    (function(r,d,u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();       
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script',document,'//engine.alkst.co/?498446036');
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="col-xs-12 col-md-12">
+                <div class="col-xs-12 col-md-12 no-padding component__banner">
+                    <div class="carousel__rotativeBanner">
+                        <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Colchones_Categoría_P1 -->
+                                <span id=zone778669716></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?778669716');
+                                </script>
+                            </div>
+                        
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Colchones_Categoría_P2 -->
+                                <span id=zone463983395></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?463983395');
+                                </script>
+                            </div>
+                            <div class="banner-adglare">
+                                <!-- AdGlare: AK_Colchones_Categoría_P3 -->
+                                <span id=zone965291434></span>
+                                <script>
+                                    (function(r,d,u) {
+                                        var s = d.createElement(r); s.async = true;
+                                        u += '&cb=' + Date.now() + Math.random();       
+                                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                                        n.parentNode.insertBefore(s, n);
+                                    })('script',document,'//engine.alkst.co/?965291434');
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--INICIO FILTROS-->
+    <div class="row">
+        <div class="container">
+            
+            <div class="col-md-12 filtros">
+                    <div class="col-xs-12 col-md-6 sin-padding">
+                        <h3>Filtrar por Tamaño</h3>
+                        <div class="filtro_tamano filete">
+                            <div class="iconos-categoria">
+                                <a href="/colchones/sencillo/c/BI_153_ALKOS"><img src="/medias/icono-colchon-sencillo.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5NzV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDUvaDdiLzEwNDk2ODIwMjgxMzc0LnN2Z3wyY2FkNDdiM2M5ZTBjNzM5ZThjYTJmNWM3MTQ2NmE2NGM4ZWM0OWM0ODk0NjVkMzZkYWVkYzVjMWFkOTgyYmMx"
+                                alt="icono colchón sencillo en alkosto"><span>Sencillo</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/colchones/semidoble/c/BI_154_ALKOS"><img src="/medias/icono-colchon-semidoble.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU4OTR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjQvaGRkLzEwNDk2ODIxMjY0NDE0LnN2Z3wwOWUzYzZhMzI5Njk2YmY0ODY5MTI3MTIxYzg5ZjQwNGZiM2ZmZDE4NDhjNjNmMThlNGY4OTk5NzgxODYxZDEz"
+                                alt="icono colchón semidoble en alkosto"><span>Semidoble</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/colchones/doble/c/BI_155_ALKOS"><img src="/medias/icono-colchon-doble.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDY0MTB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDkvaDUxLzEwNDk2ODIxNTI2NTU4LnN2Z3wyMGM5OTNhNTdlNjg1YTg2OGQwZTU4MmM0ZTc2ZmYzNGQ4MjJlMTNkMGU1NjA5NGQyM2IxMGIyNjA4YjEzMjA3"
+                                alt="icono colchón doble en alkosto"><span>Doble</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/colchones/queen/c/BI_156_ALKOS"><img src="/medias/icono-colchon-queen.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDgyMjh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZWYvaGNmLzEwNDk2ODIzMDk5NDIyLnN2Z3xkYWE1YjU4ODU3ZDFkMDI0OGM2NWJmMmFhNzdmNmQyNGU5MGMzYjFmNTQ5OTk4ZDVjYzlhM2M1MDVhZWM0ZWJk"
+                                alt="icono colchón queen en alkosto"><span>Queen</span></a>
+                            </div>
+                            <div class="iconos-categoria">
+                                <a href="/colchones/king/c/BI_157_ALKOS"><img src="/medias/icono-colchon-king.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc2MzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDcvaDM3LzEwNDk2ODIzNzg3NTUwLnN2Z3xhNzE5NDlkMzJjYTE4ZDA0Y2E2MmU1MjNiYzBlZTIwOTQwZmEwMTBiMTAwOWMyZDI4ZTQ3ZTM1MDZjMjQ4NGIy"
+                                alt="icono colchón king en alkosto"><span>King</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 sin-padding">
+                        <h3>Filtrar por Marca</h3>
+                        <div class="filtro_tamano">
+                            <div>
+                                <a href="/marcas/dorado/c/el-dorado"><img src="/medias/logo-eldorado.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIzMTE2fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGY0L2g5YS8xMDQ5Njg2MTk5NTAzOC5zdmd8OGYxZWI2NzhiNzU3N2Y2YzM0YzYwNDhjMGQwYzE3YmE3ZmFjNTg5NmJiZTVlNzQwOWQzYWUyZjMyZDYzMTY4ZA"
+                                alt="icono eldorado en alkosto"></a>
+                            </div>
+                            <div>
+                                <a href="/marcas/romance-relax/c/romance-relax"><img src="/medias/logo-romance-relax.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDkxNzl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZTIvaGMzLzEwNDk2ODYyMzg4MjU0LnN2Z3xiZTg1Mjg4OTQyNDMyNmQ3MzMzMzljZjRlMGQ2OGJhMjRmZTIzMDYxNWQzMzgwYTZiODJiMGNiYjkxOWEyNjNk"
+                                alt="icono romance relax en alkosto"></a>
+                            </div>
+                            <div>
+                                <a href="/marcas/spring/c/spring"><img src="/medias/logo-spring.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDYyOTF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZTAvaGM1LzEwNDk2ODYxMzM5Njc4LnN2Z3w3MWFiMzc0MTZjYWIwN2Q4MjIzMzU5ZWUzYjA4NDkyMjAxNzhjZmQyZDVkYTBlZjBmYTFjNDQyMDc4NzE3OWNl"
+                                alt="icono spring en alkosto"></a>
+                            </div>
+                            <div>
+                                <a href="/marcas/dormiluna/c/dormiluna"><img src="/medias/logo-dormiluna.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE3ODUxfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGM4L2hjMy8xMDQ5Njg2MzMwNTc1OC5zdmd8NjhhNDgzNTY4N2E4ZmIyZjQyNTQwYWVjYTNlMmEyOTE2MTk5NjM0MjU0MGQwMDRhYTBhNzE5YmE2ODUwYzc0Mg"
+                                alt="icono dormiluna en alkosto"></a>
+                            </div>
+                            <div>
+                                <a href="/colchones/c/BI_COLC_ALKOS?q=%3Arelevance%3Abrand%3ASIMMONS"><img src="/medias/logo-simmons.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc0NDJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODEvaGIwLzEwNDk2ODYzOTI4MzUwLnN2Z3xiMjZlMTZhMzNkZGE5ZDZiNDMwNTJlNjk3ZmMzNDc0MzAwYTZhOGFlYzI2MGE0YWM3MDUyYWZmOTU4ODAxZGU3"
+                                alt="icono simmons en alkosto"></a>
+                            </div>
+                            <div>
+                                <a href="/marcas/k-line/c/k-line"><img src="/medias/logo-kline.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU1MjV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDIvaDM0LzEwNDk2ODY0NDg1NDA2LnN2Z3xiYjZiZDI1NWY2OGViZjFkYWUyODkyYmE5Y2Q0MDExZDhiYTljMWM2YmVjMTI4NmQyZjc5YmI5ODAxYjcxNjIx"
+                                alt="icono kline en alkosto"></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>

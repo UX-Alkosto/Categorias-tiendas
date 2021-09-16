@@ -1,0 +1,411 @@
+        <style type="text/css">
+        *, *:after, *:before{
+            box-sizing: border-box; 
+        }
+        .row{
+            margin: 0 auto;
+        }
+        .body-gen{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #444444;
+        }
+        .body-gen img{
+			width: 100%;
+            display: block;
+		}
+        .body-gen p{
+            font-size: 14px;
+            margin: 1.3rem 0;
+            color: #444444;
+        }
+        .body-gen h1{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .body-gen h2{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+        .navegacion-juguetes{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 2rem 0;   
+        }
+        .boton-categorias{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 75%;
+            margin: 2rem;
+            position: relative;
+            border-radius: .6rem;
+            box-shadow: 0px 3px 6px #00000026;
+        }
+        .imagen-boton{
+            transition: .3s ease-in-out;
+        }
+        .boton-categorias:hover{
+            text-decoration: none;
+        }
+        .boton-categorias:hover > .imagen-boton{
+            transform: scale(1.1);
+        }
+        .boton-categorias h2{
+            
+            margin: 0;
+        }
+        .boton-categorias p{
+            font-size: 1.2rem;
+            margin: .3rem 0;
+        }
+        .imagen-boton{
+            position: absolute;
+            width: 30%;
+            bottom: 5%;
+        }
+        .ima-b-uno{
+            right: -10%;
+        }
+        .ima-b-dos{
+            left: -10%;
+        }
+        .texto-boton-uno h2, .texto-boton-dos h2{
+            font-weight: 600;
+            color: #444444;
+        }
+        .flecha-boton{
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 2.2rem !important;
+            color: #EB5B25 !important;
+        }
+        .texto-boton-uno{
+            grid-column: 1 / 4;
+            text-align: left;
+            padding: 1.5rem 0 1.5rem 1.5rem;
+        }
+        .texto-boton-dos{
+            grid-column: 2 / 5;
+            text-align: right;
+            padding: 1.5rem 1.5rem 1.5rem 0;
+        }
+        @media(min-width: 568px){
+            .boton-categorias{
+                flex-basis: 40%;
+            }
+            .boton-categorias p{
+                font-size: 1.3rem;
+            }
+            .ima-b-uno{
+                right: -8%;
+            }
+            .ima-b-dos{
+                left: unset;
+                right: -8%;
+            }
+            .texto-boton-uno{
+                grid-column: 1 / 4;
+                text-align: left;
+            }
+            .texto-boton-dos{
+                grid-column: 1 / 4;
+                text-align: left;
+                padding: 1.5rem 0 1.5rem 1.5rem;
+            }
+        }  
+        @media(min-width: 1024px){
+            .navegacion-juguetes{
+                padding: 5rem 0;
+            }
+            .boton-categorias{
+                flex-basis: 25%;
+            }
+        }
+        /*concoce mas*/
+        .conoce-mas{
+            background-color: #f5f5f5;
+            padding: 2rem 0;
+        }
+        .contenido-conoce{
+            padding: 0;
+            
+        }
+        .contenido-conoce h2, .contenido-conoce p{
+            color: #444444;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .contenido-conoce h2{
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .contenido-conoce p{
+            font-size: 14px;
+            margin: 3rem 0;
+        }
+        .botones-juguetes{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .boton-j{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            padding: 10px 0;
+            border: 1px solid #EB5B25;
+            border-radius: 4px;
+            opacity: 1;
+            margin: 5px;
+            text-align: center;
+            color: #EB5B25 !important;
+            letter-spacing: 0;
+            font-size: 16px;
+        }
+        .boton-j:hover{
+            background-color: #EB5B25;
+            color: #ffffff !important;
+            text-decoration: none;
+            transition: .3s ease-in-out;
+        }
+        .espacios{
+            margin: 1rem 0;
+            padding: 0;
+        }
+        .conoce-banner{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        @media(min-width: 1025px){
+            .conoce-mas{
+                padding: 4rem 0;
+            }
+            .fila-interna{
+                margin: 3rem 5rem;
+            }
+            .contenedor-marcas{
+                margin: 6rem 0;
+            }
+            .contenido-conoce p{
+                font-size: 1.5rem;
+            }
+            .contenido-conoce h2{
+                font-size: 2rem;
+                text-align: left;
+            }
+            .espacios{
+                margin: 3rem 0;
+                padding: 0 15px;
+            }
+        }
+        /*OTROS ESTILOS*/
+        .sin-padding{
+            padding: 0;
+        }
+        .filtros {
+            margin: 20px 0px;
+        }
+        .filtros_tipo {
+            display: flex;
+            justify-content: center;
+        }
+        .ancho-caja{
+            flex-basis: 20%;
+            margin: 5px;
+        }
+        .filtros_tipo div {
+            padding: 5px 0px 5px 0px;
+        }
+        .filtros_tipo a {
+            display: block;
+        }  
+        @media only screen and (max-width: 576px) {
+            .filtros_tipo {
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+            .filtros_tipo div {
+                width: 50%;
+                padding: 5px 0px 5px 0px;
+                flex: 0 0 auto;
+                margin-bottom: 20px;
+            }
+            .ancho-caja{
+                margin: 3px !important;
+            }
+            .ocultar_mobile {
+                display: none;
+            }
+        }
+        .filtros {
+            margin: 20px 0px;
+        }
+        .ver-juguetes{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .ver-juguetes > div a h2{
+            color: #444444;
+            margin: 0 0 20px 0;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .ver-juguetes > div a:hover{
+            text-decoration: none;
+        }
+    </style>
+<div class="body-gen">
+    <div class="container">
+        <div>
+            <h1>Mundo Bebes</h1>
+        </div>
+        <div class="row">
+            <div class="navegacion-juguetes">
+                <a class="boton-categorias" href="/juguetes/aprendizaje-desarrollo-bebes/c/BI_613_ALKOS">
+                    <div class="texto-boton-uno">
+                        <h2>Aprendizaje <span class="flecha-boton">›</span></h2>
+                        <p>Luces, sonidos y texturas que estimulan sus sentidos.</p>
+                    </div>
+                    
+                    <div class="imagen-boton ima-b-uno">
+                        <img src="/medias/aprendizaje.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzNTY1fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDU4L2gyNy8xMDM5MzQwMTY4ODA5NC5zdmd8ODgyZTkzOGY5MTJkZWRmZDRjMTc0Yzg5ZWFiYWZlM2E2MzZiNTQzYjM3NjY2N2E4N2E1YjQzMjdhY2YwNDFlMg" alt="aprendizaje en alkosto">
+                    </div>
+                </a>
+                
+                <a class="boton-categorias" href="/juguetes/gimnasios-caminadores-bebes/c/BI_614_ALKOS">
+                    <div class="texto-boton-dos">
+                        <h2>Gimnasios <span class="flecha-boton">›</span></h2>
+                        <p>Caminadores y gimnasios para su buen desarrollo.</p>
+                    </div>
+                    
+                    <div class="imagen-boton ima-b-dos">
+                        <img src="/medias/gimnasios.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2NDY2fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGUzL2g4MC8xMDM5MzQwMTg4NDcwMi5zdmd8NDYwOTVmNGQ3MDQxNjRlZDEyNTQxNmU1NjY0NGM2NzVhY2JjY2U5NjNjZmFhMGU2NTI4OTViMWU4MDBiNzhjMQ" alt="gimnasios para bebe en alkosto">
+                    </div>
+                </a>
+
+                <a class="boton-categorias" href="/juguetes/musicales/c/BI_603_ALKOS">
+                    <div class="texto-boton-uno">
+                        <h2>Musicales <span class="flecha-boton">›</span></h2>
+                        <p>Tambores, xilófono, trompetas para sus primeras melodías.</p>
+                    </div>
+                    
+                    <div class="imagen-boton ima-b-uno">
+                        <img src="/medias/musicales-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2OTkzfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGE0L2g5MC8xMDM5MzQzNDkxNDg0Ni5zdmd8YWQxNzRjN2FhMTJjN2E0NWZmYzBmNjZiYWYwOTRmYmJiMmIxZTk3ODg4NDc0MDNkZGYyMDlkYWI4YTM5ZmE0Ng" alt="musicales en alkosto">
+                    </div>
+                </a>
+            </div><!--cierra navegacion-juguetes-->
+            <div class="col-md-12 col-xd-12 ver-juguetes">
+                <div>
+                    <a href="/juguetes/c/BI_JUGUE_ALKOS"><h2>Ver todo en Juguetería <span class="flecha-boton">›</span></h2></a>
+                </div>    
+            </div>
+        </div>  
+        <div>
+            <h2>Nuestras Marcas</h2>
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-12 filtros">
+                        <div class="filtros_tipo">
+                            <div class="ancho-caja">
+                                <a href="/marcas/fisher-price/c/fisher-price">
+                                    <img src="/medias/fisherprice.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU3MDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWUvaGFjLzEwMzkzNDM1ODMyMzUwLnN2Z3w0Mzg3NDUyYTgxODBmZDYwNTg4MjllNzg3ZmMyYjdjN2U4OGRjZmJiZGViOTUyN2RmNTkwZmMxYzZjZTg5M2Fi" alt="logo fisher-price" />
+                                </a>
+                            </div>
+                            <div class="ancho-caja">
+                                <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3AWINFUN">
+                                    <img src="/medias/winfun.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE0MTM4fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDgxL2hlNi8xMDM5MzQzNjQyMjE3NC5zdmd8ZjMwOGQyNThhZDNmMGM1ZWRmNWEyMGExOWIzZDE0NjIzYzgxMDI4MDMzODc4MjUxMjhlYmQ0NmVlNjg4ZjlkNA" alt="logo WINFUN" />
+                                </a>
+                            </div>
+                            <div class="ancho-caja">
+                                <a href="/marcas/ronda/c/ronda">
+                                    <img src="/medias/ronda.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2NDkyfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDdjL2g0OC8xMDM5MzQzNjE2MDAzMC5zdmd8YjgyMjI1Y2EzNzc5NWZjZTk1YTEzODUyYjVlMzFhYTQ1MmU5ZjA1NTJlNzZjMzZmMmFlN2M0NTQzNjBiMTkzYQ" alt="logo Ronda" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div>
+                <h2>Promociones Destacadas</h2>
+            </div>
+            <div class="container">
+                <div class="col-xs-12 col-md-4 espacios">
+                    <!-- AdGlare: AK-Mundo-bebe-destacado-categoria1 -->
+                    <span id=zone194662472></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?194662472');
+                    </script>
+                </div>
+                <div class="col-xs-12 col-md-4 espacios">
+                    <!-- AdGlare: AK-Mundo-bebe-destacado-categoria2 -->
+                    <span id=zone482535445></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?482535445');
+                    </script>
+                </div>
+                <div class="col-xs-12 col-md-4 espacios">
+                    <!-- AdGlare: AK-Mundo-bebe-destacado-categoria3 -->
+                    <span id=zone344401378></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?344401378');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div><!--cierra container-->
+
+    <!--seccion carrusel de productos componente hybris-->
+
+    <div class="row conoce-mas">
+        <div class="container">
+            <div class="conoce-banner">
+                <div class="col-xs-12 col-sm-6 contenido-conoce">
+                    <h2>Conoce más del mundo Juguetes para bebés</h2>
+                    <p>¡La diversión en un solo lugar! Encuentra los mejores juguetes para divertirte en familia y desarrollar tus habilidades, todo en un solo sitio al mejor precio.</p>
+                    <div class="col-12 botones-juguetes">
+                        <a href="juguetes/juegos-mesa-rompecabezas/c/BI_612_ALKOS" class="col-md-3 col-xs-12 boton-j" role="button">Juegos de mesa</a>                       
+                        <a href="juguetes-ninas/c/juguetes-ninas" class="col-md-3 col-xs-12 boton-j" role="button">Juguetes niña</a>
+                        <a href="juguetes-ninos/c/juguetes-ninos" class="col-md-3 col-xs-12 boton-j" role="button">Juguetes niño</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <!-- AdGlare: AK-Mundo-Bebe-conoce-mas -->
+                    <span id=zone943944253></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?943944253');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div><!--cierra conoce-mas-->
+    
+</div><!--cierra body-gen-->
