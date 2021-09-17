@@ -1,101 +1,54 @@
-<style>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 15px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -129,26 +82,39 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"><img src="/medias/Icono-proteina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM0MzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oM2EvaGM0LzEwMzc2NTg5OTM0NjIyLnN2Z3wwY2IwNzJlNDZmNmMxYTFkN2YwYzQ1M2NjODUyYTQ3ZTNjMzkxYmM3YTg3OTRlNDM0MTkyODAwMTA1MzdlMTk3"
-                            alt="Proteína"><span>Proteína</span></a>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"
+                        title="Proteína" type="category-item">
+                        <k-icon icon="alk-icon-nutricion-deportiva"></k-icon>
+                        <p>Proteína</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"><img src="/medias/Icono-aminoacidos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0OTl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOTAvaDIxLzEwMzc2NTkwMTk2NzY2LnN2Z3xiYzQ2MjMzNjlhMzA5NjQyNTkzODdlNDFiNDBhZWFiNjYyZTMzNTllYjMyZmZjYzYyMDMzODRiMzdmNjE5MGFj"
-                            alt="Aminoácidos"><span>Aminoácidos</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"
+                        title="Aminoácidos" type="category-item">
+                        <k-icon icon="alk-icon-nutricion-deportiva"></k-icon>
+                        <p>Aminoácidos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"><img src="/medias/Icono-Creatina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMxNDd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjAvaGM0LzEwMzc2NTkwNTI0NDQ2LnN2Z3xjYmNhMDU0Zjk3MWFhNmQ5YWFjYmRkY2Y3NmI3N2QyN2NkMmVmZDJiNzU4ZmM1ODhiNjJlNjNmNjNmNjQxZGQ2"
-                            alt="Creatina"><span>Creatina</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"
+                        title="Creatina" type="category-item">
+                        <k-icon icon="alk-icon-nutricion-deportiva"></k-icon>
+                        <p>Creatina</p>
+                    </k-card>
                 </div>
-                
-                <div>
-                    <a href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"><img src="/medias/Icono-pre-entreno.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIyMzQ4NXxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2gyYy9oOWUvMTAzNzY1OTExNDcwMzguc3ZnfDEyZDljYzA0NjVhMTkzY2JhYWE5ODAyZTgxZjRjOWVlODZhMGE0ODkxODUyMGQ0YzkzM2MzOGRjNGU5MzA1ZTQ"
-                            alt="Pre entreno"><span>Pre entreno</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/deportes/nutricion-deportiva/c/BI_183_ALKOS"
+                        title="Pre entreno" type="category-item">
+                        <k-icon icon="alk-icon-nutricion-deportiva"></k-icon>
+                        <p>Pre entreno</p>
+                    </k-card>
                 </div>
-                
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>
