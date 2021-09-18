@@ -1,4 +1,7 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
@@ -16,88 +19,30 @@
         border-radius: 50px !important;
     }
 
-    @media screen and (max-width: 1007px) {
-
-        .component__banner {
-            display: block !important;
-        }
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
     }
 
-    /*OTROS ESTILOS*/
-
-    .filtros {
-        margin: 20px 0px;
-    }
 
     .filtros h3 {
         width: 100%;
         font-size: 18px;
         text-align: center;
-        color: #003780;
+        color: var(--primary-color2);
     }
 
-    .filtros_tipo {
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 10px;
-        padding: 5px 0px 5px 0px;
-        width: 100%;
-    }
-
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-
-    .filtros_tipo div a img {
-        width: 40px;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .filtros_tipo {
-            width: 70%;
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
         }
     }
+    /*OTROS ESTILOS*/
+
 
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            width: 100%;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
 
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
-
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
-
-        .filtros_tipo div a img {
-            width: 40px;
+        .ocultar_mobile {
+            display: none;
         }
 
         .filtros h3 {
@@ -105,49 +50,28 @@
             margin: 5px 0px;
         }
 
-        .ocultar_mobile {
-            display: none;
-        }
     }
-
-    @media only screen and (max-width: 375px) {
-        .filtros_tipo div {
-            width: 60%;
-        }
-    }
-
-    @media only screen and (max-width: 320px) {
-        .filtros_tipo div {
-            width: 70%;
-        }
-    }
-
 </style>
-
 
 <div class="row">
     <div class="container">
-        <div class="col-12">
+        <div class="col-12" style="margin-bottom: 10px;">
             <!-- AdGlare: AK-Deportes-Barra-Categoría -->
             <span id=zone394439042></span>
             <script>
-                (function(r, d, u) {
-                    var s = d.createElement(r);
-                    s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();
-                    s.src = u;
-                    var n = d.getElementsByTagName(r)[0];
+                (function(r,d,u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();       
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
                     n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?394439042');
-
+                })('script',document,'//engine.alkst.co/?394439042');
             </script>
         </div>
-        <hr>
     </div>
 </div>
 <div class="row">
     <div class="container">
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-12">
             <div class="col-xs-12 col-md-12 no-padding component__banner">
                 <div class="carousel__rotativeBanner">
                     <div class="owl-carousel rotativeBanner js-adglare-carousel">
@@ -163,25 +87,8 @@
                                     var n = d.getElementsByTagName(r)[0];
                                     n.parentNode.insertBefore(s, n);
                                 })('script', document, '//engine.alkst.co/?780397613');
-
                             </script>
                         </div>
-                        <div class="banner-adglare">
-                            <!-- AdGlare: AK-Movilidad-Banner-Categoría-P2 -->
-                            <span id=zone774962655></span>
-                            <script>
-                                (function(r, d, u) {
-                                    var s = d.createElement(r);
-                                    s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();
-                                    s.src = u;
-                                    var n = d.getElementsByTagName(r)[0];
-                                    n.parentNode.insertBefore(s, n);
-                                })('script', document, '//engine.alkst.co/?774962655');
-
-                            </script>
-                        </div>
-
                     </div>
                 </div>
             </div>
@@ -206,26 +113,42 @@
 <!--INICIO FILTROS-->
 <div class="row">
     <div class="container">
+
         <div class="col-md-12 filtros">
-            <h3>Filtrar por categoría</h3>
-            <div class="filtros_tipo">
-
-                <div>
-                    <a href="/deportes/movilidad/bicicletas-adulto/c/BI_1240_ALKOS"><img src="/medias/icon-bicicleta-adulto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDkxNXxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2hmYy9oYTkvMTAzNjQ2NDM4MzU5MzQuc3ZnfDRkN2NkN2QxZDJjOGU3ZTBlNmY3NmE0ZGQ2MTExNDQ1MDFhNDI0YmE1ZWQ5N2M5MGI1Mjc1MmVlY2U1MWE5NTg" alt="Bicicletas Adulto"><span>Bicicletas Adulto</span></a>
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/deportes/movilidad/bicicletas-adulto/c/BI_1240_ALKOS"
+                        title="Bicicletas Adulto" type="category-item">
+                        <k-icon icon="alk-icon-bicicleta1"></k-icon>
+                        <p>Bicicletas Adulto</p>
+                    </k-card>
                 </div>
-
-                <div>
-                    <a href="/deportes/movilidad/bicicletas-electricas/c/BI_1260_ALKOS"><img src="/medias/icon-bicicleta-electrica.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE0Njh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMjQvaDI1LzEwMzY0NjQ0MjI5MTUwLnN2Z3wzYjgwN2JkNjk3OWExMjAzMzFhZTI4NjFiM2Y3YjAxNmI2ODc0YjgxYzc2ODEwN2QyODIxMGFkMjZkZGEzYmY1" alt="Bicicletas Eléctricas"><span>Bicicletas Eléctricas</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/deportes/movilidad/bicicletas-electricas/c/BI_1260_ALKOS"
+                        title="Bicicletas Eléctricas" type="category-item">
+                        <k-icon icon="alk-icon-bicicleta-electrica"></k-icon>
+                        <p>Bicicletas Eléctricas</p>
+                    </k-card>
                 </div>
-
-                <div>
-                    <a href="/deportes/movilidad/scooters/c/BI_1261_ALKOS"><img src="/medias/icon-scooter.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDY5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2hhOS9oM2QvMTAzNjQ2NDUzMTA0OTQuc3ZnfGUwM2E4MjI4ZThkYjdjNzBiZjhjOWVmNGRkMzEzZGQxMmZjMWI4ZTk0ZTBmNzMwMWYxY2Q1ODE4NjNlY2Q1MDM" alt="Scooters y patinetas eléctricas"><span>Scooters y patinetas eléctricas</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/deportes/movilidad/scooters/c/BI_1261_ALKOS"
+                        title="Scooters y patinetas eléctricas" type="category-item">
+                        <k-icon icon="alk-icon-scooter"></k-icon>
+                        <p>Scooters</p>
+                    </k-card>
                 </div>
-
-                <div>
-                    <a href="/deportes/movilidad/accesorios-movilidad/c/BI_1262_ALKOS"><img src="/medias/icon-accesorios-mobilidad.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEwMTZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjUvaDdhLzEwMzY0NjQ2MTYyNDYyLnN2Z3w2NjYyOGI3ZDU0YTg2NDU3ZmJlYWVkYTJhNWU4ZmYzYzM5YmUxMGEyODk3NmI3MmM4YTcwYmQ4MzdkZjhjZTgz" alt="Accesorios Para Movilidad"><span>Accesorios Para Movilidad</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/deportes/movilidad/accesorios-movilidad/c/BI_1262_ALKOS"
+                        title="Accesorios Para Movilidad" type="category-item">
+                        <k-icon icon="alk-icon-casco-bicicleta"></k-icon>
+                        <p>Accesorios para Movilidad</p>
+                    </k-card>
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>

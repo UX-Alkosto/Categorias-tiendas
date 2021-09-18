@@ -1,101 +1,55 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 5px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -105,33 +59,55 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/accesorios-electronica/accesorios-camaras/lentes-flash/c/BI_0330_ALKOS"><img src="/medias/Icono-Lentes-y-Flash.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIzOTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oN2MvaDJjLzEwMzY0NDI1OTI4NzM0LnN2Z3w3OWNiMWE1M2FlNzU1NTUzNWNkNTQ5YzlhNjEyNTI2MjI5NjEyNTc2OWM2ZWFmZDczYWVmNDJiOWNiYWYyNDc4"
-                            alt="Lentes y Flash"><span>Lentes y Flash</span></a>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="5" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-camaras/lentes-flash/c/BI_0330_ALKOS"
+                        title="Lentes y Flash" type="category-item">
+                        <k-icon icon="alk-icon-camara"></k-icon>
+                        <p>Lentes y Flash</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-camaras/estuches-maletines-camaras/c/BI_0340_ALKOS"><img src="/medias/Icono-Estuches-y-Maletines.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzNjN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMjQvaDY0LzEwMzY0NDI3MzA0OTkwLnN2Z3xhN2M1Njg0ZjgzMzBiYjIyZjExN2IzZGVlYWUzNWJiMTAwZTYyYTUwZjUwZGEyYTIyNjY1MjZkY2JhYWE1Y2I0"
-                            alt="Estuches y Maletines"><span>Estuches y Maletines</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-camaras/estuches-maletines-camaras/c/BI_0340_ALKOS"
+                        title="Estuches y Maletine" type="category-item">
+                        <k-icon icon="alk-icon-maleta"></k-icon>
+                        <p>Estuches y Maletines</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-camaras/tripodes-camaras/c/BI_0350_ALKOS"><img src="/medias/Iconos-Tripodes.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI2Mzl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOGQvaGJhLzEwMzY0NDI3NzYzNzQyLnN2Z3xhNDI0MDI1ZjIwZjY5OWZlYTZkODQzZTI3ZjY3YmY4M2Q1OTA2YjBiZTcyMmI3ZDMxNWYzM2EyOTMxNGI0YWVi"
-                            alt="Tripodes"><span>Tripodes</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-camaras/tripodes-camaras/c/BI_0350_ALKOS"
+                        title="Elípticas" type="category-item">
+                        <k-icon icon="alk-icon-tripode"></k-icon>
+                        <p>Tripodes</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/usb-tarjetas-memoria/c/BI_147_ALKOS"><img src="/medias/Iconos-Tarjetas-de-Memoria.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIzNTd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjAvaDk1LzEwMzY0NDI4NTUwMTc0LnN2Z3xlZGMxNWVlODNkMDJlOGU0NjQ4YjdjNTJkZTI5YmFiMzVjMGM2NzY2ZGRhYjVhYjc2NGY5MGFjODk4YTIwYTQy"
-                            alt="Tarjetas de Memoria"><span>Tarjetas de Memoria</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/accesorios-electronica/usb-tarjetas-memoria/c/BI_147_ALKOS"
+                        title="Tarjetas de Memoria" type="category-item">
+                        <k-icon icon="alk-icon-micro-sd"></k-icon>
+                        <p>Tarjetas de Memoria</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/computadores-tablets/impresion/resmas-papel/c/BI_0230_ALKOS?q=%3Arelevance%3Atipo-accesorio-camara%3APapel+Fotográfico#"><img src="/medias/Iconos-Papel-Fotografico.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwNzh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYzcvaDVjLzEwMzY0NDI5MTA3MjMwLnN2Z3xjYzZhMTM5NDg5ZmJmYzVhN2E4YjA4NTRlYmRhYmQ1MTk4YWJmZWU5YzRjNWRmMGU0NDBkZTVhNTE5Y2FlMTQ5"
-                            alt="Papel Fotográfico"><span>Papel Fotográfico</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/computadores-tablets/impresion/resmas-papel/c/BI_0230_ALKOS?q=%3Arelevance%3Atipo-accesorio-camara%3APapel+Fotográfico#"
+                        title="Papel Fotográfico" type="category-item">
+                        <k-icon icon="alk-icon-catalog"></k-icon>
+                        <p>Papel Fotográfico</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-camaras/otros-accesorios-camaras/c/BI_0360_ALKOS"><img src="/medias/Iconos-Otros-Accesorios.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIyNzB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODEvaDA2LzEwMzY0NDI5NzYyNTkwLnN2Z3w4ODZiZGZmNmQxMmQ1YTM3OGY3OWRhYTFlY2EyNjllNTc2YjU1MTdlYzRjMWQ3ZmQ5YWQyNzJlNmM2ZDQ1ZTM5"
-                            alt="Otros Accesorios Cámaras"><span>Otros Accesorios Cámaras</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-camaras/otros-accesorios-camaras/c/BI_0360_ALKOS"
+                        title="Otros Accesorios Cámaras" type="category-item">
+                        <k-icon icon="alk-icon-camara"></k-icon>
+                        <p>Otros Accesorios Cámaras</p>
+                    </k-card>
                 </div>
-                
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>

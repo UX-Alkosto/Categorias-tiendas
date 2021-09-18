@@ -1,101 +1,55 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 5px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -152,38 +106,66 @@
 <!--INICIO FILTROS-->
 <div class="row">
     <div class="container">
+
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/hogar/habitacion/c/BI_164_ALKO/accesorios-electronica/accesorios-audio/microfonos/c/BI_0260_ALKOS"><img src="/medias/Iconos-Microfonos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIyNDF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNGQvaDY3LzEwMzY0NjQ1NzY5MjQ2LnN2Z3wwZDc0YzA3MzExNDI2OGNlMjBmZTJhMDE5Y2ZjY2QzZTQwZDk3Mjk0YzNkMDg0ZTM1ZjA4NGExYTdmZjVjZmQ0"
-                            alt="Micrófonos"><span>Micrófonos</span></a>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/habitacion/c/BI_164_ALKO/accesorios-electronica/accesorios-audio/microfonos/c/BI_0260_ALKOS"
+                        title="Micrófonos" type="category-item">
+                        <k-icon icon="alk-icon-microfono"></k-icon>
+                        <p>Micrófonos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-audio/bases-parlantes/c/BI_0270_ALKOS"><img src="/medias/Icono-bases.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIzODl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYzIvaDUwLzEwMzY0NjQ2NjIxMjE0LnN2Z3wwMzcxNmJkODU5MzIzZWUxOTkxZjIwY2I5YzY5NDdhYjNkMGEwN2M1MGYwMjljYzIyZTFhMWFjMTk0NDgwZGFk"
-                            alt="Bases"><span>Bases</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-audio/bases-parlantes/c/BI_0270_ALKOS"
+                        title="Bases" type="category-item">
+                        <k-icon icon="alk-icon-tripode"></k-icon>
+                        <p>Bases</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/cables-cargadores-adaptadores/c/BI_521_ALKOS"><img src="/medias/Icono-Cables-Adaptadores-Faceta.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI4Nzl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDYvaDE4LzEwMzY0NjQ3MTQ1NTAyLnN2Z3xiYTliZDA5NTU0NzBkYmU5ZTBkNjNhZDBhYmI3ZGNhOTIxYzliNTYzYTI3ZDViZjY2Y2YwNWE1YTk4MTgyNjEy"
-                            alt="Cables y Adaptadores Faceta"><span>Cables y Adaptadores</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/cables-cargadores-adaptadores/c/BI_521_ALKOS"
+                        title="Cables y Adaptadores" type="category-item">
+                        <k-icon icon="alk-icon-cable"></k-icon>
+                        <p>Cables y Adaptadores</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-audio/receptores-bluetooth/c/BI_1850_ALKOS"><img src="/medias/Icono-Receptores-Bluetooth.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIyNjl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDgvaDQ0LzEwMzY0NjQ4MTk0MDc4LnN2Z3xlODc3OGJkMmZlMzU0ZWVhYmUwODRlNDY4MDFjNmI0ZDAwYWYzZDNkNzVjYjEwNmU3NmVhZGNiNTdlNTYzMTgz"
-                            alt="Receptores Bluetooth"><span>Receptores Bluetooth</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/accesorios-electronica/accesorios-audio/receptores-bluetooth/c/BI_1850_ALKOS"
+                        title="Receptores Bluetooth" type="category-item">
+                        <k-icon icon="alk-icon-wifi-signal"></k-icon>
+                        <p>Receptores Bluetooth</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/audio/audifonos/c/BI_111_ALKOS"><img src="/medias/Icono-Aud-fonos-Manos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0ODd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDQvaGY4LzEwMzY0NjQ4OTQ3NzQyLnN2Z3w0YTYyNGJkNjA4NzE1MWE1NzE4YWExOGY1YTA1MGYxZDY5MzZmM2U4ODg0YjQ0OWYwMjQ5YjIwYjY4NmM2YTM2"
-                            alt="Audífonos y Manos Libres Faceta "><span>Audífonos</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/audio/audifonos/c/BI_111_ALKOS"
+                        title="Audífonos" type="category-item">
+                        <k-icon icon="alk-icon-audifonos"></k-icon>
+                        <p>Audífonos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/audio/audifonos/c/BI_111_ALKOS?q=%3Arelevance%3Atipo-audifonos%3AGafas+de+Sol+Con+Audio#"><img src="/medias/Icono-gafas-audio.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMwOTZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOWUvaDBkLzEwMzY0NjQ5NjAzMTAyLnN2Z3w2OTZjNDhlMTQzZTUzMzBhOGI1YTVmODk1MDIyOGI0MzdjMmU2ZGJjMGM0YmUyYTYzZGI2ZDQ5ZTM4MGQ1NmNl"
-                            alt="Gafas con Audio"><span>Gafas con Audio</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/audio/audifonos/c/BI_111_ALKOS?q=%3Arelevance%3Atipo-audifonos%3AGafas+de+Sol+Con+Audio#"
+                        title="Gafas con Audio" type="category-item">
+                        <k-icon icon="alk-icon-microfono"></k-icon>
+                        <p>Gafas con Audio</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-audio/lentes-gafas-audio/c/BI_1852_ALKOS"><img src="/medias/Icono-lentes.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwOTR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMGMvaDdiLzEwMzY0NjUwMDYxODU0LnN2Z3xkZTkzMTE3MDliNjhiNTcwODllMDUyMTgyMDlhZmIwZTI5NTAxYjAwNDg5N2RiNjJiNmRmNWE5NDg5NjUwZWRj"
-                            alt="Lentes para Gafas con Audio"><span>Lentes Gafas</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-audio/lentes-gafas-audio/c/BI_1852_ALKOS"
+                        title="Lentes Gafas" type="category-item">
+                        <k-icon icon="alk-icon-microfono"></k-icon>
+                        <p>Lentes Gafas</p>
+                    </k-card>
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>

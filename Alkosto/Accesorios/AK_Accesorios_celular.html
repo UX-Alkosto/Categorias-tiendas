@@ -1,101 +1,55 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 5px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -145,33 +99,63 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/accesorios-electronica/accesorios-celulares-tabletas/carcasas-estuches-protectores/c/BI_0010_ALKOS"><img src="/medias/icono-Carcasas-Estuches-Protectores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIxNDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oN2EvaGUyLzEwMzYwNDkyNjg3MzkwLnN2Z3wyZjNmNjNiYjQ4YmRhYjg5MTM5MTA3Nzc1ZWNjZTU5NmZhM2Q1ZjY5ZDVmNjFhMDAwMDA0Y2UxYjM0NjMyNWM5"
-                        alt="Carcasas, Estuches Y Protectores"><span>Estuches y protectores</span></a>
-                    </div>
-                    <div>
-                        <a href="/accesorios-electronica/accesorios-celulares-tabletas/bases-soportes-celular-tablet/c/BI_0020_ALKOS"><img src="/medias/icono-Bases-Soportes.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0Nzd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMzQvaDI3LzEwMzYwNDk3Mjc0OTEwLnN2Z3w3NDA0OTVjOTk5N2ZiZThiOWEwMWJhODdiNjE4ODEwZjVlZTM4OWI4NzBmYWJhMzg5NDExYjU5MTMyNmY5ZjRh"
-                            alt="Bases y Soportes Para Celular o Tablet"><span>Bases y soportes</span></a>
-                        </div>
-                        <div>
-                            <a href="/accesorios-electronica/kits-limpieza/c/BI_491_ALKOS"><img src="/medias/icono-Kits-de-limpieza.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0Nzd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDgvaDQ4LzEwMzYwNTU0NzgyNzUwLnN2Z3xmYjZhZWNlMzBlNWVmM2YzMzA2NTJkODcwMDI2NmYwMzdjYmY2OTBkMWM3OThhMzBlMTRjOTNhOWYxYTRhMDg3"
-                                alt="Kits de limpieza"><span>Kits de limpieza</span></a>
-                            </div>
-                            <div>
-                                <a href="/accesorios-electronica/usb-tarjetas-memoria/c/BI_147_ALKOS"><img src="/medias/icono-USB-tarjeta-de-memoria.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2Njd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNmIvaGM2LzEwMzYwNDk4NzgyMjM4LnN2Z3wwMmJiMjZlYWQ0ZGE1MmY2MjM0ZjQxNWYzMTllYWZjNDBmZWU0NjlkMTQ5MzdlNjIxNTVlNzYwNWNkZmNjM2E0"
-                                    alt="USB y Tarjetas de Memoria"><span>USB y tarjetas de memoria</span></a>
-                                </div>
-                                <div>
-                                    <a href="/accesorios-electronica/cables-cargadores-adaptadores/c/BI_521_ALKOS"><img src="/medias/icono-Cables-Cargadores-Adaptadores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwOTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjcvaDBhLzEwMzYwNDk5MzA2NTI2LnN2Z3w1MjJmOWNhOGU3M2NhZTk3MDRjYWZhNTljZTVkNjhjZjU2Yjg0MTNjOGJlZTk2ZGI2MGYyMDMwMTYzMWJkNzg1"
-                                        alt="Cables, Cargadores, Adaptadores"><span>Cables y cargadores</span></a>
-                                    </div>
-                                    <div>
-                                        <a href="/accesorios-electronica/baterias-externas-powerbank/c/BI_490_ALKOS"><img src="/medias/icono-Baterias-Externas-PowerBank.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE4Mzh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODAvaDFjLzEwMzYwNTAwMzU1MTAyLnN2Z3w5YTQ4MGRlNWJkZjM5N2M0YTQzODExZjM0YTAwN2JiMzA1MTI0Y2M4ZmNmMDYxMDljZDRhZmI4ZTQxODc0ZTQ5"
-                                            alt="Baterías Externas y PowerBank"><span>Baterías externas</span></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-celulares-tabletas/carcasas-estuches-protectores/c/BI_0010_ALKOS"
+                        title="Estuches y protectores" type="category-item">
+                        <k-icon icon="alk-icon-estuche-protector"></k-icon>
+                        <p>Estuches y protectores</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-celulares-tabletas/bases-soportes-celular-tablet/c/BI_0020_ALKOS"
+                        title="Bases y soportes" type="category-item">
+                        <k-icon icon="alk-icon-soporte-celular"></k-icon>
+                        <p>Bases y soportes</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/kits-limpieza/c/BI_491_ALKOS"
+                        title="Kits de limpieza" type="category-item">
+                        <k-icon icon="alk-icon-kit-limpieza"></k-icon>
+                        <p>Kits de limpieza</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card href="/accesorios-electronica/usb-tarjetas-memoria/c/BI_147_ALKOS"
+                        title="USB y tarjetas de memoria" type="category-item">
+                        <k-icon icon="alk-icon-memoria-celular"></k-icon>
+                        <p>USB y tarjetas de memoria</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/cables-cargadores-adaptadores/c/BI_521_ALKOS"
+                        title="Cables y cargadores" type="category-item">
+                        <k-icon icon="alk-icon-cable"></k-icon>
+                        <p>Cables y cargadores</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/baterias-externas-powerbank/c/BI_490_ALKOS"
+                        title="Baterías externas" type="category-item">
+                        <k-icon icon="alk-icon-bateria-externa"></k-icon>
+                        <p>Baterías externas</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/audio/audifonos/c/BI_111_ALKOS"
+                        title="Audífonos" type="category-item">
+                        <k-icon icon="alk-icon-audifonos-deportivos"></k-icon>
+                        <p>Audífonos</p>
+                    </k-card>
+                </div>
+            </k-slider>
+        </div>
+    </div>
+</div>
