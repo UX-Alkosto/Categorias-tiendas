@@ -1,4 +1,7 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
@@ -16,80 +19,30 @@
         border-radius: 50px !important;
     }
 
-    @media screen and (max-width: 1007px) {
-
-        .component__banner {
-            display: block !important;
-        }
-
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
     }
 
-    /*OTROS ESTILOS*/
-
-    .filtros {
-        margin: 20px 0px;
-    }
 
     .filtros h3 {
         width: 100%;
         font-size: 18px;
         text-align: center;
-        color: #004797;
+        color: var(--primary-color2);
     }
 
-    .filtros_tipo {
-        display: flex;
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
     }
+    /*OTROS ESTILOS*/
 
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 20px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-
-    .filtros_tipo div a img {
-        width: 35px;
-    }
 
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
 
-        .filtros_tipo div {
-            width: 40%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
-
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
-
-        .filtros_tipo div a img {
-            width: 30px;
+        .ocultar_mobile {
+            display: none;
         }
 
         .filtros h3 {
@@ -97,11 +50,7 @@
             margin: 5px 0px;
         }
 
-        .ocultar_mobile {
-            display: none;
-        }
     }
-
 </style>
 <div class="row">
 </div>
@@ -147,32 +96,21 @@
         </div>
     </div>
 </div>
-<!--INICIO FILTROS-->
-<div class="row">
-    <div class="container">
-        <div class="col-md-12 filtros">
-            <h3>Filtrar por categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/computadores-tablets/impresion/impresoras-escaner-multifuncionales/c/BI_0210_ALKOS"><img src="/medias/multifuncional.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwNDV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjgvaDUxLzEwMzUxNjk3MjY0NjcwLnN2Z3wwOTFhNmYxYTE2ZmNmNzhhMDIzMjg0ZDgzNmUyNmZiNmZhM2U5YzQ5ZDQ1MDllYmRiZjMxNWJiYzc0NTVjZmMw" alt="Multifuncionales"><span>Multifuncionales</span></a>
-                </div>
-                <div>
-                    <a href="/computadores-tablets/impresion/tintas-toners-cartuchos/c/BI_0220_ALKOS"><img src="/medias/toner.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2OTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjQvaDM0LzEwMzUxNjk5MDAxMzc0LnN2Z3xkMjAwYTJlOTM1N2Y0ZDU5NzMwMmJlMzg2Mzk4OWMzOTI2OTVlY2U3MjE0MTliYTUwZTk3NWZiYjRiODA4YjU3" alt="Cartuchos y tóneres"><span>Cartuchos y Tóneres</span></a>
-                </div>
-                <div>
-                    <a href="/computadores-tablets/impresion/c/BI_0230_ALKOS"><img src="/medias/resma.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI2NDZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOTcvaDE5LzEwMzUxNjk4NzM5MjMwLnN2Z3xmZjQzZmU3ZDc1MjhkY2RlOTc4ZjQyMDA1NWNhMjdhMjA4ODFhMjc3M2M4MmFiMmU5MzkwNjc4YWEzMjZjZTc4" alt="Resmas"><span>Resmas de papel</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-    <!-- Inicio filtros -->
+<!-- Inicio filtros -->
     <div class="row">
         <div class="container">
             <div class="col-md-12 filtros">
                 <h3>Filtrar por Categoría</h3>
-                <k-slider desktop-arrows="false" mobile-arrows="false" desktop-items="3" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/computadores-tablet/impresion/impresoras-escaner-multifuncionales/c/BI_0210_ALKOS?q=%3Arelevance%3Atipo-producto-impresion%3AImpresora"
+                            title="Impresoras" type="category-item">
+                            <k-icon icon="alk-icon-impresora"></k-icon>
+                            <p>Impresoras</p>
+                        </k-card>
+                    </div>
                     <div class="k-slider__slide">
                         <k-card
                             href="/computadores-tablets/impresion/impresoras-escaner-multifuncionales/c/BI_0210_ALKOS"

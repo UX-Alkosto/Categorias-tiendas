@@ -30,6 +30,18 @@
         text-align: center;
         color: var(--primary-color2);
     }
+    .filtro_computadores{
+        display: flex;
+        justify-content: center;
+    }
+    .filtro_computadores div {
+    width: 35%;
+    margin: 10px;
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffffff;
+    }
 
     @media screen and (max-width: 1007px) {
         .component__banner {
@@ -135,19 +147,19 @@
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
             <k-slider desktop-arrows="false" mobile-arrows="false" desktop-items="2" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
-                <div class="k-slider__slide">
+                <div class="k-slider__slide" style="justify-content: end;">
                     <k-card
                         href="/computadores-tablets/computadores-escritorio/computadores-all-in-one/c/BI_0060_ALKOS"
-                        title="Computadores All In One" type="category-item">
+                        title="Computadores All In One" type="category-item" style="max-width: 250px;">
                         <k-icon icon="alk-icon-computador-all-one"></k-icon>
                         <p>Computadores All In One</p>
                     </k-card>
                 </div>
-                <div class="k-slider__slide">
+                <div class="k-slider__slide" style="justify-content: start";>
                     <k-card
                         href="/computadores-tablets/computadores-escritorio/pcs-escritorio-tradicionales/c/BI_0070_ALKOS"
-                        title="Computadores de Escritorio" type="category-item">
-                        <k-icon icon="alk-icon-computadores-escritorio"></k-icon>
+                        title="Computadores de Escritorio" type="category-item" style="max-width: 250px";>
+                        <k-icon icon="alk-icon-computadores-escritorio" style="font-size:30px"></k-icon>
                         <p>Computadores de Escritorio</p>
                     </k-card>
                 </div>
