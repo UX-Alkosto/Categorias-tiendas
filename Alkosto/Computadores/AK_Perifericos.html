@@ -1,102 +1,55 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: block;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 5px;
-        display: inline-block;
-        padding: 5px 0px 5px 0px;
-        width: 18%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -154,44 +107,80 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/teclados/c/BI_A43_ALKOS"><img src="/medias/Icono-Teclados.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI5MzN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYmUvaGJjLzEwMzYxOTA1MDIwOTU4LnN2Z3xiMTRlOWUyOTg0ZGQyMzRmOGEwMGEyNGIwNTEwZGMwYmVhMTVjOWFlOWQ1YzE1MjhlY2UyZWJmZjVkZmY2ZmU4"
-                            alt="Teclados"><span>Teclados</span></a>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="5" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/teclados/c/BI_A43_ALKOS"
+                        title="Teclados" type="category-item">
+                        <k-icon icon="alk-icon-teclado"></k-icon>
+                        <p>Teclados</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/mouse-tabletas-digitalizadoras/c/BI_A44_ALKOS"><img src="/medias/Icono-Mouse-y-Tabletas-Digitalizadoras.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3ODl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDEvaDRlLzEwMzYxOTA2NTYxMDU0LnN2Z3w1NmE0NmNmYmZjMzU0ODI4M2VkYmNiMjUwNjMwN2ZmMmUwYTVlNWE4ZTRhZGZhZGY0ZDY2MDM0ZDdmMWRiMWFm"
-                            alt="Mouse y Tabletas Digitalizadoras"><span>Mouse y Tabletas</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/mouse-tabletas-digitalizadoras/c/BI_A44_ALKOS"
+                        title="Mouse y Tabletas" type="category-item">
+                        <k-icon icon="alk-icon-mouse"></k-icon>
+                        <p>Mouse y Tabletas</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/soportes-bases-computador/c/BI_A45_ALKOS"><img src="/medias/Icono-Soportes-Bases-Computador.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQwNDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjQvaGJlLzEwMzYxOTA3MDE5ODA2LnN2Z3w1OTk1YWY2MWNhYmMyMDc3M2Q4NWY5YTliZjI4Yzg3NmYyMDY2YWIxNDQ4ZmU3NDI1ZWQ0MTIzYWVmYzU5OTI3"
-                            alt="Soportes y Bases Para Computador"><span>Soportes y Bases</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/soportes-bases-computador/c/BI_A45_ALKOS"
+                        title="Soportes y Bases" type="category-item">
+                        <k-icon icon="alk-icon-tapete"></k-icon>
+                        <p>Soportes y Bases</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/webcam/c/BI_A46_ALKOS"><img src="/medias/icono-Webcam.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2NTl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oN2IvaGVlLzEwMzYxOTA3OTM3MzEwLnN2Z3xkNGNjMDY2ZjVjNjA1ZDc3ZDc4MGNlZjU2ZjJlZmE1NjBkN2MxOGJlYjljMTkzZjc5NDhmMjYxNjRlZDlkOGQ5"
-                            alt="Webcam"><span>Webcam</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/accesorios-electronica/accesorios-computadores/perifericos/webcam/c/BI_A46_ALKOS"
+                        title="Webcam" type="category-item">
+                        <k-icon icon="alk-icon-proyectores"></k-icon>
+                        <p>Webcam</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/parlantes-computadores/c/BI_A47_ALKOS"><img src="/medias/Iconos-Parlantes-Computadores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwODB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNGIvaGNmLzEwMzYxOTA4NTkyNjcwLnN2Z3w1YWVhMDU2YzFkMDY0NzJlNmY2NjUyMGNhNDUwOWUyZDAxMTAyZmE2NzgyNmZiNjFmZjc4NzRjOGEzODkyNzA2"
-                            alt="Parlantes Computadores"><span>Parlantes</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/parlantes-computadores/c/BI_A47_ALKOS"
+                        title="Parlantes" type="category-item">
+                        <k-icon icon="alk-icon-audio-hogar"></k-icon>
+                        <p>Parlantes</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/combos-perifericos/c/BI_A48_ALKOS"><img src="/medias/Icono-Combos-Perifericos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMxNjF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZTQvaDhkLzEwMzYxOTA4OTIwMzUwLnN2Z3xjNGI3NDEzNTdlNmQwY2NmZDFlZThiZjQwMDI5NzdlYzcxY2EyNjIyOGEzNTU2Y2VhOWQzMDIxNmU0MjFjMTA1"
-                            alt="Combos de Perifericos"><span>Combos Periféricos</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/combos-perifericos/c/BI_A48_ALKOS"
+                        title="combos Periféricos" type="category-item">
+                        <k-icon icon="alk-icon-computador"></k-icon>
+                        <p>Combos Periféricos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/guayas-seguridad/c/BI_A53_ALKOS"><img src="/medias/Icono-Guayas-Seguridad.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM2NTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOGMvaDY5LzEwMzYxOTA5NjQxMjQ2LnN2Z3xkZjRhYjNjYjIxY2IxNDA0Y2M5YTIwYTg4ZjNhNDdiNDFmMDFlN2M1ZDg1ZDA0OGNhN2NiZmRjY2M1OGQzOWVl"
-                            alt="Guayas de Seguridad"><span>Guayas Seguridad</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/guayas-seguridad/c/BI_A53_ALKOS"
+                        title="Guayas Seguridad" type="category-item">
+                        <k-icon icon="alk-icon-pago-seguro"></k-icon>
+                        <p>Guayas Seguridad</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/apuntadores-presentadores/c/BI_A54_ALKOS"><img src="/medias/Icono-Apuntadores-Presentadores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI2MzZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYTAvaDJhLzEwMzYxOTEwMzYyMTQyLnN2Z3xlZDk3NDA3NzUwN2Y4ZGE3YTc4ZTdmYjg2OGQ2OTBkNDYyOGYwM2M5MzMxMjE2MWEwZjFhODYzNjY4MDAzNzVh"
-                            alt="Apuntadores, Presentadores"><span>Apuntadores</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/apuntadores-presentadores/c/BI_A54_ALKOS"
+                        title="Apuntadores" type="category-item">
+                        <k-icon icon="alk-icon-control-remoto"></k-icon>
+                        <p>Apuntadores</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/accesorios-electronica/accesorios-computadores/perifericos/hub/c/BI_A55_ALKOS"><img src="/medias/Icono-HUB.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI1OTl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMGMvaDk5LzEwMzYxOTkyNDc4NzUwLnN2Z3w0NmFiZWJhZjNiMmJjYjQ2ODFmYzgyNGE4OTYyYTNjMDUwNGU3NDBlZDlkMTE1M2ViYzVhY2NhZDg4OGE1Njgy"
-                            alt="HUB"><span>HUB</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/accesorios-electronica/accesorios-computadores/perifericos/hub/c/BI_A55_ALKOS"
+                        title="HUB" type="category-item">
+                        <k-icon icon="alk-icon-bateria-externa"></k-icon>
+                        <p>HUB</p>
+                    </k-card>
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>
+

@@ -1,206 +1,150 @@
-    <style>
-        /*INICIO Estilos banner*/
-        .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
-        .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
-            top: 23px !important;
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
         }
+    }
+    /*OTROS ESTILOS*/
 
-        .owl-carousel .owl-nav .owl-prev span,
-        .owl-carousel .owl-nav .owl-next span {
-            line-height: 20px !important;
-        }
 
-        .owl-carousel .owl-nav .owl-prev,
-        .owl-carousel .owl-nav .owl-next {
-            width: 50px !important;
-            height: 50px !important;
-            border-radius: 50px !important;
-        }
+    @media only screen and (max-width: 576px) {
 
-        @media screen and (max-width: 1007px) {
-
-            .component__banner {
-                display: block !important;
-            }
-
-        }
-
-        /*FIN estilos banner*/
-        /*INICIO OTROS ESTILOS*/
-        /*.ocultar {
+        .ocultar_mobile {
             display: none;
-            }*/
-        .filtros {
-            margin: 20px 0px;
         }
 
         .filtros h3 {
-            width: 100%;
-            font-size: 18px;
-            text-align: center;
-            color: #004797;
+            font-size: 16px;
+            margin: 5px 0px;
         }
 
-        .filtro_computadores {  
-            display: flex;
-            justify-content: center;
+    }
+</style>
 
-        }
-
-        .filtro_computadores div {
-        width: 35%;
-        margin: 10px;
-        padding: 5px 0px 5px 0px;
-        text-align: center;
-        border-radius: 5px;
-        background-color: #ffffff;
-        box-shadow: 2px 2px 7px 0px rgb(0 0 0 / 23%);
-        -webkit-box-shadow: 2px 2px 7px 0px rgb(0 0 0 / 23%);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        }
-
-        .filtro_computadores div a {
-            display: block;
-            text-decoration: none;
-        }
-
-        .filtro_computadores div a i {
-            font-size: 30px;
-            color: #DD171B;
-        }
-
-        .filtro_computadores div a span {
-            display: block;
-            color: #444444;
-            padding: 4px 0px;
-            font-size: 13px;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .filtro_computadores {
-                flex-wrap: wrap;
-            }
-
-            .filtro_computadores div {
-                width: 30%;
-            }
-        }
-
-        @media only screen and (max-width: 576px) {
-            .filtro_computadores {
-                display: flex;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                -ms-overflow-style: -ms-autohiding-scrollbar;
-            }
-
-            .filtro_computadores div a span {
-                padding: 4px 0px !important;
-            }
-
-            .filtro_computadores div {
-                width: 50%;
-                padding: 5px 0px;
-                flex: 0 0 auto;
-                margin-bottom: 20px;
-            }
-
-            .filtros h3 {
-                font-size: 16px;
-                margin: 5px 0px;
-            }
-
-            .ocultar_mobile {
-                display: none;
-            }
-        }
-
-        .filtro_computadores div a img {
-            width: 35px;
-        }
-
-    </style>
-    <div class="row">
-        <div class="container">
-            <div class="col-12" style="margin-bottom: 10px;">
-               <!-- AdGlare: AK-Computadores-Banner-Categoría-Barra -->
-<span id=zone117754265></span>
-<script>
-    (function(r,d,u) {
-        var s = d.createElement(r); s.async = true;
-        u += '&cb=' + Date.now() + Math.random();       
-        s.src = u; var n = d.getElementsByTagName(r)[0];
-        n.parentNode.insertBefore(s, n);
-    })('script',document,'//engine.alkst.co/?117754265');
-</script>
-            </div>
+<div class="row">
+    <div class="container">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <!-- AdGlare: AK-Computadores-Banner-Categoría-Barra -->
+            <span id=zone117754265></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?117754265');
+            </script>
         </div>
     </div>
+</div>
 
-    <div class="row">
-        <div class="container">
-            <div class="col-xs-12 col-md-12">
-                <div class="col-xs-12 col-md-12 no-padding component__banner">
-                    <div class="carousel__rotativeBanner">
-                        <div class="owl-carousel rotativeBanner js-adglare-carousel">
-                            <div class="banner-adglare">
-                                <!-- AdGlare: AK-Computadores-Portatil-Banner-Categoría-P1 -->
-<span id=zone371582824></span>
-<script>
-    (function(r,d,u) {
-        var s = d.createElement(r); s.async = true;
-        u += '&cb=' + Date.now() + Math.random();       
-        s.src = u; var n = d.getElementsByTagName(r)[0];
-        n.parentNode.insertBefore(s, n);
-    })('script',document,'//engine.alkst.co/?371582824');
-</script>
-                            </div>
-                            <div class="banner-adglare">
-                                <!-- AdGlare: AK-Computadores-Portatil-Banner-Categoría-P2 -->
-<span id=zone632038349></span>
-<script>
-    (function(r,d,u) {
-        var s = d.createElement(r); s.async = true;
-        u += '&cb=' + Date.now() + Math.random();       
-        s.src = u; var n = d.getElementsByTagName(r)[0];
-        n.parentNode.insertBefore(s, n);
-    })('script',document,'//engine.alkst.co/?632038349');
-</script>
-                            </div>
-                            <div class="banner-adglare">
-                               <!-- AdGlare: AK-Computadores-Portatil-Banner-Categoría-P3 -->
-<span id=zone999049087></span>
-<script>
-    (function(r,d,u) {
-        var s = d.createElement(r); s.async = true;
-        u += '&cb=' + Date.now() + Math.random();       
-        s.src = u; var n = d.getElementsByTagName(r)[0];
-        n.parentNode.insertBefore(s, n);
-    })('script',document,'//engine.alkst.co/?999049087');
-</script>
-                                </script>
-                            </div>
-                           
+<div class="row">
+    <div class="container">
+        <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 no-padding component__banner">
+                <div class="carousel__rotativeBanner">
+                    <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Computadores-Portatil-Banner-Categoría-P1 -->
+                            <span id=zone371582824></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?371582824');
+                            </script>
                         </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Computadores-Portatil-Banner-Categoría-P2 -->
+                            <span id=zone632038349></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?632038349');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Computadores-Portatil-Banner-Categoría-P3 -->
+                            <span id=zone999049087></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?999049087');
+                            </script>
+                            </script>
+                        </div>
+
                     </div>
                 </div>
             </div>
-           
         </div>
+
     </div>
-   
-    <!-- Filtros -->
-    <div class="row">
-        <div class="container">
-            <div class="col-md-12 filtros">
-                <h3>Filtrar por categoría</h3>
-                <div class="filtro_computadores">
-                    <div><a href="/computadores-tablets/computadores-portatiles/portatiles-tradicionales/c/BI_0050_ALKOS">
-                            <img src="../medias/portatiles.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDczNHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g5Ni9oOWIvMTAzMzE4NTIxNzc0Mzguc3ZnfDdiZDYyODg5MmVlMjJkZmQ3NjZlZDZkMThmYTllZDEzNTdjMmQyZjEyZDU5MTNmOTdmYzgwYTBhNTJhNDY3MjY" alt="Portátiles"><span>Portátiles</span></a></div>
-                    <div><a href="/computadores-tablets/computadores-portatiles/portatiles-convertibles-2-en-1/c/BI_0040_ALKOS"><img src="/medias/CONVERTIBLES-2-EN-1.png?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEwOTh8aW1hZ2UvcG5nfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g1Ny9oY2EvMTAzMzE4NTM5MTQxNDIucG5nfGQxMjBmNzgxZjY3MDA5YjhjNzEyMWYzMDlkNGUyZDE2ZTJlOWRhNWFiNDNhZmEzNDBiNGM5ZmNmMGVjZDQwOGY" alt="Convertibles 2 en 1">
-                            <span>Convertibles 2 en 1</span></a></div>
+</div>
+
+<!-- Filtros -->
+<div class="row">
+    <div class="container">
+        <div class="col-md-12 filtros">
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="false" mobile-arrows="false" desktop-items="2" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/computadores-tablets/computadores-portatiles/portatiles-tradicionales/c/BI_0050_ALKOS"
+                        title="Portátiles" type="category-item">
+                        <k-icon icon="alk-icon-portatiles"></k-icon>
+                        <p>Portátiles</p>
+                    </k-card>
                 </div>
-            </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/computadores-tablets/computadores-portatiles/portatiles-convertibles-2-en-1/c/BI_0040_ALKOS"
+                        title="Convertibles 2 en 1" type="category-item">
+                        <k-icon icon="alk-icon-tabletas-digitalizadoras"></k-icon>
+                        <p>Convertibles 2 en 1</p>
+                    </k-card>
+                </div>
+            </k-slider>
         </div>
     </div>
+</div>
