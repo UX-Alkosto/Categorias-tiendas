@@ -1,0 +1,146 @@
+<div style="text-align:center; margin: bottom 2em;"><!-- AdGlare: KT_SAP_Pines_videojuegos -->
+    <span id=zone672939108></span>
+<script>
+    (function(r,d,u) {
+        var s = d.createElement(r); s.async = true;
+        u += '&cb=' + Date.now() + Math.random();       
+        s.src = u; var n = d.getElementsByTagName(r)[0];
+        n.parentNode.insertBefore(s, n);
+    })('script',document,'//engine.alkst.co/?672939108');
+</script></div>
+
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+</style>
+
+<!-- Filtros -->
+<div class="row">
+    <div class="container">
+        <div class="col-md-12 filtros">
+            <div class="col-xs-12 col-md-8">
+                <h3>Filtrar por categorías</h3>
+                <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/videojuegos/consolas/c/BI_131_KTRON"
+                            title="Consolas" type="category-item">
+                            <k-icon icon="alk-icon-consola-videojuego"></k-icon>
+                            <p>Consolas</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/videojuegos/juegos/c/BI_132_KTRON"
+                            title="Videojuegos" type="category-item">
+                            <k-icon icon="alk-icon-videojuegos"></k-icon>
+                            <p>Videojuegos</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/videojuegos/accesorios-videojuegos/c/BI_133_KTRON"
+                            title="Controles" type="category-item">
+                            <k-icon icon="alk-icon-control-videojuegos"></k-icon>
+                            <p>Controles</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card href="/videojuegos/figuras-accion-coleccionables/c/BI_134_KTRON"
+                            title="Coleccionables" type="category-item">
+                            <k-icon icon="alk-icon-coleccionables"></k-icon>
+                            <p>Coleccionables</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/videojuegos/pines-virtuales-videojuegos/c/BI_135_KTRON"
+                            title="Bancos y Plataformas" type="category-item">
+                            <k-icon icon="alk-icon-codigos-digitales"></k-icon>
+                            <p>Pines virtuales</p>
+                        </k-card>
+                    </div>
+                </k-slider>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>Filtrar por marcas</h3>
+                <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="2" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/marcas/xbox/c/xbox"
+                            title="Xbox" type="category-item">
+                            <k-icon icon="alk-icon-xbox"></k-icon>
+                            <p>Xbox</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/marcas/playstation/c/playstation"
+                            title="playstation" type="category-item">
+                            <k-icon icon="alk-icon-playstation"></k-icon>
+                            <p>Playstation</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/marcas/nintendo/c/nintendo"
+                            title="nintendo" type="category-item">
+                            <k-icon icon="alk-icon-nintendo"></k-icon>
+                            <p>Nintendo</p>
+                        </k-card>
+                    </div>
+                </k-slider>
+            </div>
+        </div>
+    </div>
+</div>
