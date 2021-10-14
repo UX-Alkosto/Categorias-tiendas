@@ -1,101 +1,55 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 20px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -106,8 +60,8 @@
                 <div class="carousel__rotativeBanner">
                     <div class="owl-carousel rotativeBanner js-adglare-carousel">
                         <div class="banner-adglare">-->
-                            <!-- AdGlare: AK-Exterior-Banner-Categoría-P1 -->
-                            <!--<span id=zone720249846></span>
+<!-- AdGlare: AK-Exterior-Banner-Categoría-P1 -->
+<!--<span id=zone720249846></span>
                             <script>
                                 (function(r,d,u) {
                                     var s = d.createElement(r); s.async = true;
@@ -129,20 +83,58 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/hogar/maletas-viaje/c/BI_171_ALKOS"><img src="/medias/icono-maletas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1NTd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDgvaGU0LzEwMzYxMjA5NTIwMTU4LnN2Z3xkZmZiOTkwZDFiYTU2NmM1NmUxNGM2OGI4NmFkMjJjNDMzYzg1Y2YzZGU1MmUwY2VlMzAwZjkxY2M3ZjRkMTQ5"
-                            alt="Maletas de Viaje"><span>Maletas de Viaje</span></a>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/exterior/muebles-exterior/c/BI_1124_ALKOS"
+                        title="Muebles
+                        de Exterior" type="category-item">
+                        <k-icon icon="alk-icon-exterior"></k-icon>
+                        <p>Muebles
+                            de Exteriore</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/exterior/neveras-portatiles/c/BI_1122_ALKOS"><img src="/medias/icono-nevera-portatil.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE4NjZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYmMvaGRlLzEwMzYxMjA5OTEzMzc0LnN2Z3w1M2M5NzBhYjk4MTNmYjRkOTljMDI5MzI5ZmI4NmY0YWZhNzMyYjI5YzdkMmRhODQxNDVlOWUzNDMyZmE2M2E2"
-                            alt="Neveras Portátiles"><span>Neveras Portátiles</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/muebles/mesas/mesas-plasticas/c/BI_0713_ALKOS"
+                        title="Mesas Plasticas" type="category-item">
+                        <k-icon icon="alk-icon-mesa"></k-icon>
+                        <p>Mesas Plasticas</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/exterior/sombrillas/c/BI_1123_ALKOS"><img src="/medias/icono-sombrillas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDExNDB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWIvaDUwLzEwMzYxMjEwMjQxMDU0LnN2Z3xkOGYyODlhNTIxZDIxNzU1MDQ0MGQ2MjAzNDZkNTY2NWE0N2RlM2RmMzk3MTU2OWMyMjFkMzg2OTMzMDgyMTUy"
-                            alt="Sombrillas"><span>Sombrillas</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/muebles/sillas/sillas-plasticas/c/BI_0712_ALKOS"
+                        title="Sillas Plasticas" type="category-item">
+                        <k-icon icon="alk-icon-silla"></k-icon>
+                        <p>Sillas Plasticas</p>
+                    </k-card>
                 </div>
-            </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/maletas-viaje/c/BI_171_ALKOS"
+                        title="Maletas de Viaje" type="category-item">
+                        <k-icon icon="alk-icon-maleta-viaje"></k-icon>
+                        <p>Maletas de Viaje</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/exterior/neveras-portatiles/c/BI_1122_ALKOS"
+                        title="Neveras Portátiles" type="category-item">
+                        <k-icon icon="alk-icon-nevera-portatil"></k-icon>
+                        <p>Neveras Portátiles</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/exterior/sombrillas/c/BI_1123_ALKOS"
+                        title="Sombrillas" type="category-item">
+                        <k-icon icon="alk-icon-sombrilla"></k-icon>
+                        <p>Sombrillas</p>
+                    </k-card>
+                </div>
+            </k-slider>
         </div>
     </div>
 </div>

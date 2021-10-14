@@ -1,3 +1,62 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    k-icon {
+        font-size: 30px;
+        --k-icon-color: var(--primary-color1);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+</style>
 <style>
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
@@ -182,7 +241,7 @@
                 border-right: 1px solid #444444;
             }
         }
-    </style>
+</style>
     
     <div class="row">
         <div class="container">
@@ -242,36 +301,68 @@
                         <h3>Filtrar por Categoría</h3>
                         <div class="filtro_tamano filete">
                             <div>
-                                <a href="/muebles/armarios/c/BI_400_ALKOS"><img src="/medias/icono-closets.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIxMjB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZTgvaDhkLzEwMzUzNzM4OTQwNDQ2LnN2Z3wzZWJiMDY5MmZiYTk0MjUwZjg1NDFkOWEzMDM1MGUyYjc5YzEyNzAyZWJhZTRiZjI3NmQ5NGE2YzA3MjYxY2Mx"
-                                alt="icono armarios en alkosto"><span>Armarios</span></a>
+                                <a
+                                href="/muebles/armarios/c/BI_400_ALKOS"
+                                title="Armarios" type="category-item">
+                                <k-icon icon="alk-icon-armario"></k-icon>
+                                <p>Armarios</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles/bibliotecas/c/BI_402_ALKOS"><img src="/medias/icono-bibliotecas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM0MDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOWQvaGEzLzEwNDk0MjQzMjc0NzgyLnN2Z3wxNGY4MDIzMzgyODlkMGU2MzE1MGEwYzhmN2Y0NjhhZDU2ZTE0OTdiM2FiMDIyZDgzNDZiOTE1ODA3ZWJlNjRi"
-                                alt="icono bibliotecas en alkosto"><span>Bibliotecas</span></a>
+                                <a
+                                href="/muebles/bibliotecas/c/BI_402_ALKOS"
+                                title="Bibliotecas" type="category-item">
+                                <k-icon icon="alk-icon-biblioteca"></k-icon>
+                                <p>Bibliotecas</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles/mesas/centros-entretenimiento-mesas-tv/c/BI_0700_ALKOS"><img src="/medias/icono-mesas-tv.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIzMDd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZTcvaGUyLzEwNDk0MjQzNjY3OTk4LnN2Z3xlM2JjOTViMzZiMmU5ZTZjYzY4NmZkNjFjZGU1M2EwN2IxMjhmMDc3NjM4MTIyNzY2MWE3YmQwMTdjYTE3NmU4"
-                                alt="icono centros de entretenimiento en alkosto"><span>Mesas para TV</span></a>
+                                <a
+                                href="/muebles/mesas/centros-entretenimiento-mesas-tv/c/BI_0700_ALKOS"
+                                title="Mesas para TV" type="category-item">
+                                <k-icon icon="alk-icon-mesa-tv"></k-icon>
+                                <p>Mesas para TV</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles/cajoneras-comodas/c/BI_409_ALKOS"><img src="/medias/icono-comodas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDg3MXxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g2Ny9oYzEvMTA0OTQyNDQxOTIyODYuc3ZnfDRiMTE2ZWVlZjBkOTQxZDAwYWYzZWQ4NTMyYmE1NTZkMDFmNjc1NTRjZDMxYWI1MDJkN2U2OWQ4ZTZkMmQxNDc"
-                                alt="icono cajoneras y cómodas en alkosto"><span>Cajoneras</span></a>
+                                <a
+                                href="/muebles/cajoneras-comodas/c/BI_409_ALKOS"
+                                title="Cajoneras" type="category-item">
+                                <k-icon icon="alk-icon-cajonera"></k-icon>
+                                <p>Cajoneras</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles/escritorios-centros-computo/c/BI_401_ALKOS"><img src="/medias/icono-escritorios.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyNTd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDcvaDc4LzEwNDk0MjQ0ODQ3NjQ2LnN2Z3wzZmZhZDVlOGY0MjA5YmQyN2Y3MDg3ZjFiNTY3NWJiZTM5NjI0NWQ2NWViNzgwNjg0NmM5ZWY0YThiNDYyMDIz"
-                                alt="icono escritorios en alkosto"><span>Escritorios</span></a>
+                                <a
+                                href="/muebles/escritorios-centros-computo/c/BI_401_ALKOS"
+                                title="Escritorios" type="category-item">
+                                <k-icon icon="alk-icon-escritorio"></k-icon>
+                                <p>Escritorios</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles/muebles-cocina/c/BI_404_ALKOS"><img src="/medias/icono-aux-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzMDR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNGIvaGViLzEwMzUzNzQwNzA5OTE4LnN2Z3xkOGM4YmJmMWQ5NjFlZWYyYWRhMzE1NmQ2MDdhMjgzODIxMzEyODRkYjc3OGJiOTM1MzczZTk0NWZjMDAwNjNi"
-                                alt="icono muebles de cocina en alkosto"><span>Muebles de Cocina</span></a>
+                                <a
+                                href="/muebles/muebles-cocina/c/BI_404_ALKOS"
+                                title="Muebles de Cocina" type="category-item">
+                                <k-icon icon="alk-icon-mueble-cocina"></k-icon>
+                                <p>Muebles de Cocina</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles/repisas/c/BI_403_ALKOS"><img src="/medias/icono-repisas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1ODJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNWUvaDQyLzEwNDk0MjQ1MTA5NzkwLnN2Z3wyM2IzNjA3MzQ0YmUxOTYzMzlhYmYwNTE0NjZhYzFkOTc0NTAzOTg1YWZkYjVhZmQ1OTE3ODM2ZjFlNDI0NjZi"
-                                alt="icono repisas en alkosto"><span>Repisas</span></a>
+                                <a
+                                href="/muebles/repisas/c/BI_403_ALKOS"
+                                title="Repisas" type="category-item">
+                                <k-icon icon="alk-icon-repisa"></k-icon>
+                                <p>Repisas</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles/mesas/c/BI_406_ALKOS"><img src="/medias/icono-mesas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyNjR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oM2EvaDM3LzEwNDk0MjQ1NjM0MDc4LnN2Z3w4MWI1MjkyMDdmMTQxMmVmNzU4NGFhMTQ5ZTE1ODc4ZTkxYjVlODJiY2FhZjEwYTAwZTMxNzEwOTg3ZTAzYzA4"
-                                alt="icono mesas en alkosto"><span>Mesas</span></a>
+                                <a
+                                href="/muebles/mesas/c/BI_406_ALKOS"
+                                title="Mesas" type="category-item">
+                                <k-icon icon="alk-icon-mesa"></k-icon>
+                                <p>Mesas</p>
+                                 </a>
                             </div>
                         </div>
                     </div>
@@ -279,20 +370,36 @@
                         <h3>Filtrar por Ambiente</h3>
                         <div class="filtro_tamano">
                             <div>
-                                <a href="/ambientes/muebles-alcoba/c/muebles-alcoba"><img src="/medias/icono-habitacion.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzMjR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZmMvaDMxLzEwNDc4Nzc4NTgxMDIyLnN2Z3xmMzdhNzU0ZjlmZDAyNDQ1ODJiNWQ5Nzg0YTgzOTQ1MjQyNzViZDdjMjc4ZTlhNWNkODY0NmRiYTNhODkyYTY4"
-                                alt="icono habitación en alkosto"><span>Habitación</span></a>
+                                <a
+                                href="/ambientes/muebles-alcoba/c/muebles-alcoba"
+                                title="Habitación" type="category-item">
+                                <k-icon icon="alk-icon-habitacion"></k-icon>
+                                <p>Habitación</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/ambientes/muebles-sala/c/muebles-sala"><img src="/medias/icono-sala.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIxOTF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYzgvaDk0LzEwNDc4Nzc5NjI5NTk4LnN2Z3xiMTNhOGQyZWNmZjIxM2QzOWQ4YjlhNGM5NjUzNjA4ZTk2MjMxZWVjMGRmNGU0Y2YwMjIxODgxMmEwYTUzZjc3"
-                                alt="icono sala en alkosto"><span>Sala</span></a>
+                                <a
+                                href="/ambientes/muebles-sala/c/muebles-sala"
+                                title="Sala" type="category-item">
+                                <k-icon icon="alk-icon-sala"></k-icon>
+                                <p>Sala</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/muebles-estudio/c/muebles-estudio"><img src="/medias/icono-estudio.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE3NzN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNzYvaDJhLzEwMzUzNzM5NzkyNDE0LnN2Z3xlN2M4Y2Y5NzFmZWZjMjVmOTIwNmM0MjlmNWEyNjg5MmUyYWUyMWVhMWY4NTVjNmY0MjlmZDY4ZWJkYTIwNDli"
-                                alt="icono mesas en alkosto"><span>Estudio</span></a>
+                                <a
+                                href="/muebles-estudio/c/muebles-estudio"
+                                title="Estudio" type="category-item">
+                                <k-icon icon="alk-icon-estudio"></k-icon>
+                                <p>Estudio</p>
+                                 </a>
                             </div>
                             <div>
-                                <a href="/ambientes/exterior/c/exterior"><img src="/medias/icono-muebles-exteriores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0ODJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDgvaDE0LzEwMzUzNzQxNDk2MzUwLnN2Z3wyNWI5ZGFkNzYyM2FkYTRkMDBlYjU1MTU1NGE4ZmZkMGQ0MmUwNDEyN2I4MzUzYjhhODVkNTQwMTU3OGFmZGI3"
-                                alt="icono mesas en alkosto"><span>Exterior</span></a>
+                                <a
+                                href="/ambientes/exterior/c/exterior"
+                                title="Exterior" type="category-item">
+                                <k-icon icon="alk-icon-exterior"></k-icon>
+                                <p>Exterior</p>
+                                 </a>
                             </div>
                             <!--div>
                                 <a href="/ambientes/muebles-cocina/c/muebles-cocina"><img src="/medias/icono-aux-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzMDR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNGIvaGViLzEwMzUzNzQwNzA5OTE4LnN2Z3xkOGM4YmJmMWQ5NjFlZWYyYWRhMzE1NmQ2MDdhMjgzODIxMzEyODRkYjc3OGJiOTM1MzczZTk0NWZjMDAwNjNi"

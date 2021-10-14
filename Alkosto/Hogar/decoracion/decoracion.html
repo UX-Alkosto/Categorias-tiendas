@@ -1,101 +1,55 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 10px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -141,28 +95,46 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/hogar/decoracion/tapetes/c/BI_1090_ALKOS"><img src="/medias/icono-tapetes.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDYxNjN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOGQvaGNiLzEwMzYwMTkxMTIzNDg2LnN2Z3wyNjRjOTYyZTA1MzQxYWNkNjA5Yjc1ZTM1NzliMGUzM2QzMjliYTQzYzhhMTkwYjVlNzlhZWFmNmU4NjA1NDM1"
-                            alt="Tapetes"><span>Tapetes</span></a>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/decoracion/tapetes/c/BI_1090_ALKOS"
+                        title="Tapetes" type="category-item">
+                        <k-icon icon="alk-icon-tapete"></k-icon>
+                        <p>Tapetes</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/decoracion/cojines/c/BI_1010_ALKOS"><img src="/medias/icono-cojines.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM1NjJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZmQvaDRkLzEwMzYwMTkxNzc4ODQ2LnN2Z3wyMTA5NDZkMWIwOWU0MTMyN2E5NWNjNGI0OGNjNzZhYjlhY2QxN2NjYWQ5Mzk0MmExZjg0YTQzYjE3YjA0NjIz"
-                            alt="Cojines"><span>Cojines</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/decoracion/cojines/c/BI_1010_ALKOS"
+                        title="Ventiladores" type="category-item">
+                        <k-icon icon="alk-icon-cojin"></k-icon>
+                        <p>Cojines</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/decoracion/espejos/c/BI_1030_ALKOS"><img src="/medias/icono-espejos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyMDB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNzIvaDM3LzEwMzYwMTkyNjMwODE0LnN2Z3w1YmJiZjYwYmQ0NmNjN2VjZGUyOGU4MDI5Mzk1MWUzM2VhNzQxY2M4NWRhM2MxODU2NTY1ZjBjMzVmM2JlMzBh"
-                            alt="Espejos"><span>Espejos</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/decoracion/espejos/c/BI_1030_ALKOS"
+                        title="Espejos" type="category-item">
+                        <k-icon icon="alk-icon-espejo"></k-icon>
+                        <p>Espejos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/decoracion/flores-floreros-macetas/c/BI_1040_ALKOS"><img src="/medias/icono-materas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQxMDB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oY2IvaDEwLzEwMzYwMTkzMzUxNzEwLnN2Z3w3ZjM0NTBmZmY5ZDhkNWFmMDhkZTQ1NjFiM2JlZmQ2ZjYyZDM2NjBiYjYzZTU1Nzc5YWNmZTJmNThiODc0Y2My"
-                            alt="Floreros y Macetas"><span>Floreros y Macetas</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/hogar/decoracion/flores-floreros-macetas/c/BI_1040_ALKOS"
+                        title="Floreros y Macetas" type="category-item">
+                        <k-icon icon="alk-icon-maceta"></k-icon>
+                        <p>Floreros y Macetas</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/decoracion/portarretratos-cuadros/c/BI_1050_ALKOS"><img src="/medias/icono-portaretratos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDExMTl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNzkvaGM2LzEwMzYwMTk0MjY5MjE0LnN2Z3wwMWYyMWY4YTRjMjdmMzgxM2I2NTY1ODEzZjc5NWFkYWY0YzdlYTI3NWFhNDgyNTg0OTkyN2Q4NWUyZmVhZWVl"
-                            alt="Portaretratos y Cuadros"><span>Portaretratos y Cuadros</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/hogar/decoracion/portarretratos-cuadros/c/BI_1050_ALKOS"
+                        title="Portaretratos y Cuadros" type="category-item">
+                        <k-icon icon="alk-icon-portaretrato"></k-icon>
+                        <p>Portaretratos y Cuadros</p>
+                    </k-card>
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>

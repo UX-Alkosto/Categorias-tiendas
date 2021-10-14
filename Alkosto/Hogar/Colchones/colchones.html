@@ -1,3 +1,60 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+    k-icon {
+        font-size: 25px;
+        --k-icon-color: var(--primary-color1);
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+</style>
 <style>
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
@@ -261,24 +318,44 @@
                         <h3>Filtrar por Tamaño</h3>
                         <div class="filtro_tamano filete">
                             <div class="iconos-categoria">
-                                <a href="/colchones/sencillo/c/BI_153_ALKOS"><img src="/medias/icono-colchon-sencillo.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5NzV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDUvaDdiLzEwNDk2ODIwMjgxMzc0LnN2Z3wyY2FkNDdiM2M5ZTBjNzM5ZThjYTJmNWM3MTQ2NmE2NGM4ZWM0OWM0ODk0NjVkMzZkYWVkYzVjMWFkOTgyYmMx"
-                                alt="icono colchón sencillo en alkosto"><span>Sencillo</span></a>
+                                <a
+                                    href="/colchones/sencillo/c/BI_153_ALKOS"
+                                    title="Sencillos" type="category-item">
+                                    <k-icon icon="alk-icon-colchon-sencillo"></k-icon>
+                                    <p>Sencillos</p>
+                                </a>
                             </div>
                             <div class="iconos-categoria">
-                                <a href="/colchones/semidoble/c/BI_154_ALKOS"><img src="/medias/icono-colchon-semidoble.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU4OTR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjQvaGRkLzEwNDk2ODIxMjY0NDE0LnN2Z3wwOWUzYzZhMzI5Njk2YmY0ODY5MTI3MTIxYzg5ZjQwNGZiM2ZmZDE4NDhjNjNmMThlNGY4OTk5NzgxODYxZDEz"
-                                alt="icono colchón semidoble en alkosto"><span>Semidoble</span></a>
+                                <a
+                                    href="/colchones/semidoble/c/BI_154_ALKO"
+                                    title="Semidoble" type="category-item">
+                                    <k-icon icon="alk-icon-colchon-semidoble"></k-icon>
+                                    <p>Semidoble</p>
+                                </a>
                             </div>
                             <div class="iconos-categoria">
-                                <a href="/colchones/doble/c/BI_155_ALKOS"><img src="/medias/icono-colchon-doble.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDY0MTB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDkvaDUxLzEwNDk2ODIxNTI2NTU4LnN2Z3wyMGM5OTNhNTdlNjg1YTg2OGQwZTU4MmM0ZTc2ZmYzNGQ4MjJlMTNkMGU1NjA5NGQyM2IxMGIyNjA4YjEzMjA3"
-                                alt="icono colchón doble en alkosto"><span>Doble</span></a>
+                                <a
+                                    href="/colchones/doble/c/BI_155_ALKOS"
+                                    title="Doble" type="category-item">
+                                    <k-icon icon="alk-icon-colchon-doble"></k-icon>
+                                    <p>Doble</p>
+                                </a>
                             </div>
                             <div class="iconos-categoria">
-                                <a href="/colchones/queen/c/BI_156_ALKOS"><img src="/medias/icono-colchon-queen.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDgyMjh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZWYvaGNmLzEwNDk2ODIzMDk5NDIyLnN2Z3xkYWE1YjU4ODU3ZDFkMDI0OGM2NWJmMmFhNzdmNmQyNGU5MGMzYjFmNTQ5OTk4ZDVjYzlhM2M1MDVhZWM0ZWJk"
-                                alt="icono colchón queen en alkosto"><span>Queen</span></a>
+                                <a
+                                    href="/colchones/queen/c/BI_156_ALKOS"
+                                    title="Queen" type="category-item">
+                                    <k-icon icon="alk-icon-colchon-queen"></k-icon>
+                                    <p>Queen</p>
+                                </a>
                             </div>
                             <div class="iconos-categoria">
-                                <a href="/colchones/king/c/BI_157_ALKOS"><img src="/medias/icono-colchon-king.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc2MzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDcvaDM3LzEwNDk2ODIzNzg3NTUwLnN2Z3xhNzE5NDlkMzJjYTE4ZDA0Y2E2MmU1MjNiYzBlZTIwOTQwZmEwMTBiMTAwOWMyZDI4ZTQ3ZTM1MDZjMjQ4NGIy"
-                                alt="icono colchón king en alkosto"><span>King</span></a>
+                                <a
+                                    href="/colchones/king/c/BI_157_ALKOS"
+                                    title="King" type="category-item">
+                                    <k-icon icon="alk-icon-colchon-king"></k-icon>
+                                    <p>King</p>
+                                </a>
                             </div>
                         </div>
                     </div>

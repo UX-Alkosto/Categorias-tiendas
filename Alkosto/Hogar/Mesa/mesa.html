@@ -1,125 +1,94 @@
-<style type="text/css">.owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
-.owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
-    top: 23px !important;
-}
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
 
-.owl-carousel .owl-nav .owl-prev span,
-.owl-carousel .owl-nav .owl-next span {
-    line-height: 20px !important;
-}
-
-.owl-carousel .owl-nav .owl-prev,
-.owl-carousel .owl-nav .owl-next {
-    width: 50px !important;
-    height: 50px !important;
-    border-radius: 50px !important;
-}
-
-.carousel__rotativeBanner .banner-adglare {
-    width: 100%;
-}
-
-@media screen and (max-width: 1007px) {
-    .component__banner {
-        display: block !important;
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
     }
-}
-/*OTROS ESTILOS*/
 
-.filtros {
-    margin: 20px 0px;
-}
-
-.filtros h3 {
-    width: 100%;
-    font-size: 18px;
-    text-align: center;
-    color: #003780;
-}
-
-.filtros_tipo {
-    display: flex;
-}
-
-.filtros_tipo div {
-    text-align: center;
-    box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-    -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-    -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-    border-radius: 5px;
-    margin: 10px 10px;
-    padding: 5px 0px 5px 0px;
-    width: 40%;
-}
-
-.filtros_tipo a {
-    display: block;
-    color: #444444;
-    text-decoration: none;
-}
-
-.filtros_tipo a span {
-    display: block;
-    font-size: 13px;
-    padding: 4px 0px;
-}
-
-.filtros_tipo div a img {
-    width: 30px;
-}
-
-@media only screen and (max-width: 576px) {
-    .filtros_tipo {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
     }
-    .filtros_tipo div a img {
-        width: 40px;
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
     }
-    .filtros_tipo div {
-        width: 50%;
-        padding: 5px 0px 5px 0px;
-        flex: 0 0 auto;
-        margin-bottom: 20px;
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
     }
-    .ocultar_mobile {
-        display: none;
-    }
-    .filtros_tipo a span {
-        padding: 4px 0px;
-    }
+
+
     .filtros h3 {
-        font-size: 16px;
-        margin: 5px 0px;
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
     }
-}
+
+    k-icon {
+        font-size: 30px;
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
 </style>
+
 <div class="row">
     <div class="container">
         <div class="col-xs-12 col-md-12">
             <div class="col-xs-12 col-md-12 no-padding component__banner">
                 <div class="carousel__rotativeBanner">
                     <div class="owl-carousel rotativeBanner js-adglare-carousel">
-                        <div class="banner-adglare"><!-- AdGlare: AK-Articulos-Mesa-Banner-Categoría-P1 --><script>
-                            (function(r,d,u) {
-                                var s = d.createElement(r); s.async = true;
-                                u += '&cb=' + Date.now() + Math.random();       
-                                s.src = u; var n = d.getElementsByTagName(r)[0];
-                                n.parentNode.insertBefore(s, n);
-                            })('script',document,'//engine.alkst.co/?540121114');
-                        </script></div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Articulos-Mesa-Banner-Categoría-P1 -->
+                            <span id=zone540121114></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?540121114');
+                            </script>
+                        </div>
 
-                        <div class="banner-adglare"><!-- AK-Articulos-Mesa-Banner-Categoría-P2 --><script>
-                            (function(r,d,u) {
-                                var s = d.createElement(r); s.async = true;
-                                u += '&cb=' + Date.now() + Math.random();       
-                                s.src = u; var n = d.getElementsByTagName(r)[0];
-                                n.parentNode.insertBefore(s, n);
-                            })('script',document,'//engine.alkst.co/?145534935');
-                        </script></div>
+                        <div class="banner-adglare">
+                            <!-- AK-Articulos-Mesa-Banner-Categoría-P2 -->
+                            <span id=zone145534935></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?145534935');
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -131,19 +100,65 @@
 <div class="row">
     <div class="container">
         <div class="col-md-12 filtros">
-            <h3>Filtrar por Categor&iacute;a</h3>
-
-            <div class="filtros_tipo">
-                <div><a href="/hogar/mesa/accesorios-complementos-mesa/c/BI_0969_ALKOS"><img alt="Accesorios y Complementos" src="/medias/icono-accesorios-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyNzB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjkvaGRmLzEwMzYxMTU3MTU2ODk0LnN2Z3xlMTc4OGRlZjQ0NDcxMmYyNDA4NWU3ZWM4NzkxZmY5MThjNTA1NTE2ZGM2ZjAyNGQ5OGVhOTlhODQ2ZTU3NzEw" /><span>Accesorios y Complementos</span></a></div>
-
-                <div><a href="/hogar/mesa/cubiertos/c/BI_0960_ALKOS"><img alt="Cubiertos" src="/medias/icono-cubiertos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3Nzh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjUvaDkwLzEwMzU2NTA0MjMxOTY2LnN2Z3xjZWFmZDNiMzk1ZjE1M2QyMTkxMWQ3M2ZlNjg5NTk1ZDYyMjNkOTI0ZTA3MzI5Zjc3YTZhMGIyZTMyNDQ5NGU4" /><span>Cubiertos</span></a></div>
-
-                <div><a href="/hogar/mesa/juegos-vajilla-pieza-suelta/c/BI_0961_ALKOS"><img alt="Juegos de Vajillas" src="/medias/icono-vajillas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3MDh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODgvaDQxLzEwMzU2NTM5MjkzNzI2LnN2Z3xiMGNjMWFjY2EyYzU5MDJkNWE5ZTUwMzA4YmVlYzk2OGQyMTMxZWRlYTZmOTExZDQ5OTExYTMwNWFmNGI2MTIz" /><span>Juegos Vajillas</span></a></div>
-
-                <div><a href="/hogar/mesa/termos-botellas-botilitos/c/BI_0965_ALKOS"><img alt="Termos y Botilitos" src="/medias/icono-termos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEwNjl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDEvaDE0LzEwMzYxMTU3NjE1NjQ2LnN2Z3wxMmUxOTNiMWU4ODk1NTc1YTliOTE5YjQ0NGUyZTIwN2RjMjM3MmIzZTMzNjcwMDYyODIzOTM5NDZmNmNiNWYy" /><span>Termos y Botilitos</span></a></div>
-
-                <div><a href="/hogar/cocina/jarras/c/BI_0876_ALKOS"><img alt="Jarras y Dispensadores de Agua" src="/medias/icono-jarras.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEwOTB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNGUvaGViLzEwMzYxMTkxMDM5MDA2LnN2Z3w2ZTBkNzc5YWJmNDk5Zjk3NDdiNzBjMjJjMGJmNTU5Y2NkYjY0MTU5YTAxM2RkZTI3MmMxMjVlZjU2Njk4ZDAx" /><span>Jarras</span></a></div>
-            </div>
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/cocina/baterias-cocina/c/BI_0860_ALKOS"
+                        title="Baterias
+                        de Cocina" type="category-item">
+                        <k-icon icon="alk-icon-bateria-cocina"></k-icon>
+                        <p>Baterias
+                            de Cocina</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/cocina/ollas-a-presion/c/BI_0866_ALKOS"
+                        title="ollas a presión" type="category-item">
+                        <k-icon icon="alk-icon-olla-presion"></k-icon>
+                        <p>Ollas
+                            a Presi&oacute;n</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/cocina/sartenes-cacerolas-wok/c/BI_0863_ALKOS"
+                        title="Sartenes
+                        y Otros" type="category-item">
+                        <k-icon icon="alk-icon-sarten"></k-icon>
+                        <p>Sartenes
+                            y Otros</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/mesa/cubiertos/c/BI_0960_ALKOS"
+                        title="Cubiertos" type="category-item">
+                        <k-icon icon="alk-icon-cubiertos"></k-icon>
+                        <p>Cubiertos</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/mesa/juegos-vajilla-pieza-suelta/c/BI_0961_ALKOS"
+                        title="Juegos
+                        de Vajillas" type="category-item">
+                        <k-icon icon="alk-icon-vajilla"></k-icon>
+                        <p>Juegos
+                            de Vajillas</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/organizacion-aseo/c/BI_169_ALKOS"
+                        title="Organización y Aseo" type="category-item">
+                        <k-icon icon="alk-icon-organizacion-aseo"></k-icon>
+                        <p>Organizaci&oacute;n
+                            y Aseo</p>
+                    </k-card>
+                </div>
+            </k-slider>
         </div>
     </div>
 </div>
