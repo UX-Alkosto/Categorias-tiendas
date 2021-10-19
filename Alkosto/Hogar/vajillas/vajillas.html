@@ -1,101 +1,58 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+    k-icon {
+        font-size: 35px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 20px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
 
@@ -142,28 +99,45 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/hogar/mesa/accesorios-complementos-mesa/c/BI_0969_ALKOS"><img src="/medias/icono-accesorios-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyNzB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjkvaGRmLzEwMzYxMTU3MTU2ODk0LnN2Z3xlMTc4OGRlZjQ0NDcxMmYyNDA4NWU3ZWM4NzkxZmY5MThjNTA1NTE2ZGM2ZjAyNGQ5OGVhOTlhODQ2ZTU3NzEw"
-                            alt="Accesorios y Complementos"><span>Accesorios y Complementos</span></a>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2" style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/mesa/accesorios-complementos-mesa/c/BI_0969_ALKOS"
+                        title="Accesorios y Complementos" type="category-item">
+                        <k-icon icon="alk-icon-cuchillos"></k-icon>
+                        <p>Accesorios y Complementos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/mesa/cubiertos/c/BI_0960_ALKOS"><img src="/medias/icono-cubiertos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3Nzh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjUvaDkwLzEwMzU2NTA0MjMxOTY2LnN2Z3xjZWFmZDNiMzk1ZjE1M2QyMTkxMWQ3M2ZlNjg5NTk1ZDYyMjNkOTI0ZTA3MzI5Zjc3YTZhMGIyZTMyNDQ5NGU4"
-                            alt="Cubiertos"><span>Cubiertos</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/mesa/cubiertos/c/BI_0960_ALKOS"
+                        title="Cubiertos" type="category-item">
+                        <k-icon icon="alk-icon-cubiertos"></k-icon>
+                        <p>Cubiertos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/mesa/juegos-vajilla-pieza-suelta/c/BI_0961_ALKOS"><img src="/medias/icono-vajillas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3MDh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODgvaDQxLzEwMzU2NTM5MjkzNzI2LnN2Z3xiMGNjMWFjY2EyYzU5MDJkNWE5ZTUwMzA4YmVlYzk2OGQyMTMxZWRlYTZmOTExZDQ5OTExYTMwNWFmNGI2MTIz"
-                            alt="Juegos de Vajillas"><span>Juegos de Vajillas</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/mesa/juegos-vajilla-pieza-suelta/c/BI_0961_ALKOS"
+                        title="Juegos de Vajillas" type="category-item">
+                        <k-icon icon="alk-icon-vajilla"></k-icon>
+                        <p>Juegos de Vajillas</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/hogar/mesa/botilitos-botellas/c/BI_0966_ALKOS"><img src="/medias/icono-termos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEwNjl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNDEvaDE0LzEwMzYxMTU3NjE1NjQ2LnN2Z3wxMmUxOTNiMWU4ODk1NTc1YTliOTE5YjQ0NGUyZTIwN2RjMjM3MmIzZTMzNjcwMDYyODIzOTM5NDZmNmNiNWYy"
-                            alt="Termos y Botilitos"><span>Termos y Botilitos</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/hogar/mesa/botilitos-botellas/c/BI_0966_ALKOS"
+                        title="Calefactores" type="category-item">
+                        <k-icon icon="alk-icon-bebidas"></k-icon>
+                        <p>Termos y Botilitos
                 </div>
-                <div>
-                    <a href="/hogar/cocina/jarras/c/BI_0876_ALKOS"><img src="/medias/icono-jarras.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEwOTB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNGUvaGViLzEwMzYxMTkxMDM5MDA2LnN2Z3w2ZTBkNzc5YWJmNDk5Zjk3NDdiNzBjMjJjMGJmNTU5Y2NkYjY0MTU5YTAxM2RkZTI3MmMxMjVlZjU2Njk4ZDAx"
-                            alt="Jarras y Dispensadores de Agua"><span>Jarras</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/hogar/cocina/jarras/c/BI_0876_ALKOS"
+                        title="Jarras" type="category-item">
+                        <k-icon icon="alk-icon-aseo-hogar"></k-icon>
+                        <p>Jarras</p>
+                    </k-card>
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>

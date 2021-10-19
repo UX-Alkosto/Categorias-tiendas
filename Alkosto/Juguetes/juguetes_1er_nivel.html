@@ -1,3 +1,57 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+</style>
+
 <style>
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
@@ -367,31 +421,46 @@
     <!--INICIO FILTROS-->
     <div class="row">
         <div class="container">
-            
             <div class="col-md-12 filtros">
-                <h3>Navega por mundos</h3>
-                <div class="filtros_tipo">
-                    <div>
-                        <a href="/juguetes-ninas/c/juguetes-ninas"><img src="/medias/icon-nin-a.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM4MjB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWIvaDgwLzEwNDkzOTQ4MzMwMDE0LnN2Z3xkNmRkMzZkNjkwZWZlODM4NDg2NzM1NDBiMGYyYjNkMTBkZmE2YzBmZjZlMWIyMzE0Yjg5NDAzNzQ2MGE5Mzgy"
-                                alt="icono mundo niña en alkosto"><span>Mundo Niña</span></a>
+                <h3>Filtrar por Categoría</h3>
+                <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2" style="--k-icon-color: var(--primary-color1)";>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/juguetes-ninas/c/juguetes-ninas"
+                            title="Mundo Niña" type="category-item">
+                            <k-icon icon="alk-icon-mundo-nina"></k-icon>
+                            <p>Mundo Niña</p>
+                        </k-card>
                     </div>
-                    <div>
-                        <a href="/juguetes-ninos/c/juguetes-ninos"><img src="/medias/icon-nin-o.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI5MzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODQvaDg4LzEwNDkzOTQ5MjgwMjg2LnN2Z3wzZDA3MjNlZWJiYTk3Nzg3NTQwY2JlNWEyMmYxMWJjN2UwZWNiNGVmMTcyZTU5NTM3YTcxMmZjM2Y3NjBkMTc5"
-                                alt="icono mundo niño en alkosto"><span>Mundo Niños</span></a>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/juguetes-ninos/c/juguetes-ninos"
+                            title="Mundo Niños" type="category-item">
+                            <k-icon icon="alk-icon-mundo-nino"></k-icon>
+                            <p>Mundo Niños</p>
+                        </k-card>
                     </div>
-                    <div>
-                        <a href="/juguetes-bebes/c/juguetes-bebes"><img src="/medias/icon-bebe.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE5ODl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjkvaGQ1LzEwNDkzOTQ5ODM3MzQyLnN2Z3wwMDU0YzIwZjVkYWM4NDRlYWJiZWRiZDI1OGY2ZmNkYjcxNzhlMzM5ODQ4YWJmZWMyMDVkYTlkMTJiYjMwYWIw"
-                                alt="icono mundo bebé en alkosto"><span>Mundo Bebé</span></a>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/juguetes-bebes/c/juguetes-bebes"
+                            title="Mundo Bebé" type="category-item">
+                            <k-icon icon="alk-icon-bebe"></k-icon>
+                            <p>Mundo Bebé</p>
+                        </k-card>
                     </div>
-                    <div>
-                        <a href="/juguetes/juegos-mesa-rompecabezas/c/BI_612_ALKOS"><img src="/medias/icon-dado.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQzNTN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWEvaDhhLzEwNDkzOTUwOTUxNDU0LnN2Z3xhYWFjMjdjZDdhMGZjZjcwZTliZWIxZTY2ZTJiNmQ0MTFjMGUwN2VjMWVhMjg4NTg3YmIzODkxMGE5OTBkYmU3"
-                                alt="icono juegos de mesa en alkosto"><span>Juegos de Mesa</span></a>
+                    <div class="k-slider__slide">
+                        <k-card href="/juguetes/juegos-mesa-rompecabezas/c/BI_612_ALKOS"
+                            title="Juegos de Mesa" type="category-item">
+                            <k-icon icon="alk-icon-juegos-mesa"></k-icon>
+                            <p>Juegos de Mesa
                     </div>
-                    <div>
-                        <a href="/juguetes/deportes-exterior/c/BI_615_ALKOS"><img src="/medias/icon-patineta.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzNjF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZTMvaGYyLzEwNDkzOTUxNDc1NzQyLnN2Z3w4Y2FmM2U3NGZlNGZkMzk0YTkzYTQyOGRkZjI1ZjZlZmU0YjAyODAzNTBkMzljYzU0ODNjMmQxNWU4NzAwZGIx"
-                                alt="icono deportes y exterior en alkosto"><span>Deportes y Exterior</span></a>
+                    <div class="k-slider__slide">
+                        <k-card href="/juguetes/deportes-exterior/c/BI_615_ALKOS"
+                            title="Deportes y Exterior" type="category-item">
+                            <k-icon icon="alk-icon-triciclo"></k-icon>
+                            <p>Deportes y Exterior
                     </div>
-                </div>
+                </k-slider>
             </div>
         </div>
     </div>

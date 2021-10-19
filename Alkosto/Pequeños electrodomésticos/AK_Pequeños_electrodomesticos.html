@@ -1,103 +1,57 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
     /*OTROS ESTILOS*/
-    
-    .filtros {
-        margin: 20px 0px;
-    }
-    
-    .filtros h3 {
-        width: 100%;
-        font-size: 18px;
-        text-align: center;
-        color: #003780;
-    }
-    
-    .filtros_tipo {
-        display: flex;
-    }
-    
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 10px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-    
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-    
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-    
-    .filtros_tipo div a img {
-        width: 30px;
-    }
-    
+
+
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-        .filtros_tipo div a img {
-            width: 40px;
-        }
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
+
         .ocultar_mobile {
             display: none;
         }
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
+
     }
 </style>
+
 <div class="row">
     <div class="container">
         <div class="col-12" style="margin-bottom: 10px;">
@@ -117,144 +71,105 @@
 
 <div class="row">
     <div class="container">
-        <div class="col-xs-12 col-md-8">
+        <div class="col-xs-12 col-md-12">
             <div class="col-xs-12 col-md-12 no-padding component__banner">
                 <div class="carousel__rotativeBanner">
                     <div class="owl-carousel rotativeBanner js-adglare-carousel">
                         <div class="banner-adglare">
-                            <!-- AdGlare: AK-Cuidado Personal-Banner-Categoría-P3 -->
-                            <span id=zone243918413></span>
+                            <!-- AdGlare: AK-Cuidado-Personal-Banner-Categoría-P1 -->
+                            <span id=zone173664202></span>
                             <script>
-                                (function(r,d,u) {
+                                (function (r, d, u) {
                                     var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();       
+                                    u += '&cb=' + Date.now() + Math.random();
                                     s.src = u; var n = d.getElementsByTagName(r)[0];
                                     n.parentNode.insertBefore(s, n);
-                                })('script',document,'//engine.alkst.co/?243918413');
+                                })('script', document, '//engine.alkst.co/?173664202');
                             </script>
-                         </div>
+                        </div>
+
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Preparación-alimentos-Banner-Categoría-P1 -->
+                            <span id=zone466568155></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?466568155');
+                            </script>
+                        </div>
+
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Cuidado-Banner-Categoria-P1 -->
+                            <span id=zone217326658></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?217326658');
+                            </script>
+                        </div>
+
                         <div class="banner-adglare">
                             <!-- AdGlare: AK-Preparación-alimentos-Banner-Categoría-P2 -->
                             <span id=zone228087046></span>
                             <script>
-                                (function(r,d,u) {
+                                (function (r, d, u) {
                                     var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();       
+                                    u += '&cb=' + Date.now() + Math.random();
                                     s.src = u; var n = d.getElementsByTagName(r)[0];
                                     n.parentNode.insertBefore(s, n);
-                                })('script',document,'//engine.alkst.co/?228087046');
-                            </script>
-                        </div>
-                        <div class="banner-adglare">
-                            <!-- AdGlare: AK_Cuidado_Banner _Categoria _P2 -->
-                            <span id=zone596939302></span>
-                            <script>
-                                (function(r,d,u) {
-                                    var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();       
-                                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                                    n.parentNode.insertBefore(s, n);
-                                })('script',document,'//engine.alkst.co/?596939302');
-                            </script>
-                        </div>
-                        
-                        <div class="banner-adglare">
-                            <!-- AdGlare: AK-Preparación-alimentos-Banner-Categoría-P4 -->
-                            <span id=zone591905821></span>
-                            <script>
-                                (function(r,d,u) {
-                                    var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();       
-                                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                                    n.parentNode.insertBefore(s, n);
-                                })('script',document,'//engine.alkst.co/?591905821');
+                                })('script', document, '//engine.alkst.co/?228087046');
                             </script>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hidden-xs col-md-4">
-            <!-- AdGlare: AK Destacado Lateral Electrodomesticos -->
-            <span id=zone591462689></span>
-            <script>
-                (function(r,d,u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();       
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script',document,'//engine.alkst.co/?591462689');
-            </script>
-        </div>
     </div>
 </div>
-
-<!-- Institucionales -->
-<div class="row ocultar_mobile">
-    <div class="container">
-        <div class="col-xs-4 col-md-4">
-            <!-- AdGlare: PELECTRO_institucional1 -->
-            <span id=zone948641023></span>
-            <script>
-                (function(r,d,u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();       
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script',document,'//engine.alkst.co/?948641023');
-            </script>
-        </div>
-        <div class="col-xs-4 col-md-4">
-            <!-- AdGlare: PELECTRO_institucional2 -->
-            <span id=zone166981057></span>
-            <script>
-                (function(r,d,u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();       
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script',document,'//engine.alkst.co/?166981057');
-            </script>
-        </div>
-        <div class="col-xs-4 col-md-4">
-            <!-- AdGlare: PELECTRO_institucional3 -->
-            <span id=zone345472381></span>
-            <script>
-                (function(r,d,u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();       
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script',document,'//engine.alkst.co/?345472381');
-            </script>
-        </div>
-    </div>
-</div>
-
 
 <!--INICIO FILTROS-->
 <div class="row">
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS"><img src="/medias/Icono-Cuidado-personal.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQ3NTB8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOGUvaDU3LzEwMzgxMjgzNTU3NDA2LnN2Z3wzMzRiMTk5NTU4ZTFhYzI3NGFiMDhkOGUyYzRhNjE1YmQwNDk2ODM3MzA2ZWI5Njg5MzhlMGRjZDUwNmY4Mjdj"
-                            alt="Cuidado personal"><span>Cuidado personal</span></a>
+            <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="4" mobile-items="2" style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS"
+                        title="Cuidado personal" type="category-item">
+                        <k-icon icon="alk-icon-aseo-personal"></k-icon>
+                        <p>Cuidado personal</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/preparacion-alimentos/c/BI_0540_ALKOS"><img src="/medias/Icono-Preparacion-alimentos.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM2MDZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNmMvaDE1LzEwMzgxMjgzNzU0MDE0LnN2Z3wyZTkyNDRhMTU4YTRkOTMzODFiMzM2OWQ1Yjg4ZDc3YjEwZjNjZDFiZjI2ZTZmZTM3NzRhOWEwZTQzOWY0M2Ex"
-                            alt="Preparación de Alimentos"><span>Preparación de Alimentos</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/pequenos-electrodomesticos/preparacion-alimentos/c/BI_0540_ALKOS"
+                        title="Preparación de Alimentos" type="category-item">
+                        <k-icon icon="alk-icon-freidora"></k-icon>
+                        <p>Preparación de Alimentos</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_ALKOS"><img src="/medias/Icono-cuidados-del-hogar.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM2MzJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNzgvaDVmLzEwMzgxMjgzODg1MDg2LnN2Z3wxNTU4NDIzZDkzMjEyMTQ2NDM3YzdhNWM0YWI1YjRiMjkzYjhmYmMzODY1ZDQxNjM0ZWQ0YTI5ZjEzYzI5MWY0"
-                            alt="Cuidado del hogar "><span>Cuidado del hogar </span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_ALKOS"
+                        title="Cuidado del hogar" type="category-item">
+                        <k-icon icon="alk-icon-aspiradora"></k-icon>
+                        <p>Cuidado del hogar</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/planchas-ropa/c/BI_A17_ALKOS"><img src="/medias/Icono-Planchado-costura.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI5MTJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYWIvaGUxLzEwMzgxMjg0MTE0NDYyLnN2Z3wxMWI1NjAyMzU1YjFhYjBkN2FjMGNmNzM1ODliYjMxMmE1NjkyOWE3NGNhYmRiZWJjYWVmMzEyNGI2MGFhMWEz"
-                            alt="Planchado y costura"><span>Planchado y costura</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/planchas-ropa/c/BI_A17_ALKOS"
+                        title="Juegos de Mesa" type="category-item">
+                        <k-icon icon="alk-icon-plancha"></k-icon>
+                        <p>Planchado y costura
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>

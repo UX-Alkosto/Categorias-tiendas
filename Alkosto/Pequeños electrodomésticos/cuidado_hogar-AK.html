@@ -1,4 +1,7 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
@@ -16,79 +19,29 @@
         border-radius: 50px !important;
     }
 
-    @media screen and (max-width: 1007px) {
-
-        .component__banner {
-            display: block !important;
-        }
-    }
-
-    /*OTROS ESTILOS*/
-
-    .filtros {
-        margin: 20px 0px;
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
     }
 
     .filtros h3 {
         width: 100%;
         font-size: 18px;
         text-align: center;
-        color: #003780;
+        color: var(--primary-color2);
     }
 
-    .filtros_tipo {
-        display: flex;
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
     }
+    /*OTROS ESTILOS*/
 
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 10px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-
-    .filtros_tipo div a img {
-        width: 35px;
-    }
 
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
 
-        .filtros_tipo div {
-            width: 40%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
-
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
-
-        .filtros_tipo div a img {
-            width: 30px;
+        .ocultar_mobile {
+            display: none;
         }
 
         .filtros h3 {
@@ -96,11 +49,7 @@
             margin: 5px 0px;
         }
 
-        .ocultar_mobile {
-            display: none;
-        }
     }
-
 </style>
 
 
@@ -187,24 +136,46 @@
 <div class="row">
     <div class="container">
         <div class="col-md-12 filtros">
-            <h3>Filtrar por categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/planchas-ropa/c/BI_A17_ALKOS"><img src="/medias/plancha.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwNjN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMmIvaGVlLzEwMzYxMjI0OTg2NjU0LnN2Z3w1MTRiZDAzMmU2M2Q5MmE2OTY5Yzg4ZmRhMGZjYzgzYzI1MzYwYWRjOWExOTI1Mjg4NzBkZmQxZmFlMTliZDkz" alt="Planchas"><span>Planchas de ropa</span></a>
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2" style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/planchas-ropa/c/BI_A17_ALKOS"
+                        title="Planchas de ropa" type="category-item">
+                        <k-icon icon="alk-icon-plancha"></k-icon>
+                        <p>Planchas de ropa</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/maquinas-coser/c/BI_A18_ALKOS"><img src="/medias/maquina-coser.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3MzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYTkvaDNlLzEwMzYxMjI1NzczMDg2LnN2Z3w1Y2FiMWJkYTgxMjg1OWIwNDZkMzQ3MDYyYTMyMWY5YjZkZGZlNmRmMDViODI2YjE0OWEyYTQzMmI3MjM0NTc2" alt="Máquinas de coser"><span>Máquinas de coser</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/maquinas-coser/c/BI_A18_ALKOS"
+                        title="Máquinas de coser" type="category-item">
+                        <k-icon icon="alk-icon-chaqueta"></k-icon>
+                        <p>Máquinas de coser</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/aspiradoras-hidrolavadoras/c/BI_A16_ALKOS?q=%3Arelevance%3Atipo-producto-cuidado-pisos%3AAspiradora#"><img src="/medias/aspiradora.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI2NTl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDYvaDVkLzEwMzYxMjI2NDYxMjE0LnN2Z3wzYjk1ZDQ0ZmQzMDMyZWU0MmU0NWZhOTI4ZGQ1NTMzZDUyNzhmYjgxYzU0YjViMzdmNjUxNWU0NDM0MTAxMzBh"><span>Aspiradoras</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/aspiradoras-hidrolavadoras/c/BI_A16_ALKOS?q=%3Arelevance%3Atipo-producto-cuidado-pisos%3AAspiradora#"
+                        title="Aspiradoras" type="category-item">
+                        <k-icon icon="alk-icon-aspiradora"></k-icon>
+                        <p>Aspiradoras</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/aspiradoras-hidrolavadoras/c/BI_A16_ALKOS?q=%3Arelevance%3Atipo-producto-cuidado-pisos%3AHidrolavadora#"><img src="/backoffice/medias/hidrolavadora.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMwODl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMTkvaDA5LzEwMzYxMjI2OTg1NTAyLnN2Z3w0MTM1NjRjNzc5YjE4ZGY4MWY5MGRmMjU3YWUxYTNmNGI5NWIwNTFhN2UwMDYzYThhMzI0MGJjOGI0NDkzMzk0" alt="Hidrolavadoras"><span>Hidrolavadoras</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/aspiradoras-hidrolavadoras/c/BI_A16_ALKOS?q=%3Arelevance%3Atipo-producto-cuidado-pisos%3AHidrolavadora#"
+                        title="Hidrolavadoras" type="category-item">
+                        <k-icon icon="Aspiradoras"></k-icon>
+                        <p>Hidrolavadoras
                 </div>
-                <div>
-                    <a href="#"><img src="/backoffice/medias/combo-cuidado-hogar.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQwNTJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNzMvaGIzLzEwMzYxMjI3OTY4NTQyLnN2Z3xjZTkxMGJlZjQxYjk2ODg4MWJkZDU0NDU4ZTZmNDY0ZThjY2UyYWNkMmRjZjU2ZjliMDc5OGVkODgwOWRhYzRm" alt="Combos cuidado del hogar"><span>Combos</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="#"
+                        title="combo" type="category-item">
+                        <k-icon icon="alk-icon-combo"></k-icon>
+                        <p>Combos
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>
+
