@@ -31,6 +31,8 @@
         color: var(--primary-color2);
     }
 
+
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
@@ -38,6 +40,7 @@
     }
 
     /*OTROS ESTILOS*/
+
 
 
     @media only screen and (max-width: 576px) {
@@ -51,27 +54,46 @@
             margin: 5px 0px;
         }
     }
-.alk-icon-camioneta:before, .alk-icon-moto:before {
-    font-size: 115% !important;
+
+
+    .alk-icon-camioneta:before,
+    .alk-icon-moto:before {
+        font-size: 115% !important;
+    }
+
+    /* estilos banner superior buscador */
+    .searchHelperComponent__filterType__message span {
+
+        visibility: hidden;
+    }
+
+    .searchHelperComponent__filterType__container {
+        height: 350px;
+    }
+    @media only screen and (max-width: 1400px) {
+    .searchHelperComponent__filterType__container {
+        height: 310px;
+    }
 }
+
 </style>
 
 <div class="row">
-            <div class="container">
-                <div class="col-12" style="margin-bottom: 10px;">
-                    <!-- AdGlare: Barra_Lanzamiento_Llantas_AK -->
-                    <span id=zone172144818></span>
-                    <script>
-                        (function(r,d,u) {
-                            var s = d.createElement(r); s.async = true;
-                            u += '&cb=' + Date.now() + Math.random();       
-                            s.src = u; var n = d.getElementsByTagName(r)[0];
-                            n.parentNode.insertBefore(s, n);
-                        })('script',document,'//engine.alkst.co/?172144818');
-                    </script>
-                </div>
-            </div>
+    <div class="container">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <!-- AdGlare: Barra_Lanzamiento_Llantas_AK -->
+            <span id=zone172144818></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?172144818');
+            </script>
         </div>
+    </div>
+</div>
 <div class="row">
     <div class="container">
         <div class="col-xs-12 col-md-12">
@@ -82,60 +104,60 @@
                             <!-- AdGlare: AK-Llantas-Banner-Categoría-P1 -->
                             <span id=zone307916843></span>
                             <script>
-                                (function(r,d,u) {
+                                (function (r, d, u) {
                                     var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();       
+                                    u += '&cb=' + Date.now() + Math.random();
                                     s.src = u; var n = d.getElementsByTagName(r)[0];
                                     n.parentNode.insertBefore(s, n);
-                                })('script',document,'//engine.alkst.co/?307916843');
+                                })('script', document, '//engine.alkst.co/?307916843');
                             </script>
                         </div>
                         <div class="banner-adglare">
                             <!-- AdGlare: AK-Llantas-Banner-Categoría-P2 -->
                             <span id=zone999693204></span>
                             <script>
-                                (function(r,d,u) {
+                                (function (r, d, u) {
                                     var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();       
+                                    u += '&cb=' + Date.now() + Math.random();
                                     s.src = u; var n = d.getElementsByTagName(r)[0];
                                     n.parentNode.insertBefore(s, n);
-                                })('script',document,'//engine.alkst.co/?999693204');
+                                })('script', document, '//engine.alkst.co/?999693204');
                             </script>
                         </div>
                         <div class="banner-adglare">
                             <!-- AdGlare: AK-Llantas-Banner-Categoría-P3 -->
                             <span id=zone593701929></span>
                             <script>
-                                (function(r,d,u) {
+                                (function (r, d, u) {
                                     var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();       
+                                    u += '&cb=' + Date.now() + Math.random();
                                     s.src = u; var n = d.getElementsByTagName(r)[0];
                                     n.parentNode.insertBefore(s, n);
-                                })('script',document,'//engine.alkst.co/?593701929');
+                                })('script', document, '//engine.alkst.co/?593701929');
                             </script>
                         </div>
 
                         <div class="banner-adglare">
-                           <!-- AdGlare: AK-Llantas-Banner-Categoría-P4 -->
-                           <span id=zone438272383></span>
-                           <script>
-                            (function(r,d,u) {
-                                var s = d.createElement(r); s.async = true;
-                                u += '&cb=' + Date.now() + Math.random();       
-                                s.src = u; var n = d.getElementsByTagName(r)[0];
-                                n.parentNode.insertBefore(s, n);
-                            })('script',document,'//engine.alkst.co/?438272383');
-                        </script>
+                            <!-- AdGlare: AK-Llantas-Banner-Categoría-P4 -->
+                            <span id=zone438272383></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?438272383');
+                            </script>
+                        </div>
+
+
+
                     </div>
-
-
-
                 </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 </div>
 
 <!--INICIO FILTROS-->
@@ -143,7 +165,8 @@
     <div class="container">
         <div class="col-md-12 filtros">
             <h3>Filtrar por Categoría</h3>
-            <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="4" mobile-items="2" style="--k-icon-color: var(--primary-color1)";>
+            <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="4" mobile-items="2"
+                style="--k-icon-color: var(--primary-color1)" ;>
                 <div class="k-slider__slide">
                     <k-card href="/llantas/llantas-automovil/c/BI_174_ALKOS" title="Automóvil" type="category-item">
                         <k-icon icon="alk-icon-carro"></k-icon>
@@ -169,6 +192,6 @@
                     </k-card>
                 </div>
             </k-slider>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+</div>

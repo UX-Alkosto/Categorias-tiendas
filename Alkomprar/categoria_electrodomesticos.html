@@ -1,0 +1,520 @@
+<style type="text/css">
+    .demo-alkomprar {
+        font-style: normal !important;
+        font-weight: normal !important;
+        speak: none !important;
+        display: inline-block !important;
+        text-decoration: inherit !important;
+        width: 1em !important;
+        margin-right: .2em !important;
+        text-align: center !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        line-height: 1em !important;
+        margin-left: .2em !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 20px;
+        margin-top: 49px;
+        margin-bottom: 13px;
+        color: #cc0000;
+        position: absolute;
+    }
+
+    .demo-alkomprar:before {
+        content: "";
+    }
+
+    .h1_content
+    {display: block !important;}
+
+    .contenedor_contenido h1 {
+        font-size: 45px !important;
+        color: #cc0000 !important;
+        font-weight: bold !important;
+        margin-bottom: 32px !important;
+        margin-top: 32px !important;
+    }
+
+    .contenedor_contenido h2 {
+        font-size: 32px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido h3 {
+        font-size: 20px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido h4 {
+        font-size: 16px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido p {
+        font-size: 16px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .color_grisoscuro {
+        color: #444;
+    }
+
+    .color_grisclaro {
+        color: #959595;
+    }
+
+    .color_azul {
+        color: #003E7F;
+    }
+
+    .color_gris_fondo {
+        background: #F5F5F5;
+    }
+
+    .color_rojo {
+        color: #cc0000;
+    }
+
+
+    .contenedor_contenido .titulo_texto {
+        font-weight: 400 !important;
+        margin: 0 !important;
+        padding: 0;
+        height: 70px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        float: left;
+        font-size: 24px !important;
+    }
+
+    .contenedor_contenido .sombra {
+        box-shadow: 0px 2px 8px #0000003d;
+    }
+
+    .contenedor_contenido .card {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+
+    .contenedor_contenido .margen_interna {
+        padding: 16px;
+    }
+
+    .contenedor_contenido {
+        width: 1280px !important;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 100% !important;
+    }
+
+
+    .right {
+        float: right;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .contenedor_contenido .col-4 {
+        width: 30.5%;
+        display: inline-block;
+        padding: 0;
+        margin: 0 16px;
+    }
+
+
+
+    .cta {
+        background: #DD171B;
+        height: 56px !important;
+        text-align: center;
+        line-height: 56px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 214px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: none !important;
+    }
+
+    .cta a {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        border-radius: 4px;
+    }
+
+    .cta a:hover {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        background: #AB1114;
+        border-radius: 4px;
+    }
+
+
+    .cierre {
+        width: 100%;
+        height: 88px;
+        clear: both;
+    }
+
+    .contenedor_contenido .caja_sombra {
+        padding: 16px;
+        margin-top: 38px;
+        margin-bottom: 36px;
+        height: 100px;
+    }
+
+    .contenedor_contenido .producto {
+        position: relative;
+        margin-top: -73px;
+        text-align: right;
+        margin-right: -12px;
+    }
+
+    .contenedor_contenido .producto img {
+        width: 40%;
+    }
+
+    .contenedor_contenido .banner {
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido .banner img {
+        width: 100%;
+    }
+
+    .contenedor_contenido .col-4:hover .producto {
+        transition: all 0.3s;
+        transform: scale(1.1);
+    }
+
+    .cierre {
+        height: 88px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .color_azul img {
+        margin-left: 8px;
+    }
+
+    .contenedor_contenido .icono {
+        width: 15px;
+        position: relative;
+        top: 47px;
+        margin-left: 8px;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        .contenedor_contenido {
+            width: 95% !important;
+            margin: 0 16px;
+            padding: 0;
+        }
+
+        .contenedor_contenido .col-4 {
+            width: 46.3%;
+            display: inline-block;
+            padding: 0;
+            margin: 0 16px;
+        }
+
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+
+        .contenedor_contenido {
+            width: 95% !important;
+            margin: 0 16px;
+            padding: 0;
+        }
+
+        .contenedor_contenido .col-4 {
+            width: 45%;
+            display: inline-block;
+            padding: 0;
+            margin: 0 16px;
+        }
+
+    }
+
+
+
+
+    @media screen and (max-width: 540px) {
+
+
+        .demo-alkomprar {
+            margin-top: 35px;
+        }
+
+
+        .contenedor_contenido h1 {
+            font-size: 36px !important;
+            margin-bottom: 16px !important;
+            margin-top: 16px !important;
+        }
+
+        .contenedor_contenido {
+            margin: 0 16px;
+            width: 92% !important;
+        }
+
+        .contenedor_contenido .caja_sombra {
+            padding: 16px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            height: 90px;
+        }
+
+
+        .contenedor_contenido .par {
+            left: -230px;
+            top: -71px;
+            margin-top: 0 !important;
+        }
+
+        .contenedor_contenido .col-4 {
+            width: 100%;
+        }
+
+
+        .cierre {
+            width: 100%;
+            height: 56px;
+            clear: both;
+        }
+
+
+        .contenedor_contenido .caja_sombra {
+            padding: 16px 24px !important;
+        }
+
+        .cta {
+            width: 100% !important;
+
+        }
+
+        .contenedor_contenido .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 16px;
+        }
+
+        .cierre {
+            height: 24px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+
+        .contenedor_contenido .tit_par {
+            margin-left: 35% !important;
+        }
+
+
+        .contenedor_contenido .titulo_texto {
+            font-size: 24px !important;
+            height: 56px;
+        }
+
+        .contenedor_contenido .producto {}
+
+        .contenedor_contenido .producto img {
+            width: 40%;
+        }
+
+        .contenedor_contenido .col-4 {
+            padding: 0;
+            margin: 0;
+        }
+
+    }
+
+    @media screen and (max-width: 375px) {
+
+        .contenedor_contenido .par {
+            left: -204px;
+        }
+
+        .contenedor_contenido .producto img {
+            width: 40%;
+        }
+
+    }
+
+    @media screen and (max-width: 320px) {
+
+        .contenedor_contenido .caja_sombra {
+            padding: 16px !important;
+        }
+
+        .contenedor_contenido .tit_par {
+            margin-left: 46% !important;
+        }
+
+        .contenedor_contenido .par {
+            left: -162px;
+            top: -90px;
+            position: relative;
+        }
+
+        .contenedor_contenido .producto img {
+            width: 50%;
+        }
+
+        .contenedor_contenido .titulo_texto {
+            font-size: 18px !important;
+            height: 53px;
+        }
+
+        .contenedor_contenido .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 8px;
+        }
+
+    }
+</style>
+
+<div class="contenedor_contenido">
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto"><a
+                    href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/c/BI_0610">Refrigeraci&oacute;n</a>
+            </h2>
+
+            <div class="producto"><a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/c/BI_0610"><img
+                        alt="Refigeración"
+                        src="/medias/refrigeracion.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8OTU3OXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oMmYvaGQxLzk0MjQzMDM3ODM5NjYucG5nfDRiMDQwMDZhOWQ1MDM5YzU4MDdlNjRjNzAwNTNmYzJkN2VjZWQ1NWIzNDdkNDg1Y2RkZjQxMTkxOWE1YjkyMDY" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto"><a
+                    href="/electrodomesticos/grandes-electrodomesticos/lavado/c/BI_0600">Lavadoras y<br />Secadoras</a>
+            </h2>
+
+            <div class="producto par"><a href="/electrodomesticos/grandes-electrodomesticos/lavado/c/BI_0600"><img
+                        alt="Lavadoras y Secadoras"
+                        src="/medias/medias/lavadoras.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8MTA3Njh8aW1hZ2UvcG5nfGNvbXB1dGFkb3JlcyBBbGtvbXByYXIvaDg3L2hjMS85NDI0MzAzOTE1MDM4LnBuZ3wxNGI3NGQ5MjhiNGEwMTk1ZjA1ZTUwMzhiYTY5MTgzZGY3NDFiOTZmNWU3Njc5NjI5NzQ3ODVhM2E1ZTI3ODYw" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto"><a
+                    href="/electrodomesticos/grandes-electrodomesticos/electrodomesticos-cocina/c/BI_0580">Cocinas</a>
+            </h2>
+
+            <div class="producto"><a
+                    href="/electrodomesticos/grandes-electrodomesticos/electrodomesticos-cocina/c/BI_0580"><img
+                        alt="Cocinas"
+                        src="/medias/cocina.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8OTQyOXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oYWUvaGQ1Lzk0MjQzMDQ0MzkzMjYucG5nfDZkN2U0OTllMDE5ZDk5NDM2MmRkNjQ1NzQ3NDg3NGViNDZjOWVkMzc5ZDJkYjFiNmNmM2MxYmYxMzU2MjE4N2Y" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/electromenores-cocina/c/BI_0540">Preparaci&oacute;n
+                    de<br />Alimentos</a></h2>
+
+            <div class="producto par"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/electromenores-cocina/c/BI_0540"><img
+                        alt="Preparación de Alimentos"
+                        src="/medias/alimentos.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8MTAzMjZ8aW1hZ2UvcG5nfGNvbXB1dGFkb3JlcyBBbGtvbXByYXIvaDE5L2g4Ni85NDI0MzA0NzY3MDA2LnBuZ3xmMzlmOWJiYzVkZDYxZmNiZDQ3ODE5NzUxMjEyMDAyNzJiN2JlYTA2NjZkOGI2MmYyYTQzMTU4OTI3MTJiNGZl" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto"><a
+                    href="/electrodomesticos/grandes-electrodomesticos/climatizacion/c/BI_0590">Climatizaci&oacute;n</a>
+            </h2>
+
+            <div class="producto"><a href="/electrodomesticos/grandes-electrodomesticos/climatizacion/c/BI_0590"><img
+                        alt="Climatización"
+                        src="/medias/climatizacion.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8NDAwN3xpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oMjcvaGUwLzk0MjQzMDYwMTIxOTAucG5nfGVmMzlmYzQ1YmNjYzQ3MTMwYjAyMTM5YjM1NmY1NTgxNDBhNzJjYmQyNzUxODhkZmI4MTM5NTkzNzNjMTM3YTY" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530">Cuidado<br />Personal</a>
+            </h2>
+
+            <div class="producto par"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530"><img
+                        alt="Cuidado Personal"
+                        src="/medias/cuidado-personal.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8NjYwNXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oMTMvaDY3Lzk0MjQzMDcyNTczNzQucG5nfGI1YWE4NDFmY2U0M2FiOTE5YWVhNzhlOGRjMjc4MzVlODIxNTcxYzcwNzI5YTNkYWY1MzE0ODEyZjk5Y2NiOTI" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/limpieza-cuidado-ropa/c/BI_0560">Cuidado<br />de
+                    Hogar</a></h2>
+
+            <div class="producto"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/limpieza-cuidado-ropa/c/BI_0560"><img
+                        alt="Cuidado de hogar"
+                        src="/medias/hogar.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8Njg4N3xpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oZjkvaDVlLzk0MjQzMDczMjI5MTAucG5nfGEyMDkwZDQ4MTcyOTU5YmZmNThkMGUwYjA5ZDA4OGMzYzI2N2M1NDhhZDE3MzdjNjM0YWQ0YzE3OTRlNmY2MDQ" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/combos-electrodomesticos/combos-preparacion-alimentos/c/BI_A51">Otros<br />Electrohogar</a>
+            </h2>
+
+            <div class="producto par"><a
+                    href="/electrodomesticos/pequenos-electrodomesticos/combos-electrodomesticos/combos-preparacion-alimentos/c/BI_A51"><img
+                        alt="Otros Electrohogar"
+                        src="/medias/otros.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8MTA3Mjd8aW1hZ2UvcG5nfGNvbXB1dGFkb3JlcyBBbGtvbXByYXIvaDk1L2gxOS85NDI0MzA5NTUxMTM0LnBuZ3wyMjFmMTRiOGY4MTg0YTQ3YzJiMDE2NTlkYjQ3N2QxMmE2MmRhODk5YzlhOGJkMjY5MTE5YzFlZTdlZjkyMjhj" />
+                </a></div>
+        </div>
+    </div>
+</div>
+
+<div class="cierre"></div>

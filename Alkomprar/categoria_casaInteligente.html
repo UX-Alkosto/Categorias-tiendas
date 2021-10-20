@@ -1,0 +1,483 @@
+<style type="text/css">
+    .demo-alkomprar {
+        font-style: normal !important;
+        font-weight: normal !important;
+        speak: none !important;
+        display: inline-block !important;
+        text-decoration: inherit !important;
+        width: 1em !important;
+        margin-right: .2em !important;
+        text-align: center !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        line-height: 1em !important;
+        margin-left: .2em !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 20px;
+        margin-top: 49px;
+        margin-bottom: 13px;
+        color: #cc0000;
+        position: absolute;
+    }
+
+    .demo-alkomprar:before {
+        content: "";
+    }
+
+    .h1_content {
+        display: block !important;
+    }
+
+    .contenedor_contenido h1 {
+        font-size: 45px !important;
+        color: #cc0000 !important;
+        font-weight: bold !important;
+        margin-bottom: 32px !important;
+        margin-top: 32px !important;
+    }
+
+    .contenedor_contenido h2 {
+        font-size: 32px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido h3 {
+        font-size: 20px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido h4 {
+        font-size: 16px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido p {
+        font-size: 16px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .color_grisoscuro {
+        color: #444;
+    }
+
+    .color_grisclaro {
+        color: #959595;
+    }
+
+    .color_azul {
+        color: #003E7F;
+    }
+
+    .color_gris_fondo {
+        background: #F5F5F5;
+    }
+
+    .color_rojo {
+        color: #cc0000;
+    }
+
+
+    .contenedor_contenido .titulo_texto {
+        font-weight: 400 !important;
+        margin: 0 !important;
+        padding: 0;
+        height: 70px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        float: left;
+        font-size: 24px !important;
+    }
+
+    .contenedor_contenido .sombra {
+        box-shadow: 0px 2px 8px #0000003d;
+    }
+
+    .contenedor_contenido .card {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+
+    .contenedor_contenido .margen_interna {
+        padding: 16px;
+    }
+
+    .contenedor_contenido {
+        width: 1280px !important;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 100% !important;
+    }
+
+
+    .right {
+        float: right;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .contenedor_contenido .col-4 {
+        width: 30.5%;
+        display: inline-block;
+        padding: 0;
+        margin: 0 16px;
+    }
+
+
+
+    .cta {
+        background: #DD171B;
+        height: 56px !important;
+        text-align: center;
+        line-height: 56px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 214px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: none !important;
+    }
+
+    .cta a {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        border-radius: 4px;
+    }
+
+    .cta a:hover {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        background: #AB1114;
+        border-radius: 4px;
+    }
+
+
+    .cierre {
+        width: 100%;
+        height: 88px;
+        clear: both;
+    }
+
+    .contenedor_contenido .caja_sombra {
+        padding: 16px;
+        margin-top: 38px;
+        margin-bottom: 36px;
+        height: 100px;
+    }
+
+    .contenedor_contenido .producto {
+        position: relative;
+        margin-top: -73px;
+        text-align: right;
+        margin-right: -12px;
+    }
+
+    .contenedor_contenido .producto img {
+        width: 40%;
+    }
+
+    .contenedor_contenido .banner {
+        margin-bottom: 16px !important;
+    }
+
+    .contenedor_contenido .banner img {
+        width: 100%;
+    }
+
+    .contenedor_contenido .col-4:hover .producto {
+        transition: all 0.3s;
+        transform: scale(1.1);
+    }
+
+    .cierre {
+        height: 88px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .color_azul img {
+        margin-left: 8px;
+    }
+
+    .contenedor_contenido .icono {
+        width: 15px;
+        position: relative;
+        top: 47px;
+        margin-left: 8px;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        .contenedor_contenido {
+            width: 95% !important;
+            margin: 0 16px;
+            padding: 0;
+        }
+
+        .contenedor_contenido .col-4 {
+            width: 46.3%;
+            display: inline-block;
+            padding: 0;
+            margin: 0 16px;
+        }
+
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+
+        .contenedor_contenido {
+            width: 95% !important;
+            margin: 0 16px;
+            padding: 0;
+        }
+
+        .contenedor_contenido .col-4 {
+            width: 45%;
+            display: inline-block;
+            padding: 0;
+            margin: 0 16px;
+        }
+
+    }
+
+
+
+
+    @media screen and (max-width: 540px) {
+
+        .demo-alkomprar {
+            margin-top: 35px;
+        }
+
+        .contenedor_contenido h1 {
+            font-size: 36px !important;
+            margin-bottom: 16px !important;
+            margin-top: 16px !important;
+        }
+
+        .contenedor_contenido {
+            margin: 0 16px;
+            width: 92% !important;
+        }
+
+        .contenedor_contenido .caja_sombra {
+            padding: 16px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            height: 90px;
+        }
+
+
+        .contenedor_contenido .par {
+            left: -230px;
+            top: -71px;
+            margin-top: 0 !important;
+        }
+
+        .contenedor_contenido .col-4 {
+            width: 100%;
+        }
+
+
+        .cierre {
+            width: 100%;
+            height: 56px;
+            clear: both;
+        }
+
+
+        .contenedor_contenido .caja_sombra {
+            padding: 16px 24px !important;
+        }
+
+        .contenedor_contenido .cta {
+            width: 100% !important;
+
+        }
+
+        .contenedor_contenido .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 16px;
+        }
+
+        .contenedor_contenido .cierre {
+            height: 24px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+
+        .contenedor_contenido .tit_par {
+            margin-left: 35% !important;
+        }
+
+
+        .contenedor_contenido .titulo_texto {
+            font-size: 24px !important;
+            height: 56px;
+        }
+
+        .contenedor_contenido .producto {}
+
+        .contenedor_contenido .producto img {
+            width: 40%;
+        }
+
+        .contenedor_contenido .col-4 {
+            padding: 0;
+            margin: 0;
+        }
+
+    }
+
+    @media screen and (max-width: 375px) {
+
+        .contenedor_contenido .par {
+            left: -204px;
+        }
+
+        .contenedor_contenido .producto img {
+            width: 40%;
+        }
+
+    }
+
+    @media screen and (max-width: 320px) {
+
+        .contenedor_contenido .caja_sombra {
+            padding: 16px !important;
+        }
+
+        .contenedor_contenido .tit_par {
+            margin-left: 46% !important;
+        }
+
+        .contenedor_contenido .par {
+            left: -162px;
+            top: -90px;
+            position: relative;
+        }
+
+        .contenedor_contenido .producto img {
+            width: 50%;
+        }
+
+        .contenedor_contenido .titulo_texto {
+            font-size: 18px !important;
+            height: 53px;
+        }
+
+        .contenedor_contenido .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 8px;
+        }
+
+    }
+</style>
+
+<div class="contenedor_contenido">
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto"><a href="/casa-inteligente-domotica/redes-wifi/c/BI_142">Redes y
+                    Wifi</a></h2>
+
+            <div class="producto"><a href="/casa-inteligente-domotica/redes-wifi/c/BI_142"><img alt="Redes y Wifi"
+                        src="/medias/router.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8NjQ4MXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oYmIvaDUzLzk0MjU2MTA3MzU2NDYucG5nfDAyMjIzZTMzNjg0OWE4YzA5OWJhN2M4YzY0NmRhYWZmMzlkMDlmMDMyZWIwZWFkMDgyMjAxNjFkZDEyNGJlM2Q" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto"><a
+                    href="/casa-inteligente-domotica/iluminacion-electricidad/c/BI_138">Iluminaci&oacute;n
+                    y<br />Electricidad</a></h2>
+
+            <div class="producto par"><a href="/casa-inteligente-domotica/iluminacion-electricidad/c/BI_138"><img
+                        alt="Iluminación y Electricidad"
+                        src="/medias/medias/bombillos.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8NzE5OHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oZGQvaDk1Lzk0MjU2MTA5MzIyNTQucG5nfDQyNzJhMTEwOGZlMTQxMzJhYWJmMjJhOWM3MjIxODE2ZDEyMDU3YmU4MzQ2ZThlNGVjYjQxNzZmYjk3ZTljOTU" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto"><a
+                    href="/casa-inteligente-domotica/camaras-seguridad/c/BI_136">C&aacute;maras de<br />Seguridad</a>
+            </h2>
+
+            <div class="producto"><a href="/casa-inteligente-domotica/camaras-seguridad/c/BI_136"><img
+                        alt="Cámaras de seguridad"
+                        src="/medias/camaras.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8MTExNTB8aW1hZ2UvcG5nfGNvbXB1dGFkb3JlcyBBbGtvbXByYXIvaGU2L2gwZi85NDI1NjExMDYzMzI2LnBuZ3wzYjc2Y2FhN2RjNDgzYTIzYWVhMjk3MTdiM2RkNzY1YWVjZTlmZjM1NmI5OWJiNTkzNjYzM2Y1ZjNlYWFlYjhm" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto"><a
+                    href="/casa-inteligente-domotica/cerraduras-electronicas/c/BI_139">Cerraduras<br />Electr&oacute;nicas</a>
+            </h2>
+
+            <div class="producto par"><a href="/casa-inteligente-domotica/cerraduras-electronicas/c/BI_139"><img
+                        alt="Cerraduras Electrónicas"
+                        src="/medias/cerraduras.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8ODM3N3xpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oNWUvaDZjLzk0MjU2MTE4NDk3NTgucG5nfGEzNTdiNmY3NWYzNTAzOGFiYjQzNTU4ODMyZmJhMmJhN2RiYzhkMDFiMTFlMDM5YzQ5NzY0ZmJmNWQxN2NiMmQ" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto"><a
+                    href="/casa-inteligente-domotica/asistentes-voz/c/BI_144">Asistentes<br />de voz</a></h2>
+
+            <div class="producto"><a href="/casa-inteligente-domotica/asistentes-voz/c/BI_144"><img
+                        alt="Asistentes de voz"
+                        src="/medias/asistente.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8OTU3MHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oNzMvaDlhLzk0MjU2MTIwNDYzNjYucG5nfDU0NjNlNjdlZTZlY2QyYjMzNDg3ODU2MWZhYzJiNWU3M2M3MzEzYjFlNWM0ZDAzMTkwM2NhY2IyYmIzY2Y1NjU" />
+                </a></div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto"><a
+                    href="/casa-inteligente-domotica/sensores/c/BI_140">Sensores</a></h2>
+
+            <div class="producto par"><a href="/casa-inteligente-domotica/sensores/c/BI_140"><img alt="Sensores"
+                        src="/medias/sensor.png?context=bWFzdGVyfGNvbXB1dGFkb3JlcyBBbGtvbXByYXJ8NzQzOXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzIEFsa29tcHJhci9oYzcvaDBiLzk0MjU2MTI4MzI3OTgucG5nfGRhMWJiMTRmN2RmNWI3MjUwNzc0NTQzMzBhZDliNzZjNmFjNGQxMjM0MTk2ZDdkMTYwYzdmMTQxMjhhNjY1ZWM" />
+                </a></div>
+        </div>
+    </div>
+</div>
+
+<div class="cierre"></div>
