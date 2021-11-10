@@ -1,144 +1,57 @@
-    <style>
-        /*INICIO Estilos banner*/
-        .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
-        .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
-            top: 23px !important;
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
         }
+    }
+    /*OTROS ESTILOS*/
 
-        .owl-carousel .owl-nav .owl-prev span,
-        .owl-carousel .owl-nav .owl-next span {
-            line-height: 20px !important;
-        }
 
-        .owl-carousel .owl-nav .owl-prev,
-        .owl-carousel .owl-nav .owl-next {
-            width: 50px !important;
-            height: 50px !important;
-            border-radius: 50px !important;
-        }
+    @media only screen and (max-width: 576px) {
 
-        @media screen and (max-width: 1007px) {
-
-            .component__banner {
-                display: block !important;
-            }
-
-        }
-
-        /*FIN estilos banner*/
-        /*INICIO OTROS ESTILOS*/
-        /*.ocultar {
+        .ocultar_mobile {
             display: none;
-            }*/
+        }
 
-            .filtros {
-                margin: 20px 0px;
-            }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
 
-            .filtros h3 {
-                width: 100%;
-                font-size: 18px;
-                text-align: center;
-                color: #004797;
-            }
-
-            .filtro_videojuegos,
-            .filtro_marcas {
-                display: flex;
-
-            }
-
-            .filtro_videojuegos div {
-                width: 16.6%;
-                margin: 10px;
-                padding: 5px 0px;
-                text-align: center;
-                border-radius: 5px;
-                background-color: #ffffff;
-                box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-                -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-                -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            }
-
-            .filtro_marcas div {
-                width: 30%;
-                margin: 10px;
-                padding: 5px 0px;
-                text-align: center;
-                border-radius: 5px;
-                background-color: #ffffff;
-                box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-                -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-                -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            }
-
-            .filtro_videojuegos div a,
-            .filtro_marcas div a {
-                display: block;
-                text-decoration: none;
-            }
-
-            .filtro_videojuegos div a i,
-            .filtro_marcas div a i {
-                font-size: 25px;
-                color: #EB5B25;
-            }
-
-            .filtro_videojuegos div a span,
-            .filtro_marcas div a span {
-                display: block;
-                color: #444444;
-                padding: 4px 0px;
-                font-size: 13px;
-            }
-
-            @media only screen and (max-width: 768px) {
-
-                .filtro_videojuegos,
-                .filtro_marcas {
-                    flex-wrap: wrap;
-                }
-
-                .filtro_videojuegos div {
-                    width: 17%;
-                }
-            }
-
-            @media only screen and (max-width: 576px) {
-
-                .filtro_videojuegos,
-                .filtro_marcas {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    overflow-x: auto;
-                    -webkit-overflow-scrolling: touch;
-                    -ms-overflow-style: -ms-autohiding-scrollbar;
-                }
-
-                .filtro_videojuegos div a span,
-                .filtro_marcas div a span {
-                    padding: 4px 0px !important;
-                }
-
-                .filtro_videojuegos div,
-                .filtro_marcas div {
-                    width: 50%;
-                    padding: 5px 0px;
-                    flex: 0 0 auto;
-                    margin-bottom: 20px;
-                }
-
-                .filtros h3 {
-                    font-size: 16px;
-                    margin: 5px 0px;
-                }
-
-                .ocultar_mobile {
-                    display: none;
-                }
-            }
-
-        </style>
+    }
+</style>
 
         <div class="row">
             <div class="container">
@@ -222,13 +135,32 @@
         <div class="row">
             <div class="container">
                 <div class="col-md-12 filtros">
-                    <h3>Filtrar por marcas</h3>
-                    <div class="filtro_marcas">
-                        <div><a href="/marcas/xbox/c/xbox"><i class="icon-icon-xbox">&#xe8ac;</i><span>Juegos Xbox</span>
-                        </a></div>
-                        <div><a href="/marcas/playstation/c/playstation"><i class="icon-icon-playstation">&#xe872;</i><span>Juegos PlayStation</span></a></div>
-                        <div><a href="/marcas/nintendo/c/nintendo"><i class="icon-icon-nintendo">&#xe862;</i><span>Juegos Nintendo</span></a></div>
-                    </div>
+                    <h3>Filtrar por Categoría</h3>
+                    <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="3" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                        <div class="k-slider__slide">
+                            <k-card
+                                href="/videojuegos/consolas/consolas-xbox/c/BI_0380_ALKOS"
+                                title="Xbox" type="category-item">
+                                <k-icon icon="alk-icon-xbox"></k-icon>
+                                <p>Xbox</p>
+                            </k-card>
+                        </div>
+                        <div class="k-slider__slide">
+                            <k-card
+                                href="/videojuegos/consolas/consolas-playstation/c/BI_0370_ALKOS"
+                                title="PlayStation" type="category-item">
+                                <k-icon icon="alk-icon-playstation"></k-icon>
+                                <p>PlayStation</p>
+                            </k-card>
+                        </div>
+                        <div class="k-slider__slide">
+                            <k-card href="/videojuegos/consolas/consolas-nintendo/c/BI_0390_ALKOS"
+                                title="Controles Remotos" type="category-item">
+                                <k-icon icon="alk-icon-nintendo"></k-icon>
+                                <p>Nintendo</p>
+                            </k-card>
+                        </div>
+                    </k-slider>
                 </div>
             </div>
         </div>
