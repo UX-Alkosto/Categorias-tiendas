@@ -1,3 +1,56 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+</style>
 <style>
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
@@ -239,20 +292,36 @@
                 <h3>Filtrar por tamaño de pantalla</h3>
                 <div class="filtro_tamano">
                     <div>
-                        <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Amenos+de+32%27+pulgadas#"><img class="padding12" style="width: 25%;" src="/medias/icon-size-screen.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzOTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZmUvaDg3LzEwMzcwMjk5OTg1OTUwLnN2Z3xjYTU5M2U4MWNhYTAzMzBjMTM4NDI5ZWFiOGFjNTU3MTE1YjRlNTg1OTUxZjNjMWUxZjhiMzMzZGI3MDE3ZjJj"
-                                alt="Tamaño pantalla"><span>10" a 32"</span></a>
+                        <a
+                            href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Amenos+de+32%27+pulgadas#"
+                            title="Tamaño pantalla" type="category-item" >
+                            <k-icon icon="alk-icon-tamano-pantalla-tv" style="font-size: 1.5em;"></k-icon>
+                            <p>10" a 32"</p>
+                        </a>
                     </div>
                     <div>
-                        <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+40%27+a+49%27+pulgadas#"><img class="padding10" style="width: 30%;" src="/medias/icon-size-screen.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzOTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZmUvaDg3LzEwMzcwMjk5OTg1OTUwLnN2Z3xjYTU5M2U4MWNhYTAzMzBjMTM4NDI5ZWFiOGFjNTU3MTE1YjRlNTg1OTUxZjNjMWUxZjhiMzMzZGI3MDE3ZjJj"
-                                alt="Tamaño pantalla"><span>40" a 49"</span></a>
+                        <a
+                            href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+40%27+a+49%27+pulgadas#"
+                            title="Tamaño pantalla" type="category-item">
+                            <k-icon icon="alk-icon-tamano-pantalla-tv" style="font-size: 2em"></k-icon>
+                            <p>40" a 49"</p>
+                        </a>
                     </div>
                     <div>
-                        <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+50%27+a+59%27+pulgadas#"><img class="padding6" style="width: 35%;" src="/medias/icon-size-screen.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzOTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZmUvaDg3LzEwMzcwMjk5OTg1OTUwLnN2Z3xjYTU5M2U4MWNhYTAzMzBjMTM4NDI5ZWFiOGFjNTU3MTE1YjRlNTg1OTUxZjNjMWUxZjhiMzMzZGI3MDE3ZjJj"
-                                alt="Tamaño pantalla"><span>50" a 59"</span></a>
+                        <a
+                            href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+50%27+a+59%27+pulgadas#"
+                            title="Tamaño pantalla" type="category-item">
+                            <k-icon icon="alk-icon-tamano-pantalla-tv" style="font-size: 2.5em;" ></k-icon>
+                            <p>50" a 59</p>
+                        </a>
                     </div>
                     <div>
-                        <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+60%27+pulgadas+y+más#"><img class="padding6" style="width: 40%;" src="/medias/icon-size-screen.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzOTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZmUvaDg3LzEwMzcwMjk5OTg1OTUwLnN2Z3xjYTU5M2U4MWNhYTAzMzBjMTM4NDI5ZWFiOGFjNTU3MTE1YjRlNTg1OTUxZjNjMWUxZjhiMzMzZGI3MDE3ZjJj"
-                                alt="Tamaño pantalla"><span>60" +</span></a>
+                        <a
+                            href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+60%27+pulgadas+y+más#"
+                            title="Tamaño pantalla" type="category-item">
+                            <k-icon icon="alk-icon-tamano-pantalla-tv" style="font-size: 3em;" ></k-icon>
+                            <p>60" +</p>
+                        </a>
                     </div>
                 </div>
             </div>

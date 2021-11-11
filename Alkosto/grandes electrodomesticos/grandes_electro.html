@@ -1,120 +1,56 @@
-    <style>
-        .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
-        .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
-            top: 23px !important;
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
         }
+    }
+    /*OTROS ESTILOS*/
 
-        .owl-carousel .owl-nav .owl-prev span,
-        .owl-carousel .owl-nav .owl-next span {
-            line-height: 20px !important;
-        }
 
-        .owl-carousel .owl-nav .owl-prev,
-        .owl-carousel .owl-nav .owl-next {
-            width: 50px !important;
-            height: 50px !important;
-            border-radius: 50px !important;
-        }
+    @media only screen and (max-width: 576px) {
 
-        @media screen and (max-width: 1007px) {
-
-            .component__banner {
-                display: block !important;
-            }
-        }
-
-        /*OTROS ESTILOS*/
-
-        .filtros {
-            margin: 20px 0px;
+        .ocultar_mobile {
+            display: none;
         }
 
         .filtros h3 {
-            width: 100%;
-            font-size: 18px;
-            text-align: center;
-            color: #003780;
+            font-size: 16px;
+            margin: 5px 0px;
         }
 
-        .filtros_tipo {
-            display: flex;
-        }
-
-        .filtros_tipo div {
-            text-align: center;
-            box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            border-radius: 5px;
-            margin: 10px 10px;
-            padding: 5px 0px 5px 0px;
-            width: 25%;
-        }
-
-        .filtros_tipo a {
-            display: block;
-            color: #444444;
-            text-decoration: none;
-        }
-
-        .filtros_tipo a span {
-            display: block;
-            font-size: 13px;
-            padding: 4px 0px;
-        }
-
-        .filtros_tipo div a img {
-            width: 35px;
-        }
-        
-        @media only screen and (max-width: 820px) {
-            .filtros_tipo div {
-                width: 50%;
-                margin-right: 20px;
-            }
-        }
-
-        @media only screen and (max-width: 576px) {
-            .filtros_tipo {
-                display: flex;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                -ms-overflow-style: -ms-autohiding-scrollbar;
-            }
-
-            .filtros_tipo div {
-                width: 60%;
-                padding: 5px 0px 5px 0px;
-                flex: 0 0 auto;
-                margin-bottom: 20px;
-                margin-right: 20px;
-            }
-
-            .filtros_tipo a span {
-                padding: 4px 0px;
-            }
-
-            .filtros_tipo div a img {
-                width: 30px;
-            }
-
-            .filtros h3 {
-                font-size: 16px;
-                margin: 5px 0px;
-            }
-
-            .ocultar_mobile {
-                display: none;
-            }
-        }
-        
-        @media only screen and (max-width: 375px) {
-            .filtros_tipo div {
-                width: 70%;
-            }
-        }
-    </style>
+    }
+</style>
     <div class="row">
         <div class="container">
             <div class="col-12" style="margin-bottom: 10px;">
@@ -188,24 +124,53 @@
 <div class="row">
     <div class="container">
         <div class="col-md-12 filtros">
-            <h3>Filtrar por categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/cocina/c/BI_0580_ALKOS"><img src="/medias/icono-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQwNTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oODMvaGQzLzEwMzMzMzA3ODk1ODM4LnN2Z3xiMjEwNmQzYmRlMzY0MzhjODg1M2FhZTViMTgxMThmZWJhMTc4ZTI3OGNlOTZkM2MwODVjYTIwMGQyNGUyZjEx" alt="Cocina"><span>Cocina</span></a>
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/cocina/c/BI_0580_ALKOS"
+                        title="Cocina" type="category-item">
+                        <k-icon icon="alk-icon-cocina" style="font-size: 35px"></k-icon>
+                        <p>Cocina</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/c/BI_0610_ALKOS"><img src="/medias/icono-refrigeracion.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1Mzd8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZmEvaDdiLzEwMzMzMzEwNjE1NTgyLnN2Z3w0YWQ2ZmM4ZjRmMmQ2MDI5YzM0YTRlZmU5MzIzZTFmMGM1ZTM4YzE5MGQxM2ExY2E3N2NlNjMyOGNhNThmYjI2" alt="Refrigeración"><span>Refrigeración</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/c/BI_0610_ALKOS"
+                        title="Refrigeración" type="category-item">
+                        <k-icon icon="alk-icon-refrigeracion" style="font-size: 35px"></k-icon>
+                        <p>Refrigeración</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/lavado/c/BI_0600_ALKOS"><img src="/medias/icono-lavadoras.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIxNzF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDUvaDIwLzEwMzMzMzEwMjg3OTAyLnN2Z3wxYTU3MmMyMzBmMWE0NGY2ZTlmOGQxMDI3NjliYWM0ZDE2OTRiMTFkZjRiMDc0Nzk4MWZjMzAzN2FhNmQzMjVh" alt="Lavado y Secado"><span>Lavado y Secado</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/lavado/c/BI_0600_ALKOS"
+                        title="Lavadoras y
+                        Secadoras" type="category-item">
+                        <k-icon icon="alk-icon-lavadoras-secadoras" style="font-size: 35px"></k-icon>
+                        <p>Lavado y Secado</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/climatizacion/calentadores/c/BI_A24_ALKOS"><img src="/medias/icono-calentadores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI1NTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZWMvaDA0LzEwMzMzMzA5MDc1NDg2LnN2Z3w4YWYzMWJkNDIwODI3NjRiMzUxYjg2ZTg4NjlhNWMwNTQ5NmJjNTQ4MzczMWU3ZGFiNWM5MDg3ZDYwYWI0OTQ4" alt="Calentadores"><span>Calentadores</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/climatizacion/calentadores/c/BI_A24_ALKOS"
+                        title="Calentadores" type="category-item">
+                        <k-icon icon="alk-icon-calentador" style="font-size: 35px"></k-icon>
+                        <p>Calentadores</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/climatizacion/c/BI_0590_ALKOS"><img src="/medias/icono-climatizacion.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0OTZ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjQvaGQwLzEwMzMzMzA5NTM0MjM4LnN2Z3w4MzZlMTM5NmFhZDA2M2JjMzQxNjI4NDBkNDg3YzVmYjhkYjAwY2I2ZTM3YTU3YjYzOTYxMmJlNTEzNTM1ZTVk" alt="Climatización"><span>Climatización</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/climatizacion/c/BI_0590_ALKOS"
+                        title="Lavadoras y
+                        Secadoras" type="category-item">
+                        <k-icon icon="alk-icon-climatizacion" style="font-size: 35px"></k-icon>
+                        <p>Climatización</p>
+                    </k-card>
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>
+
+
