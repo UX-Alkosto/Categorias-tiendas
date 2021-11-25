@@ -1,4 +1,7 @@
-<style>
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
     .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
@@ -16,79 +19,29 @@
         border-radius: 50px !important;
     }
 
-    @media screen and (max-width: 1007px) {
-
-        .component__banner {
-            display: block !important;
-        }
-    }
-
-    /*OTROS ESTILOS*/
-
-    .filtros {
-        margin: 20px 0px;
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
     }
 
     .filtros h3 {
         width: 100%;
         font-size: 18px;
         text-align: center;
-        color: #003780;
+        color: var(--primary-color2);
     }
 
-    .filtros_tipo {
-        display: flex;
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
     }
+    /*OTROS ESTILOS*/
 
-    .filtros_tipo div {
-        text-align: center;
-        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-        border-radius: 5px;
-        margin: 10px 20px;
-        padding: 5px 0px 5px 0px;
-        width: 40%;
-    }
-
-    .filtros_tipo a {
-        display: block;
-        color: #444444;
-        text-decoration: none;
-    }
-
-    .filtros_tipo a span {
-        display: block;
-        font-size: 13px;
-        padding: 4px 0px;
-    }
-
-    .filtros_tipo div a img {
-        width: 25px;
-    }
 
     @media only screen and (max-width: 576px) {
-        .filtros_tipo {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
 
-        .filtros_tipo div {
-            width: 50%;
-            padding: 5px 0px 5px 0px;
-            flex: 0 0 auto;
-            margin-bottom: 20px;
-        }
-
-        .filtros_tipo a span {
-            padding: 4px 0px;
-        }
-
-        .filtros_tipo div a img {
-            width: 30px;
+        .ocultar_mobile {
+            display: none;
         }
 
         .filtros h3 {
@@ -96,9 +49,6 @@
             margin: 5px 0px;
         }
 
-        .ocultar_mobile {
-            display: none;
-        }
     }
 </style>
 
@@ -222,24 +172,48 @@
 <div class="row">
     <div class="container">
         <div class="col-md-12 filtros">
-            <h3>Filtrar por categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/neveras-nevecones/c/BI_A29"><img src="/medias/icon-nevera.svg?context=bWFzdGVyfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3N8MTQ0NXxpbWFnZS9zdmcreG1sfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3MvaDczL2g5YS85NzQ5NDUwNzg0Nzk4LnN2Z3w4ZmJjMjkzOGE5N2YyY2ViYjAxZjNhNzUyZDM3NzRmMzRhYjZlOTI3YjYzNGExODVkZmY2ZGIyNzYxMTAwMmVl" alt="Neveras"><span>Neveras</span></a>
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="true" mobile-arrows="true" desktop-items="4" mobile-items="2";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/neveras/c/BI_A29_KTRON"
+                        title="Neveras" type="category-item">
+                        <k-icon icon="alk-icon-refrigeracion"></k-icon>
+                        <p>Neveras</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/nevecones/c/BI_A32_KTRON"><img src="/medias/icon-nevecon.svg?context=bWFzdGVyfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3N8MzA4MXxpbWFnZS9zdmcreG1sfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3MvaGFlL2hhYS85NzQ5NDUwOTQ4NjM4LnN2Z3xlMGZiOTNmZGYyNzZkZmJmYzQyZmU2N2YxNGZhMzc5MjAwN2ViNjhhMTY4ODM5MzRmNTkwZDE1MzQ0NzVmYTcw" alt="Nevecones"><span>Nevecones</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/nevecones/c/BI_A32_KTRON"
+                        title="Nevecones" type="category-item">
+                        <k-icon icon="alk-icon-nevecon"></k-icon>
+                        <p>Nevecones</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/congeladores/c/BI_A30_KTRON"><img src="/medias/icon-congelador.svg?context=bWFzdGVyfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3N8Mjk2N3xpbWFnZS9zdmcreG1sfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3MvaGQ4L2hiZC85NzQ5NDUxMzc0NjIyLnN2Z3wyOGUyZTMwNDMzMDU1YmExYmU0NzNmYjYzY2ZjYmRjOGMxNTQ1Zjg5NzVjYWQ4Yzc0ZmI0NWM3MzI4Mjk5ZGIz" alt="Congeladores"><span>Congeladores</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/congeladores/c/BI_A30_KTRON"
+                        title="Congeladores" type="category-item">
+                        <k-icon icon="alk-icon-congelador"></k-icon>
+                        <p>Congeladores</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/vineras-minibares/c/BI_A31_KTRON"><img src="/medias/icon-minibar.svg?context=bWFzdGVyfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3N8MTg0NXxpbWFnZS9zdmcreG1sfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3MvaDIyL2hmZC85NzQ5NDUxNzY3ODM4LnN2Z3xhYzBiZDFkODA5MTIxYzk2MjE2NTA4YmM5MTIwMTVhNzA5ZTFhZWE3NDg2MjM2ZjQ3NmQ4ZjhjNGQ2YWQ4OTFi" alt="Minibares"><span>Minibares</span></a>
+                <div class="k-slider__slide">
+                    <k-card href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/vineras-minibares/c/BI_A31_KTRON"
+                        title="Minibares" type="category-item">
+                        <k-icon icon="alk-icon-minibar"></k-icon>
+                        <p>Minibares</p>
+                    </k-card>
                 </div>
-                <div>
-                    <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/dispensadores-agua/c/BI_A13_KTRON"><img src="/medias/icon-dispensador.svg?context=bWFzdGVyfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3N8MjY3MHxpbWFnZS9zdmcreG1sfGljb25vc19yZWZyaWdlcmFjaW9uX2ZpbHRyb3MvaDM3L2g0OC85NzQ5NDUyMDI5OTgyLnN2Z3w4OTJkYWQ0NDliZGEyZmU2ZTBiYmE5OGU5MzU0NjRlNmVlZDUyYTE1MTI3NjAxNzk2MWZmM2RkMmU5MmJmZWM0" alt="Dispensador de agua"><span>Dispensadores de agua</span></a>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/dispensadores-agua/c/BI_A13_KTRON"
+                        title="Dispensadores de agua" type="category-item">
+                        <k-icon icon="alk-icon-dispensador"></k-icon>
+                        <p>Dispensadores de agua</p>
+                    </k-card>
                 </div>
-            </div>
+            </k-slider>
         </div>
     </div>
 </div>

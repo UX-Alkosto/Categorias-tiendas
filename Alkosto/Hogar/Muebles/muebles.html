@@ -41,6 +41,7 @@
             display: block !important;
         }
     }
+
     /*OTROS ESTILOS*/
 
 
@@ -62,44 +63,49 @@
     .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
         top: 23px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev span,
     .owl-carousel .owl-nav .owl-next span {
         line-height: 20px !important;
     }
-    
+
     .owl-carousel .owl-nav .owl-prev,
     .owl-carousel .owl-nav .owl-next {
         width: 50px !important;
         height: 50px !important;
         border-radius: 50px !important;
     }
-    
+
     .carousel__rotativeBanner .banner-adglare {
         width: 100%;
     }
-    
+
     @media screen and (max-width: 1007px) {
         .component__banner {
             display: block !important;
         }
     }
+
     /*OTROS ESTILOS*/
-    .sin-padding{
+    .sin-padding {
         padding: 0;
     }
+
     .filtros {
         margin: 20px 0px;
     }
+
     .filtros h3 {
         width: 100%;
         font-size: 18px;
         text-align: center;
         color: #003780;
     }
+
     .filtros_tipo {
         display: flex;
     }
+
     .filtros_tipo div {
         text-align: center;
         box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
@@ -110,24 +116,24 @@
         padding: 5px 0px 5px 0px;
         width: 40%;
     }
-    
+
     .filtros_tipo a {
         display: block;
         color: #444444;
         text-decoration: none;
     }
-    
+
     .filtros_tipo a span {
         display: block;
         font-size: 14px;
         font-weight: bold;
         padding: 4px 0px;
     }
-    
+
     .filtros_tipo div a img {
         width: 30px;
     }
-        
+
     @media only screen and (max-width: 576px) {
         .filtros_tipo {
             display: flex;
@@ -136,277 +142,284 @@
             -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
         }
+
         .filtros_tipo div a img {
             width: 40px;
         }
+
         .filtros_tipo div {
             width: 50%;
             padding: 5px 0px 5px 0px;
             flex: 0 0 auto;
             margin-bottom: 20px;
         }
+
         .ocultar_mobile {
             display: none;
         }
+
         .filtros_tipo a span {
             padding: 4px 0px;
         }
+
         .filtros h3 {
             font-size: 16px;
             margin: 5px 0px;
         }
     }
-    
-    .centrar{
+
+    .centrar {
         display: flex;
         justify-content: center;
     }
-        .filtros {
-            margin: 20px 0px;
+
+    .filtros {
+        margin: 20px 0px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+
+    .filtro_tamano {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 25px;
+    }
+
+    .filtro_tamano div {
+        width: 23%;
+        text-align: center;
+        margin: 5px;
+        padding: 5px 0 0 0;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+    }
+
+    .filtro_tamano div a img {
+        width: 22%;
+    }
+
+    .filtro_tamano div a {
+        display: block;
+        text-decoration: none;
+        color: #444444;
+        margin: 0 auto;
+    }
+
+    .filtro_tamano div a span {
+        display: block;
+        padding: 4px 0px;
+        font-size: 12px;
+    }
+
+    @media only screen and (max-width: 769px) {
+        .filtro_tamano {
+            padding: 0px 10px 0px 0px;
         }
 
-        .filtros h3 {
-            width: 100%;
-            font-size: 18px;
-            text-align: center;
-            color: #003780;
-        }
+    }
+
+    @media only screen and (max-width: 576px) {
         .filtro_tamano {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 0 25px;
+            flex-wrap: nowrap;
+            justify-content: unset;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
         }
 
         .filtro_tamano div {
-            width: 23%;
-            text-align: center;
-            margin: 5px;
-            padding: 5px 0 0 0;
-            box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
-            border-radius: 5px;
-        }
-        .filtro_tamano div a img{
-            width: 22%;
-        }
-        .filtro_tamano div a {
-            display: block;
-            text-decoration: none;
-            color: #444444;
-            margin: 0 auto;
+            width: 50%;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+            padding: 0;
         }
 
-        .filtro_tamano div a span {
-            display: block;
-            padding: 4px 0px;
-            font-size: 12px;
-        }
-        @media only screen and (max-width: 769px) {
-            .filtro_tamano {
-                padding: 0px 10px 0px 0px;
-            }
-
+        .filtro_tamano div a img {
+            width: 30px !important;
+            padding-top: 5px;
         }
 
-        @media only screen and (max-width: 576px) {
-            .filtro_tamano {
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: unset;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                -ms-overflow-style: -ms-autohiding-scrollbar;
-            }
-            .filtro_tamano div {
-                width: 50%;
-                flex: 0 0 auto;
-                margin-bottom: 20px;
-                padding: 0;
-            }
-
-            .filtro_tamano div a img {
-                width: 30px !important;
-                padding-top: 5px;
-            }
-
-            .filtros h3 {
-                font-size: 16px;
-                margin: 5px 0px;
-            }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
         }
-        @media(min-width:1080px){
-            .filete{
-                border-right: 1px solid #444444;
-            }
+    }
+
+    @media(min-width:1080px) {
+        .filete {
+            border-right: 1px solid #444444;
         }
+    }
 </style>
-    
-    <div class="row">
-        <div class="container">
-            <div class="col-xs-12 col-md-12">
-                <div class="col-xs-12 col-md-12 no-padding component__banner">
-                    <div class="carousel__rotativeBanner">
-                        <div class="owl-carousel rotativeBanner js-adglare-carousel">
-                            <div class="banner-adglare">
-                                <!-- AdGlare: AK-Muebles-Banner-Categoría-P1 -->
-                                <span id=zone438021711></span>
-                                <script>
-                                    (function(r,d,u) {
-                                        var s = d.createElement(r); s.async = true;
-                                        u += '&cb=' + Date.now() + Math.random();       
-                                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                                        n.parentNode.insertBefore(s, n);
-                                    })('script',document,'//engine.alkst.co/?438021711');
-                                </script>
-                            </div>
-                        
-                            <div class="banner-adglare">
-                                <!-- AdGlare: AK-Muebles-Banner-Categoría-P2 -->
-                                <span id=zone224555942></span>
-                                <script>
-                                    (function(r,d,u) {
-                                        var s = d.createElement(r); s.async = true;
-                                        u += '&cb=' + Date.now() + Math.random();       
-                                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                                        n.parentNode.insertBefore(s, n);
-                                    })('script',document,'//engine.alkst.co/?224555942');
-                                </script>
-                            </div>
-                            <div class="banner-adglare">
-                                <!-- AdGlare: AK-Muebles-Banner-Categoría-P3 -->
-                                <span id=zone696095900></span>
-                                <script>
-                                    (function(r,d,u) {
-                                        var s = d.createElement(r); s.async = true;
-                                        u += '&cb=' + Date.now() + Math.random();       
-                                        s.src = u; var n = d.getElementsByTagName(r)[0];
-                                        n.parentNode.insertBefore(s, n);
-                                    })('script',document,'//engine.alkst.co/?696095900');
-                                </script>
-                            </div>
+
+<div class="row">
+    <div class="container">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <!-- AdGlare: AK-Muebles-Banner-Categoría-Barra -->
+            <span id=zone379179161></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?379179161');
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 no-padding component__banner">
+                <div class="carousel__rotativeBanner">
+                    <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Muebles-Banner-Categoría-P1 -->
+                            <span id=zone438021711></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?438021711');
+                            </script>
+                        </div>
+
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Muebles-Banner-Categoría-P2 -->
+                            <span id=zone224555942></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?224555942');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Muebles-Banner-Categoría-P3 -->
+                            <span id=zone696095900></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?696095900');
+                            </script>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--INICIO FILTROS-->
-    <div class="row">
-        <div class="container">
-            
-            <div class="col-md-12 filtros">
-                    <div class="col-xs-12 col-md-6 sin-padding">
-                        <h3>Filtrar por Categoría</h3>
-                        <div class="filtro_tamano filete">
-                            <div>
-                                <a
-                                href="/muebles/armarios/c/BI_400_ALKOS"
-                                title="Armarios" type="category-item">
-                                <k-icon icon="alk-icon-armario"></k-icon>
-                                <p>Armarios</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles/bibliotecas/c/BI_402_ALKOS"
-                                title="Bibliotecas" type="category-item">
-                                <k-icon icon="alk-icon-biblioteca"></k-icon>
-                                <p>Bibliotecas</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles/mesas/centros-entretenimiento-mesas-tv/c/BI_0700_ALKOS"
-                                title="Mesas para TV" type="category-item">
-                                <k-icon icon="alk-icon-mesa-tv"></k-icon>
-                                <p>Mesas para TV</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles/cajoneras-comodas/c/BI_409_ALKOS"
-                                title="Cajoneras" type="category-item">
-                                <k-icon icon="alk-icon-cajonera"></k-icon>
-                                <p>Cajoneras</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles/escritorios-centros-computo/c/BI_401_ALKOS"
-                                title="Escritorios" type="category-item">
-                                <k-icon icon="alk-icon-escritorio"></k-icon>
-                                <p>Escritorios</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles/muebles-cocina/c/BI_404_ALKOS"
-                                title="Muebles de Cocina" type="category-item">
-                                <k-icon icon="alk-icon-mueble-cocina"></k-icon>
-                                <p>Muebles de Cocina</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles/repisas/c/BI_403_ALKOS"
-                                title="Repisas" type="category-item">
-                                <k-icon icon="alk-icon-repisa"></k-icon>
-                                <p>Repisas</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles/mesas/c/BI_406_ALKOS"
-                                title="Mesas" type="category-item">
-                                <k-icon icon="alk-icon-mesa"></k-icon>
-                                <p>Mesas</p>
-                                 </a>
-                            </div>
-                        </div>
+</div>
+<!--INICIO FILTROS-->
+<div class="row">
+    <div class="container">
+
+        <div class="col-md-12 filtros">
+            <div class="col-xs-12 col-md-6 sin-padding">
+                <h3>Filtrar por Categoría</h3>
+                <div class="filtro_tamano filete">
+                    <div>
+                        <a href="/muebles/armarios/c/BI_400_ALKOS" title="Armarios" type="category-item">
+                            <k-icon icon="alk-icon-armario"></k-icon>
+                            <p>Armarios</p>
+                        </a>
                     </div>
-                    <div class="col-xs-12 col-md-6 sin-padding">
-                        <h3>Filtrar por Ambiente</h3>
-                        <div class="filtro_tamano">
-                            <div>
-                                <a
-                                href="/ambientes/muebles-alcoba/c/muebles-alcoba"
-                                title="Habitación" type="category-item">
-                                <k-icon icon="alk-icon-habitacion"></k-icon>
-                                <p>Habitación</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/ambientes/muebles-sala/c/muebles-sala"
-                                title="Sala" type="category-item">
-                                <k-icon icon="alk-icon-sala"></k-icon>
-                                <p>Sala</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/muebles-estudio/c/muebles-estudio"
-                                title="Estudio" type="category-item">
-                                <k-icon icon="alk-icon-estudio"></k-icon>
-                                <p>Estudio</p>
-                                 </a>
-                            </div>
-                            <div>
-                                <a
-                                href="/ambientes/exterior/c/exterior"
-                                title="Exterior" type="category-item">
-                                <k-icon icon="alk-icon-exterior"></k-icon>
-                                <p>Exterior</p>
-                                 </a>
-                            </div>
-                            <!--div>
+                    <div>
+                        <a href="/muebles/bibliotecas/c/BI_402_ALKOS" title="Bibliotecas" type="category-item">
+                            <k-icon icon="alk-icon-biblioteca"></k-icon>
+                            <p>Bibliotecas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/muebles/mesas/centros-entretenimiento-mesas-tv/c/BI_0700_ALKOS" title="Mesas para TV"
+                            type="category-item">
+                            <k-icon icon="alk-icon-mesa-tv"></k-icon>
+                            <p>Mesas para TV</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/muebles/cajoneras-comodas/c/BI_409_ALKOS" title="Cajoneras" type="category-item">
+                            <k-icon icon="alk-icon-cajonera"></k-icon>
+                            <p>Cajoneras</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/muebles/escritorios-centros-computo/c/BI_401_ALKOS" title="Escritorios"
+                            type="category-item">
+                            <k-icon icon="alk-icon-escritorio"></k-icon>
+                            <p>Escritorios</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/muebles/muebles-cocina/c/BI_404_ALKOS" title="Muebles de Cocina" type="category-item">
+                            <k-icon icon="alk-icon-mueble-cocina"></k-icon>
+                            <p>Muebles de Cocina</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/muebles/repisas/c/BI_403_ALKOS" title="Repisas" type="category-item">
+                            <k-icon icon="alk-icon-repisa"></k-icon>
+                            <p>Repisas</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/muebles/mesas/c/BI_406_ALKOS" title="Mesas" type="category-item">
+                            <k-icon icon="alk-icon-mesa"></k-icon>
+                            <p>Mesas</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 sin-padding">
+                <h3>Filtrar por Ambiente</h3>
+                <div class="filtro_tamano">
+                    <div>
+                        <a href="/ambientes/muebles-alcoba/c/muebles-alcoba" title="Habitación" type="category-item">
+                            <k-icon icon="alk-icon-habitacion"></k-icon>
+                            <p>Habitación</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/ambientes/muebles-sala/c/muebles-sala" title="Sala" type="category-item">
+                            <k-icon icon="alk-icon-sala"></k-icon>
+                            <p>Sala</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/muebles-estudio/c/muebles-estudio" title="Estudio" type="category-item">
+                            <k-icon icon="alk-icon-estudio"></k-icon>
+                            <p>Estudio</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/ambientes/exterior/c/exterior" title="Exterior" type="category-item">
+                            <k-icon icon="alk-icon-exterior"></k-icon>
+                            <p>Exterior</p>
+                        </a>
+                    </div>
+                    <!--div>
                                 <a href="/ambientes/muebles-cocina/c/muebles-cocina"><img src="/medias/icono-aux-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMzMDR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNGIvaGViLzEwMzUzNzQwNzA5OTE4LnN2Z3xkOGM4YmJmMWQ5NjFlZWYyYWRhMzE1NmQ2MDdhMjgzODIxMzEyODRkYjc3OGJiOTM1MzczZTk0NWZjMDAwNjNi"
                                 alt="icono mesas en alkosto"><span>Muebles de Cocina</span></a>
                             </div-->
-                        </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
