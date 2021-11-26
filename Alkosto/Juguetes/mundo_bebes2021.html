@@ -1,0 +1,523 @@
+    <style type="text/css">
+        *, *:after, *:before{
+            box-sizing: border-box; 
+        }
+        h1 {
+            margin-bottom: 1em !important;
+        }
+        .row{
+            margin: 0 auto;
+        }
+        .body-gen{
+            font-family: Arial, Helvetica, sans-serif;
+            color: #444444;
+        }
+        .body-gen img{
+            width: 100%;
+            display: block;
+        }
+        .body-gen p{
+            font-size: 14px;
+            margin: 1.3rem 0;
+            color: #444444;
+        }
+        .body-gen h1{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .body-gen h2{
+            font-size: 18px;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+        .navegacion-juguetes{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 2rem 0;   
+        }
+        .boton-categorias{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 75%;
+            margin: 2rem;
+            position: relative;
+            border-radius: .6rem;
+            box-shadow: 0px 3px 6px #00000026;
+        }
+        .imagen-boton{
+            transition: .3s ease-in-out;
+        }
+        .boton-categorias:hover{
+            text-decoration: none;
+        }
+        .boton-categorias:hover > .imagen-boton{
+            transform: scale(1.1);
+        }
+        .boton-categorias h2{
+            
+            margin: 0;
+        }
+        .boton-categorias p{
+            font-size: 1.2rem;
+            margin: .3rem 0;
+        }
+        .imagen-boton{
+            position: absolute;
+            width: 30%;
+            bottom: 5%;
+        }
+        .ima-b-uno{
+            right: -10%;
+        }
+        .ima-b-dos{
+            left: -10%;
+        }
+        .texto-boton-uno h2, .texto-boton-dos h2{
+            font-weight: 600;
+            color: #444444;
+        }
+        .flecha-boton{
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 2.2rem !important;
+            color: #EB5B25 !important;
+        }
+        .texto-boton-uno{
+            grid-column: 1 / 4;
+            text-align: left;
+            padding: 1.5rem 0 1.5rem 1.5rem;
+        }
+        .texto-boton-dos{
+            grid-column: 2 / 5;
+            text-align: right;
+            padding: 1.5rem 1.5rem 1.5rem 0;
+        }
+        @media(min-width: 568px){
+            .boton-categorias{
+                flex-basis: 40%;
+            }
+            .boton-categorias p{
+                font-size: 1.3rem;
+            }
+            .ima-b-uno{
+                right: -8%;
+            }
+            .ima-b-dos{
+                left: unset;
+                right: -8%;
+            }
+            .texto-boton-uno{
+                grid-column: 1 / 4;
+                text-align: left;
+            }
+            .texto-boton-dos{
+                grid-column: 1 / 4;
+                text-align: left;
+                padding: 1.5rem 0 1.5rem 1.5rem;
+            }
+        }  
+        @media(min-width: 1024px){
+            .navegacion-juguetes{
+                padding: 2rem 0;
+            }
+            .boton-categorias{
+                flex-basis: 25%;
+            }
+        }
+
+        /*estilos carrusel marcas*/
+        .marcas-juguetes {
+            margin-bottom: 6.5rem;
+            width: 85%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .marcas-juguetes img{
+            width: 100%;
+            display: block;
+        }
+        .marcas-juguetes .contenedor-marcas-juguetes {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .marcas-juguetes .contenedor-marcas-juguetes .flecha-izquierda,
+        .marcas-juguetes .contenedor-marcas-juguetes .flecha-derecha {
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            top: calc(50% - 15%);
+            border: #fff;
+            border-radius: 50%;
+            background-color: #fff;
+            outline: none;
+            cursor: pointer;
+            padding: 0 !important;
+            box-shadow: 0px 0px 18px -6px rgba(0,0,0,0.75);
+        }
+        @media(min-width: 1025px){
+            .marcas-juguetes {
+                width: 90%;
+                padding: 2rem 0;
+            }
+            .marcas-juguetes .contenedor-marcas-juguetes .flecha-izquierda,
+            .marcas-juguetes .contenedor-marcas-juguetes .flecha-derecha {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        .marcas-juguetes .contenedor-marcas-juguetes .flecha-izquierda {
+            left: -5%;
+        }
+        .marcas-juguetes .contenedor-marcas-juguetes .flecha-derecha {
+            right: -5%;
+        }
+        .marcas-juguetes .cont-carrusel-juguetes {
+            width: 100%;
+            padding: 1.6rem 0;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+        .marcas-juguetes .cont-carrusel-juguetes .carrusel-juguetes {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .marcas-juguetes .cont-carrusel-juguetes .carrusel-juguetes .marquita {
+            min-width: 16.66%;
+            transition: .3s ease all;
+        }
+        .marcas-juguetes .cont-carrusel-juguetes .carrusel-juguetes .marquita.hover {
+            transform: scale(1.2);
+            transform-origin: center;
+        }
+        .marcas-juguetes .cont-carrusel-juguetes .carrusel-juguetes .marquita img {
+            width: 100%;
+            vertical-align: top;
+        }
+        @media(max-width: 580px){
+            .marcas-juguetes .cont-carrusel-juguetes {
+                overflow-y: hidden;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+            }
+            .marcas-juguetes .cont-carrusel-juguetes .carrusel-juguetes .marquita {
+                min-width: 40%;
+            }
+            .flecha-izquierda, .flecha-derecha{
+                visibility: hidden;
+            }            
+        }
+        .marquita{
+            background-color: white;
+        }
+        /*concoce mas*/
+        .conoce-mas{
+            background-color: #f5f5f5;
+            padding: 2rem 0;
+        }
+        .contenido-conoce{
+            padding: 0;
+            
+        }
+        .contenido-conoce h2, .contenido-conoce p{
+            color: #444444;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .contenido-conoce h2{
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .contenido-conoce p{
+            font-size: 14px;
+            margin: 3rem 0;
+        }
+        .botones-juguetes{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .boton-j{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            padding: 10px 0;
+            border: 1px solid #EB5B25;
+            border-radius: 4px;
+            opacity: 1;
+            margin: 5px;
+            text-align: center;
+            color: #EB5B25 !important;
+            letter-spacing: 0;
+            font-size: 16px;
+        }
+        .boton-j:hover{
+            background-color: #EB5B25;
+            color: #ffffff !important;
+            text-decoration: none;
+            transition: .3s ease-in-out;
+        }
+        .espacios{
+            margin: 1rem 0;
+            padding: 0;
+        }
+        .conoce-banner{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        @media(min-width: 1025px){
+            .conoce-mas{
+                padding: 4rem 0;
+            }
+            .fila-interna{
+                margin: 3rem 5rem;
+            }
+            .contenedor-marcas{
+                margin: 6rem 0;
+            }
+            .contenido-conoce p{
+                font-size: 1.5rem;
+            }
+            .contenido-conoce h2{
+                font-size: 2rem;
+                text-align: left;
+            }
+            .espacios{
+                margin: 3rem 0;
+                padding: 0 15px;
+            }
+        }
+        .ver-juguetes{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .ver-juguetes > div a h2{
+            color: #444444;
+            margin: 0 0 20px 0;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .ver-juguetes > div a:hover{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 580px){
+            .boton-categorias p {
+                display: none;
+            }
+            .boton-categorias {
+                flex-basis: 42.5%;
+                margin: 2rem 3%;
+                min-height: 76px;
+            }
+            .ima-b-dos {
+                right: -8%;
+                left: inherit;
+            }
+            .texto-boton-dos {
+                grid-column: 1 / 4;
+                text-align: left;
+                padding: 1.5rem 0 1.5rem 1.5rem;
+            }
+            .navegacion-juguetes h2 {
+                text-align: inherit !important;
+            }
+            .body-gen h2{
+                text-align: center;
+            }
+        }
+    </style>
+<div class="body-gen">
+    <div class="container">
+        <div>
+            <h1>Juguetes Bebés</h1>
+        </div>
+        <div class="row">
+            <div class="navegacion-juguetes">
+                <a class="boton-categorias" href="/juguetes/aprendizaje-desarrollo-bebes/c/BI_613_ALKOS">
+                    <div class="texto-boton-uno">
+                        <h2>Aprendizaje <span class="flecha-boton">›</span></h2>
+                        <p>Luces, sonidos y texturas que estimulan sus sentidos.</p>
+                    </div>
+                    
+                    <div class="imagen-boton ima-b-uno">
+                        <img src="/medias/aprendizaje.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzNTY1fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDU4L2gyNy8xMDM5MzQwMTY4ODA5NC5zdmd8ODgyZTkzOGY5MTJkZWRmZDRjMTc0Yzg5ZWFiYWZlM2E2MzZiNTQzYjM3NjY2N2E4N2E1YjQzMjdhY2YwNDFlMg" alt="aprendizaje en alkosto">
+                    </div>
+                </a>
+                
+                <a class="boton-categorias" href="/juguetes/gimnasios-caminadores-bebes/c/BI_614_ALKOS">
+                    <div class="texto-boton-dos">
+                        <h2>Gimnasios <span class="flecha-boton">›</span></h2>
+                        <p>Caminadores y gimnasios para su buen desarrollo.</p>
+                    </div>
+                    
+                    <div class="imagen-boton ima-b-dos">
+                        <img src="/medias/gimnasios.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2NDY2fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGUzL2g4MC8xMDM5MzQwMTg4NDcwMi5zdmd8NDYwOTVmNGQ3MDQxNjRlZDEyNTQxNmU1NjY0NGM2NzVhY2JjY2U5NjNjZmFhMGU2NTI4OTViMWU4MDBiNzhjMQ" alt="gimnasios para bebe en alkosto">
+                    </div>
+                </a>
+            </div><!--cierra navegacion-juguetes-->
+        </div>  
+        <div>
+        <div>
+            <h2>Nuestras Marcas</h2>
+        </div> 
+        <div class="marcas-juguetes">        
+            <div class="contenedor-marcas-juguetes">
+                <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+                    <img src="/medias/flecha-izquierda.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU0NXxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2hiZi9oYWMvMTAzODI5OTA1NzM1OTguc3ZnfGI1ZmZkNmY5OTMxMzhkMzk2YWE1ODQwNzQ3N2NjMTlkMWRhZWEzOWQ2YTM4OTc0ZWIwZDE3Zjk1NzllZTVkZmE" alt="flecha izquierda">
+                </button>
+
+                <div class="cont-carrusel-juguetes">
+                    <div class="carrusel-juguetes">
+                        <div class="marquita">
+                            <a href="/marcas/fisher-price/c/fisher-price">
+                                <img src="/medias/fisherprice.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU3MDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWUvaGFjLzEwMzkzNDM1ODMyMzUwLnN2Z3w0Mzg3NDUyYTgxODBmZDYwNTg4MjllNzg3ZmMyYjdjN2U4OGRjZmJiZGViOTUyN2RmNTkwZmMxYzZjZTg5M2Fi" alt="logo fisher price">
+                            </a>
+                        </div>
+                        <div class="marquita">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3AWINFUN">
+                                <img src="/medias/winfun.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE0MTM4fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDgxL2hlNi8xMDM5MzQzNjQyMjE3NC5zdmd8ZjMwOGQyNThhZDNmMGM1ZWRmNWEyMGExOWIzZDE0NjIzYzgxMDI4MDMzODc4MjUxMjhlYmQ0NmVlNjg4ZjlkNA" alt="logo winfun">
+                            </a>
+                        </div>
+                        <div class="marquita">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3APLAY">
+                               <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/img-sap/logos/play.svg" alt="logo Play">
+                            </a>
+                        </div>
+                        <div class="marquita">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3AINFUNBEBE">
+                               <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/img-sap/logos/infunbebe.svg" alt="logo infunbebe">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <button role="button" id="flecha-derecha" class="flecha-derecha">
+                    <img src="/medias/flecha-derecha.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU0NHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2hlZi9oMDkvMTAzODI5OTA5MDEyNzguc3ZnfGFlY2UyYjhmNWU2NjdjNzI4OGI3MWYxZDMwOTUxMjA3ODdmYjYyOWZmYmRlNzdlMTY3NTg2N2MwNjdmMjRiZTk" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+        <script>
+            const fila = document.querySelector('.cont-carrusel-juguetes');
+            const marquitas = document.querySelectorAll('.marquita');
+            
+            const flechaIzquierda = document.getElementById('flecha-izquierda');
+            const flechaDerecha = document.getElementById('flecha-derecha');
+            
+            // ? -----Event Listener para la flecha derecha-----
+            flechaDerecha.addEventListener('click', () => {
+                fila.scrollLeft += fila.offsetWidth;
+            
+                const indicadorActivo = document.querySelector('.activo');
+                if(indicadorActivo.nextSibling){
+                    indicadorActivo.nextSibling.classList.add('activo');
+                    indicadorActivo.classList.remove('activo');
+                }
+            });
+            
+            // ? -----Event Listener para la flecha izquierda-----
+            flechaIzquierda.addEventListener('click', () => {
+                fila.scrollLeft -= fila.offsetWidth;
+            
+                const indicadorActivo = document.querySelector('.activo');
+                if(indicadorActivo.previousSibling){
+                    indicadorActivo.previousSibling.classList.add('activo');
+                    indicadorActivo.classList.remove('activo');
+                }
+            });
+            
+            // ? -----Hover marcas-----
+            marquitas.forEach((marquita) => {
+                marquita.addEventListener('mouseenter', (e) => {
+                    const elemento = e.currentTarget;
+                    setTimeout(() => {
+                        marquitas.forEach(marquita => marquita.classList.remove('hover'));
+                        elemento.classList.add('hover');
+                    }, 300);
+                });
+            });
+            
+            fila.addEventListener('mouseleave', () => {
+                marquitas.forEach(marquita => marquita.classList.remove('hover'));
+            });
+        </script>
+        <div class="row">
+            <div>
+                <h2>Promociones Destacadas</h2>
+            </div>
+            <div class="container">
+                <div class="col-xs-12 col-md-4 espacios">
+                    <!-- AdGlare: AK-Mundo-bebe-destacado-categoria1 -->
+                    <span id=zone194662472></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?194662472');
+                    </script>
+                </div>
+                <div class="col-xs-12 col-md-4 espacios">
+                    <!-- AdGlare: AK-Mundo-bebe-destacado-categoria2 -->
+                    <span id=zone482535445></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?482535445');
+                    </script>
+                </div>
+                <div class="col-xs-12 col-md-4 espacios">
+                    <!-- AdGlare: AK-Mundo-bebe-destacado-categoria3 -->
+                    <span id=zone344401378></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?344401378');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div><!--cierra container-->
+
+    <!--seccion carrusel de productos componente hybris-->
+
+    <div class="row conoce-mas">
+        <div class="container">
+            <div class="conoce-banner">
+                <div class="col-xs-12 col-sm-6 contenido-conoce">
+                    <h2>Conoce más del mundo Juguetes para bebés</h2>
+                    <p>¡La diversión en un solo lugar! Encuentra los mejores juguetes para divertirte en familia y desarrollar tus habilidades, todo en un solo sitio al mejor precio.</p>
+                    <div class="col-12 botones-juguetes">
+                        <a href="juguetes/juegos-mesa-rompecabezas/c/BI_612_ALKOS" class="col-md-3 col-xs-12 boton-j" role="button">Juegos de mesa</a>                       
+                        <a href="juguetes-ninas/c/juguetes-ninas" class="col-md-3 col-xs-12 boton-j" role="button">Juguetes niña</a>
+                        <a href="juguetes-ninos/c/juguetes-ninos" class="col-md-3 col-xs-12 boton-j" role="button">Juguetes niño</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <!-- AdGlare: AK-Mundo-Bebe-conoce-mas -->
+                    <span id=zone943944253></span>
+                    <script>
+                        (function(r,d,u) {
+                            var s = d.createElement(r); s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();       
+                            s.src = u; var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script',document,'//engine.alkst.co/?943944253');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div><!--cierra conoce-mas-->
+    
+</div><!--cierra body-gen-->
