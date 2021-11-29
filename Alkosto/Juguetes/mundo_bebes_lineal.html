@@ -1,0 +1,341 @@
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+    .container.row {
+        align-items: center;
+        display: flex;
+        margin: 0 auto;
+    }
+    h3.contain {
+        font-size: 16px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+    span.flecha-boton {
+        color: var(--primary-color1);
+    }
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+        width: 48px;
+        height: 48px;
+        border-radius: 24px !important;
+    }
+    a.boton-categorias {
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px #00000026;
+        color: var(--text-color);
+        display: flex;
+        padding: 1em;
+        position: relative; 
+        min-height: 138px;       
+    }
+    a.boton-categorias h2 {
+        font-size: 18px !important;
+        margin-bottom: 0.5em !important;
+    }
+    a.boton-categorias img {
+        position: absolute;
+        right: -14px;
+        max-width: 85px;
+    }
+    a.boton-categorias p {
+        width: 70%;
+    }
+    .carrusel--tips,.carrusel--tips2{
+        margin-bottom:1em;
+        margin-top: 2em;
+    }
+    .carrusel--tips .owl-stage,.carrusel--tips2 .owl-stage {
+        display: flex;
+        position: relative;     
+    }
+    .carrusel--tips button.owl-dot,.carrusel--tips2 button.owl-dot {
+        width: 12px;
+        height: 12px;
+        border: none;
+        margin: 0.25em;
+        border-radius: 48px;
+        background-color: var(--text-color-disabled);
+    }
+    .carrusel--tips button.owl-dot.active, .carrusel--tips2 button.owl-dot.active {
+        background-color: var(--primary-color2);
+    }
+    .carrusel--tips .owl-item.active, .carrusel--tips2 .owl-item.active {
+        opacity: 1;
+    }
+    .carrusel--tips .owl-item, .carrusel--tips2 .owl-item {
+        opacity: 0;
+        transition: .3s ease all
+    }
+    .carrusel--tips .owl-dots, .carrusel--tips2 .owl-dots{
+        display: none;
+        text-align: center;
+        margin-top: 2em;
+    }
+    .carrusel--tips .owl-nav, .carrusel--tips2 .owl-nav {
+        position: relative;
+        bottom: 82px;
+    }
+    .carrusel--tips .owl-nav button, .carrusel--tips2 .owl-nav button {
+        display: none;
+        background-color: white;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 34px;
+        color: var(--primary-color1);
+        font-size: 26px;
+        box-shadow: 1px 1px 12px rgb(68 68 68 / 20%);
+    }
+    .carrusel--tips .owl-nav button span, .carrusel--tips2 .owl-nav button span {
+        position: relative;
+        top: -3px;
+    }
+    .carrusel--tips button.owl-prev, .carrusel--tips2 button.owl-prev {
+        position: absolute;
+        left: -1.5em;
+    }
+    .carrusel--tips button.owl-next, .carrusel--tips2 button.owl-next{
+        position: absolute;
+        right: -1.5em;
+    }
+    .carrusel--tips2 .owl-nav,.carrusel--tips2 .owl-dots{
+        display: none !important;
+    }
+   
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+    .showin{
+        display: none;
+    }
+    .bord {
+        border-right: 1px solid var(--alert-border-color-success);
+        padding: 0 2em;
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+        .container.row {
+            display: block;
+        }
+        .showin{
+            display: block;
+        }
+        .showoff{
+            display: none;
+        }
+        .bord {
+            border-right: none;
+            padding: inherit;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+        .carrusel--tips2 .owl-nav,.carrusel--tips2 .owl-dots{
+        display: block !important;
+        }
+        .carrusel--tips button.owl-prev, .carrusel--tips2 button.owl-prev {
+            left: -0.5em;
+        }
+        .carrusel--tips button.owl-next, .carrusel--tips2 button.owl-next{
+            right: -0.5em;
+        }
+        a.boton-categorias{
+            padding:2em;
+        }
+        a.boton-categorias img {
+            right: 28px;
+        }
+        .carrusel--tips .owl-dots{
+            display: none;
+        }
+        .carrusel--tips .owl-nav button, .carrusel--tips2 .owl-nav button {
+            display: block;
+        }
+
+    }
+</style>
+
+<div class="row">
+    <div class="container">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <!-- AdGlare: AK_BARRA_MUNDO_JUGUETES -->
+            <span id=zone705643954></span>
+            <script>
+                (function(r,d,u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();       
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script',document,'//engine.alkst.co/?705643954');
+            </script>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 no-padding component__banner">
+                <div class="carousel__rotativeBanner">
+                    <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Mundo-bebe-destacado-categoria1 -->
+                            <span id=zone194662472></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?194662472');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Mundo-bebe-destacado-categoria2 -->
+                            <span id=zone482535445></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?482535445');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Mundo-bebe-destacado-categoria3 -->
+                            <span id=zone344401378></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?344401378');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container row">
+    <div class="col-md-6">
+        <h3 class="contain">Filtrar por Categoría</h3>
+    </div>
+    <div class="col-md-6">
+        <h3 class="contain showoff">Nuestras Marcas</h3>
+    </div>
+</div>
+<div class="container row">
+    <!--INICIO FILTROS-->
+    <div class="col-md-6 bord">
+        <div class="carrusel--tips">
+                <a class="boton-categorias" href="/juguetes/aprendizaje-desarrollo-bebes/c/BI_613_ALKOS">
+                    <div class="texto-boton">
+                        <h2>Aprendizaje <span class="flecha-boton">›</span></h2>
+                        <p>Luces, sonidos y texturas que estimulan sus sentidos.</p>
+                    </div>
+                    
+                    <div class="imagen-boton">
+                        <img src="/medias/aprendizaje.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzNTY1fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDU4L2gyNy8xMDM5MzQwMTY4ODA5NC5zdmd8ODgyZTkzOGY5MTJkZWRmZDRjMTc0Yzg5ZWFiYWZlM2E2MzZiNTQzYjM3NjY2N2E4N2E1YjQzMjdhY2YwNDFlMg" alt="aprendizaje en alkosto">
+                    </div>
+                </a>
+                <a class="boton-categorias" href="/juguetes/gimnasios-caminadores-bebes/c/BI_614_ALKOS">
+                    <div class="texto-boton">
+                        <h2>Gimnasios <span class="flecha-boton">›</span></h2>
+                        <p>Caminadores y gimnasios para su buen desarrollo.</p>
+                    </div>
+                    
+                    <div class="imagen-boton">
+                        <img src="/medias/gimnasios.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2NDY2fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGUzL2g4MC8xMDM5MzQwMTg4NDcwMi5zdmd8NDYwOTVmNGQ3MDQxNjRlZDEyNTQxNmU1NjY0NGM2NzVhY2JjY2U5NjNjZmFhMGU2NTI4OTViMWU4MDBiNzhjMQ" alt="gimnasios para bebe en alkosto">
+                    </div>
+                </a>                
+        </div>
+    </div>
+    <!-- MARCAS -->
+    <div class="col-md-6">
+        <h3 class="contain showin">Nuestras Marcas</h3>
+        <div class="carrusel--tips2">
+                   <a href="/marcas/fisher-price/c/fisher-price">
+                                <img src="/medias/fisherprice.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU3MDl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWUvaGFjLzEwMzkzNDM1ODMyMzUwLnN2Z3w0Mzg3NDUyYTgxODBmZDYwNTg4MjllNzg3ZmMyYjdjN2U4OGRjZmJiZGViOTUyN2RmNTkwZmMxYzZjZTg5M2Fi" alt="logo fisher price">
+                            </a>
+               
+               
+                    <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3AWINFUN">
+                                <img src="/medias/winfun.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE0MTM4fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDgxL2hlNi8xMDM5MzQzNjQyMjE3NC5zdmd8ZjMwOGQyNThhZDNmMGM1ZWRmNWEyMGExOWIzZDE0NjIzYzgxMDI4MDMzODc4MjUxMjhlYmQ0NmVlNjg4ZjlkNA" alt="logo winfun">
+                            </a>
+              
+              
+                     <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3APLAY">
+                               <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/img-sap/logos/play.svg" alt="logo Play">
+                            </a>
+                
+             
+                    <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3AINFUNBEBE">
+                               <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/img-sap/logos/infunbebe.svg" alt="logo infunbebe">
+                            </a>     
+        </div>
+    </div>
+</div>
+
+<script>
+    //Jquery
+     window.onload = function() {
+
+        var owl = $('.carrusel--tips');
+          owl.owlCarousel({
+            margin: 24,
+            loop: false,
+            touchDrag: false,
+            responsive: {
+              0: {
+                items: 1
+              },
+              600: {
+                items: 2
+              },
+              1000: {
+                mouseDrag: false,                
+                items: 2
+              }
+            }
+          })
+          var owl2 = $('.carrusel--tips2');
+          owl2.owlCarousel({
+            
+            loop: false,            
+            responsive: {
+              0: {
+                margin: 10,
+                items: 2
+              },
+              600: {
+                margin: 24,
+                items: 3
+              },
+              1000: {
+                margin: 32,
+                mouseDrag: false,
+                items: 4
+              }
+            }
+          })
+    }
+</script>
