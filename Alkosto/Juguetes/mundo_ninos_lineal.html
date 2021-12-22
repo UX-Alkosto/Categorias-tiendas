@@ -1,0 +1,399 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+    h3.container {
+        font-size: 16px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+    span.flecha-boton {
+        color: var(--primary-color1);
+    }
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+        width: 48px;
+        height: 48px;
+        border-radius: 24px !important;
+    }
+    a.boton-categorias {
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px #00000026;
+        color: var(--text-color);
+        display: flex;
+        padding: 1em;
+        position: relative; 
+        min-height: 138px;       
+    }
+    a.boton-categorias h2 {
+        font-size: 18px !important;
+        margin-bottom: 0.5em !important;
+    }
+    a.boton-categorias img {
+        position: absolute;
+        right: -14px;
+        max-width: 85px;
+    }
+    a.boton-categorias p {
+        width: 70%;
+    }
+    .carrusel--tips,.carrusel--tips2{
+        margin-bottom:1em;
+        margin-top: 2em;
+    }
+    .carrusel--tips .owl-stage,.carrusel--tips2 .owl-stage {
+        display: flex;
+        position: relative;     
+    }
+    .carrusel--tips button.owl-dot,.carrusel--tips2 button.owl-dot {
+        width: 12px;
+        height: 12px;
+        border: none;
+        margin: 0.25em;
+        border-radius: 48px;
+        background-color: var(--text-color-disabled);
+    }
+    .carrusel--tips button.owl-dot.active, .carrusel--tips2 button.owl-dot.active {
+        background-color: var(--primary-color2);
+    }
+    .carrusel--tips .owl-item.active, .carrusel--tips2 .owl-item.active {
+        opacity: 1;
+    }
+    .carrusel--tips .owl-item, .carrusel--tips2 .owl-item {
+        opacity: 0;
+        transition: .3s ease all
+    }
+    .carrusel--tips .owl-dots, .carrusel--tips2 .owl-dots{
+        text-align: center;
+        margin-top: 2em;
+    }
+    .carrusel--tips .owl-nav, .carrusel--tips2 .owl-nav {
+        position: relative;
+        bottom: 82px;
+    }
+    .carrusel--tips .owl-nav button, .carrusel--tips2 .owl-nav button {
+        background-color: white;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 34px;
+        color: var(--primary-color1);
+        font-size: 26px;
+        box-shadow: 1px 1px 12px rgb(68 68 68 / 20%);
+    }
+    .carrusel--tips .owl-nav button span, .carrusel--tips2 .owl-nav button span {
+        position: relative;
+        top: -3px;
+    }
+    .carrusel--tips button.owl-prev, .carrusel--tips2 button.owl-prev {
+        position: absolute;
+        left: -1.5em;
+    }
+    .carrusel--tips button.owl-next, .carrusel--tips2 button.owl-next{
+        position: absolute;
+        right: -1.5em;
+    }
+    .carrusel--tips2 .owl-nav,.carrusel--tips2 .owl-dots{
+        display: none !important;
+    }
+   
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+        .carrusel--tips2 .owl-nav,.carrusel--tips2 .owl-dots{
+        display: block !important;
+        }
+        .carrusel--tips button.owl-prev, .carrusel--tips2 button.owl-prev {
+            left: -0.5em;
+        }
+        .carrusel--tips button.owl-next, .carrusel--tips2 button.owl-next{
+            right: -0.5em;
+        }
+        a.boton-categorias{
+            padding:2em;
+        }
+        a.boton-categorias img {
+            right: 28px;
+        }
+        .carrusel--tips .owl-dots{
+            display: none;
+        }
+
+    }
+</style>
+
+<div class="row">
+    <div class="container">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <!-- AdGlare: AK_BARRA_MUNDO_JUGUETES -->
+            <span id=zone705643954></span>
+            <script>
+                (function(r,d,u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();       
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script',document,'//engine.alkst.co/?705643954');
+            </script>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 no-padding component__banner">
+                <div class="carousel__rotativeBanner">
+                    <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                        <div class="banner-adglare">
+                           <!-- AdGlare: AK-Mundo-niños-destacado-categoria1 -->
+                            <span id=zone509523034></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?509523034');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Mundo-niños-destacado-categoria2 -->
+                            <span id=zone794547287></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?794547287');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Mundo-niños-destacado-categoria3 -->
+                            <span id=zone687156889></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?687156889');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--INICIO FILTROS-->
+
+            <h3 class="container">Filtrar por Categoría</h3>
+            <div class="container carrusel--tips">
+                    <a class="boton-categorias" href="/juguetes/carros-a-control-remoto-vehiculos-drones/c/BI_605_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Carros y Drones <span class="flecha-boton">›</span></h2>
+                            <p>¡El control de la velocidad esta en tus manos!</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2021/juguetes/CARRO-CONTROL-REMOTO.png" alt="carros y drones en alkosto">
+                        </div>
+                    </a>
+                    <a class="boton-categorias" href="/juguetes/pistas-carros/c/BI_606_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Pista de Carros <span class="flecha-boton">›</span></h2>
+                            <p>Rampas, giros y garajes para tu propia carrera.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://www.alkosto.com/medias/pistas-carros-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDUzMTcyfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGQzL2gzZi8xMDM4NDMwOTE5MDY4Ni5zdmd8YzkzZjMxZGRkMjVmNGJkNTU3YzRkNWJhNTVhY2IwOTcwMjY0ZGJhZjhjNjg0NjZlYWMyZTliNzc2MDg5ZTFmYg" alt="pistas de carros en alkosto">
+                        </div>
+                    </a>
+                
+                
+                    <a class="boton-categorias" href="/juguetes/figuras-accion-coleccionables/c/BI_607_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Figuras de Acción <span class="flecha-boton">›</span></h2>
+                            <p>Animales, personajes de moda para coleccionar.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://www.alkosto.com/medias/figuras-accion-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU4NTQwfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGNhL2hlNy8xMDM4NDMwOTcxNDk3NC5zdmd8OGQ2NTliMThmZjY0ODhjMjFkZWE1MDk0NDA4ZWZmZmQ1OTFmOWQ0ZjM5Nzk3OWJmM2JkY2JhOTJhNDE4ODdjNA" alt="figuras de acción en alkosto">
+                        </div>
+                    </a>
+                
+               
+                    <a class="boton-categorias" href="/juguetes/deportes-exterior/c/BI_615_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Deportivos <span class="flecha-boton">›</span></h2>
+                            <p>Balones, patinetas y más para retar tus habilidades.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://www.alkosto.com/medias/deportivos-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQ0MDk1fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGRlL2g2Yi8xMDM4NDMxMDIzOTI2Mi5zdmd8OTk1MTgzNTlhZDc1Y2NiODM5NTdlNWMwYWYxYzIzMmVjNTA4M2QyNTUxOWYyMTE2MjEyZGFmYWIzMmM0ZDVmZA" alt="juegos deportivos en alkosto">
+                        </div>
+                    </a>
+                
+                
+                    <a class="boton-categorias" href="/juguetes/deportes-exterior/lanzadores-punteria/c/BI_D002_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Lanzadores <span class="flecha-boton">›</span></h2>
+                            <p>Pon a prueba tu puntería, lanzadores de agua y más.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://www.alkosto.com/medias/lanzadores-punteria-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQ0MjI0fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDhkL2gxNS8xMDM4NDMxMDgyOTA4Ni5zdmd8MjhiNDE3OGEwYTM1YmJjZDBkZjFmMzMwN2U0YWE3ZmFiYTU3ZWE5MjM0NTg3NWM0ZGQ5ODUwMzk2NTU3YWE0YQ" alt="Lanzadores y puntería en alkosto">
+                        </div>
+                    </a>
+               
+                
+                    <a class="boton-categorias" href="/juguetes/manualidades-didacticos/c/BI_602_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Manualidades <span class="flecha-boton">›</span></h2>
+                            <p>¡La creatividad no tiene límites! Plastilina, moldes y más.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2021/juguetes/MANUALIDADES.png" alt="manualidades">
+                        </div>
+                    </a>
+                
+                
+                    <a class="boton-categorias" href="/juguetes/juegos-rol/c/BI_609_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Juegos de Rol <span class="flecha-boton">›</span></h2>
+                            <p>¿Médico, cocinero, cantante? Juega a las profesiones.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2021/juguetes/JUEGOS-DE-ROL.png" alt="juegos rol">
+                        </div>
+                    </a>
+                
+                
+                    <a class="boton-categorias" href="/juguetes/peluches/c/BI_604_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Peluches <span class="flecha-boton">›</span></h2>
+                            <p>Osos, perros, unicornios... Adorables compañeros de regalo.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://www.alkosto.com/medias/peluches.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1MDE4fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDk5L2gyYi8xMDM4Mjk4Njk2OTExOC5zdmd8Yzk4NzEzOGViNmM5ZTVhZDM5MjY5OTkxYThlZjdkNmI2ZjMzYzg3OWQzZDMyYmQwNjRhNmYxNjc5NWNkOGEyZA" alt="peluches en alkosto">
+                        </div>
+                    </a>
+                
+                
+                    <a class="boton-categorias" href="/juguetes/bloques-armar/c/BI_608_ALKOS">
+                        <div class="texto-boton">
+                            <h2>Lego y bloques <span class="flecha-boton">›</span></h2>
+                            <p>Lego y bloques para armar ahora construir es tu reto.</p>
+                        </div>
+                        
+                        <div class="imagen-boton">
+                            <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2021/juguetes/LEGO.png" alt="">
+                        </div>
+                    </a>
+            </div>
+ 
+
+<!-- MARCAS -->
+
+
+            <h3 class="container">Nuestras Marcas</h3>
+            <div class="container carrusel--tips2">
+                    <a href="/marcas/play-doh/c/play-doh">
+                                <img src="https://www.alkosto.com/medias/play-doh.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE4MjUzfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDM2L2gwMS8xMDM4MzYxMjE4MjU1OC5zdmd8N2JiNmNkZWUzZDhkNmVkZjdjN2U4ZjIxODU5NjEwMGJkMDYwOWIwMzFhYTdiZGIwM2Q1MDBjNjdlYjBlNDhiZQ" alt="logo play doh">
+                            </a>
+               
+               
+                    <a href="/marcas/marvel/c/marvel">
+                                <img src="https://www.alkosto.com/medias/marvel-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyMjh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oOTcvaGZjLzEwMzg0MzEyNjY0MDk0LnN2Z3w3ZWRkMmU0ZjJhMThlOTgxZWEwZjYzMTAxNzMyZjA2M2RkN2E1ZjEwYzk5MjcxNjU0ZjI4YzlhMjVmZjQ3NDgz" alt="logo marvel">
+                            </a>
+              
+              
+                    <a href="/marcas/lego/c/lego">
+                                <img src="https://www.alkosto.com/medias/logo-lego.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQyMjl8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMWMvaDhjLzEwNDgzODk4NDgyNzE4LnN2Z3xlNDAzMjllMmI3ZDZiY2RlYWNiNjI2M2U3YTIwZDRhZmQwZDlhN2RjZmE2NTRmYTg5OTFiMWE4NThkZGY0N2E5" alt="logo max steel">
+                            </a>
+                
+             
+                    <a href="/marcas/hot-wheels/c/hotwheels">
+                                <img src="https://www.alkosto.com/medias/hotwheels-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU3MTR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oY2QvaGRlLzEwMzg0MzExNzQ2NTkwLnN2Z3xmMGI3YWFkNzRlOTliZTc1ZjY1M2JjZWYyOGJiOWFhZTUyNmQxYTkyZGZhYWM1M2UwZmNhYWU3MWYxNWVjZjI0" alt="logo hot wheels">
+                            </a>
+                
+                    <a href="/marcas/nerf/c/nerf">
+                                <img src="https://www.alkosto.com/medias/nerf-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1NDQxfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGNkL2g5My8xMDM4NDMxMzE4ODM4Mi5zdmd8N2EyNGY2MDIzYjc5YzYzMDYwNzZmYzU2YmIyMGNjMDQ4YzBmZGJiOTBlNDc5ZTQ4MWIxODNiMDcyNGY0MjQwYg" alt="logo nerf">
+                            </a>
+              
+                    <a href="/juguetes/deportes-exterior/c/BI_615_ALKOS?q=%3Arelevance%3Abrand%3APRINSEL">
+                                <img src="https://www.alkosto.com/medias/prinsel-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDExMDc0fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDMxL2g2OS8xMDM4NDMxNDY5NTcxMC5zdmd8YjY4MzU0ZmJjNjk1YWQ5M2M4ZmU1OWUzYmQ4MzJiMzI1NGY1Zjk3ODRlN2M1MmZlZDQ4ZjUyYzRiZjk2ZTYwYw" alt="logo princel">
+                            </a>
+                
+                    <a href="/marcas/paw-patrol/c/paw-patrol">
+                                <img src="https://www.alkosto.com/medias/pawpatrol-01.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2MTAwfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGJhL2hiMS8xMDM4NDMxNDMwMjQ5NC5zdmd8MTJhNmUxZWQxNjczMWE3ODc2NjM5ZjI0YzliNGY5ZDE0M2ZlZjkzYTA2NjdhNTA4YTk1MGYzNTk0N2M3MmRlYw" alt="logo paw patrol">
+                            </a>
+            
+        </div>
+
+<script>
+    //Jquery
+     window.onload = function() {
+
+        var owl = $('.carrusel--tips');
+          owl.owlCarousel({
+            margin: 12,
+            loop: false,
+            touchDrag: false,
+            responsive: {
+              0: {
+                items: 1
+              },
+              600: {
+                items: 2
+              },
+              1000: {
+                mouseDrag: false,                
+                items: 4
+              }
+            }
+          })
+          var owl2 = $('.carrusel--tips2');
+          owl2.owlCarousel({
+            margin: 12,
+            loop: false,            
+            responsive: {
+              0: {
+                items: 2
+              },
+              600: {
+                items: 3
+              },
+              1000: {
+                mouseDrag: false,
+                items: 7
+              }
+            }
+          })
+    }
+</script>

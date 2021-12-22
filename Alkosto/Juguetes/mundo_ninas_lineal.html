@@ -1,0 +1,344 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+    h3.container {
+        font-size: 16px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+    span.flecha-boton {
+        color: var(--primary-color1);
+    }
+    .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+        width: 48px;
+        height: 48px;
+        border-radius: 24px !important;
+    }
+    a.boton-categorias {
+        border-radius: 4px;
+        box-shadow: 0px 3px 6px #00000026;
+        color: var(--text-color);
+        display: flex;
+        padding: 1em;
+        position: relative; 
+        min-height: 138px;       
+    }
+    a.boton-categorias h2 {
+        font-size: 18px !important;
+        margin-bottom: 0.5em !important;
+    }
+    a.boton-categorias img {
+        position: absolute;
+        right: -14px;
+        max-width: 85px;
+    }
+    a.boton-categorias p {
+        width: 70%;
+    }
+    .carrusel--tips,.carrusel--tips2{
+        margin-bottom:1em;
+        margin-top: 2em;
+    }
+    .carrusel--tips .owl-stage,.carrusel--tips2 .owl-stage {
+        display: flex;
+        position: relative;     
+    }
+    .carrusel--tips button.owl-dot,.carrusel--tips2 button.owl-dot {
+        width: 12px;
+        height: 12px;
+        border: none;
+        margin: 0.25em;
+        border-radius: 48px;
+        background-color: var(--text-color-disabled);
+    }
+    .carrusel--tips button.owl-dot.active, .carrusel--tips2 button.owl-dot.active {
+        background-color: var(--primary-color2);
+    }
+    .carrusel--tips .owl-item.active, .carrusel--tips2 .owl-item.active {
+        opacity: 1;
+    }
+    .carrusel--tips .owl-item, .carrusel--tips2 .owl-item {
+        opacity: 0;
+        transition: .3s ease all
+    }
+    .carrusel--tips .owl-dots, .carrusel--tips2 .owl-dots{
+        text-align: center;
+        margin-top: 2em;
+    }
+    .carrusel--tips .owl-nav, .carrusel--tips2 .owl-nav {
+        position: relative;
+        bottom: 82px;
+    }
+    .carrusel--tips .owl-nav button, .carrusel--tips2 .owl-nav button {
+        background-color: white;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 34px;
+        color: var(--primary-color1);
+        font-size: 26px;
+        box-shadow: 1px 1px 12px rgb(68 68 68 / 20%);
+    }
+    .carrusel--tips .owl-nav button span, .carrusel--tips2 .owl-nav button span {
+        position: relative;
+        top: -3px;
+    }
+    .carrusel--tips button.owl-prev, .carrusel--tips2 button.owl-prev {
+        position: absolute;
+        left: -1.5em;
+    }
+    .carrusel--tips button.owl-next, .carrusel--tips2 button.owl-next{
+        position: absolute;
+        right: -1.5em;
+    }
+    .carrusel--tips2 .owl-nav,.carrusel--tips2 .owl-dots{
+        display: none !important;
+    }
+   
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+        .carrusel--tips2 .owl-nav,.carrusel--tips2 .owl-dots{
+        display: block !important;
+        }
+        .carrusel--tips button.owl-prev, .carrusel--tips2 button.owl-prev {
+            left: -0.5em;
+        }
+        .carrusel--tips button.owl-next, .carrusel--tips2 button.owl-next{
+            right: -0.5em;
+        }
+        a.boton-categorias{
+            padding:2em;
+        }
+        a.boton-categorias img {
+            right: 28px;
+        }
+        .carrusel--tips .owl-dots{
+            display: none;
+        }
+
+    }
+</style>
+
+<div class="row">
+    <div class="container">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <!-- AdGlare: AK_BARRA_MUNDO_JUGUETES -->
+            <span id=zone705643954></span>
+            <script>
+                (function(r,d,u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();       
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script',document,'//engine.alkst.co/?705643954');
+            </script>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 no-padding component__banner">
+                <div class="carousel__rotativeBanner">
+                    <div class="owl-carousel rotativeBanner js-adglare-carousel">
+                        <div class="banner-adglare">
+                           <!-- AdGlare: AK-Mundo-niñas-destacado-categoria1 -->
+                            <span id=zone131321027></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?131321027');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Mundo-niñas-destacado-categoria2 -->
+                            <span id=zone670431266></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?670431266');
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <!-- AdGlare: AK-Mundo-niñas-destacado-categoria3 -->
+                            <span id=zone226059038></span>
+                            <script>
+                                (function(r,d,u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();       
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script',document,'//engine.alkst.co/?226059038');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--INICIO FILTROS-->
+
+            <h3 class="container">Filtrar por Categoría</h3>
+            <div class="container carrusel--tips">
+                <a class="boton-categorias" href="/juguetes/munecas-sus-accesorios/c/BI_611_ALKOS">
+                    <div class="texto-boton">
+                        <h2>Muñecas <span class="flecha-boton">›</span></h2>
+                        <p>Casitas, sets y accesorios de muñecas para jugar.</p>
+                    </div>
+                    
+                    <div class="imagen-boton">
+                        <img id="barbie" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2021/juguetes/BARBIE.png" alt="muñecas en alkosto">
+                    </div>
+                </a>
+                <a class="boton-categorias" href="/juguetes/juegos-rol/c/BI_609_ALKOS">
+                    <div class="texto-boton">
+                        <h2>Juegos de Rol <span class="flecha-boton">›</span></h2>
+                        <p>¿Médico, cocinero, cantante? Juega a las profesiones.</p>
+                    </div>
+                    
+                    <div class="imagen-boton">
+                        <img src="/medias/juegos-rol.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE0ODMxfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGVjL2g2OC8xMDM4Mjk4NTA2ODU3NC5zdmd8YzFjNjc5ODZlYTJjOTZkNjg5MjY5YzdlYWQ4ZTBmNmMzMzg0OWI5NWQ5ZDJiZGY3ZjQyNGNjOTEwNTRkY2ZlNA" alt="Juegos de rol en alkosto">
+                    </div>
+                </a>
+
+                <a class="boton-categorias" href="/juguetes/peluches/c/BI_604_ALKOS">
+                    <div class="texto-boton">
+                        <h2>Peluches <span class="flecha-boton">›</span></h2>
+                        <p>Osos, perros, unicornios... Adorables compañeros.</p>
+                    </div>
+                    
+                    <div class="imagen-boton">
+                        <img src="/medias/peluches.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1MDE4fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDk5L2gyYi8xMDM4Mjk4Njk2OTExOC5zdmd8Yzk4NzEzOGViNmM5ZTVhZDM5MjY5OTkxYThlZjdkNmI2ZjMzYzg3OWQzZDMyYmQwNjRhNmYxNjc5NWNkOGEyZA" alt="peluches en alkosto">
+                    </div>
+                </a>
+
+                <a class="boton-categorias" href="/juguetes/manualidades-didacticos/c/BI_602_ALKOS">
+                    <div class="texto-boton">
+                        <h2>Manualidades <span class="flecha-boton">›</span></h2>
+                        <p>¡La creatividad no tiene límites! Plastilina, moldes y más.</p>
+                    </div>
+                    
+                    <div class="imagen-boton">
+                        <img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2021/juguetes/MANUALIDADES.png" alt="manualidades" alt="manualidades en alkosto">
+                    </div>
+                </a>
+
+                <a class="boton-categorias" href="/juguetes/juegos-belleza/c/BI_601_ALKOS">
+                    <div class="texto-boton">
+                        <h2>Juegos Belleza <span class="flecha-boton">›</span></h2>
+                        <p>¡Conviértete en un asesor de moda! Peinados, uñas y más.</p>
+                    </div>
+                    
+                    <div class="imagen-boton">
+                        <img src="/medias/juegos-belleza.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE2OTM5fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGMyL2g0NC8xMDM4Mjk4NDYwOTgyMi5zdmd8Yzk4NzRhYWEwYzE2YTMyNDE2MTllYTk0NjM3YTcxNzJkMDY2Y2JmYzU3ZDk4NDc3ZDZiNDRlYzU0YjNiNmEyYQ" alt="Juegos de belleza en alkosto">
+                    </div>
+                </a>
+            </div>
+ 
+
+<!-- MARCAS -->
+
+
+            <h3 class="container">Nuestras Marcas</h3>
+            <div class="container carrusel--tips2">
+                    <a href="marcas/play-doh/c/play-doh">
+                                <img src="/medias/play-doh.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE4MjUzfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaDM2L2gwMS8xMDM4MzYxMjE4MjU1OC5zdmd8N2JiNmNkZWUzZDhkNmVkZjdjN2U4ZjIxODU5NjEwMGJkMDYwOWIwMzFhYTdiZGIwM2Q1MDBjNjdlYjBlNDhiZQ" alt="logo play doh">
+                            </a>
+               
+               
+                    <a href="marcas/barbie/c/barbie">
+                                <img src="/medias/barbie.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDM0NzV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYjgvaDIyLzEwMzgzNjA5NzI0OTU4LnN2Z3w3YTk3MDBkYjQwM2RlNjk2YzU3ZGRkZjI1MTkxODc2MTVlOWE5ZDhlYTE2M2E0ZjZmYmUyM2NlNTcyNWMxM2U2" alt="logo barbie">
+                            </a>
+              
+              
+                    <a href="juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3ALITTLE+MOMMY">
+                                <img src="/medias/little-mommy.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc2NTV8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZDQvaGZjLzEwMzgzNjEwNTc2OTI2LnN2Z3w1NzQ4ZmMwOWMxOTQ0NGYxNzQzZWM2NzZmNDc4NGJmMTJkMzRmZTA4Y2I3MGU5YWIyZWE1MTJmYTlmZmNjNjkw" alt="logo little mommy">
+                            </a>
+                
+             
+                    <a href="marcas/lol/c/lol">
+                                <img src="/medias/lol.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI3Mjk0fGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGQxL2g1OC8xMDM4MzYxMTU1OTk2Ni5zdmd8ZWYwOGNkZTdkNjEwZDNiY2YwOTc4N2EzMTZkZWI3NzYyZDQzZDZkMDFjNmYxYmZhNjJlYzhjNWEzMWNhYmQ5NA" alt="logo lol">
+                            </a>
+                
+                    <a href="marcas/polly-pocket/c/polly-pocket">
+                                <img src="/medias/polly-pocket.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1OTUyfGltYWdlL3N2Zyt4bWx8SWNvbm9zIENhdGVnb3LDrWFzIEFsa29zdG8vaGU2L2g3ZC8xMDM4MzYxMjc3MjM4Mi5zdmd8YTAwOGQ5ODczN2Q3NGU5MTQ4YzkxNjExZGVhZDViNGEwODQwN2RiMWYwOWE1MzU3M2RmNTI1OWFlMmZkNGRiNw" alt="logo polly pocket">
+                            </a>
+              
+                    <a href="/marcas/baby-alive/c/baby-alive">
+                                <img src="/medias/baby-alive.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDcyMjF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMTMvaDQ3LzEwMzgzNjA2MTg2MDE0LnN2Z3w4YThjMjIxYjU5ZWU1NTQ4MDVhYTA3MjdlNWVlZDAzZmZhMzUxZThhOWE3YWY5YjkzNmI3MTgxYTc0MGI5NDIz" alt="logo baby alive">
+                            </a>
+            
+        </div>
+
+<script>
+    //Jquery
+     window.onload = function() {
+
+        var owl = $('.carrusel--tips');
+          owl.owlCarousel({
+            margin: 12,
+            loop: false,
+            touchDrag: false,
+            responsive: {
+              0: {
+                items: 1
+              },
+              600: {
+                items: 2
+              },
+              1000: {
+                mouseDrag: false,                
+                items: 4
+              }
+            }
+          })
+          var owl2 = $('.carrusel--tips2');
+          owl2.owlCarousel({
+            margin: 12,
+            loop: false,            
+            responsive: {
+              0: {
+                items: 2
+              },
+              600: {
+                items: 3
+              },
+              1000: {
+                mouseDrag: false,
+                items: 6
+              }
+            }
+          })
+    }
+</script>
