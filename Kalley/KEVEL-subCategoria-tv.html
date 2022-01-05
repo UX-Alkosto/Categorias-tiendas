@@ -179,15 +179,23 @@
 <div class="row">
     <div class="container">
         <div class="barra-lanzamientos">
-            <!-- AdGlare: KALL-barra-televisores -->
-            <span id=zone995044523></span>
-            <script>
-                (function (r, d, u) {
-                    var s = d.createElement(r); s.async = true;
-                    u += '&cb=' + Date.now() + Math.random();
-                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                    n.parentNode.insertBefore(s, n);
-                })('script', document, '//engine.alkst.co/?995044523');
+            <script type="text/javascript" src="https://static.adzerk.net/ados.js"></script>
+            <script type="text/javascript">
+                var ados = ados || {};
+                ados.run = ados.run || [];
+                ados.run.push(function () {
+                    /* load placement for account: alkosto-dev,
+                                                  site: Kalley,
+                                                  zone: KLLY-Barra-TV,
+                                                  size: 1920x100 - Barra categoría Desktop
+                                                  size: 520x120 - Barra categoría Mobile */
+                    if (window.innerWidth >= 767) {
+                        ados_addInlinePlacement(10806, 1172914, 4260).setZone(253602).loadInline();
+                    } else {
+                        ados_addInlinePlacement(10806, 1172914, 4261).setZone(253602).loadInline();
+                    }
+                    ados_load();
+                });
             </script>
         </div>
     </div>
@@ -200,7 +208,6 @@
                 <div class="carousel__rotativeBanner">
                     <div class="owl-carousel rotativeBanner js-adglare-carousel">
                         <div class="banner-adglare">
-                            <script type="text/javascript" src="https://static.adzerk.net/ados.js"></script>
                             <script type="text/javascript">
                                 var ados = ados || {};
                                 ados.run = ados.run || [];
@@ -208,7 +215,8 @@
                                     /* load placement for account: alkosto-dev,
                                                                   site: Kalley,
                                                                   zone: KLLY-Rotativo-TV-1,
-                                                                  size: 1400x400 - Banner categoría Desktop */
+                                                                  size: 1400x400 - Banner categoría Desktop
+                                                                  size: 520x555 - Banner categoría Mobile */
                                     if (window.innerWidth >= 767) {
                                         ados_addInlinePlacement(10806, 1172914, 3605).setZone(253595).loadInline();
                                     } else {
@@ -219,15 +227,60 @@
                             </script>
                         </div>
                         <div class="banner-adglare">
-                            <!-- AdGlare: KALLEY-Rotativo-TV-2 -->
-                            <span id=zone811568919></span>
-                            <script>
-                                (function (r, d, u) {
-                                    var s = d.createElement(r); s.async = true;
-                                    u += '&cb=' + Date.now() + Math.random();
-                                    s.src = u; var n = d.getElementsByTagName(r)[0];
-                                    n.parentNode.insertBefore(s, n);
-                                })('script', document, '//engine.alkst.co/?811568919');
+                            <script type="text/javascript">
+                                var ados = ados || {};
+                                ados.run = ados.run || [];
+                                ados.run.push(function () {
+                                    /* load placement for account: alkosto-dev,
+                                                                  site: Kalley,
+                                                                  zone: KLLY-Rotativo-TV-2,
+                                                                  size: 1400x400 - Banner categoría Desktop
+                                                                  size: 520x555 - Banner categoría Mobile */
+                                    if (window.innerWidth >= 767) {
+                                        ados_addInlinePlacement(10806, 1172914, 3605).setZone(253596).loadInline();
+                                    } else {
+                                        ados_addInlinePlacement(10806, 1172914, 4169).setZone(253596).loadInline();
+                                    }
+                                    ados_load();
+                                });
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <script type="text/javascript">
+                                var ados = ados || {};
+                                ados.run = ados.run || [];
+                                ados.run.push(function () {
+                                    /* load placement for account: alkosto-dev,
+                                                                  site: Kalley,
+                                                                  zone: KLLY-Rotativo-TV-3,
+                                                                  size: 1400x400 - Banner categoría Desktop
+                                                                  size: 520x555 - Banner categoría Mobile */
+                                    if (window.innerWidth >= 767) {
+                                        ados_addInlinePlacement(10806, 1172914, 3605).setZone(253597).loadInline();
+                                    } else {
+                                        ados_addInlinePlacement(10806, 1172914, 4169).setZone(253597).loadInline();
+                                    }
+                                    ados_load();
+                                });
+                            </script>
+                        </div>
+                        <div class="banner-adglare">
+                            <script type="text/javascript">
+                                var ados = ados || {};
+                                ados.run = ados.run || [];
+                                ados.run.push(function () {
+                                    /* load placement for account: alkosto-dev,
+                                                                  site: Kalley,
+                                                                  zone: KLLY-Rotativo-TV-4,
+                                                                  size: 1400x400 - Banner categoría Desktop
+                                                                  size: 520x555 - Banner categoría Mobile */
+                                    if (window.innerWidth >= 767) {
+                                        ados_addInlinePlacement(10806, 1172914, 3605).setZone(253598).loadInline();
+                                    } else {
+                                        ados_addInlinePlacement(10806, 1172914, 4169).setZone(253598).loadInline();
+                                    }
+                                    ados_load();
+                                });
                             </script>
                         </div>
                     </div>
@@ -272,3 +325,15 @@
         </div>
     </div>
 </div>
+<!--<script-- type="text/javascript">
+        load();
+    function load(){ 
+        // set target="_top" to reload whole frame
+        var links = this.content.document.getElementsByTagName("a");
+        for(var i = 0; i < links.length; i++){
+            var link = links[i];
+            link.target="_top";
+        }
+    }
+
+</script-->
