@@ -22,6 +22,9 @@
         max-width: 1280px;
         margin: 0 auto 0px auto;
     }
+    .barra-lanzamientos img {
+        width: 100%;
+    }
 
     @media screen and (max-width: 1007px) {
 
@@ -40,7 +43,7 @@
     .filtros h3 {
         width: 100%;
         font-size: 18px;
-        text-align: center;
+        text-align: center !important;
         color: #003780;
     }
 
@@ -176,7 +179,7 @@
         }
     }
 </style>
-<div class="row">
+<div class="row kevel">
     <div class="container">
         <div class="barra-lanzamientos">
             <script type="text/javascript" src="https://static.adzerk.net/ados.js"></script>
@@ -201,7 +204,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row kevel">
     <div class="container">
         <div class="col-xs-12 col-md-12">
             <div class="col-xs-12 col-md-12 no-padding component__banner">
@@ -325,15 +328,13 @@
         </div>
     </div>
 </div>
-<!--<script-- type="text/javascript">
-        load();
-    function load(){ 
-        // set target="_top" to reload whole frame
-        var links = this.content.document.getElementsByTagName("a");
-        for(var i = 0; i < links.length; i++){
-            var link = links[i];
-            link.target="_top";
-        }
+<script type="text/javascript">
+window.addEventListener("load", function (o) {
+    var linkList = document.querySelectorAll('.kevel a');
+    console.log(linkList)
+    for (var i = 0; i < linkList.length; i++) {
+     linkList[i].setAttribute('target', '_top');
     }
+});
 
-</script-->
+</script>
