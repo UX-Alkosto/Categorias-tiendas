@@ -1,0 +1,95 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+</style>
+<!--INICIO FILTROS-->
+<div class="row">
+    <div class="container">
+        <div class="col-md-12 filtros">
+            <h3>Filtrar por tipo de prenda</h3>
+            <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/ropa/ropa-hombre/c/BI_141_ALKOS?q=%3Arelevance%3Atipo-prenda-ropa%3ABuzo"
+                        title="Buzos" type="category-item">
+                        <k-icon icon="alk-icon-buzo-hoodie-hombre"></k-icon>
+                        <p>Buzos</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/ropa/ropa-hombre/c/BI_141_ALKOS?q=%3Arelevance%3Atipo-prenda-ropa%3ACamiseta"
+                        title="Camisetas" type="category-item">
+                        <k-icon icon="alk-icon-camiseta-hombre"></k-icon>
+                        <p>Camisetas</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/ropa/ropa-hombre/c/BI_141_ALKOS?q=%3Arelevance%3Atipo-prenda-ropa%3APolo"
+                        title="Camisas Polo" type="category-item">
+                        <k-icon icon="alk-icon-camiseta-polo-hombre"></k-icon>
+                        <p>Camisas Polo</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card href="/ropa/ropa-hombre/c/BI_141_ALKOS?q=%3Arelevance%3Atipo-prenda-ropa%3ADeportivo+Performance"
+                        title="Deportivo" type="category-item">
+                        <k-icon icon="alk-icon-buzo-hoodie-hombre"></k-icon>
+                        <p>Deportivo</p>
+                    </k-card>
+                </div>
+            </k-slider>
+        </div>
+    </div>
+</div>
