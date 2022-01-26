@@ -1,0 +1,540 @@
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+<style type="text/css">
+    @import url("https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css");
+
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare-lego {
+        width: 100%;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    .lego-block-item{
+        border-radius: 0px;
+    -webkit-box-shadow: 0px;
+    box-shadow: 0px;
+    position: relative;
+   padding: 0px;
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+
+    /*OTROS ESTILOS*/
+    .filtros {
+        margin: 20px 0px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+
+    .filtros_tipo {
+        display: flex;
+    }
+
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+
+    .filtros_tipo a span {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 4px 0px;
+    }
+
+    .filtros_tipo div a img {
+        width: 30px;
+    }
+
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+
+    .centrar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filtros {
+        margin: 20px 0px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+
+    /*filtros edades y marca*/
+    .sin-padding {
+        padding: 0;
+    }
+
+    .iconos-categoria {
+        display: flex;
+        align-items: center;
+    }
+
+    @media(min-width:768px) {
+        .iconos-categoria a img {
+            width: 20% !important;
+        }
+
+        .iconos-categoria {
+            width: 20% !important;
+            height: 46px;
+        }
+    }
+
+    .filtros {
+        margin: 20px 0px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+
+    .filtros_tipo {
+        display: flex;
+    }
+
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+
+    .filtros_tipo a span {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 4px 0px;
+    }
+
+    .filtros_tipo div a img {
+        width: 30px;
+    }
+
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+
+    .centrar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .filtros {
+        margin: 20px 0px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+
+    .filtro_tamano {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .filtro_tamano div {
+        width: 19%;
+        text-align: center;
+        padding: 0;
+        margin: 5px;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+    }
+
+    .filtro_tamano div a img {
+        width: 70%;
+    }
+
+    .filtro_tamano div a {
+        display: block;
+        text-decoration: none;
+        color: #444444;
+        margin: 0 auto;
+    }
+
+    .filtro_tamano div a span {
+        display: block;
+        padding: 4px 0px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 769px) {
+        .filtro_tamano {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .filtro_tamano {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: unset;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        .filtro_tamano div {
+            width: 50%;
+            height: 50px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .filtro_tamano div a img {
+            width: 70px;
+            padding: 5px 0;
+        }
+
+        .iconos-categoria a img {
+            width: 30px !important;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+
+</style>
+<div class="row">
+    <div class="container">
+        <div class="col-12" style="margin-bottom: 10px;">
+            <!-- AdGlare: AK-Banner-Principal-LEGO -->
+            <span id=zone475245097></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?475245097');
+            </script>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="carousel">
+        <div
+            class="carousel__component carousel__component--references-component owl-carousel js-related-product-carousel owl-loaded owl-drag">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item">
+                        <div class="block-item lego-block-item">
+                            <!-- AdGlare: AK-Banner-Categoría-LEGO-1 -->
+                            <span id=zone980496647></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?980496647');
+                            </script>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="block-item lego-block-item">
+                            <!-- AdGlare: AK-Banner-Categoría-LEGO-2 -->
+                            <span id=zone557155154></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?557155154');
+                            </script>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="block-item lego-block-item">
+                            <!-- AdGlare: AK-Banner-Categoría-LEGO-3 -->
+                            <span id=zone800368521></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?800368521');
+                            </script>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="block-item lego-block-item">
+                            <!-- AdGlare: AK-Banner-Categoría-LEGO-4 -->
+                            <span id=zone115635802></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?115635802');
+                            </script>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="block-item lego-block-item">
+                            <!-- AdGlare: AK-Banner-Categoría-LEGO-5 -->
+                            <span id=zone757517175></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?757517175');
+                            </script>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="block-item lego-block-item">
+                            <!-- AdGlare: AK-Banner-Categoría-LEGO-6 -->
+                            <span id=zone576471326></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?576471326');
+                            </script>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="block-item lego-block-item">
+                            <!-- AdGlare: AK-Banner-Categoría-LEGO-7 -->
+                            <span id=zone261943688></span>
+                            <script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?261943688');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--INICIO FILTROS-->
+    <div class="row">
+        <div class="container">
+            <div class="col-md-12 filtros">
+                <div class="col-md-12 sin-padding">
+                    <h3>Filtrar por edad</h3>
+                    <div class="filtro_tamano filete">
+                        <div class="iconos-categoria">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A0+a+12+meses">
+                                <span>0 a 12 meses</span></a>
+                        </div>
+                        <div class="iconos-categoria">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A1+a+3+años">
+                                <span>1 a 3 años</span></a>
+                        </div>
+                        <div class="iconos-categoria">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A4+a+6+años">
+                                <span>4 a 6 años</span></a>
+                        </div>
+                        <div class="iconos-categoria">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A7+a+9+años">
+                                <span>7 a 9 años</span></a>
+                        </div>
+                        <div class="iconos-categoria">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A10+a+11+años">
+                                <span>10 a 11 años</span></a>
+                        </div>
+                        <div class="iconos-categoria">
+                            <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3A12+a+13+años">
+                                <span>12 a 13 años</span></a>
+                        </div>
+                        <div class="iconos-categoria">
+                            <a
+                                href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Aedad-juguetes-rangos%3AMayor+a+14+años">
+                                <span>+ 14 años</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Jquery
+        window.onload = function () {
+
+            var owl = $('.carrusel--tips');
+            owl.owlCarousel({
+                margin: 12,
+                loop: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            })
+
+        }
+    </script>
