@@ -68,6 +68,10 @@
 		.caja-imagen img{
 			width: 100%;
 		}
+
+        .margen-sup{
+            margin-top: 6%;
+        }
 		@media(min-width: 1080px){
 			.body-gen{
 				max-width: 1200px;
@@ -285,7 +289,12 @@
 				margin: 0 0 0 50px;
 			}
 			.basis-dos{
-				flex-basis: 50%;
+				flex-basis: 100%;
+				margin: 0;
+				margin-left: -25%;
+			}
+            .basis-uno{
+				flex-basis: 100%;
 				margin: 0;
 				padding: 0 15px;
 			}
@@ -296,6 +305,9 @@
 			.ambiente-mesa{
 				padding: 0 20px 0 0;
 			}
+            .margen-sup{
+            margin-top: 0%;
+        }
 		}
         @media(min-width: 2560px){
             .caja-contenedora h2{
@@ -308,754 +320,339 @@
 		.ambientada-uno{
 			position: relative;
 		}
-        /* oculta el input checkbox */
-		#expandir-contenido, #expandir-contenido-dos, #expandir-contenido-tres,#expandir-contenido-cuatro, #expandir-contenido-cinco, #expandir-contenido-seis, 
-		#expandir-contenido-siete, #expandir-contenido-ocho, #expandir-contenido-nueve, #expandir-contenido-diez, #expandir-contenido-once, #expandir-contenido-doce,
-		#expandir-contenido-trece, #expandir-contenido-catorce, #expandir-contenido-quince, #expandir-contenido-dieciseis {
-            display: none;
-        }
-        /* oculta el contenido expansible por defecto */
-        .cont-expandible, .cont-expandible-dos, .cont-expandible-tres, .cont-expandible-cuatro, .cont-expandible-cinco, .cont-expandible-seis, 
-		.cont-expandible-siete, .cont-expandible-ocho, .cont-expandible-nueve, .cont-expandible-diez, .cont-expandible-once, .cont-expandible-doce,
-		.cont-expandible-trece, .cont-expandible-catorce, .cont-expandible-quince, .cont-expandible-dieciseis {
-            visibility: collapse;
-        }
-		.caja-expandible{
-            display: flex;
-            flex-direction: column;
-            width: 170px;
-			background: #ffffff;
-			box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.38);
-            border-radius: 5px;
-			padding: 15px;
-		}
-		.caja-expandible h3{
-			font-size: 14px;
-			margin: 0 0 10px 0;
-		}
-		.caja-expandible p{
-			text-align: right;
-			margin: 0;
-			font-weight: bold;
-		}
+        
+        
+		
 
-        /* estilos para los puntos */
-        .expandir-boton {
-			width: 30px;
-			height: 30px;
-            padding: 0;
-            background-color: #ffffff;
-            border-radius: 100%;
-        }
-		/*posición de las cajas con punto ambientada-uno*/
-		.caja-boton{
-			display: flex;
-			flex-direction: row;
-			position: absolute;
-		}
-		.cb-uno{
-			top: 54%;
-			left: 13%;
-			flex-direction: column;
-		}
-		.cb-dos{
-			top: 15%;
-			left: 30%;
-			flex-direction: row-reverse;
-			align-items: center;
-		}
-		.cb-tres{
-			top: 21%;
-			left: 13%;
-			flex-direction: row;
-			align-items: center;
-		}
-		.cb-cuatro{
-			top: 10%;
-			left: 42%;
-			flex-direction: column-reverse;
-			align-items: center;
-		}
-		.cb-cinco{
-			top: 76%;
-			left: 10%;
-			flex-direction: column;
-			align-items: center;
-		}
-		.cb-seis{
-			top: 11%;
-			left: 17%;
-			flex-direction: row-reverse;
-			align-items: center;
-		}
-		.cb-siete{
-			top: 53%;
-			left: 32%;
-			flex-direction: row-reverse;
-			align-items: center;
-		}
-		.cb-ocho{
-			top: 7%;
-			left: 24%;
-			flex-direction: row;
-			align-items: center;
-		}
-		.cb-nueve{
-			top: 58%;
-			left: 20%;
-			align-items: center;
-			flex-direction: row-reverse;
-		}
-		.cb-diez{
-			bottom: 58%;
-			left: 13%;
-			flex-direction: row;
-			align-items: center;
-		}
-		.cb-once{
-			top: 50%;
-			left: 36%;
-			flex-direction: row-reverse;
-			align-items: center;
-		}
-		.cb-doce{
-			top: 71%;
-			left: 26%;
-            flex-direction: column;
-			align-items: center;
-		}
-		.cb-trece{
-			top: 59%;
-			left: 27%;
-			align-items: center;
-			flex-direction: column-reverse;
-		}
-		.cb-catorce{
-			top: 59%;
-			left: 35%;
-			align-items: center;
-			flex-direction: row-reverse;
-		}
-		.cb-quince{
-			top: 67%;
-			left: 25%;
-			flex-direction: row-reverse;
-			align-items: center;
-		}
-		.cb-dieciseis{
-			top: 20%;
-			left: 24%;
-			align-items: center;
-			flex-direction: row-reverse;
-		}
-
+        
 	
-	
-		/*posición de los puntos para ambientada-uno*/
-		.posicion-punto{
-			margin: 5px 0 0 70px;
-		}
-		.posicion-punto-dos{
-			margin: 0 0 0 5px;
-		}
-		.posicion-punto-tres{
-			margin: 0 0 5px 0;
-		}
-		.posicion-punto-cuatro{
-			margin: 5px 0 0 0;
-		}
-		.posicion-punto-seis{
-			margin: 5px 0 0 0;
-		}
-		.posicion-punto-siete{
-			margin: 0 0 0 5px;
-		}
-		.posicion-punto-ocho{
-			margin: 5px 0 0 0;
-		}
-		.posicion-punto-nueve{
-			margin: 5px 0 0 0;
-		}
-		.posicion-punto-diez{
-			margin: 0 0 5px 0;
-		}
-		.posicion-punto-once{
-			margin: 5px 0 0 0;
-		}
-		.posicion-punto-trece{
-			margin: 5px 0 0 0;
-		}
-		.posicion-punto-catorce{
-			margin: 0 0 0 5px;
-		}
-		.posicion-punto-quince{
-			margin: 0 5px 5px 6px;
-		}
-		.posicion-punto-dieciseis{
-			margin: 5px 5px 5px 5px;
-		}
-		@media(min-width: 768px){
-			.posicion-punto-dos{
-				margin: 0 0 5px 0;
-			}
-			.cb-uno{
-				top: 62%;
-				left: 32%;
-			}
-			.cb-dos{
-				top: 25%;
-				left: 75%;
-				flex-direction: column;
-			}
-			.cb-tres{
-				top: 32%;
-				left: 13%;
-			}
-			.cb-cuatro{
-				top: 32%;
-				left: 52%;
-			}
-			.cb-cinco{
-				top: 78%;
-				left: 25%;
-			}
-			.cb-seis{
-				flex-direction: row-reverse;
-				top: 18%;
-				left: 40%;
-			}
-			.posicion-punto-seis{
-				margin: 0 5px 0 0;
-			}
-			.cb-siete{
-				top: 62%;
-				left: 56%;
-                flex-direction: row-reverse;
-			}
-			.cb-ocho{
-				top: 20%;
-				left: 24%;
-			}
-			.cb-nueve{
-				top: 59%;
-				left: 45%;
-			}
-			.cb-diez{
-				bottom: 58%;
-				left: 11%;
-			}
-			.cb-once{
-				top: 40%;
-				left: 42%;
-				flex-direction: row-reverse;
-			}
-			.cb-doce{
-				top: 64%;
-				left: 39%;
-			}
-			.cb-trece{
-				left: 42%;
-				top: 59%;
-			}
-			.cb-catorce{
-				top: 62%;
-				left: 65%;
-			}
-
-			.cb-quince{
-			top: 68%;
-			left: 49%;
-			flex-direction: column;
-			align-items: center;
-		}
-		.cb-dieciseis{
-			top: 15%;
-			left: 59%;
-			align-items: center;
-			flex-direction: column-reverse;
-		}
-
-	
-		}
 		@media(min-width: 1080px){
-			.cb-uno{
-				top: 46%;
-				left: 26%;
-			}
-			.cb-cuatro{
-				top: 7%;
-				left: 43%;
-			}
-			.cb-cinco{
-				top: 53%;
-                left: 14%;
-			}
-			.cb-seis{
-				top: 21%;
-				left: 33%;
-			}
-			.cb-siete{
-				top: 63%;
-				left: 47%;
-			}
-			.cb-ocho{
-				top: 20%;
-				left: 27%;
-                flex-direction: column;
-			}
-			.cb-nueve{
-				top: 57%;
-				left: 35%;
-			}
-			.cb-diez{
-				bottom: 66%;
-				left: 10%;
-			}
-			.cb-once{
-				top: 48%;
-				left: 38%;
-			}
-			.cb-doce{
-				top: 40%;
-				left: 27%;
-			}
-			.cb-trece{
-				top: 30%;
-				left: 31%;
-			}
-            .cb-catorce{
-				top: 50%;
-				left: 58%;
-			}
+		
 			.amb-der{
 				justify-self: end;
 			}
 			.tex-amb-izq{
 				left: 0;
 			}
-			
-
-			.cb-quince{
-			top: 65%;
-			left: 27%;
-			flex-direction: row-reverse;
-			align-items: center;
+		
 		}
-		.cb-dieciseis{
-			top: 25%;
-			left: 50%;
-			align-items: center;
-			flex-direction: row-reverse;
-		}
-
-	
-		}
-        /* muestra el contenido oculto cuando el checkbox esta en estado cheked */
-        #expandir-contenido:checked ~ * .cont-expandible {
-            visibility: visible;
-        }
-        #expandir-contenido-dos:checked ~ * .cont-expandible-dos {
-            visibility: visible;
-        }
-        #expandir-contenido-tres:checked ~ * .cont-expandible-tres {
-            visibility: visible;
-        }
-        #expandir-contenido-cuatro:checked ~ * .cont-expandible-cuatro {
-            visibility: visible;
-        }
-        #expandir-contenido-cinco:checked ~ * .cont-expandible-cinco {
-            visibility: visible;
-        }
-        #expandir-contenido-seis:checked ~ * .cont-expandible-seis {
-            visibility: visible;
-        }
-		#expandir-contenido-siete:checked ~ * .cont-expandible-siete {
-            visibility: visible;
-        }
-		#expandir-contenido-ocho:checked ~ * .cont-expandible-ocho {
-            visibility: visible;
-        }
-		#expandir-contenido-nueve:checked ~ * .cont-expandible-nueve {
-            visibility: visible;
-        }
-		#expandir-contenido-diez:checked ~ * .cont-expandible-diez {
-            visibility: visible;
-        }
-		#expandir-contenido-once:checked ~ * .cont-expandible-once {
-            visibility: visible;
-        }
-		#expandir-contenido-doce:checked ~ * .cont-expandible-doce {
-            visibility: visible;
-        }
-		#expandir-contenido-trece:checked ~ * .cont-expandible-trece {
-            visibility: visible;
-        }
-		#expandir-contenido-catorce:checked ~ * .cont-expandible-catorce {
-            visibility: visible;
-        }
-		#expandir-contenido-quince:checked ~ * .cont-expandible-quince{
-            visibility: visible;
-        }
-		#expandir-contenido-dieciseis:checked ~ * .cont-expandible-dieciseis{
-            visibility: visible;
-        }
-		.expandir-boton img {
-			transition: .3s ease-in-out;
-		}
-		/*estilos para el punto cuando el checkbox esta en estado cheked*/
-        .animacion:checked ~ .expandir-boton img {
-			transform: rotate(45deg) scale(1.2);
-        }
-</style>
-<div class="row marcas-juguetes">
-	<div class="titulo-hogar">
-		<h1>Hogar</h1>
-	</div>		
-	<div class="col-md-12 col-xs-12 carrusel-juguetes">
-		<div class="col-md-12 col-xs-12 carrusel-juguetes">	
-			<div class="col-md-2 col-xs-4 marquita">
-				<a href="/colchones/c/BI_COLC_ALKOS">
-					<div class="caja-contenedora">
-						<div class="caja-imagen">
-							<img src="/medias/colchones.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyODN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDAvaGI2LzEwNTE2MzAwMDA1NDA2LnN2Z3wxNjQ4NTQ2MWM0NTgzMjg3Y2QzNTFjMWIyZTA2NjExNjQ1MTg5MjhiNzdhMzQzYWEwNTNlMWY1MjUzZjE1YTIz" alt="icono categoría colchones en alkosto">
-						</div>
-						<div class="texto-categoria">
-							<h2>Colchones</h2>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/ambientes/muebles-alcoba/c/muebles-alcoba">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-muebles.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzMDN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMTEvaGMzLzEwNTE2MzAwNTI5Njk0LnN2Z3xjZDc0Njk0NDA5NWU3NmZjZDU5NWM3NTNiOGY5YjMyMDc2NTRiOTQ4ZWExZGMzOTI3MmI5MjJiYTkzOTc4Mjhj" alt="icono categoría muebles de habitación en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Muebles de habitación</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/ambientes/muebles-sala/c/muebles-sala">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-sala.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1MTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oY2MvaDM2LzEwNTE2MzAxMDUzOTgyLnN2Z3wxM2IzNWQzYmFiYjhiNmQ5YmU4ZTkyNDkwNThjNDIwYzE0OGQ5ZTQyNDA5Yjk4ZDkyMDBkYzRmMGEyYzI4Mzk4" alt="icono ambiente sala en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Sala</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/muebles-estudio/c/muebles-estudio">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/escritorios.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMwMzN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDQvaDZlLzEwNTE2MzAyMjMzNjMwLnN2Z3w5OWQ1YTQ1OWViYzBmMWZjZmIwM2ViNTY1NzlmZjkyMDcyNDliM2FkZjM0NWEyMWUyMDYxZDQzMDU4MDI3MzVh" alt="icono ambiente estudio en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Estudio</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/ambientes/exterior/c/exterior">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-muebles-exteriores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDk5OHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g0Zi9oMWYvMTA1MTY1NzY4OTUwMDYuc3ZnfGI2MDVkN2FmOWM1NzZhYWMxNTA4NzMzYWM3N2YxOTBlNDFjYzk2ZjU3OWFiNDY1OTE4YzhmMTVjNGEyYjQ1MTg" alt="icono ambiente exterior en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Exterior</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/marcas/gildan/c/gildan">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-gildan-landnghogar.svg?context=bWFzdGVyfGhvZ2FyfDI3NjF8aW1hZ2Uvc3ZnK3htbHxob2dhci9oODcvaDllLzExNTA3NzIwNjE4MDE0LnN2Z3wyZjBjMDUxYWVkZTRmYTU3NmY0MDNiOTkwN2NlYTYxMDBiZmQ5MWQ1ZmIzMjZkOWI0MTlmODQzMDU3NDlhZWM1">
-					</div>
-					<div class="texto-categoria">
-						<h2>Ropa  Gildan</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/hogar/habitacion/c/BI_164_ALKOS">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-cubrecamas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc0MnxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g5NS9oN2EvMTA1MTY3Mzc0NTgyMDYuc3ZnfGU0Y2JkNmU1ZGMzMDJiYzZmODI5ZDA4M2Q3NmFiNTg2YWY1YjUxNmFjOTE5OGI4N2FmYzliMTYwZDk1MDAzYWQ" alt="icono categoría ropa de cama en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Habitación</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/hogar/cocina/c/BI_166_ALKOS">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzMzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjYvaGI3LzEwNTE2ODI5MDExOTk4LnN2Z3xiODMwYWY1NGIxNTUwMzljODQyZjgyMGRjNDJiM2JjNGRjZDBiZDc4MzBjYjg3MGYzMWU3YWFhY2YwYWU4ODVm" alt="icono categoría cocina en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Cocina</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/hogar/mesa/c/BI_167_ALKOS">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-vajillas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0MzJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjcvaDdhLzEwNTE2OTA0NzM4ODQ2LnN2Z3wxNmE1OGIzMTU3YjdiYjkxYjEzOWZiNTI2ODA4NGY5ZTU5NGQyZGY0OWY4MjFlZWVjOGYxNDc3YWZmNGM5NDY0" alt="icono categoría mesa y complementos en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Mesa y complementos</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/hogar/bano/c/BI_165_ALKOS">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-bano.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0MTJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oY2UvaDFiLzEwNTE2OTYzODE5NTUwLnN2Z3xjMDdlOWZmYjNhYjcxMTJjYTM1ZWQ5N2Y3YmRlMDZlNDNmMjI0NjIyNDBjNWZhNjIxOGRkZThlZDNjNWM2MmNi" alt="icono categoría baño en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Baño</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/hogar/organizacion-aseo/c/BI_169_ALKOS">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-organizacion.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwMDF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYzkvaGY4LzEwNTE3MDI3OTc5Mjk0LnN2Z3w1N2QzYmZlZDRiNDlkNTYyMDQ5YTVkZjk4YzQ0ZDhmZDU5NzNiMzAyNGMwY2NmYWM2ZmRkNjZjNGViZDRjZjhj" alt="icono categoría organización y aseo en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Organización <br> y aseo</h2>
-					</div>
-				</div>
-			</a>
-			</div>
-			<div class="col-md-2 col-xs-4 marquita">
-			<a href="/hogar/decoracion/c/BI_168_ALKOS">
-				<div class="caja-contenedora">
-					<div class="caja-imagen">
-						<img src="/medias/icono-decoracion.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQ1Nzh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMjUvaDUxLzEwNTE3MDgwOTY1MTUwLnN2Z3xiZmY5OTgxNjE5MTI5Y2QyZmQ0MWM4NzUyOGRlOGI3ZGRkYmM2MDc5MjQxMGIzMjdlYzVjNjYwMjMwMWQ4M2E1" alt="icono categoría decoración en alkosto">
-					</div>
-					<div class="texto-categoria">
-						<h2>Decoración</h2>
-					</div>
-				</div>
-			</a>
-			</div>	
-    	</div>						
-	</div>
-	<!-- cierra iconos categorías -->
-	<div class="row body-gen">
-		<!------------------------------------------------------------------------>
-		<!------------------------------------------------------------------------>
-		<div class="col-md-12 colc-xs-12 contenedor-amb-uno">
-    		<div class="col-md-9 col-xs-12 ambientada-uno amb-der"> <a href="/muebles-estudio/c/muebles-estudio">
-        		<img class="ambientada-pc"  src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-oficina-hogar-2-22.jpg" alt="ambiente estudio en alkosto"></a>
-        		<a href="/muebles-estudio/c/muebles-estudio"> <img class="ambientada-mobile" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-oficina-hogar-2-22-mob2.jpg" alt="ambiente estudio en alkosto mobile"></a>
-        		<div class="caja-boton cb-ocho">
-           			<input type="checkbox" id="expandir-contenido-ocho" class="animacion"/>
-            		<label for="expandir-contenido-ocho" class="expandir-boton posicion-punto-ocho">
-            			<img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar">
-            		</label>
-            		<div>
-                		<a href="/silla-oficina-mundial-sillas-florencia/p/7705946810364">
-                    		<div class="cont-expandible-ocho caja-expandible">
-                        		<h3>Silla de oficina Florencia MUNDIAL DE SILLAS</h3>
-                        		<p>Comprar</p>
-                    		</div>
-                    	</a>
-                	</div>
-        		</div>
-        		<div class="caja-boton cb-catorce">
-            		<input type="checkbox" id="expandir-contenido-catorce" class="animacion"/>
-            		<label for="expandir-contenido-catorce" class="expandir-boton posicion-punto-catorce">
-            			<img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar">
-            		</label>
-            		<div>
-                		<a href="/escritorio-practimac-enkubo-rovere/p/7706112969275">
-                    		<div class="cont-expandible-catorce caja-expandible">
-                        		<h3>Escritorio Enkubo Rovere PRACTIMAC</h3>
-                        		<p>Comprar</p>
-                    		</div>
-                		</a>
-            		</div>
-        		</div>
-    		</div>
-    		<div class="col-md-4 col-xs-12 texto-ambiente-uno tex-amb-izq">
-        		<div class="filete-hogar">
-            		<h3>ESPACIOS PARA CREAR <br><span>OFICINA EN CASA</span></h3>
-        		</div>
-        		<div class="parrafo-ambiente uno">
-            		<p>Elementos funcionales, cómodos y prácticos para renovar tu <span>Home Office.</span></p>
-        		</div>
-        		<a class="boton-ambientes" href="/muebles-estudio/c/muebles-estudio">Conoce más</a>
-    		</div>
+       
+	</style>
+	<div class="row marcas-juguetes">
+		<div class="titulo-hogar">
+			<h1>Hogar</h1>
 		</div>
-		<!------------------------------------------------------------------------>
-		<!--------------------------------------------------------->
-		<div class="col-md-12 colc-xs-12 contenedor-amb-dos">
+		
+		<div class="col-md-12 col-xs-12 carrusel-juguetes">	
+
+
+			<div class="col-md-12 col-xs-12 carrusel-juguetes">	
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/colchones/c/BI_COLC_ALKOS">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/colchones.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEyODN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDAvaGI2LzEwNTE2MzAwMDA1NDA2LnN2Z3wxNjQ4NTQ2MWM0NTgzMjg3Y2QzNTFjMWIyZTA2NjExNjQ1MTg5MjhiNzdhMzQzYWEwNTNlMWY1MjUzZjE1YTIz" alt="icono categoría colchones en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Colchones</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/ambientes/muebles-alcoba/c/muebles-alcoba">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-muebles.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzMDN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMTEvaGMzLzEwNTE2MzAwNTI5Njk0LnN2Z3xjZDc0Njk0NDA5NWU3NmZjZDU5NWM3NTNiOGY5YjMyMDc2NTRiOTQ4ZWExZGMzOTI3MmI5MjJiYTkzOTc4Mjhj" alt="icono categoría muebles de habitación en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Muebles de habitación</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/ambientes/muebles-sala/c/muebles-sala">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-sala.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDE1MTh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oY2MvaDM2LzEwNTE2MzAxMDUzOTgyLnN2Z3wxM2IzNWQzYmFiYjhiNmQ5YmU4ZTkyNDkwNThjNDIwYzE0OGQ5ZTQyNDA5Yjk4ZDkyMDBkYzRmMGEyYzI4Mzk4" alt="icono ambiente sala en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Sala</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/muebles-estudio/c/muebles-estudio">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/escritorios.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDMwMzN8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMDQvaDZlLzEwNTE2MzAyMjMzNjMwLnN2Z3w5OWQ1YTQ1OWViYzBmMWZjZmIwM2ViNTY1NzlmZjkyMDcyNDliM2FkZjM0NWEyMWUyMDYxZDQzMDU4MDI3MzVh" alt="icono ambiente estudio en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Estudio</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/ambientes/exterior/c/exterior">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-muebles-exteriores.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDk5OHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g0Zi9oMWYvMTA1MTY1NzY4OTUwMDYuc3ZnfGI2MDVkN2FmOWM1NzZhYWMxNTA4NzMzYWM3N2YxOTBlNDFjYzk2ZjU3OWFiNDY1OTE4YzhmMTVjNGEyYjQ1MTg" alt="icono ambiente exterior en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Exterior</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+
+                <div class="col-md-2 col-xs-4 marquita">
+					<a href="/marcas/gildan/c/gildan">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-gildan-landnghogar.svg?context=bWFzdGVyfGhvZ2FyfDI3NjF8aW1hZ2Uvc3ZnK3htbHxob2dhci9oODcvaDllLzExNTA3NzIwNjE4MDE0LnN2Z3wyZjBjMDUxYWVkZTRmYTU3NmY0MDNiOTkwN2NlYTYxMDBiZmQ5MWQ1ZmIzMjZkOWI0MTlmODQzMDU3NDlhZWM1">
+							</div>
+							<div class="texto-categoria">
+								<h2>Ropa  Gildan</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/hogar/habitacion/c/BI_164_ALKOS">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-cubrecamas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDc0MnxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g5NS9oN2EvMTA1MTY3Mzc0NTgyMDYuc3ZnfGU0Y2JkNmU1ZGMzMDJiYzZmODI5ZDA4M2Q3NmFiNTg2YWY1YjUxNmFjOTE5OGI4N2FmYzliMTYwZDk1MDAzYWQ" alt="icono categoría ropa de cama en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Habitación</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/hogar/cocina/c/BI_166_ALKOS">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-cocina.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDEzMzR8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oNjYvaGI3LzEwNTE2ODI5MDExOTk4LnN2Z3xiODMwYWY1NGIxNTUwMzljODQyZjgyMGRjNDJiM2JjNGRjZDBiZDc4MzBjYjg3MGYzMWU3YWFhY2YwYWU4ODVm" alt="icono categoría cocina en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Cocina</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/hogar/mesa/c/BI_167_ALKOS">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-vajillas.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0MzJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oZjcvaDdhLzEwNTE2OTA0NzM4ODQ2LnN2Z3wxNmE1OGIzMTU3YjdiYjkxYjEzOWZiNTI2ODA4NGY5ZTU5NGQyZGY0OWY4MjFlZWVjOGYxNDc3YWZmNGM5NDY0" alt="icono categoría mesa y complementos en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Mesa y complementos</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/hogar/bano/c/BI_165_ALKOS">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-bano.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDI0MTJ8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oY2UvaDFiLzEwNTE2OTYzODE5NTUwLnN2Z3xjMDdlOWZmYjNhYjcxMTJjYTM1ZWQ5N2Y3YmRlMDZlNDNmMjI0NjIyNDBjNWZhNjIxOGRkZThlZDNjNWM2MmNi" alt="icono categoría baño en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Baño</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/hogar/organizacion-aseo/c/BI_169_ALKOS">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-organizacion.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDIwMDF8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oYzkvaGY4LzEwNTE3MDI3OTc5Mjk0LnN2Z3w1N2QzYmZlZDRiNDlkNTYyMDQ5YTVkZjk4YzQ0ZDhmZDU5NzNiMzAyNGMwY2NmYWM2ZmRkNjZjNGViZDRjZjhj" alt="icono categoría organización y aseo en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Organización <br> y aseo</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 col-xs-4 marquita">
+					<a href="/hogar/decoracion/c/BI_168_ALKOS">
+						<div class="caja-contenedora">
+							<div class="caja-imagen">
+								<img src="/medias/icono-decoracion.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDQ1Nzh8aW1hZ2Uvc3ZnK3htbHxJY29ub3MgQ2F0ZWdvcsOtYXMgQWxrb3N0by9oMjUvaDUxLzEwNTE3MDgwOTY1MTUwLnN2Z3xiZmY5OTgxNjE5MTI5Y2QyZmQ0MWM4NzUyOGRlOGI3ZGRkYmM2MDc5MjQxMGIzMjdlYzVjNjYwMjMwMWQ4M2E1" alt="icono categoría decoración en alkosto">
+							</div>
+							<div class="texto-categoria">
+								<h2>Decoración</h2>
+							</div>
+						</div>
+					</a>
+				</div>
+		
+               
+
+			</div>						
+		</div> <!-- cierra iconos categorías -->
+
+	<div class="row body-gen">
+
+
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+
+<div class="col-md-12 colc-xs-12 contenedor-amb-uno">
+    <div class="col-md-9 col-xs-12 ambientada-uno amb-der">
+       <a href="/muebles/sofas-sillones/c/BI_407_ALKOS"> <img class="ambientada-pc" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-sala-03-22.jpg" alt="ambiente sala en alkosto"></a>
+       <a href="/muebles/sofas-sillones/c/BI_407_ALKOS"> </a>  <img class="ambientada-mobile" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-sala-03-22-mob.jpg" alt="ambiente sala en alkosto mobile"></a>
+
+       
+        
+    </div>
+
+    <div class="col-md-4 col-xs-12 texto-ambiente-uno tex-amb-izq">
+        <div class="filete-hogar">
+            <h3>CREA ESPACIOS <br><span>LLENOS DE ESTILO</span></h3>
+        </div>
+        <div class="parrafo-ambiente uno">
+            <p>Encuentra los mejores Sofás para <span>tu hogar.</span></p>
+        </div>
+        <a class="boton-ambientes" href="/muebles/sofas-sillones/c/BI_407_ALKOS">
+            Conoce más
+        </a>
+    </div>
+</div>
+
+<!------------------------------------------------------------------------>
+<!--------------------------------------------------------->
+<div class="col-md-12 colc-xs-12 contenedor-amb-dos">
 	<div class="col-md-8 colc-xs-12 ambiente-izq">
 		<div class="col-md-12 col-xs-12 texto-ambiente-dos">
-			<div class="filete-hogar basis-uno">
-				<h3>ESPACIOS DE<br><span>RELAJACIÓN</span></h3>
+			
+			<div class="parrafo-ambiente uno basis-uno">
+				<p  class="margen-sup">Encuentra aquí las mejores sillas para <span>oficina y el hogar</span></p>
 			</div>
-			<div class="parrafo-ambiente uno basis-dos">
-				<p>Combina, cambia y renueva. <br><span>Creemos un espacio relajante en casa.</span></p>
-			</div>
-			<a class="boton-ambientes basis-tres" href="/ambientes/muebles-sala/c/muebles-sala">
+			<a class="boton-ambientes basis-tres" href="muebles/sillas/c/BI_408_ALKOS">
 				Conoce más
 			</a>
 		</div>
 
 		<div class="col-md-12 col-xs-12 ambientada-dos">
-		<a href="/ambientes/muebles-sala/c/muebles-sala">	<img class="ambientada-pc" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-oficina-silla-hogar-2-22.jpg" alt="ambiente sala en alkosto"></a>
-		<a href="/ambientes/muebles-sala/c/muebles-sala"> <img class="ambientada-mobile" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-oficina-silla-hogar-2-22-mob.jpg" alt="ambiente sala en alkosto mobile"></a>
+		<a href="muebles/sillas/c/BI_408_ALKOS"></a>	<img class="ambientada-pc" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-oficina-03-22.jpg" alt="ambiente sillas en alkosto"></a>
+		<a href="muebles/sillas/c/BI_408_ALKOS">	<img class="ambientada-mobile" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-oficina-03-22-mob.jpg" alt="ambiente sillas en alkosto mobile"></a>
 
 			
 
-			<div class="caja-boton cb-tres">
-				<input type="checkbox" id="expandir-contenido-tres" class="animacion"/>
-				<label for="expandir-contenido-tres" class="expandir-boton posicion-punto-tres"><img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar"></label>
-				<div>
-					<a href="/silla-gamer-tukasa-w-182-negra-roja/p/7705946377720">
-						<div class="cont-expandible-tres caja-expandible">
-							<h3>Silla Gamer W-182 Negra/Roja TUKASA</h3>
-							<p>Comprar</p>
-						</div>
-					</a>
-				</div>
-			</div>
+			
 
-			<div class="caja-boton cb-nueve">
-				<input type="checkbox" id="expandir-contenido-nueve" class="animacion"/>
-				<label for="expandir-contenido-nueve" class="expandir-boton posicion-punto-nueve"><img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar"></label>
-				<div>
-					<a href="/estacion-trabajo-practimac-madrid-con-cajones-wengue/p/7707070842044">
-						<div class="cont-expandible-nueve caja-expandible">
-							<h3>Estación de Trabajo Madrid con Cajones Wengue PRACTIMAC</h3>
-							<p>Comprar</p>
-						</div>
-					</a>
-				</div>
-			</div>
 		</div>
 	</div>
 
 	<div class="col-md-4 colc-xs-12 ambiente-der">
 		<div class="col-md-12 col-xs-12 texto-ambiente-tres">
 			<div class="parrafo-ambiente pa-uno">
-				<p>Desconéctate en el espacio favorito de <span>tu casa.</span></p>
+				<p>Organiza tus cosas con las mejores <span>Bibliotecas</span></p>
 			</div>
-			<a class="boton-ambientes" href="/muebles/mesas/mesas-auxiliares-centro/c/BI_0702_ALKOS">
+			<a class="boton-ambientes" href="/muebles/bibliotecas/c/BI_402_ALKOS">
 				Conoce más
 			</a>
 		</div>
 		<div class="col-md-12 col-xs-12 ambientada-tres">
-		<a href="/muebles/mesas/mesas-auxiliares-centro/c/BI_0702_ALKOS">	<img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-para-sala-2-22.jpg" alt="poltronas y sillones para el hogar en alkosto"></a>
+		<a href="/muebles/bibliotecas/c/BI_402_ALKOS "><img src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-muebles-03-22.jpg" alt="poltronas y sillones para el hogar en alkosto"></a>	
 		</div>
 
 		
 
-		<div class="caja-boton cb-cinco">
-			<input type="checkbox" id="expandir-contenido-cinco" class="animacion"/>
-			<label for="expandir-contenido-cinco" class="expandir-boton posicion-punto-cinco"><img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar"></label>
-			<div>
-				<a href="/poltrona-mecedora-tukasa-rocking/p/7705946729642">
-					<div class="cont-expandible-cinco caja-expandible">
-						<h3>Poltrona Mecedora Rocking TUKASA </h3>
-						<p>Comprar</p>
-					</div>
-				</a>
+		
+	</div>
+</div>
+
+
+<!------------------------------------------------------------------------>
+		<!--------------------------------------------------------->
+<div class="col-md-12 colc-xs-12 contenedor-amb-uno">
+    <div class="col-md-9 col-xs-12 ambientada-uno">
+       <a href="/hogar/cocina/baterias-cocina/c/BI_0860_ALKOS"> <img class="ambientada-pc" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-ar-cocina-03-22.jpg" alt="ambiente cocina en alkosto"></a>
+       <a href="/hogar/cocina/baterias-cocina/c/BI_0860_ALKOS"> <img class="ambientada-mobile" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-ar-cocina-03-22-mob.jpg" alt="ambiente cocina en alkosto mobile"></a>
+
+      
+        
+
+		
+
+		
+
+    </div>
+    <div class="col-md-4 col-xs-12 texto-ambiente-cuatro">
+        <div class="filete-hogar">
+            <h3><span>¿sabías qué?</span></h3>
+        </div>
+        <div class="parrafo-ambiente uno">
+            <p>En Alkosto encuentras <span>Baterías de cocina </span>para tus mejores recetas</p>
+        </div>
+        <a class="boton-ambientes" href="/hogar/cocina/baterias-cocina/c/BI_0860_ALKOS">
+            Conoce más
+        </a>
+    </div>
+</div>
+
+
+		
+<!--------------------------------------------------------->
+
+
+
+
+
+
+<div class="col-md-12 colc-xs-12 contenedor-amb-tres">
+	<div class="col-md-8 colc-xs-12 ambiente-cocina">
+		<div class="col-md-12 col-xs-12 texto-ambiente-dos color-cocina">
+			<div class="filete-hogar basis-uno">
+				<h3>UNA HABITACIÓN <br><span>DE REVISTA</span></h3>
 			</div>
+			<div class="parrafo-ambiente uno basis-dos">
+				<p>Encuentra cubrecamas, juegos de sábanas, almohadas y más!</span></p>
+			</div>
+			<a class="boton-ambientes basis-tres" href="/hogar/habitacion/c/BI_164_ALKOS">
+				Conoce más
+			</a>
+		</div>
+
+		<div class="col-md-12 col-xs-12 ambientada-seis">
+		<a href="/hogar/habitacion/c/BI_164_ALKOS">	<img class="ambientada-pc" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-habitacion2-03-22.jpg" alt="ambiente cocina alkosto"></a>
+		<a href="/hogar/habitacion/c/BI_164_ALKOS">	<img class="ambientada-mobile" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-habitacion2-03-22-mob.jpg" alt="ambiente cocina alkosto"></a>
+
+			
+
+			
 		</div>
 	</div>
-		</div>
-		<!------------------------------------------------------------------------>
-		<!--------------------------------------------------------->
-		<!--------------------------------------------------------->
-		<div class="col-md-12 colc-xs-12 contenedor-amb-tres">
-			<div class="col-md-8 colc-xs-12 ambiente-cocina">
-				<div class="col-md-12 col-xs-12 texto-ambiente-dos color-cocina">
-					<div class="filete-hogar basis-uno">
-						<h3>¡Diviértete! <br><span></span></h3>
-					</div>
-					<div class="parrafo-ambiente uno basis-dos">
-						<p>Descubriendo prácticos complementos para tu cocina… ¡Y no te cuesta más!</p>
-					</div>
-					<a class="boton-ambientes basis-tres" href="/hogar/cocina/c/BI_166_ALKOS">Conoce más</a>
-				</div>
-				<div class="col-md-12 col-xs-12 ambientada-seis">
-				<a href="/hogar/cocina/c/BI_166_ALKOS"><img class="ambientada-pc" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-articulos-2-22.jpg" alt="ambiente cocina alkosto"></a>	
-				<a href="/hogar/cocina/c/BI_166_ALKOS"> <img class="ambientada-mobile" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-articulos-2-22-mob.jpg" alt="ambiente cocina alkosto"></a>	
-					<div class="caja-boton cb-seis">
-						<input type="checkbox" id="expandir-contenido-seis" class="animacion"/>
-						<label for="expandir-contenido-seis" class="expandir-boton posicion-punto-seis">
-							<img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar">
-						</label>
-						<div>
-							<a href="/sarten-free-home-antiadherente-aluminio-fundido-24-cm/p/7705946617451">
-								<div class="cont-expandible-seis caja-expandible">
-									<h3>Sartén FREE HOME Antiadherente</h3>
-									<p>Comprar</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="caja-boton cb-siete">
-						<input type="checkbox" id="expandir-contenido-siete" class="animacion"/>
-						<label for="expandir-contenido-siete" class="expandir-boton posicion-punto-siete">
-							<img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar">
-						</label>
-						<div>
-							<a href="/bateria-cocina-8-piezas-ilko-acero-inoxidable-tapa-vidrio-prime/p/7806810239691">
-								<div class="cont-expandible-siete caja-expandible">
-									<h3>Batería de Cocina 8 Piezas ILKO Acero Inoxidable</h3>
-									<p>Comprar</p>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
+
+	<div class="col-md-4 colc-xs-12 ambiente-mesa">
+		<div class="col-md-12 col-xs-12 texto-ambiente-tres color-mesa">
+			<div class="parrafo-ambiente pa-uno">
+				<p> <span>Tu Baño de ensueño </span>Toallas y accesorios con un toque de estilo!</p>
 			</div>
-			<div class="col-md-4 colc-xs-12 ambiente-mesa">
-				<div class="col-md-12 col-xs-12 texto-ambiente-tres color-mesa">
-					<div class="parrafo-ambiente pa-uno">
-						<p> <span>¡Diviértete!</span>Creando un hogar a la moda.  ¡Y no te cuesta más!</p>
-					</div>
-					<a class="boton-ambientes" href="/hogar/cocina/refractarias-moldes-bowls/c/BI_0867_ALKOS">Conoce más</a>
-				</div>
-				<div class="col-md-12 col-xs-12 ambientada-tres">
-				<a href="/hogar/cocina/c/BI_166_ALKOS">	<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-cocina-2-22.jpg" alt="ambiente cocina en alkosto"></a>
-				</div>
-				<div class="caja-boton cb-trece">
-					<input type="checkbox" id="expandir-contenido-trece" class="animacion"/>
-					<label for="expandir-contenido-trece" class="expandir-boton posicion-punto-trece"><img src="/medias/icono-punto.svg?context=bWFzdGVyfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvfDU5MHxpbWFnZS9zdmcreG1sfEljb25vcyBDYXRlZ29yw61hcyBBbGtvc3RvL2g4NC9oYzcvMTA1MTcxNTQ2OTMxNTAuc3ZnfDFmNjUyMzgzYzZkYTQyNDFlMTg1Y2E4Mjc3ZDhhZTA2YTI4YzRiYmE0ZmQ2Y2RlMzdhZGQ2ZjMyZTljNTU5Y2M" alt="icono abrir cerrar"></label>
-					<div>
-						<a href="/hogar/cocina/refractarias-moldes-bowls/c/BI_0867_ALKOS?q=%3Arelevance%3Abrand%3AFREE+HOME%3Amaterial-ppal-artho%3AAluminio">
-							<div class="cont-expandible-trece caja-expandible">
-								<h3>Molde Antiadherente FREE HOME </h3>
-								<p>Comprar</p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
+			<a class="boton-ambientes" href="/hogar/bano/c/BI_165_ALKOS">
+				Conoce más
+			</a>
 		</div>
-		<!--------------------------------------------------------->
-	</div><!-- cierra body-gen -->
+		<div class="col-md-12 col-xs-12 ambientada-tres">
+		<a href="/hogar/bano/c/BI_165_ALKOS">	<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-bano-03-22.jpg" alt="ambiente cocina en alkosto"> </a>
+		</div>
+
+
+
+		
+	</div>
 </div>
+
+	<!--------------------------------------------------------->
+
+				
+	</div><!-- cierra body-gen -->
