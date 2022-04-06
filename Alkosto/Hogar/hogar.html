@@ -2,6 +2,9 @@
 		*, *:after, *:before{
             box-sizing: border-box; 
         }
+        h1.h1_content {
+    		display: none;
+		}
 		.body-gen{
 			line-height: 1.2;
 			padding: 0;
@@ -72,6 +75,55 @@
         .margen-sup{
             margin-top: 6%;
         }
+        /*New menu*/
+        .circles-container {
+		    flex-wrap: wrap;
+		    max-width: 1366px;
+		    width: 100%;
+		    overflow: hidden;
+		    transition: transform .3s ease;
+		    display: flex;
+		    transform: translate(0,0);
+		    margin: 0em auto;
+		    opacity: 1;
+		    height: auto;
+		    justify-content: space-between;
+		}
+		.circles {
+		    flex: 0 0 calc(10% - 12px);
+    		color: white;
+    		margin: 1em 0;
+		}
+		.circles a {
+		    background: var(--text-color-disabled);
+		    box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px;
+		    border-radius: 100%;
+		    display: block;
+		    margin: 0 auto;
+		    padding: 0.5em;
+		    transition: .3s ease all;
+		    width: fit-content;
+		}
+		.circles img {
+		    object-fit: cover;
+		    transition: .3s ease all;
+		    max-width: 90px;
+		}
+		.circles h3 {
+		    font-size: 16px;
+		    text-align: center;
+		    transition: .3s ease all;
+		}
+		.circles:hover a {
+			box-shadow: rgb(0 0 0 / 6%) 0px 3px 6px 1px;
+		}
+		.circles:hover h3 {
+		    color: var(--primary-color2) !important;
+		}
+		.circles:hover img{
+			transform: scale(1.15);
+		}
+		/*end new menu*/
 		@media(min-width: 1080px){
 			.body-gen{
 				max-width: 1200px;
@@ -320,12 +372,7 @@
 		/*estilos para cajas de producto en fotos ambientadas*/
 		.ambientada-uno{
 			position: relative;
-		}
-        
-        
-		
-
-        
+		}   
 	
 		@media(min-width: 1080px){
 		
@@ -337,13 +384,36 @@
 			}
 		
 		}
+
+		@media screen and (max-width: 1366px){
+			.circles-container{
+				justify-content: center;
+				margin-left: 0 15px;
+			}
+		}
+		@media screen and (max-width: 991px){
+			.circles {
+    			flex: 0 0 calc(15% - 12px);
+    		}
+		}
+		@media screen and (max-width: 767px){
+			.circles {
+    			flex: 0 0 calc(20% - 12px);
+    		}
+		}
+		@media screen and (max-width: 480px){
+			.circles {
+				flex: 0 0 calc(25% - 12px); 
+			}
+			.circles img { max-width: 70px}
+			.circles h3 {font-size: 14px}
+		}
 </style>
-	<div class="row marcas-juguetes">
-		<div class="titulo-hogar">
-			<h1>Hogar</h1>
-		</div>
-		
-		<div class="col-md-12 col-xs-12 carrusel-juguetes">	
+<div class="row marcas-juguetes">
+	<div class="titulo-hogar">
+		<h1>Hogar</h1>
+	</div>		
+	<!--div class="col-md-12 col-xs-12 carrusel-juguetes">	
 
 
 			<div class="col-md-12 col-xs-12 carrusel-juguetes">	
@@ -497,49 +567,97 @@
                
 
 			</div>						
-		</div> <!-- cierra iconos categorías -->
-
-	<div class="row body-gen">
-
-
-<!------------------------------------------------------------------------>
-<!------------------------------------------------------------------------>
-
-<div class="col-md-12 colc-xs-12 contenedor-amb-uno">
-    <div class="col-md-9 col-xs-12 ambientada-uno amb-der">
-       <a href="/muebles/sofas-sillones/c/BI_407_ALKOS"> <img class="ambientada-pc" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-sala-03-22.jpg" alt="ambiente sala en alkosto"></a>
-       <a href="/muebles/sofas-sillones/c/BI_407_ALKOS">  <img class="ambientada-mobile" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-sala-03-22-mob.jpg" alt="ambiente sala en alkosto mobile"></a>
-
-       
-        
-    </div>
-
-    <div class="col-md-4 col-xs-12 texto-ambiente-uno tex-amb-izq">
-        <div class="filete-hogar">
-            <h3>CREA ESPACIOS <br><span>LLENOS DE ESTILO</span></h3>
-        </div>
-        <div class="parrafo-ambiente uno">
-            <p>Encuentra los mejores Sofás para <span>tu hogar.</span></p>
-        </div>
-        <a class="boton-ambientes" href="/muebles/sofas-sillones/c/BI_407_ALKOS">
-            Conoce más
-        </a>
-    </div>
-</div>
-
-<!------------------------------------------------------------------------>
-<!--------------------------------------------------------->
-<div class="col-md-12 colc-xs-12 contenedor-amb-dos">
-	<div class="col-md-8 colc-xs-12 ambiente-izq">
-		<div class="col-md-12 col-xs-12 texto-ambiente-dos">
-			
-			<div class="parrafo-ambiente uno basis-uno">
-				<p  class="margen-sup">Encuentra aquí las mejores sillas para <span>oficina y el hogar</span></p>
-			</div>
-			<a class="boton-ambientes basis-tres" href="muebles/sillas/c/BI_408_ALKOS">
-				Conoce más
+	</div--> <!-- cierra iconos categorías -->
+	<div id="menu-hogar" class="circles-container">
+		<div class="circles">
+			<a href="/colchones/c/BI_COLC_ALKOS">
+				<img alt="refrigeración" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Refrigeracion.png">
 			</a>
+			<h3>Colchones</h3>
 		</div>
+		<div class="circles">
+			<a href="/muebles/c/BI_MUEB_ALKOS">
+				<img alt="lavado" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Lavado.png">
+			</a>
+			<h3>Muebles</h3>
+		</div>
+		<div class="circles">
+			<a href="/muebles/sofas-sillones/c/BI_407_ALKOS">
+				<img alt="Aires Acondicionados" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Aires-Acondicionados.png">
+			</a>
+			<h3>Sillas & Sofás</h3>
+		</div>
+		<div class="circles">
+			<a href="/hogar/exterior/c/BI_170_ALKOS">
+				<img alt="Ventilación" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Ventilacion.png">
+			</a>
+			<h3>Exterior</h3>
+		</div>
+		<div class="circles">
+			<a href="/hogar/habitacion/c/BI_164_ALKOS">
+				<img alt="planchas ropa" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Planchas-de-ropa.png">
+			</a>
+			<h3>Habitación</h3>
+		</div>
+		<div class="circles">
+			<a href="/hogar/bano/c/BI_165_ALKOS">
+				<img alt="Aspiradoras Hidrolavadoras" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Aspiradoras-Hidrolavadoras.png">
+			</a>
+			<h3>Baño</h3>
+		</div>
+		<div class="circles">
+			<a href="/hogar/cocina/c/BI_166_ALKOS">
+				<img alt="Aspiradoras Hidrolavadoras" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Aspiradoras-Hidrolavadoras.png">
+			</a>
+			<h3>Cocina</h3>
+		</div>
+		<div class="circles">
+			<a href="/hogar/decoracion/c/BI_168_ALKOS">
+				<img alt="Aspiradoras Hidrolavadoras" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Aspiradoras-Hidrolavadoras.png">
+			</a>
+			<h3>Decoración</h3>
+		</div>
+		<div class="circles">
+			<a href="/hogar/mesa/c/BI_167_ALKOS">
+				<img alt="Aspiradoras Hidrolavadoras" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Aspiradoras-Hidrolavadoras.png">
+			</a>
+			<h3>Mesas</h3>
+		</div>
+		<div class="circles">
+			<a href="/hogar/organizacion-aseo/c/BI_169_ALKOS">
+				<img alt="Aspiradoras Hidrolavadoras" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Kalley/Fichas-y-Manuales/img/Electrodomesticos-Aspiradoras-Hidrolavadoras.png">
+			</a>
+			<h3>Organización</h3>
+		</div>
+	</div>
+	<div class="row body-gen">
+		<!------------------------------------------------------------------------>
+		<!------------------------------------------------------------------------>
+		<div class="col-md-12 colc-xs-12 contenedor-amb-uno">
+    		<div class="col-md-9 col-xs-12 ambientada-uno amb-der">
+       			<a href="/muebles/sofas-sillones/c/BI_407_ALKOS"> <img class="ambientada-pc" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-sala-03-22.jpg" alt="ambiente sala en alkosto"></a>
+       			<a href="/muebles/sofas-sillones/c/BI_407_ALKOS">  <img class="ambientada-mobile" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-sala-03-22-mob.jpg" alt="ambiente sala en alkosto mobile"></a>         
+    		</div>
+    		<div class="col-md-4 col-xs-12 texto-ambiente-uno tex-amb-izq">
+        		<div class="filete-hogar">
+            		<h3>CREA ESPACIOS <br><span>LLENOS DE ESTILO</span></h3>
+        		</div>
+        		<div class="parrafo-ambiente uno">
+            		<p>Encuentra los mejores Sofás para <span>tu hogar.</span></p>
+        		</div>
+        		<a class="boton-ambientes" href="/muebles/sofas-sillones/c/BI_407_ALKOS">Conoce más</a>
+    		</div>
+		</div>
+		<!------------------------------------------------------------------------>
+		<!--------------------------------------------------------->
+		<div class="col-md-12 colc-xs-12 contenedor-amb-dos">
+			<div class="col-md-8 colc-xs-12 ambiente-izq">
+				<div class="col-md-12 col-xs-12 texto-ambiente-dos">			
+					<div class="parrafo-ambiente uno basis-uno">
+						<p  class="margen-sup">Encuentra aquí las mejores sillas para <span>oficina y el hogar</span></p>
+					</div>
+					<a class="boton-ambientes basis-tres" href="muebles/sillas/c/BI_408_ALKOS">Conoce más</a>
+				</div>
 
 		<div class="col-md-12 col-xs-12 ambientada-dos">
 		<a href="muebles/sillas/c/BI_408_ALKOS">	<img class="ambientada-pc" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/hogar/landing_hogar/ambiente-oficina-03-22.jpg" alt="ambiente sillas en alkosto"></a>
