@@ -1,0 +1,554 @@
+<style>
+    :root {
+       --main-alert: #dd171b;
+       --main-naranja-oscuro: #b14b25;
+       --main-text1: #444444;
+       --main-text2: #5c5c5c;
+       --main-text3: #959595;
+       --main-naranja: #eb5b25;
+       --main-azul: #004797;
+       --main-fondo-gris: #f5f5f5;
+       --main-deshabilitado: #e0e0e0;
+       --main-azul-claro: #edf1f6;
+   }
+   
+   h1 {
+       font-size: 24px !important;
+       color: #444444 !important;
+       font-weight: bold !important;
+       margin-bottom: 32px !important;
+       margin-top: 32px !important;
+       text-align: left !important;
+   }
+   
+   h2 {
+       font-size: 18px !important;
+       font-weight: bold !important;
+       margin-bottom: 0 !important;
+       margin-top: 0 !important;
+   }
+   
+   h3 {
+       font-size: 16px !important;
+       margin: 0 !important;
+   }
+   
+   h4 {
+       font-size: 15px !important;
+       margin: 0 !important;
+   }
+   
+   p {
+       font-size: 14px;
+   }
+   
+   .color_grisoscuro {
+       color: #444;
+   }
+   
+   .color_grisclaro {
+       color: #959595;
+   }
+   
+   .color_azul {
+       color: var(--main-azul);
+   }
+   
+   .color_gris_fondo {
+       background: var(--main-fondo-gris);
+   }
+   
+   .sombra {
+       box-shadow: 0px 2px 8px #0000003d;
+   }
+   
+   .card {
+       -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+       border-radius: 8px;
+   }
+   
+   .margen_interna {
+       padding: 16px;
+   }
+   
+   .contenedor_cms {
+       width: 1280px !important;
+       margin: 0 auto;
+       padding: 0;
+       max-width: 100% !important;
+   }
+   
+   .contenedor_cms .col-sm-4 {
+       width: 31.333333% !important;
+       padding: 0 !important;
+   }
+   
+   .right {
+       float: right;
+   }
+   
+   .left {
+       float: left;
+   }
+   
+   .clear {
+       clear: both;
+   }
+   
+   .cta {
+       background: #DD171B;
+       height: 56px !important;
+       text-align: center;
+       line-height: 56px;
+       font-size: 14px;
+       font-weight: bold;
+       width: 214px;
+       -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+       border-radius: 4px;
+   }
+   
+   a:focus,
+   a:hover {
+       text-decoration: none !important;
+   }
+   
+   .cta a {
+       height: 56px;
+       color: #FFF !important;
+       display: block;
+       border-radius: 4px;
+   }
+   
+   .cta a:hover {
+       height: 56px;
+       color: #FFF !important;
+       display: block;
+       background: #AB1114;
+       border-radius: 4px;
+   }
+   
+   .cierre {
+       width: 100%;
+       height: 88px;
+       clear: both;
+   }
+   
+   .contenedor_cms .col-4,
+   .contenedor_cms .col-8 {
+       padding: 0;
+       margin: 0 16px;
+       display: inline-block;
+   }
+   
+   .contenedor_cms .col-4:first-child {
+       margin-left: 0 !important;
+   }
+   
+   .contenedor_cms .col-4:last-child {
+       margin-right: 0 !important;
+   }
+   
+   .contenedor_cms .col-4 {
+       width: 31.333333%;
+   }
+   
+   .contenedor_cms .col-8 {
+       width: 65.666667%;
+       text-align: center;
+   }
+   
+   h2 {
+       font-weight: 400 !important;
+       margin: 0 !important;
+       padding: 0;
+       height: 70px;
+       display: -webkit-flex;
+       display: -ms-flexbox;
+       display: -ms-flex;
+       display: flex;
+       -ms-flex-flow: row nowrap;
+       -webkit-flex-flow: row nowrap;
+       -moz-flex-flow: row nowrap;
+       flex-flow: row nowrap;
+       align-items: flex-end;
+       float: left;
+   }
+   
+   .contenedor_cms .col-8 h3 {
+       margin: 0;
+       padding: 0;
+       font-weight: 400 !important;
+   }
+   
+   .sombra {
+       padding: 16px;
+       margin-top: 38px;
+       margin-bottom: 36px;
+       height: 103px;
+   }
+   
+   .producto {
+       position: absolute;
+       top: 16px;
+       right: 0;
+       text-align: right;
+   }
+   
+   .producto img {
+       width: 80%;
+   }
+
+   .img-dron {
+        max-width: 214px;
+        margin-top: 30px;
+    }
+   
+   .banner {
+       margin-bottom: 16px !important;
+   }
+   
+   .banner img {
+       width: 100%;
+   }
+   
+   .contenedor_cms .col-4:hover .producto {
+       transition: all 0.3s;
+       transform: scale(1.1);
+   }
+   
+   .elementos {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       width: 100%;
+       overflow: auto;
+       white-space: nowrap;
+       text-align: center;
+   }
+   
+   .elementos li {
+       display: inline-block;
+       line-height: 14px;
+       width: 23%;
+       margin-left: 0;
+       margin-right: 8px;
+       padding-right: 8px;
+       border-right: solid 1px #959595;
+       vertical-align: top;
+       text-align: left;
+       white-space: normal;
+   }
+   
+   .elementos li:last-child {
+       margin-right: 0;
+       padding-right: 0;
+       border: none;
+   }
+   
+   .elementos li img{
+       float: left;
+       margin-right: 8px;
+       width: 51px;
+   }
+   
+   .elementos li a,
+   .elementos li a:hover {
+       color: #444;
+       text-decoration: none;
+   }
+   
+   .cierre {
+       height: 88px;
+       width: 100%;
+       margin: 0 auto;
+   }
+   
+   .color_azul img {
+       margin-left: 8px;
+   }
+   
+   .icono {
+       width: 15px;
+       position: relative;
+       top: 47px;
+       margin-left: 8px;
+   }
+   
+   .img{
+       max-width: 214px;
+       margin-top: 30px;
+   }
+   
+   @media screen and (max-width: 1024px) {
+       .sombra {
+           padding: 16px;
+           margin-top: 0px;
+           margin-bottom: 36px;
+           height: 80px;
+       }
+       .contenedor_cms {
+           width: 95% !important;
+       }
+       .pageType-CategoryPage .contenedor_cms .col-4 {
+           width: 30.333333% !important;
+       }
+       .producto img{
+           width: 50%;
+       }
+       .producto {
+           position: absolute;
+           top: -7px;
+           right: 0;
+           text-align: right;
+       }
+       h2 {
+           font-size: 20px !important;
+           height: 50px;
+       }
+       .icono {
+           width: 15px;
+           position: relative;
+           top: 27px;
+           margin-left: 8px;
+       }
+       .cierre {
+           height: 38px;
+           width: 100%;
+           margin: 0 auto;
+       }
+   }
+   
+   @media screen and (max-width: 768px) {
+       h2 {
+           max-width: 115px;
+       }
+       .cierre {
+           height: 38px;
+           width: 100%;
+           margin: 0 auto;
+       }
+   }
+   
+   @media screen and (max-width: 540px) {
+       .contenedor_cms .col-4,
+       .contenedor_cms .col-8 {
+           margin: 0;
+       }
+       .cierre {
+           width: 100%;
+           height: 40px;
+           clear: both;
+       }
+       .contenedor_cms .col-xs-12 {
+           width: 100% !important;
+           padding: 0 !important;
+       }
+       h1 {
+           margin-bottom: 16px !important;
+           margin-top: 16px !important;
+       }
+       .container {
+           margin: 0 16px;
+       }
+       .margen_interna {}
+       .sombra {
+           padding: 16px 24px !important;
+       }
+       .cta {
+           width: 100% !important;
+       }
+       .icono {
+           width: 15px;
+           position: relative;
+           top: 31px;
+           margin-left: 16px;
+       }
+       h1 {
+           margin-bottom: 16px !important;
+       }
+       .tit_par {
+           margin-left: 36% !important;
+       }
+       h2 {
+           font-weight: 400 !important;
+           margin: 0 !important;
+           padding: 0;
+           height: 54px;
+           display: -webkit-flex;
+           display: -ms-flexbox;
+           display: -ms-flex;
+           display: flex;
+           -ms-flex-flow: row nowrap;
+           -webkit-flex-flow: row nowrap;
+           -moz-flex-flow: row nowrap;
+           flex-flow: row nowrap;
+           align-items: flex-end;
+           max-width: 180px;
+       }
+       .producto {
+           width: 40%;
+           top: -8px;
+       }
+       .pageType-CategoryPage .producto img {
+           width: 90%;
+           margin-left: 26px;
+       }
+       .pageType-CategoryPage .contenedor_cms .col-xs-12 {
+           width: 100% !important;
+       }
+       .contenedor_cms .col-sm-4 {
+           padding: 0;
+           margin: 0;
+       }
+       .contenedor_cms {
+           margin: 0 16px;
+           width: 92% !important;
+       }
+       .sombra {
+           margin-top: 18px;
+           padding: 16px !important;
+           height: 87px;
+       }
+       .par {
+           left: 0;
+           margin-left: -27px !important;
+           top: -4px;
+       }
+       .elementos li {
+           width: 43%;
+       }
+       .beneficios {
+           width: 108%;
+           margin: 0 0 16px -4%;
+           background: #f8f8f8;
+           box-shadow: none !important;
+           border-radius: 0;
+           height: 104px;
+       }
+       .contenedor_cms .col-sm-8 h3 {
+           text-align: left;
+       }
+       .contenedor_cms .sombra {
+           margin-bottom: 40px;
+       }
+   }
+   
+   @media screen and (max-width: 375px) {
+       .beneficios {
+           height: 111px !important;
+           margin-bottom: 16px !important;
+       }
+       .sombra {
+           margin-top: 18px;
+           padding: 16px !important;
+           height: 72px;
+       }
+       h1 {
+           margin-bottom: 16px !important;
+           margin-top: 16px !important;
+       }
+       h2 {
+           font-size: 20px !important;
+           height: 40px;
+           max-width: 180px;
+       }
+       .elementos li {
+           width: 57%;
+       }
+       .pageType-CategoryPage .icono {
+           top: 17px !important;
+       }
+   }
+   
+   @media screen and (max-width: 320px) {
+       .contenedor_cms {
+           margin: 0 16px;
+           width: 91% !important;
+       }
+       h2 {
+           height: 40px;
+       }
+   }
+</style>
+
+<div class="contenedor_cms">
+
+   <h1>Cámaras</h1>
+
+</div>
+
+<div class="contenedor_cms">
+
+   <div class="col-4 col-xs-12">
+       <a href="/camaras/camaras-fotograficas/c/BI_126_ALKOS">
+           <div class="sombra card">
+               <h2 class="color_azul">Cámaras<br> Fotográficas</h2>
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+           </div>
+           <div class="producto">
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto"  src="/medias/camaras.png?context=bWFzdGVyfGNhbWFyYXMtbGFuZGluZy1wcmltZXItbml2ZWx8NDIwMjd8aW1hZ2UvcG5nfGNhbWFyYXMtbGFuZGluZy1wcmltZXItbml2ZWwvaGJjL2g0OS85NDUzNzY5MzkyMTU4LnBuZ3xiYzc1ZDAyODUyNjFjOGUzMmFiYTlmODFkOTkzZWJkMDM5MTdjNDhhMDMwZDhhOGIzZGEzOWEwOTI2ZWMyYjQw"
+               />
+           </div>
+       </a>
+   </div>
+   <div class="col-4 col-xs-12">
+       <a href="https://www.alkosto.com/camaras/camaras-accion/c/BI_127_ALKOS">
+           <div class="sombra card">
+               <h2 class="color_azul">Cámaras<br>de Acción</h2>
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+           </div>
+           <div class="producto">
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" src="/medias/camara-accion-ak-kt.png?context=bWFzdGVyfGltYWdlc3wxNTkzNXxpbWFnZS9wbmd8aW1hZ2VzL2g4MC9oODgvMTIzNTA3NDYxNjUyNzgucG5nfGUyMGRkNzg4ODQ1NWEyNTIyN2UxMjJmYjM4ZjAwYWM4ZmM4NDNiZDE3MDk2ZWNjOTEzZmUxNGQ3NDE3MzQ1YWM"
+               />
+           </div>
+       </a>
+   </div>
+
+   <div class="col-4 col-xs-12">
+       <a href="/casa-inteligente-domotica/camaras-seguridad/c/BI_136_ALKOS">
+           <div class="sombra card">
+               <h2 class="color_azul">Cámaras<br>de Seguridad</h2>
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+           </div>
+           <div class="producto">
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" src="/medias/camaras-seguridad.png?context=bWFzdGVyfGNhbWFyYXMtbGFuZGluZy1wcmltZXItbml2ZWx8Mzc0MTd8aW1hZ2UvcG5nfGNhbWFyYXMtbGFuZGluZy1wcmltZXItbml2ZWwvaDYwL2g5MS85Mzk1MzkyNDc5MjYyLnBuZ3xhZTQxNGE0OTlmNmRiMjgyNDE0YzM5MWEyNTA0MWU3ZTVjMzRkYjc4ZDVlMjIwMDFiMzIzYmY2NGZjMzgzMThh"
+               />
+           </div>
+       </a>
+   </div>
+
+</div>
+
+<div class="contenedor_cms">
+
+   <div class="col-4 col-xs-12">
+       <a href="/camaras/drones/c/BI_129_ALKOS">
+           <div class="sombra card">
+               <h2 class="color_azul tit_par">Drones</h2>
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+           </div>
+           <div class="producto par">
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto"  class="img-dron" src="/medias/dron.png?context=bWFzdGVyfGNhbWFyYXMtbGFuZGluZy1wcmltZXItbml2ZWx8MTkwODYzfGltYWdlL3BuZ3xjYW1hcmFzLWxhbmRpbmctcHJpbWVyLW5pdmVsL2gyZC9oOGYvMTE1OTk3NDM2ODA1NDIucG5nfDY0MzgxNWY2OTJlZGE1MzgyOTA2ODhiN2FmZTdlOWJjMGQwZWQ0MDBlODJmMzczYjk5YjY3MTliMGViZTFjOGI"
+               />
+           </div>
+       </a>
+   </div>
+
+<div class="col-4 col-xs-12">
+       <a href="/accesorios-electronica/accesorios-camaras/c/BI_130_ALKOS">
+           <div class="sombra card">
+               <h2 class="color_azul tit_par">Accesorios <br>de Cámaras</h2>
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+           </div>
+           <div class="producto par">
+               <img alt="Cámaras en Alkosto" title="Cámaras en Alkosto" src="/medias/camaras-accesorios.png?context=bWFzdGVyfGNhbWFyYXMtbGFuZGluZy1wcmltZXItbml2ZWx8MzE1MjR8aW1hZ2UvcG5nfGNhbWFyYXMtbGFuZGluZy1wcmltZXItbml2ZWwvaGI5L2g2YS85Mzk1MzkxNzU4MzY2LnBuZ3w4MTQ2NjUzNjc3MGIyM2JlOTJlMDAzZTdkMWVmZTc5Y2JiN2QwMTgxYjliNTI2YWY1MTBhMjk1MTBjZjdiNDMw"
+               />
+           </div>
+       </a>
+   </div>
+</div>
+
+<div class="clear"></div>
+<div class="cierre"></div>
