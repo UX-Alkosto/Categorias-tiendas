@@ -1,0 +1,624 @@
+<style>
+    
+    
+    
+    h1{
+            font-size: 45px !important;  
+            color: #444444 !important;
+            font-weight: bold !important;
+            margin-bottom: 32px !important;
+            margin-top: 32px !important;
+        }
+
+        h2{
+           font-size: 32px !important;  
+            font-weight: bold !important;
+            margin-bottom: 16px !important;
+        }
+
+        h3{
+           font-size: 20px !important;  
+            font-weight: bold !important;
+            margin-bottom: 16px !important;
+        }
+
+        h4{
+           font-size: 16px !important;  
+            font-weight: bold !important;
+            margin-bottom: 16px !important;
+        }
+
+        p{
+            font-size: 16px !important;
+            margin-bottom: auto !important;
+        }
+
+        .color_grisoscuro{color: #444;}
+        .color_grisclaro{color: #959595;}
+        .color_azul{color: #003E7F;}
+        .color_gris_fondo{background: #F5F5F5;}
+
+        .sombra{
+                box-shadow: 0px 2px 8px #0000003d;
+        }
+
+
+        .card{
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+        }
+
+        .margen_interna{
+            padding: 16px;
+        }
+
+        .contenedor_cms{
+            width: 1280px !important;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 100% !important;
+        }
+
+        .contenedor_cms .col-sm-4 {
+            width: 31.333333% !important;
+            padding: 0 !important;
+        }
+
+        .right{
+            float: right;
+        }
+        .left{
+            float: left;
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        .cta{
+            background: #DD171B;
+            height: 56px !important;
+            text-align: center;
+            line-height: 56px;
+            font-size: 14px;
+            font-weight: bold;
+            width: 214px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        a:focus, a:hover {
+            text-decoration: none !important;
+        }
+
+        .cta a {
+                height: 56px;
+                color: #FFF !important;
+                display: block;
+                border-radius: 4px;
+            }
+
+        .cta a:hover {
+                height: 56px;
+                color: #FFF !important;
+                display: block;
+                background: #AB1114;
+                border-radius: 4px;
+            }
+
+
+        .cierre{width: 100%; height: 88px; clear: both;}
+    
+    
+
+    
+    .contenedor_cms .col-4,
+    .contenedor_cms .col-8 {
+        padding: 0;
+        margin: 0 16px;
+        display: inline-block;
+    }
+    
+    .contenedor_cms .col-4:first-child {
+        margin-left: 0 !important;
+    }
+    
+    
+    .contenedor_cms .col-4:last-child {
+        margin-right: 0 !important;
+    }
+    
+    .contenedor_cms .col-4 {
+        width: 31.333333%;
+    }
+    
+    .contenedor_cms .col-8 {
+        width: 65.666667%;
+        text-align: center;
+    }
+    
+    h2 {
+        font-weight: 400 !important;
+        margin: 0 !important;
+        padding: 0;
+        height: 70px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        float: left;
+        font-size: 24px !important;
+    }
+    
+    .contenedor_cms .col-8 h3 {
+        margin: 0;
+        padding: 0;
+        font-weight: 400 !important;
+    }
+    
+    .sombra {
+        padding: 16px;
+        margin-top: 38px;
+        margin-bottom: 36px;
+        height: 103px;
+    }
+    
+    .producto {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        text-align: right;
+    }
+    
+    .producto img {
+        width: 80%;
+    }
+    
+    .banner {
+        margin-bottom: 16px !important;
+    }
+    
+    .banner img {
+        width: 100%;
+    }
+    
+    .contenedor_cms .col-4:hover .producto {
+        transition: all 0.3s;
+        transform: scale(1.1);
+    }
+    
+    .elementos {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: auto;
+        white-space: nowrap;
+        text-align: center;
+    }
+    
+    .elementos li {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 14px;
+        width: 23%;
+        margin-left: 0;
+        margin-right: 8px;
+        padding-right: 8px;
+        border-right: solid 1px #959595;
+        vertical-align: top;
+        text-align: left;
+        white-space: normal;
+    }
+    
+    .elementos li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border: none;
+    }
+    
+    .elementos li img {
+        float: left;
+        margin-right: 8px;
+        width: 51px;
+    }
+    
+    .elementos li a,
+    .elementos li a:hover {
+        color: #444;
+        text-decoration: none;
+    }
+    
+    .cierre {
+        height: 88px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .color_azul img {
+        margin-left: 8px;
+    }
+    
+    .icono {
+        width: 15px;
+        position: relative;
+        top: 47px;
+        margin-left: 8px;
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        
+        .sombra {
+            padding: 16px;
+            margin-top: 0px;
+            margin-bottom: 36px;
+            height: 80px;
+        }
+       
+        .contenedor_cms {
+            width: 95% !important;
+        }
+        
+        .pageType-CategoryPage .contenedor_cms .col-4 {
+            width: 30.333333% !important;
+        }
+        
+        .producto img {
+            width: 50%;
+        }
+        
+        .producto {
+            position: absolute;
+            top: -7px;
+            right: 0;
+            text-align: right;
+        }
+        
+        h2 {
+            font-size: 20px !important;
+            height: 50px;
+        }
+        
+        .icono {
+            width: 15px;
+            position: relative;
+            top: 27px;
+            margin-left: 8px;
+        }
+        
+        .cierre {
+            height: 38px;
+            width: 100%;
+            margin: 0 auto;
+        } 
+        
+    } 
+    
+     @media screen and (max-width: 768px) {
+         
+        h2 {
+            font-size: 16px !important;
+            max-width: 115px;
+        }  
+         
+        .cierre {
+            height: 38px;
+            width: 100%;
+            margin: 0 auto;
+        } 
+         
+    }     
+    
+    @media screen and (max-width: 540px) {
+        
+        .contenedor_cms .col-4, .contenedor_cms .col-8 {
+            margin: 0;
+        }
+        
+        .cierre{width: 100%; height: 40px; clear: both;}
+    
+    
+    .contenedor_cms .col-xs-12 {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    h1{
+        font-size: 36px !important;  
+        margin-bottom: 16px !important;
+        margin-top: 16px !important;
+    }
+    
+    .container{
+        margin: 0 16px;
+    }
+    
+    .margen_interna{
+        
+    }
+    
+    .sombra{
+                    padding: 16px 24px !important;
+                }
+    
+    .cta{
+        width: 100% !important;
+        
+    }
+        
+        
+        .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 16px;
+        }
+
+        h1 {
+            margin-bottom: 16px !important;
+        }
+        .tit_par {
+            margin-left: 36% !important;
+        }
+        h2 {
+            font-weight: 400 !important;
+            margin: 0 !important;
+            padding: 0;
+            font-size: 20px !important;
+            height: 54px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: -ms-flex;
+            display: flex;
+            -ms-flex-flow: row nowrap;
+            -webkit-flex-flow: row nowrap;
+            -moz-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            max-width: 180px;
+        }
+        .producto {
+            width: 40%;
+            top: -8px;
+        }
+        .pageType-CategoryPage .producto img {
+            width: 90%;
+            margin-left: 26px;
+        }
+        .pageType-CategoryPage .contenedor_cms .col-xs-12 {
+            width: 100% !important;
+        }
+        .contenedor_cms .col-sm-4 {
+            padding: 0;
+            margin: 0;
+        }
+        .contenedor_cms {
+            margin: 0 16px;
+            width: 92% !important;
+        }
+        .sombra {
+            margin-top: 18px;
+            padding: 16px !important;
+            height: 87px;
+        }
+        .par {
+            left: 0;
+            margin-left: -27px !important;
+            top: -4px;
+        }
+        .elementos li {
+            width: 43%;
+        }
+        .beneficios {
+            width: 108%;
+            margin: 0 0 16px -4%;
+            background: #f8f8f8;
+            box-shadow: none !important;
+            border-radius: 0;
+            height: 104px;
+        }
+        .contenedor_cms .col-sm-8 h3 {
+            text-align: left;
+        }
+        .contenedor_cms .sombra {
+            margin-bottom: 40px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .beneficios {
+            height: 111px !important;
+            margin-bottom: 16px !important;
+        }
+        .sombra {
+            margin-top: 18px;
+            padding: 16px !important;
+            height: 72px;
+        }
+        h1 {
+            font-size: 32px !important;
+            margin-bottom: 16px !important;
+            margin-top: 16px !important;
+        }
+        h2 {
+            font-size: 20px !important;
+            height: 40px;
+            max-width: 180px;
+        }
+        .elementos li {
+            width: 57%;
+        }
+        .pageType-CategoryPage .icono {
+            top: 17px !important;
+        }
+    }
+    
+    
+    @media screen and (max-width: 320px) {
+        .contenedor_cms {
+            margin: 0 16px;
+            width: 91% !important;
+        }
+        h2 {
+            font-size: 16px !important;
+            height: 40px;
+        }
+    }
+    
+    
+</style>
+
+
+<div class="contenedor_cms">
+
+    <h1>Accesorios</h1>
+
+</div>
+
+<div class="contenedor_cms">
+
+    <div class="col-4 col-xs-12">
+        <a href="/accesorios-electronica/accesorios-celulares-tabletas/c/BI_102_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul">Accesorios para<br> Celulares y Tabletas</h2>
+                <img class="icono" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto">
+                <img src="/medias/celular.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wxMjE4MXxpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2g4ZS9oNDgvOTM4Nzc4MjM0MDYzOC5wbmd8MjAwYjFlODI0ZmI2MWFlZTAxMGVmZjViMTM0NWU0YjE0ODc0YmY3YmUwODllYjIwZjQ5YjBhYTViODIxZDhjMA" />
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-4 col-xs-12">
+        <a href="/accesorios-electronica/accesorios-computadores/c/BI_108_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul tit_par">Accesorios<br> para Computadores</h2>
+                <img class="icono" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto par">
+                <img src="/medias/computador.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wxMTM5OXxpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2gwYS9oZWYvOTM4NzUyMTI0NTIxNC5wbmd8YTZmMzFlZDViYThmMjI1ZWRjNDA1YzhiNGZkNmI2OGRkNTMyNDZhMmJjZGNiYmViMmYwMzNhZmIwYjhlOTQzOQ" />
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-4 col-xs-12">
+        <a href="/accesorios-electronica/accesorios-tv-video/c/BI_123_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul">Accesorios<br>para TV</h2>
+                <img class="icono" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto">
+                <img src="/medias/tv.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wxNTY1MXxpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2gwOC9oMWUvOTM4NzUyMTUwNzM1OC5wbmd8ZmRmMTY1N2VhMjJkOGNmOGFkOGYzNWE2ZDQzNTVhZTUxYmIyMDhkYjBmYjU3MmIzYmU3NTg2MGU0OGM4Mjg2Ng" />
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div class="contenedor_cms">
+
+    <div class="col-4 col-xs-12">
+        <a href="/accesorios-electronica/accesorios-audio/c/BI_118_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul tit_par">Accesorios<br>para Audio</h2>
+                <img class="icono" src="https://s3.amazonaws.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto par">
+                <img src="/medias/audio.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wyNjUwM3xpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2hhNS9oZDIvOTM4NzUyMDg4NDc2Ni5wbmd8NmMwMjViMzNkZmUyNWIyOTk2M2U2OWJmZDcwMzAzN2E1YmRiMjM0ZDBiYjFkZGU4ZTMyMjA4YmZlMjk4NTcxNA" />
+            </div>
+        </a>
+    </div>
+
+    <div class="col-4 col-xs-12">
+        <a href="/accesorios-electronica/accesorios-computadores/accesorios-gaming/c/BI_0201_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul">Accesorios<br>Gaming</h2>
+                <img class="icono" src="https://s3.amazonaws.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto">
+                <img src="/medias/gaming.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wzMDI2MHxpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2g2ZC9oMDAvOTQ1Mzc1MTMzNjk5MC5wbmd8OWNjZTIxYjdkNGI2ZDk5NjFlY2UwODc3NTI2YjdlYTBmYzQ3MzI5YmZlYjdmNmYwYTg2ODcwZjFkNzE0M2M5OQ" />
+            </div>
+        </a>
+    </div>
+
+    <div class="col-4 col-xs-12">
+        <a href="/accesorios-electronica/accesorios-camaras/c/BI_130_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul tit_par">Accesorios<br>para Cámaras</h2>
+                <img class="icono" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto par">
+                <img src="/medias/camaras.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wzMTUyNHxpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2g1My9oNWQvOTM4NzUyMTExNDE0Mi5wbmd8ZTcyZWIzY2JhNDM2N2U1NzkzMjk5YTM3MjAyYmY4MDg3YTQyMThiZTBkMWY4YjI0NjM1ZTVhYzI4OTIzNjMyYQ" />
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div class="contenedor_cms">
+
+    <div class="col-4 col-xs-12">
+        <a href="/c/BI_SMAW_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul">Accesorios<br>para Smartwatch</h2>
+                <img class="icono" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto">
+                <img src="/medias/smartWatch.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wxOTIyMXxpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2hkYy9oMDAvOTM4NzUyMTQ0MTgyMi5wbmd8ZjkwMDYzZjVlMGM4NWFmMzZkNDM4NjA4MzJhYzRlNjFjZDM1OTU4MTc4MmYyNjJkMmQ5OTAwMTAxYWMwNTFlYQ" />
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-4 col-xs-12">
+        <a href="/accesorios-electronica/accesorios-deporte-salud/c/BI_492_KTRON">
+            <div class="sombra card">
+                <h2 class="color_azul tit_par">Accesorios<br>para Deporte</h2>
+                <img class="icono" src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto par">
+                <img src="/medias/Deportes.png?context=bWFzdGVyfGFjY2Vzb3Jpb3MtbGFuZGluZ3wyMTUzMHxpbWFnZS9wbmd8YWNjZXNvcmlvcy1sYW5kaW5nL2g2ZC9oMGMvOTM4Nzc4MjYzNTU1MC5wbmd8ZGRiNTBmODg2NTViMjY2MjUyMGY2OTIxNTY2YzBiYWFkYjI4ZmJhMDk0ZjZjNjNiZDk3ZjFlMzkzNDUwNDYyNA" />
+            </div>
+        </a>
+    </div>
+
+</div>
+
+
+
+<!-- Inicio Elementos de confianza -->
+<!-- 
+<div class="col-sm-8 col-xs-12 sombra card beneficios">
+    <h3 class="color_azul">Beneficios de Ktronix</h3>
+    <ul class="elementos">
+        <li>
+            <a href="/entregas-devoluciones/envio-gratis"><img src="http://staging2.ktronix.com/medias/medias/envio-gratis.png?context=bWFzdGVyfGljb25vcyB8Nzg3MnxpbWFnZS9wbmd8aWNvbm9zL2hhYS9oNzYvOTE1MTY0MjU2NjY4Ni5wbmd8YTAwY2VkZmFjZTI5YjUyZDVlZTNhMTkyNjA3MDgzZjNhNWNhZWU2OTc1ZmNhMTg3Y2JjNjU4ODEwM2VjZjhkZg"
+                /> Envío gratis a 800 municipios </a>
+        </li>
+        <li>
+            <a href="/gana-50"><img src="http://staging2.ktronix.com/medias/gana-50.png?context=bWFzdGVyfGljb25vcyB8Nzc4MnxpbWFnZS9wbmd8aWNvbm9zL2gzYi9oYTcvOTE1MTY0MjUwMTE1MC5wbmd8YTVmZjcxYmJhNmJkMTdmYzUyZWNhYjc2YmZjMzg2M2VkNjBhNGY1ZWVhZGRmOWRjYTc5NmM3ZTFlZDc1ZGEyMg" />                Gana la mitad de tu compra </a>
+        </li>
+        <li>
+            <a href="/entregas-devoluciones/recoge-tienda"><img src="http://staging2.ktronix.com/medias/recoge-en-tienda.png?context=bWFzdGVyfGljb25vcyB8NTQ5NXxpbWFnZS9wbmd8aWNvbm9zL2g5ZS9oZjcvOTE1MTY0MjY5Nzc1OC5wbmd8NjUyYTdlNmZmMzBjMmFjNzVmYWZiYWE3MTBmMjhhMDUzMzFjN2JmODcyOTM3NmU3NmEyMTliYzhjMGY5ZjJkOQ"
+                /> Compra online y recoge en tienda</a>
+        </li>
+        <li>
+            <a href="/entregas-devoluciones"><img src="http://staging2.ktronix.com/medias/entrega.png?context=bWFzdGVyfGljb25vcyB8NTA0NXxpbWFnZS9wbmd8aWNvbm9zL2g5ZS9oMmMvOTE1MTY0MjQzNTYxNC5wbmd8NjFkZjk3MmYzNzA1MWU1ZjhkNjVjMGUxYTdhNmRmNjIyYWNlY2JkZTI4ZDQ5MDFhYjg2MmEzZTIyNTUzOTk2ZA" />                Entrega 24 horas para Bogotá </a>
+        </li>
+    </ul>
+</div> -->
+
+<!-- Inicio Ofertas -->
+<div class="clear"></div>
+
+<div class="cierre"></div>

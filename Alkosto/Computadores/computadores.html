@@ -1,0 +1,771 @@
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js">
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+
+<style>
+    @import url('https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css');
+
+    :root {
+        --alkosto-alert: #dd171b;
+        --alkosto-naranja-oscuro: #b14b25;
+        --alkosto-text1: #444444;
+        --alkosto-text2: #5c5c5c;
+        --alkosto-text3: #959595;
+        --alkosto-naranja: #eb5b25;
+        --alkosto-azul: #004797;
+        --alkosto-fondo-gris: #f5f5f5;
+        --alkosto-deshabilitado: #e0e0e0;
+        --alkosto-azul-claro: #edf1f6;
+    }
+
+    @keyframes slider {
+        to {
+            -moz-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .grid-container-sub {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 158px;
+        margin-top: 20px;
+    }
+
+    .ctn-info-grid {
+        box-shadow: 0px 0px 4px #919ba645;
+        text-align: center;
+        height: 130px;
+        position: relative;
+    }
+
+    .ctn-info-grid img {
+        width: 101px;
+        margin-top: -25px;
+    }
+
+    .ctn-info-grid p {
+        color: var(--alkosto-azul);
+        font-weight: bold;
+        width: 101px;
+        margin: 0 auto;
+        margin-top: 2px;
+        line-height: 15px;
+    }
+
+    .ctn-info-grid>p>i {
+        color: var(--alkosto-naranja);
+        position: absolute;
+        margin-left: 22px;
+    }
+
+    .ctn-info-grid span {
+        display: none;
+    }
+
+    .link-productos {
+        display: none;
+    }
+
+    .fondo-fluid {
+        height: 146px;
+        background: var(--alkosto-fondo-gris);
+        text-align: center;
+        color: var(--alkosto-azul);
+        margin-top: 25px;
+    }
+
+    .fondo-fluid h2 {
+        font-weight: bold;
+    }
+
+    .ctn-slider {
+        width: 100%;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 27px;
+        white-space: nowrap;
+        overflow-x: auto;
+        display: flex;
+        justify-content: space-between;
+        /* display: inline-flex;
+         -moz-animation: slider 5s infinite linear;
+        -webkit-animation: slider 5s infinite linear;
+        animation: slider 5s infinite linear; */
+    }
+
+    .ctn-slider img {
+        width: 80px;
+        margin-left: 15px;
+    }
+
+    .ctn-title-h2 {
+        border-bottom: 1px solid #dbdbdb;
+        margin-top: 5px;
+    }
+
+    .ctn-title-h2 h2 {
+        color: var(--alkosto-text1);
+        border-bottom: 2px solid var(--alkosto-naranja);
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+
+    .ctn-banners-lanzamientos {
+        display: flex;
+        width: auto;
+        overflow-x: auto;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .ctn-banners-adglare {
+        width: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bn-img-adglare {
+        margin-left: 15px;
+    }
+
+    .banner-adglare {
+        height: 285px;
+        width: 340px;
+    }
+
+    .btn-ver-ofertas {
+        background: var(--alkosto-naranja);
+        color: white;
+        width: 298px;
+        height: 56px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        vertical-align: middle;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .btn-ver-ofertas p {
+        line-height: 53px;
+    }
+
+    .fluid-gris {
+        height: auto;
+        background: var(--alkosto-fondo-gris);
+        padding-top: 29px;
+        margin-top: 35px;
+    }
+
+    .fluid-gris h2 {
+        color: var(--alkosto-azul)
+    }
+
+    .btn-borde {
+        width: 260px;
+        height: 56px;
+        border: 1px solid var(--alkosto-naranja);
+        color: var(--alkosto-naranja);
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .btn-borde p {
+        margin-top: 17px;
+    }
+
+    .btn-borde:last-child {
+        margin-top: 27px;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .btn-zona-seo {
+        width: 260px;
+        height: 56px;
+        background: var(--alkosto-naranja);
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .btn-zona-seo p {
+        line-height: 53px;
+    }
+
+    .btn-zona-seo:hover {
+        background: var(--alkosto-naranja-oscuro);
+    }
+
+    .ctn-image-close img {
+        max-width: 100%;
+        margin-top: 25px;
+    }
+
+    /* Sección banners de lanzamiento */
+
+    .banner-lanzmiento {
+        width: 260px;
+        height: 405px;
+        text-align: center;
+        margin-left: 15px;
+        position: relative;
+    }
+
+    .banner-lanzmiento span {
+        font-weight: bold;
+        color: var(--alkosto-text1);
+        display: inherit;
+    }
+
+    .banner-lanzmiento img {
+        margin-bottom: 15px;
+    }
+
+    .label-exclusive {
+        position: absolute;
+        z-index: 2;
+        background: var(--alkosto-naranja);
+        color: white;
+        height: auto;
+        padding: 6px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+
+    /* Fin sección de lanzamientos  */
+
+    .barra-lanzamientos {
+        width: 100%;
+        max-width: 1280px;
+        margin: 16px auto;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        .grid-container-sub {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 220px;
+        }
+
+        .ctn-info-grid span {
+            display: block;
+            font-size: 12px;
+            padding: 6px;
+            color: var(--alkosto-text1);
+        }
+
+        .link-productos {
+            position: absolute;
+            bottom: 8px;
+            display: block;
+            left: 50%;
+            margin-left: -50px !important;
+        }
+
+        .ctn-info-grid>p>i {
+            color: transparent;
+        }
+
+        .ctn-info-grid {
+            height: 195px;
+        }
+
+        .link-productos>i {
+            color: var(--alkosto-naranja) !important;
+            margin-left: 4px !important;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .ctn-image-close {
+            padding: 12px;
+            width: 45%;
+            margin: 0 auto;
+        }
+
+        .fluid-gris {
+            padding-bottom: 29px;
+        }
+
+        .btn-borde {
+            width: 198px;
+            margin: 0 5px;
+        }
+
+        .btn-zona-seo {
+            width: 198px;
+            margin: 0 5px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .grid-container-sub {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 16px;
+        }
+
+        .ctn-slider {
+            width: 70%;
+        }
+
+        .btn-borde {
+            width: 240px;
+        }
+
+        .btn-borde:hover {
+            background: var(--alkosto-naranja);
+            color: white;
+        }
+
+        .btn-zona-seo {
+            width: 240px;
+        }
+
+        .ctn-banners-lanzamientos {
+            justify-content: space-around;
+        }
+
+        .btn-ver-ofertas:hover {
+            background: var(--alkosto-naranja-oscuro);
+        }
+
+        .contenido_elementos {
+            width: 64%;
+        }
+    }
+</style>
+
+<section class="container">
+    <h1>Computadores</h1>
+</section>
+
+<section class="container">
+    <div class="barra-lanzamientos">
+        <!-- AdGlare: barra-lanzamientos-computadores -->
+        <span id=zone702492180></span>
+        <script>
+            (function (r, d, u) {
+                var s = d.createElement(r); s.async = true;
+                u += '&cb=' + Date.now() + Math.random();
+                s.src = u; var n = d.getElementsByTagName(r)[0];
+                n.parentNode.insertBefore(s, n);
+            })('script', document, '//engine.alkst.co/?702492180');
+        </script>
+    </div>
+</section>
+
+
+<section class="container">
+    <div class="grid-container-sub">
+        <a href="/computadores-tablets/computadores-portatiles/c/BI_104_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/portatiles1.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wyNjEwNnxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2g3Yy9oZDIvMTA0NzA3NTkwMDYyMzgucG5nfDA4MGMyZWE0M2Y0NTgyZWZjY2M3NWY3MTVlYWEwMjBkYjk0NTY5Yjg4NDM3NTM0M2UyOGQwNDNiZTQ3NTgyNzY"
+                        alt="Computadores portátiles">
+                    <p>Computadores portátiles
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra portátiles y convertibles 2 en 1 de las mejores marcas que tenemos para ti. </span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/computadores-tablets/computadores-escritorio/c/BI_105_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/all-in-one.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wyODkxNnxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2g3MC9oNGYvMTA0NzA3NTkyNjgzODIucG5nfDEyMTBmODhkZDNiN2UyMzc1MmE2ZmM5OTQ4Y2I3OWUyZWE3MDQ4M2Y0YTY5MmIyYTg2YzRkMmVkZjA3MzY2ZTk"
+                        alt="Computadores de escritorio">
+                    <p>Computadores de escritorio
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Computadores de mesa y All in One para tu estudio, trabajo y diversión. </span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/computadores-tablets/gaming/c/BI_106_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/gamer-3.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w0MTk1OHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2hkYi9oYmQvMTA0NzA3NTk3NTk5MDIucG5nfDQxOWU0MDM3ZWZiZWM3YTM2MjM2YzJhNjlmZDdlMmEyMDZjMWVjOWMzM2Y5NzU2ZDNhMGJiZTNkYjEwNjE1NTQ"
+                        alt="Zona Gamer">
+                    <p>Zona Gamer
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Lleva tu zona Gamer a otro nivel con los mejores PC y portátiles alto desempeño, accesorios y
+                        monitores.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/computadores-empresariales/c/computadores-empresariales">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/empresarial.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wyODUwNHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2g2Yi9oYWIvMTA0NzA3NjAwMjIwNDYucG5nfDgwNmUxOGQ2NWJmNmQyZWQ4MzQ3ZTMwM2U5YmFlYTBjMzQ5NjM4ZTA1OWEyYzdkMDJkZWZkZmJhNjUwMGFmMTY"
+                        alt="Computadores empresariales">
+                    <p>Computadores empresariales
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Computadores y portátiles corporativos que ofrecen el mejor rendimiento de clase
+                        empresarial.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/computadores-tablets/tablets-ipads/c/BI_107_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/ipad-y-tablets.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wxMTgzOHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gyZi9oYjQvMTA0MzQwMzEyNTU1ODIucG5nfDkwMGFmMTIzYjY4ZDllNjg3YWIzNzU3MjllNWQ5NzliZDRmMDc5NTk5MWFhOWQwY2ZkZjlkMzIyODk5ZTJjYzA"
+                        alt="Tabletas">
+                    <p>Tabletas
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Tables y iPads ideales para ti con el mejor rendimiento y tecnología.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/computadores-tablets/monitores/c/BI_110_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/monitores.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w0Mjk0MHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2hhMi9oZDYvMTA0NzA3NjA5NzIzMTgucG5nfGNkZDYyM2I4MTFmZThjMGM3N2JlZTdmMzI4MzkyZmQwYThiN2Y1NmU3ODhlYmIwYWQ0ZDk4YzAzNTA5NzdkNDY"
+                        alt="Monitores">
+                    <p>Monitores
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Los mejores monitores para tus necesidades, estilo de vida, profesión y más.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/computadores-tablets/impresion/impresoras-escaner-multifuncionales/c/BI_0210_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/multifuncionales.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wyMjQwOXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2hkNi9oZWYvMTA0NzA3NjExNjg5MjYucG5nfGJkNTZjMjYwYWJjNTQ3OTUyMDU5ZTQwNjVkMzJkNzRhYzZjNzU5NGI4ZWEyNTM0ODFmNzJmNDFmYmMwYzY5OWQ"
+                        alt="Impresoras y multifuncionales">
+                    <p>Impresoras y multifuncionales
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Impresoras, Escáner y Multifuncionales para tu hogar y oficina.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/computadores-tablets/impresion/tintas-toners-cartuchos/c/BI_0220_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/tintas-y-papel.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wzMjYzN3xpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gxZC9oYzYvMTA0NzA3NjEyOTk5OTgucG5nfDY5NjQyZTY0ZjVjOTMzYjY0ZTlmZDZjNDgzZTlkYTM0MjI2M2VmYjI0ZjAyM2RhOWYxYmI2OGRlOWYxYjFkNzc"
+                        alt="Tintas y papel">
+                    <p>Tintas y papel
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Tintas, Tóners y Cartuchos de las mejores marcas y para todas las impresoras.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/tv-video/proyectores-videobeam/c/BI_121_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/videoproyector.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wxNjg3OXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gyZS9oODQvMTA0NzA3NjE3OTE1MTgucG5nfGI0NzVjZDc5MGRkMmUyNGIyMTkwNzU4YTkxZDU2NzI1MjNiZTBlNjA1ZGY1MmVjZWU2N2ZlNzkzY2YxMDU1YWM"
+                        alt="Proyectores">
+                    <p>Proyectores
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Disfruta la experiencia de una pantalla gigante con nuestros Video Beam, Proyectores y
+                        Mini.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/accesorios-electronica/accesorios-computadores/c/BI_108_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/accesorios.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w0MDUxM3xpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gxMC9oZmUvMTA0NzA3NjI1MTI0MTQucG5nfGI2OTZjOGU1ODU1YjZhZWViYzdkZTdmYzZkNWMzNWE2ZjIwMDJlOWMzM2Q4NTNkNzE4ODM4OTYxNDYwZDRhNzk"
+                        alt="Accesorios computadores">
+                    <p>Accesorios computadores
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Teclados, Mouse, Parlantes, Cámaras Web, Fundas, Audifonos y más accesorios para tu
+                        computador. </span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/casa-inteligente-domotica/redes-wifi/c/BI_142_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/redes-wifi.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wyMjg4MHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2g0ZC9oMmUvMTA0MDUzNjk4Mzk2NDYucG5nfDM4NWQ5MzliZTRmMDVmYWI2ODgyMmFjNjgwYTI0OGI1NmRlZDA1ZTA5NTJiMDk5ZjllNjViZjNjZjZjMWI5ZDI"
+                        alt="Redes y Wifi">
+                    <p>Redes y Wifi
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra routers, adaptadores de red y extensores Wi-Fi y disfruta la mejor conexión. </span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="container-fluid fondo-fluid">
+    <h2>¡Las mejores marcas en un solo lugar!</h2>
+
+    <k-slider arrows="true" desktop-items="7" mobile-items="3" peek="50" style="--k-slider-background-color: #f5f5f5;">
+        <div class="k-slider__slide">
+            <a href="/marcas/hp/c/hp">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-hp-2.png"
+                    alt="HP">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/computadores-tablets/computadores-portatiles/c/BI_104_ALKOS?q=%3Arelevance%3Abrand%3AAPPLE">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-apple.png"
+                    alt="Apple">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/marcas/lenovo/c/lenovo">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-lenovo.png"
+                    alt="Lenovo">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/marcas/asus/c/asus">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-asus.png"
+                    alt="ASUS">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/marcas/acer/c/acer">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-acer.png"
+                    alt="Acer">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/marcas/epson/c/epson">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-epson.png"
+                    alt="Epson">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/computadores-tablets/impresion/c/BI_109_ALKOS?q=%3Arelevance%3Abrand%3ACANON">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-canon.png"
+                    alt="Canon">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/computadores-tablet/computadores-portatiles/c/BI_104_ALKOS?q=%3Arelevance%3Abrand%3AHUAWEI">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-huawei-3.png"
+                    alt="huawei">
+            </a>
+        </div>
+
+    </k-slider>
+</section>
+
+<section class="container">
+    <div class="ctn-banners-lanzamientos">
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-compu-html-1 -->
+            <span id=zone212599101></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?212599101');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-compu-html-2 -->
+            <span id=zone615395828></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?615395828');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-compu-html-3 -->
+            <span id=zone869518229></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?869518229');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-compu-html-4 -->
+            <span id=zone999726024></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?999726024');
+            </script>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="ctn-title-h2">
+        <h2>Promociones destacadas</h2>
+    </div>
+    <div class="row ctn-banners-adglare">
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-compu-promo-1 -->
+                <span id=zone845722419></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?845722419');
+                </script>
+            </div>
+        </div>
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-compu-promo-2 -->
+                <span id=zone742183698></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?742183698');
+                </script>
+            </div>
+        </div>
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-compu-promo-3 -->
+                <span id=zone220315549></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?220315549');
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="/computadores-tablets/computadores-portatiles/c/BI_104_ALKOS">
+        <div class="btn-ver-ofertas">
+            <p>Ver ofertas</p>
+        </div>
+    </a>
+</section>
+
+<section class="container-fluid fluid-gris">
+    <div class="container flex">
+        <div>
+            <h2>Conoce más del mundo de computadores, tablets e impresoras</h2>
+            <p>Todo lo que necesitas saber sobre Computadores Portátiles, de Mesa, PC Gamer y Tablets, Impresoras
+                Multifuncionales, Monitores, Proyectores, Accesorios y más. </p>
+            <a href="/guia-compra/guia-computadores/c/guia-computadores">
+                <div class="btn-zona-seo">
+                    <p>Guía de compra</p>
+                </div>
+            </a>
+        </div>
+        <div class="ctn-image-close">
+            <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Ktronix/Dummy-images/landing-compuSEO.png"
+                alt="">
+        </div>
+    </div>
+</section>

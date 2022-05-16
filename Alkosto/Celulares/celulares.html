@@ -1,0 +1,613 @@
+<style>
+    @import url('https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css');
+     :root {
+        --alkosto-alert: #dd171b;
+        --alkosto-naranja-oscuro: #b14b25;
+        --alkosto-text1: #444444;
+        --alkosto-text2: #5c5c5c;
+        --alkosto-text3: #959595;
+        --alkosto-naranja: #eb5b25;
+        --alkosto-azul: #004797;
+        --alkosto-fondo-gris: #f5f5f5;
+        --alkosto-deshabilitado: #e0e0e0;
+        --alkosto-azul-claro: #edf1f6;
+    }
+    
+    h1 {
+        font-size: 24px !important;
+    }
+    
+    h2 {
+        font-size: 18px !important;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .grid-container-sub {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 158px;
+        margin-top: 20px;
+    }
+    
+    .ctn-info-grid {
+        box-shadow: 0px 0px 4px #919ba645;
+        text-align: center;
+        height: 130px;
+        position: relative;
+    }
+    
+    .ctn-info-grid img {
+        width: 101px;
+        margin-top: -25px;
+    }
+    
+    .ctn-info-grid p {
+        color: var(--alkosto-azul);
+        font-weight: bold;
+        width: 101px;
+        margin: 0 auto;
+        margin-top: 2px;
+        line-height: 15px;
+    }
+    
+    .ctn-info-grid>p>i {
+        color: var(--alkosto-naranja);
+        position: absolute;
+        margin-left: 22px;
+    }
+    
+    .ctn-info-grid span {
+        display: none;
+    }
+    
+    .link-productos {
+        display: none;
+    }
+    
+    .fondo-fluid {
+        height: 110px;
+        background: var(--alkosto-fondo-gris);
+        text-align: center;
+        color: var(--alkosto-azul);
+        margin-top: 25px;
+    }
+    
+    .fondo-fluid h2 {
+        font-weight: bold;
+    }
+    
+    .ctn-slider {
+        width: 100%;
+        max-width: 1280px;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: 27px;
+        white-space: nowrap;
+        overflow-x: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .ctn-slider img {
+        width: 80px;
+        margin-left: 15px;
+    }
+    
+    .ctn-title-h2 {
+        border-bottom: 1px solid #dbdbdb;
+        margin-top: 5px;
+    }
+    
+    .ctn-title-h2 h2 {
+        color: var(--alkosto-text1);
+        border-bottom: 2px solid var(--alkosto-naranja);
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+    
+    .ctn-banners-lanzamientos {
+        display: flex;
+        width: auto;
+        overflow-x: auto;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    
+    .ctn-banners-adglare {
+        width: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .bn-img-adglare {
+        margin-left: 15px;
+    }
+    
+    .banner-adglare {
+        height: 285px;
+        width: 340px;
+    }
+    
+    .btn-ver-ofertas {
+        background: var(--alkosto-naranja);
+        color: white;
+        width: 298px;
+        height: 56px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        vertical-align: middle;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .btn-ver-ofertas p {
+        line-height: 53px;
+    }
+    
+    .fluid-gris {
+        height: auto;
+        background: var(--alkosto-fondo-gris);
+        padding-top: 29px;
+        margin-top: 35px;
+    }
+    
+    .fluid-gris h2 {
+        color: var(--alkosto-azul)
+    }
+    
+    .btn-borde {
+        width: 260px;
+        height: 56px;
+        border: 1px solid var(--alkosto-naranja);
+        color: var(--alkosto-naranja);
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .btn-borde p {
+        margin-top: 17px;
+    }
+    
+    .btn-borde:last-child {
+        margin-top: 27px;
+        position: absolute;
+        bottom: 20px;
+    }
+    
+    .btn-zona-seo {
+        width: 260px;
+        height: 56px;
+        background: var(--alkosto-naranja);
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .btn-zona-seo p {
+        line-height: 53px;
+    }
+    
+    .btn-zona-seo:hover {
+        background: var(--alkosto-naranja-oscuro);
+    }
+    
+    .ctn-image-close img {
+        max-width: 100%;
+        margin-top: 25px;
+    }
+    /* Sección banners de lanzamiento */
+    
+    .banner-lanzmiento {
+        width: 260px;
+        height: 405px;
+        text-align: center;
+        margin-left: 15px;
+        position: relative;
+    }
+    
+    .banner-lanzmiento span {
+        font-weight: bold;
+        color: var(--alkosto-text1);
+        display: inherit;
+    }
+    
+    .banner-lanzmiento img {
+        margin-bottom: 15px;
+    }
+    
+    .label-exclusive {
+        position: absolute;
+        z-index: 2;
+        background: var(--alkosto-naranja);
+        color: white;
+        height: auto;
+        padding: 6px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+    /* Fin sección de lanzamientos  */
+    
+    .barra_lanzamiento {
+        margin: 0 auto 48px auto;
+        height: 100px;
+        text-align: center;
+        width: 100%;
+        max-width: 1280px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        .barra_lanzamiento {
+            height: 120px;
+        }
+        .grid-container-sub {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 220px;
+        }
+        .ctn-info-grid span {
+            display: block;
+            font-size: 12px;
+            padding: 6px;
+            color: var(--alkosto-text1);
+        }
+        .link-productos {
+            position: absolute;
+            bottom: 8px;
+            display: block;
+            left: 50%;
+            margin-left: -50px !important;
+        }
+        .ctn-info-grid>p>i {
+            color: transparent;
+        }
+        .ctn-info-grid {
+            height: 195px;
+        }
+        .link-productos>i {
+            color: var(--alkosto-naranja) !important;
+            margin-left: 4px !important;
+        }
+        .flex {
+            display: flex;
+        }
+        .ctn-image-close {
+            padding: 12px;
+            width: 45%;
+            margin: 0 auto;
+        }
+        .fluid-gris {
+            padding-bottom: 29px;
+        }
+        .btn-borde {
+            width: 198px;
+            margin: 0 5px;
+        }
+        .btn-zona-seo {
+            width: 198px;
+            margin: 0 5px;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .grid-container-sub {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 16px;
+        }
+        .ctn-slider {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .btn-borde {
+            width: 240px;
+        }
+        v .btn-borde:hover {
+            background: var(--alkosto-naranja);
+            color: white;
+        }
+        .btn-zona-seo {
+            width: 240px;
+        }
+        .ctn-banners-lanzamientos {
+            justify-content: space-around;
+        }
+        .btn-ver-ofertas:hover {
+            background: var(--alkosto-naranja-oscuro);
+        }
+        .contenido_elementos {
+            width: 64%;
+        }
+    }
+</style>
+
+<section class="container">
+    <h1>Celulares</h1>
+</section>
+<section class="container" style="margin-bottom: 24px;">
+<!-- AdGlare: Barra Cel Primer nivel -->
+<span id=zone819166035></span>
+<script>
+    (function(r,d,u) {
+        var s = d.createElement(r); s.async = true;
+        u += '&cb=' + Date.now() + Math.random();       
+        s.src = u; var n = d.getElementsByTagName(r)[0];
+        n.parentNode.insertBefore(s, n);
+    })('script',document,'//engine.alkst.co/?819166035');
+</script>
+</section>
+<section class="container">
+    <div class="grid-container-sub">
+        <a href="/celulares/telefonos-celulares/c/BI_101_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/celulares.png?context=bWFzdGVyfGNhdGVnb3JpYSBjZWx1bGFyZXN8MjAzNjZ8aW1hZ2UvcG5nfGNhdGVnb3JpYSBjZWx1bGFyZXMvaGI2L2hlZS85Mzg3NDA2NDU4OTEwLnBuZ3wzYzAxZTlhOTQ2OGM2ZjFlNzM3MTQyYmI3YTczYWJmNDU3NGIwMWQ1ODIzNWQzNzQ3MmU3ODk4MTM5M2I5NWVm" alt="Celulares">
+                    <p>Celulares
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Conéctate, juega, comparte y navega con nuestros Celulares y Smartphones de última tecnología.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/accesorios-electronica/accesorios-celulares-tabletas/c/BI_102_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/ACCESORIOS-PARA-CELULAR.png?context=bWFzdGVyfENlbHVsYXJlcy1sYW5kaW5ncGFnZXwyMzEzN3xpbWFnZS9wbmd8Q2VsdWxhcmVzLWxhbmRpbmdwYWdlL2hkYy9oNzcvMTA0NzM4MjMyNzI5OTAucG5nfDE0NmRhZjE2NmIxM2NlZmQxZDE0Njk1ZjY3ODc2NTBkZDY1YzhiOWMyNmVlNWRkM2IzNzIwZTc2MjRlYjJiMWQ"
+                        alt="Accesorios para celulares">
+                    <p>Accesorios para celulares
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra accesorios para celulares, manos libres, estuches, power bank, cargadores y más.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/smartwatch/c/BI_SMAW_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/smartwatch.png?context=bWFzdGVyfGNhdGVnb3JpYSBjZWx1bGFyZXN8MzA1ODh8aW1hZ2UvcG5nfGNhdGVnb3JpYSBjZWx1bGFyZXMvaGNlL2gzMi85Mzg3NDA4MjYxMTUwLnBuZ3xjNDM5MWE0Njc3ZjhiM2NkZGIzMTAwNDM4MDE3ZDEzNzcwYWQ5MGVlOWRjMTc4NWZkMGY2MDQxNGExOWVjMzRl" alt="Smartwatch">
+                    <p>Smartwatch
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra los Relojes Inteligentes de diferentes modelos, colores y funcionalidades.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/audio/pines-virtuales-audio/c/BI_119_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/pines-spotify.png?context=bWFzdGVyfGxhbmRpbmctcGluZXN8MzYwMDV8aW1hZ2UvcG5nfGxhbmRpbmctcGluZXMvaGJiL2hkNS85NDA1MTQ1ODQxNjk0LnBuZ3w1NzUxMGJlMzkwMGNhMjJjODBkY2YzMWYzYjBhNWM3YjhhZGZjMjllN2RkZjlhMTk0N2YzMmI5ZmJkZWVmNTIw" alt="Spotify">
+                    <p>Spotify
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Disfruta de tu música favorita en todos los dispositivos móviles en Spotify. </span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="container-fluid fondo-fluid">
+    <div class="ctn-title-h2" style="margin-bottom: 16px;">
+        <h2>¡Las mejores marcas en un solo lugar!</h2>
+    </div>
+    <div class="ctn-slider">
+        <a href="celulares/telefonos-celulares/iphone/c/BI_M009_ALKOS">
+            <img src="/medias/iphone.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDI2ODh8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oNjcvaGIxLzk3OTg4ODU4MzQ3ODIuc3ZnfDk4NGY1OWExOTQyMzI1ODIyN2E0MzdiMTI5NGY5ZjI4MTdjNDliYWU3NjkxNTdhN2UzY2FmNDQ5MmFlMTJlNjg"
+                alt="logo Iphone">
+        </a>
+        <a href="/celulares/telefonos-celulares/samsung/c/BI_M017_ALKOS">
+            <img src="/medias/samsung.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDMzMjF8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oMDIvaGJhLzk3OTg4ODQ4MTg5NzQuc3ZnfGJjNjgyMzE3MGQ5NGUwYWQ2NzViZDhjYzI0YjAzMDRmOWFlNGVhYTczYzk0Y2RkMDVkODkzZTA1Y2VjNWFlMzc"
+                alt="logo Samsung">
+        </a>
+        <a href="/celulares/telefonos-celulares/motorola/c/BI_M015_ALKOS">
+            <img src="/medias/motorola.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDQyNDd8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oZjYvaGVhLzk3OTg4ODYxNjI0NjIuc3ZnfDE1MWFiMmVhY2VmMmIzNDYwYTZlZGU1ZDc0YzgwYzRmZjMzZjQ1ZDdhNzQzYjUxOWYyNDEyMThkOTk3ZWFiMmY"
+                alt="logo Motorola">
+        </a>
+        <a href="/celulares/telefonos-celulares/nokia/c/BI_M016_ALKOS">
+            <img src="/medias/nokia.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDEzODl8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oNWQvaDg4Lzk3OTg5MTE0NTkzNTguc3ZnfDhjYmM2Yzc0NjQ5NWU4NTUzZGJhOWI5OTg0MTkyYjA5M2UzMGVhODAxZWQ3ZDU0NDU0NWJjNWVmNjFlNzlhNDQ"
+                alt="logo Nokia">
+        </a>
+        <a href="/celulares/telefonos-celulares/xiaomi/c/BI_M021_ALKOS">
+            <img src="/medias/xiaomi-nuevo-logo.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDQxNTd8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oMjYvaGI1LzExNDAxNjkxNjYwMzE4LnN2Z3wzYTRlM2NjZDA0NzcxNTVmYTc0YTIxNmI4YTUyYWY5NDhiMWU4YzkwZjJkNmNhZTQxMmZjNmFiM2FkNjkzYTc1"
+                alt="logo Xiaomi">
+        </a>
+        <a href="/celulares/telefonos-celulares/huawei/c/BI_M008_ALKOS">
+            <img src="/medias/huawei-filtro.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDMwNjJ8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oNzEvaDdlLzk3OTg5NzAxNzk2MTQuc3ZnfDkyY2MwNjQxMTU2NWE2ZTEzYjIyMmE2MWZiMDhkMDZmMDUyM2RhOWRjMDRkOTc0YjcxZDZiYmY5ZjE4YTg1ZTY"
+                alt="logo Huawei">
+        </a>
+        <a href="celulares/telefonos-celulares/vivo/c/BI_M020_ALKOS">
+            <img src="/medias/logo-vivo.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDM0ODB8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oNDQvaGEzLzEwMjk3NDMwMDgxNTY2LnN2Z3w2NTRjY2M4NDM3ZmRhZGYzYmJjNzgxMDZlYzU0ZTY2N2M5ZTg0MjU0MWU5MmRiYTkwMDVmMjljYTU1OTY4ODJi"
+                alt="logo Vivo">
+        </a>
+        <a href="celulares/telefonos-celulares/zte/c/BI_M023_ALKOS">
+            <img src="/medias/Logo-zte-hybris-2021.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDM4MjMzfGltYWdlL3N2Zyt4bWx8bWFyY2FfY2VsdWxhcmVzX2ZpbHRyb3MvaGY4L2g1Mi8xMDQ5OTQxMTg2OTcyNi5zdmd8M2ViNjNmNjdmNzQ2MDhiZmM2OTNmOTcwZWI1ZjY1MWJkNWI0Y2U3ZGUzZTk5YzE3ZWRmZDYyMjdjNWIxMzkxMQ"
+                alt="ZTE">
+        </a>
+        <a href="celulares/telefonos-celulares/oppo/c/BI_M024_ALKOS">
+            <img src="/medias/oppo-logo.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDg1MTMxfGltYWdlL3N2Zyt4bWx8bWFyY2FfY2VsdWxhcmVzX2ZpbHRyb3MvaGI0L2g4OS8xMDUxOTUxMjUxNDU5MC5zdmd8NTAwMjYxMTY4MTFiNWQ4Mzc1YTc4M2Y4ZDhiMjhjMDRlZWJhNTFhNTY5MTE4ODJhYTM2NGY4ZDUxNzgzMjMxNw"
+                alt="Oppo">
+        </a>
+        <a href="celulares/telefonos-celulares/tcl/c/BI_M025_ALKOS">
+            <img src="/medias/Logo-TCL-hybris-01.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDY3OHxpbWFnZS9zdmcreG1sfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zL2hhMC9oMTYvMTA1MzQ4Njc2NjQ5MjYuc3ZnfGY2YWE2N2QwMDA5M2YxMDc2YWU5NjMyN2VkZDM0ZDIzOTFjNGNkNjlmMTBiZGJkMzhjM2I4MDQ4N2U0ZTQwNTM"
+                alt="TCL">
+        </a>
+        <a href="celulares/telefonos-celulares/realme/c/BI_M026_ALKOS">
+            <img src="/medias/Logo-realme.svg?context=bWFzdGVyfG1hcmNhX2NlbHVsYXJlc19maWx0cm9zfDE3NTF8aW1hZ2Uvc3ZnK3htbHxtYXJjYV9jZWx1bGFyZXNfZmlsdHJvcy9oOTQvaGNhLzEwNjY0NjY1MTUzNTY2LnN2Z3w3YWJjNTBkMzM5MGJlODExOThhMGViZjM0ZDdkYzczNDBkOWJjM2ViMjI5ZDE0N2FhOTlmMDJlYjIyZTg0YmI3"
+                alt="REALME">
+        </a>
+    </div>
+</section>
+
+<section class="container">
+    <div class="ctn-banners-lanzamientos">
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-cel-html-1 -->
+            <span id=zone984927468></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?984927468');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-cel-html-2 -->
+            <span id=zone123447546></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?123447546');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-cel-html-3 -->
+            <span id=zone949659442></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?949659442');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-cel-html-4 -->
+            <span id=zone412524721></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?412524721');
+            </script>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="ctn-title-h2">
+        <h2>Promociones destacadas</h2>
+    </div>
+    <div class="row ctn-banners-adglare">
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-cel-promo-1 -->
+                <span id=zone510003254></span>
+                <script>
+                    (function(r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?510003254');
+                </script>
+            </div>
+        </div>
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-cel-promo-2 -->
+                <span id=zone396544613></span>
+                <script>
+                    (function(r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?396544613');
+                </script>
+            </div>
+        </div>
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-cel-promo-3 -->
+                <span id=zone135716893></span>
+                <script>
+                    (function(r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?135716893');
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="/celulares/telefonos-celulares/c/BI_101_ALKOS">
+        <div class="btn-ver-ofertas">
+            <p>Ver ofertas</p>
+        </div>
+    </a>
+</section>
+
+<section class="container-fluid fluid-gris">
+    <div class="container flex">
+        <div>
+            <h2>Conoce más del mundo de celulares</h2>
+            <p>Encuentra toda la información que necesitas saber sobre Celulares y Smartphones para decidir cuál es el teléfono ideal para ti.</p>
+            <a href="/guia-compra/guia-celulares/c/guia-celulares">
+                <div class="btn-zona-seo">
+                    <p>Guía de compra</p>
+                </div>
+            </a>
+        </div>
+        <div class="ctn-image-close">
+            <img src="medias/SEO-celulares.jpg?context=bWFzdGVyfENlbHVsYXJlcy1sYW5kaW5ncGFnZXw0MDQzMnxpbWFnZS9qcGVnfENlbHVsYXJlcy1sYW5kaW5ncGFnZS9oOTQvaDBhLzEwNDczODIzNDA0MDYyLmpwZ3w0ZGMxYjE1ODZhODA3MThmMmY4YTYxYTFiYmY0NjhlYjkzMGRmZGFmNTIyYzMxMTg5MjQ2NzQxZTY3ZmViYmZh"
+                alt="">
+        </div>
+    </div>
+</section>

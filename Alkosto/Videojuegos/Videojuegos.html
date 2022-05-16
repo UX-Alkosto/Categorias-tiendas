@@ -1,0 +1,636 @@
+<style>
+     :root {
+        --main-alert: #dd171b;
+        --main-naranja-oscuro: #b14b25;
+        --main-text1: #444444;
+        --main-text2: #5c5c5c;
+        --main-text3: #959595;
+        --main-naranja: #eb5b25;
+        --main-azul: #004797;
+        --main-fondo-gris: #f5f5f5;
+        --main-deshabilitado: #e0e0e0;
+        --main-azul-claro: #edf1f6;
+    }
+    
+    h1 {
+        font-size: 24px !important;
+        color: #444444 !important;
+        font-weight: bold !important;
+        margin-bottom: 32px !important;
+        margin-top: 32px !important;
+        text-align: left !important;
+    }
+    
+    h2 {
+        font-size: 18px !important;
+        font-weight: bold !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    h3 {
+        font-size: 16px !important;
+        margin: 0 !important;
+    }
+    
+    h4 {
+        font-size: 15px !important;
+        margin: 0 !important;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .color_grisoscuro {
+        color: #444;
+    }
+    
+    .color_grisclaro {
+        color: #959595;
+    }
+    
+    .color_azul {
+        color: var(--main-azul);
+    }
+    
+    .color_gris_fondo {
+        background: var(--main-fondo-gris);
+    }
+    
+    .sombra {
+        box-shadow: 0px 2px 8px #0000003d;
+    }
+    
+    .card {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+    
+    .playstation {
+        border: 1px solid black;
+        box-shadow: none !important;
+    }
+    
+    .playstation img {
+        width: 80%;
+        position: absolute;
+        top: 23px;
+        left: 35px;
+        transition: all 0.3s;
+    }
+    
+    .xbox {
+        border: 1px solid #0F7C11;
+        box-shadow: none !important;
+    }
+    
+    .xbox img {
+        width: 75%;
+        position: absolute;
+        top: 22px;
+        left: 55px;
+        transition: all 0.3s;
+    }
+    
+    .nintendo {
+        border: 1px solid #EA1B23;
+        box-shadow: none !important;
+    }
+    
+    .nintendo img {
+        width: 75%;
+        position: absolute;
+        top: 21px;
+        left: 55px;
+        transition: all 0.3s;
+    }
+    
+    .nintendo:hover img,
+    .playstation:hover img,
+    .xbox:hover img {
+        transform: scale(1.1);
+    }
+    
+    .margen_interna {
+        padding: 16px;
+    }
+    
+    .contenedor_cms {
+        width: 1280px !important;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 100% !important;
+    }
+    
+    .contenedor_cms .col-sm-4 {
+        width: 31.333333% !important;
+        padding: 0 !important;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .left {
+        float: left;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    .cta {
+        background: #DD171B;
+        height: 56px !important;
+        text-align: center;
+        line-height: 56px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 214px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    
+    a:focus,
+    a:hover {
+        text-decoration: none !important;
+    }
+    
+    .cta a {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        border-radius: 4px;
+    }
+    
+    .cta a:hover {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        background: #AB1114;
+        border-radius: 4px;
+    }
+    
+    .cierre {
+        width: 100%;
+        height: 88px;
+        clear: both;
+    }
+    
+    .contenedor_cms .col-4,
+    .contenedor_cms .col-8 {
+        padding: 0;
+        margin: 0 16px;
+        display: inline-block;
+    }
+    
+    .contenedor_cms .col-4:first-child {
+        margin-left: 0 !important;
+    }
+    
+    .contenedor_cms .col-4:last-child {
+        margin-right: 0 !important;
+    }
+    
+    .contenedor_cms .col-4 {
+        width: 31.333333%;
+    }
+    
+    .contenedor_cms .col-8 {
+        width: 65.666667%;
+        text-align: center;
+    }
+    
+    h2 {
+        font-weight: 400 !important;
+        margin: 0 !important;
+        padding: 0;
+        height: 70px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        float: left;
+    }
+    
+    .contenedor_cms .col-8 h3 {
+        margin: 0;
+        padding: 0;
+        font-weight: 400 !important;
+    }
+    
+    .sombra {
+        padding: 16px;
+        margin-top: 38px;
+        margin-bottom: 36px;
+        height: 103px;
+    }
+    
+    .producto {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        text-align: right;
+    }
+    
+    .producto img {
+        width: 80%;
+    }
+    
+    .banner {
+        margin-bottom: 16px !important;
+    }
+    
+    .banner img {
+        width: 100%;
+    }
+    
+    .contenedor_cms .col-4:hover .producto {
+        transition: all 0.3s;
+        transform: scale(1.1);
+    }
+    
+    .elementos {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: auto;
+        white-space: nowrap;
+        text-align: center;
+    }
+    
+    .elementos li {
+        display: inline-block;
+        line-height: 14px;
+        width: 23%;
+        margin-left: 0;
+        margin-right: 8px;
+        padding-right: 8px;
+        border-right: solid 1px #959595;
+        vertical-align: top;
+        text-align: left;
+        white-space: normal;
+    }
+    
+    .elementos li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border: none;
+    }
+    
+    .elementos li img {
+        float: left;
+        margin-right: 8px;
+        width: 51px;
+    }
+    
+    .elementos li a,
+    .elementos li a:hover {
+        color: #444;
+        text-decoration: none;
+    }
+    
+    .cierre {
+        height: 88px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .color_azul img {
+        margin-left: 8px;
+    }
+    
+    .icono {
+        width: 15px;
+        position: relative;
+        top: 47px;
+        margin-left: 8px;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .sombra {
+            padding: 16px;
+            margin-top: 0px;
+            margin-bottom: 36px;
+            height: 80px;
+        }
+        .contenedor_cms {
+            width: 95% !important;
+        }
+        .pageType-CategoryPage .contenedor_cms .col-4 {
+            width: 30.333333% !important;
+        }
+        .producto img {
+            width: 50%;
+        }
+        .producto {
+            position: absolute;
+            top: -7px;
+            right: 0;
+            text-align: right;
+        }
+        h2 {
+            font-size: 20px !important;
+            height: 50px;
+        }
+        .icono {
+            width: 15px;
+            position: relative;
+            top: 27px;
+            margin-left: 8px;
+        }
+        .cierre {
+            height: 38px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        h2 {
+            max-width: 115px;
+        }
+        .cierre {
+            height: 38px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    
+    @media screen and (max-width: 540px) {
+        .contenedor_cms .col-4,
+        .contenedor_cms .col-8 {
+            margin: 0;
+        }
+        .cierre {
+            width: 100%;
+            height: 40px;
+            clear: both;
+        }
+        .contenedor_cms .col-xs-12 {
+            width: 100% !important;
+            padding: 0 !important;
+        }
+        h1 {
+            margin-bottom: 16px !important;
+            margin-top: 16px !important;
+        }
+        .container {
+            margin: 0 16px;
+        }
+        .margen_interna {}
+        .sombra {
+            padding: 16px 24px !important;
+        }
+        .cta {
+            width: 100% !important;
+        }
+        .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 16px;
+        }
+        h1 {
+            margin-bottom: 16px !important;
+        }
+        .tit_par {
+            margin-left: 36% !important;
+        }
+        h2 {
+            font-weight: 400 !important;
+            margin: 0 !important;
+            padding: 0;
+            height: 54px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: -ms-flex;
+            display: flex;
+            -ms-flex-flow: row nowrap;
+            -webkit-flex-flow: row nowrap;
+            -moz-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            max-width: 180px;
+        }
+        .producto {
+            width: 40%;
+            top: -8px;
+        }
+        .pageType-CategoryPage .producto img {
+            width: 90%;
+            margin-left: 26px;
+        }
+        .pageType-CategoryPage .contenedor_cms .col-xs-12 {
+            width: 100% !important;
+        }
+        .contenedor_cms .col-sm-4 {
+            padding: 0;
+            margin: 0;
+        }
+        .contenedor_cms {
+            margin: 0 16px;
+            width: 92% !important;
+        }
+        .sombra {
+            margin-top: 18px;
+            padding: 16px !important;
+            height: 87px;
+        }
+        .par {
+            left: 0;
+            margin-left: -27px !important;
+            top: -4px;
+        }
+        .elementos li {
+            width: 43%;
+        }
+        .beneficios {
+            width: 108%;
+            margin: 0 0 16px -4%;
+            background: #f8f8f8;
+            box-shadow: none !important;
+            border-radius: 0;
+            height: 104px;
+        }
+        .contenedor_cms .col-sm-8 h3 {
+            text-align: left;
+        }
+        .contenedor_cms .sombra {
+            margin-bottom: 40px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .beneficios {
+            height: 111px !important;
+            margin-bottom: 16px !important;
+        }
+        .sombra {
+            margin-top: 18px;
+            padding: 16px !important;
+            height: 72px;
+        }
+        h1 {
+            margin-bottom: 16px !important;
+            margin-top: 16px !important;
+        }
+        h2 {
+            font-size: 20px !important;
+            height: 40px;
+            max-width: 180px;
+        }
+        .elementos li {
+            width: 57%;
+        }
+        .pageType-CategoryPage .icono {
+            top: 17px !important;
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .contenedor_cms {
+            margin: 0 16px;
+            width: 91% !important;
+        }
+        h2 {
+            height: 40px;
+        }
+    }
+</style>
+
+
+<div class="contenedor_cms">
+
+    <h1>Videojuegos</h1>
+
+</div>
+
+<div class="contenedor_cms">
+
+    <div class="col-4 col-xs-12">
+        <a href="/videojuegos/consolas/c/BI_131_ALKOS?page=1&pageSize=25&sort=relevance">
+            <div class="sombra card">
+                <h2 class="color_azul">Consolas</h2>
+                <img class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto">
+                <img src="/medias/videojuegos-consolas?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8MjI0ODR8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaGI5L2hiNy8xMDU3MDA0NjkzMDk3NC5wbmd8N2U3NzI4Mjg1OTNhMzE3MjZkODVjZjk2NDU0OGExNTRiNTgzZWI5MjdmNzI4ZWVjZGRiZDY1YTY3YTU3MTBlYg"
+                />
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-4 col-xs-12">
+        <a href="/videojuegos/juegos/c/BI_132_ALKOS">
+            <div class="sombra card">
+                <h2 class="color_azul tit_par">Videojuegos</h2>
+                <img class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto par">
+                <img src="/medias/videojuegos-videojuegos?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8NDU0OTB8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaGEzL2g3OC8xMDU3MDA0NjQ3MjIyMi5wbmd8ODE3MmRjODRmZTI3YzVmNTEwMjZhZTM5Mzk1MjQ1MWI0ZTEzNTViNTUxZTNkMTk1NTY1YjljY2Y3MjhiYzg5MQ"
+                />
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-4 col-xs-12">
+        <a href="/videojuegos/accesorios-videojuegos/c/BI_133_ALKOS">
+            <div class="sombra card">
+                <h2 class="color_azul">Controles y<br>Accesorios</h2>
+                <img class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto">
+                <img src="/medias/videojuegos-controles?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8MjUwNjh8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaDJmL2gyNi8xMDU3MDA0NzI5MTQyMi5wbmd8YTY3NTgyOGFmMmE2NTc0OGZiNTQ0NGQ5YTYzZTg4MGQ1YzQ0NDdhNThiMzk2NjU1MzQxMjNlYjc4NGI4YjQzMg"
+                />
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div class="contenedor_cms">
+
+    <div class="col-4 col-xs-12">
+        <a href="/videojuegos/pines-virtuales-videojuegos/c/BI_135_ALKOS">
+            <div class="sombra card">
+                <h2 class="color_azul tit_par">Membresias y<br>códigos digitales</h2>
+                <img class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto par">
+                <img src="/medias/membresias.png?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8Mjc3MTd8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaGI1L2hmZi85Mzg3NTE4MDAxMTgyLnBuZ3xkOTRkNjQ3ZmY3ZmEyNDRjZTU0OWMzYWUxNjhhMDUwNTk5ODNiMTlmOTNlMzlkZmRmMjVjMDFiMmU0ZmRlZTA1" />
+            </div>
+        </a>
+    </div>
+
+    <div class="col-4 col-xs-12">
+        <a href="/computadores-tablets/gaming/pcs-torres-gamers/c/BI_0090_ALKOS?page=1&pageSize=25&sort=relevance">
+            <div class="sombra card">
+                <h2 class="color_azul">PC Gaming</h2><img class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto">
+                <img src="/medias/pc-gaming.png?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8Mjk3MzZ8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaGEyL2hiMS85Mzg3NTE4MTk3NzkwLnBuZ3xmY2IxMTRiODBkYzQ4NTAwZDFmNzM5ODVlMTE1NWEyNjhlZTBiNTU3MTAzYjhlOTdjMWYzZmIzODZhM2QyNjUy" />
+            </div>
+        </a>
+    </div>
+
+    <div class="col-4 col-xs-12">
+        <a href="/videojuegos/figuras-accion-coleccionables/c/BI_134_ALKOS">
+            <div class="sombra card">
+                <h2 class="color_azul tit_par">Coleccionables</h2>
+                <img class="icono" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </div>
+            <div class="producto par">
+                <img src="/medias/coleccionable.png?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8MzM3OTR8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaGFkL2hjOS85Mzg3NDU0NTYyMzM0LnBuZ3wzZTY3Y2IyYWE5MzkyMWY0NzI1NGFiZjNkZWMzNmEzNDkzOWU5OTI2YmQxOGQxZWRmMTY4M2QxNTljODc0ZTc0" />
+            </div>
+        </a>
+    </div>
+
+</div>
+
+<div class="contenedor_cms">
+
+    <div class="col-4 col-xs-12">
+        <a href="../../marcas/playstation/c/playstation">
+            <div class="sombra card playstation">
+                <img src="/medias/videojuegos-logo-ps?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8NjgwOXxpbWFnZS9wbmd8dmlkZW9qdWVnb3MtbGFuZGluZy9oYmUvaGM1LzEwNTcwMDQ4NzY1OTgyLnBuZ3wyMjVmNmQ1MTMwNmFhYTdjZTBlNDk1MjM5MDE4ZmRkM2JjNWMxNTI1MWI5YzQ3NDBlMDMyMWMyOTNiNDk2ODAy"
+                />
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-4 col-xs-12">
+        <a href="../../marcas/xbox/c/xbox">
+            <div class="sombra card xbox">
+                <img src="/medias/xbox.png?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8Mjg4MzF8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaGRiL2g4MC85Mzg4NTY5NDkzNTM0LnBuZ3wyZDk4ZTVmNTdhYTU4NjcwOTQ2YzdkMDRiZmRiNDY5YWI2ZDEzMGUwMTc0NzExOTYzM2IyNzhlYTg2OGM5YjBm" />
+            </div>
+        </a>
+    </div>
+
+
+    <div class="col-4 col-xs-12">
+        <a href="../../marcas/nintendo/c/nintendo">
+            <div class="sombra card nintendo">
+                <img src="/medias/nintendo.png?context=bWFzdGVyfHZpZGVvanVlZ29zLWxhbmRpbmd8MzU1NTJ8aW1hZ2UvcG5nfHZpZGVvanVlZ29zLWxhbmRpbmcvaGY2L2hmOS85Mzg4NTY5NTkxODM4LnBuZ3w1NThmNDcxN2RkMDY0M2ViYTgyZDVkMzNjOTRiNmExNGRiYTgxYTEyYThmNzQ1MDY0OWJiM2JkNjFhYzUxNTQx" />
+            </div>
+        </a>
+    </div>
+    
+
+</div>
+
+
+<div class="clear"></div>
+<div class="cierre"></div>

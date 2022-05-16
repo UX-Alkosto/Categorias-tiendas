@@ -1,0 +1,431 @@
+<style type="text/css">
+    .contenedor_contenido h1 {
+        font-size: 24px !important;
+        color: #444444 !important;
+        font-weight: bold !important;
+        margin-bottom: 32px !important;
+        margin-top: 32px !important;
+    }
+    
+    .contenedor_contenido h2 {
+        font-size: 32px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .contenedor_contenido h3 {
+        font-size: 20px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .contenedor_contenido h4 {
+        font-size: 16px !important;
+        font-weight: bold !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .contenedor_contenido p {
+        font-size: 16px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .color_grisoscuro {
+        color: #444;
+    }
+    
+    .color_grisoscuro a,
+    .color_grisoscuro a:hover {
+        color: #444;
+    }
+    
+    .color_grisclaro {
+        color: #959595;
+    }
+    
+    .color_azul {
+        color: #003E7F;
+    }
+    
+    .color_gris_fondo {
+        background: #F5F5F5;
+    }
+    
+    .color_rojo {
+        color: #cc0000;
+    }
+    
+    .contenedor_contenido .titulo_texto {
+        font-weight: 400 !important;
+        margin: 0 !important;
+        padding: 0;
+        height: 70px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -ms-flex;
+        display: flex;
+        -ms-flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        float: left;
+        font-size: 24px !important;
+    }
+    
+    .contenedor_contenido .sombra {
+        box-shadow: 0px 2px 8px #0000003d;
+    }
+    
+    .contenedor_contenido .card {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+    }
+    
+    .contenedor_contenido .margen_interna {
+        padding: 16px;
+    }
+    
+    .contenedor_contenido {
+        width: 1280px !important;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 100% !important;
+        font-family: 'Encode Sans Condensed', sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .right {
+        float: right;
+    }
+    
+    .left {
+        float: left;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    .contenedor_contenido .col-4 {
+        width: 31.333333%;
+        padding: 0;
+        margin: 0px 10px;
+    }
+    
+    .contenedor_contenido .cta {
+        background: #DD171B;
+        height: 56px !important;
+        text-align: center;
+        line-height: 56px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 214px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+    
+    a:focus,
+    a:hover {
+        text-decoration: none !important;
+    }
+    
+    .cta a {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        border-radius: 4px;
+    }
+    
+    .cta a:hover {
+        height: 56px;
+        color: #FFF !important;
+        display: block;
+        background: #AB1114;
+        border-radius: 4px;
+    }
+    
+    .cierre {
+        width: 100%;
+        height: 88px;
+        clear: both;
+    }
+    
+    .contenedor_contenido .caja_sombra {
+        padding: 16px;
+        margin-top: 38px;
+        margin-bottom: 36px;
+        height: 100px;
+    }
+    
+    .contenedor_contenido .producto {
+        position: relative;
+        margin-top: -73px;
+        text-align: right;
+        margin-right: -12px;
+    }
+    
+    .contenedor_contenido .producto img {
+        width: 40%;
+    }
+    
+    .contenedor_contenido .banner {
+        margin-bottom: 16px !important;
+    }
+    
+    .contenedor_contenido .banner img {
+        width: 100%;
+    }
+    
+    .contenedor_contenido .col-4:hover .producto {
+        transition: all 0.3s;
+        transform: scale(1.1);
+    }
+    
+    .cierre {
+        height: 88px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .color_azul img {
+        margin-left: 8px;
+    }
+    
+    .contenedor_contenido .icono {
+        width: 15px;
+        position: relative;
+        top: 47px;
+        margin-left: 8px;
+    }
+    
+    .contenedor_contenido>div:nth-child(3) .producto img {
+        width: 65%;
+    }
+    
+    .contenedor_contenido>div:nth-child(3) .producto {
+        margin-top: -90px;
+    }
+    
+    .contenedor_contenido>div:last-child .producto img {
+        width: 33%;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .contenedor_contenido .col-4 {
+            width: 47%;
+        }
+    }
+    
+    @media screen and (max-width: 731px) {
+        .contenedor_contenido .producto {
+            margin-top: -30px;
+        }
+    }
+    
+    @media screen and (max-width: 667px) {
+        .contenedor_contenido .col-4 {
+            width: 45%;
+        }
+        .contenedor_contenido .titulo_texto {
+            font-size: 21px !important;
+        }
+    }
+    
+    @media screen and (max-width: 540px) {
+        .contenedor_contenido h1 {
+            font-size: 36px !important;
+            margin-bottom: 16px !important;
+            margin-top: 16px !important;
+        }
+        .contenedor_contenido {
+            margin: 0 16px;
+            width: 92% !important;
+        }
+        .contenedor_contenido .caja_sombra {
+            padding: 16px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            height: 90px;
+        }
+        .contenedor_contenido .par {
+            left: -230px;
+            top: -75px;
+            margin-top: 0 !important;
+        }
+        .contenedor_contenido>div:last-child .par,
+        .contenedor_contenido>div:first-child .producto {
+            top: -30px;
+        }
+        .contenedor_contenido>div:nth-child(2) .par {
+            top: -90px;
+        }
+        .contenedor_contenido>div:nth-child(2) .icono,
+        .contenedor_contenido>div:last-child .icono {
+            top: 50px;
+        }
+        .contenedor_contenido .col-4 {
+            width: 100%;
+        }
+        .cierre {
+            width: 100%;
+            height: 56px;
+            clear: both;
+        }
+        .contenedor_contenido .caja_sombra {
+            padding: 16px 24px !important;
+        }
+        .cta {
+            width: 100% !important;
+        }
+        .contenedor_contenido .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 16px;
+        }
+        .cierre {
+            height: 24px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .contenedor_contenido .tit_par {
+            margin-left: 40% !important;
+        }
+        .contenedor_contenido>div:nth-child(2) .tit_par,
+        .contenedor_contenido>div:last-child .tit_par {
+            margin-top: 20px !important;
+        }
+        .contenedor_contenido .titulo_texto {
+            font-size: 24px !important;
+            height: 56px;
+        }
+        .contenedor_contenido .producto img {
+            width: 40%;
+        }
+        .contenedor_contenido .col-4 {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .contenedor_contenido .par {
+            left: -204px;
+        }
+        .contenedor_contenido .producto img {
+            width: 40%;
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .contenedor_contenido .tit_par {
+            margin-left: 40% !important;
+        }
+        .contenedor_contenido .par {
+            left: -162px;
+            top: -90px;
+            position: relative;
+        }
+        .contenedor_contenido .producto img {
+            width: 50%;
+        }
+        .contenedor_contenido .titulo_texto {
+            font-size: 18px !important;
+            height: 53px;
+        }
+        .contenedor_contenido .icono {
+            width: 15px;
+            position: relative;
+            top: 31px;
+            margin-left: 8px;
+        }
+        .contenedor_contenido>div:nth-child(3) .producto {
+            top: 40px;
+        }
+        .contenedor_contenido>div:last-child .par {
+            top: -15px;
+        }
+    }
+</style>
+<div class="contenedor_contenido">
+    <h1>Llantas</h1>
+</div>
+
+<div class="contenedor_contenido">
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto">
+                <a href="/llantas/c/BI_LLAN_ALKOS">Llantas</a>
+            </h2>
+            <a href="/llantas/c/BI_LLAN_ALKOS">
+                <img class="icono" src="https://s3.amazonaws.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </a>
+
+            <div class="producto">
+                <a href="/llantas/c/BI_LLAN_ALKOS">
+                    <img alt="Llantas" src="/medias/llantas.png?context=bWFzdGVyfGxsYW50YXN8MzAyMTQ0fGltYWdlL3BuZ3xsbGFudGFzL2hiNC9oMDEvOTQzMTc1MzE5NTU1MC5wbmd8MzdmODFmMGVjNTNmODg3YzRmYThhZDFhZjg3YzlkZjBlMGQ2YWQ5ZjRmOGI3Zjk4M2U4ZGRlMzY5YzU3ODgwMw" />
+                </a>
+            </div>
+            <a href="/llantas/c/BI_LLAN_ALKOS"> </a>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto">
+                <a href="/accesorios-automotores/accesorios-carro/c/BI_178_ALKOS">Accesorios<br />para autos</a>
+            </h2>
+            <a href="/accesorios-automotores/accesorios-carro/c/BI_178_ALKOS">
+                <img class="icono" src="https://s3.amazonaws.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </a>
+
+            <div class="producto par">
+                <a href="/accesorios-automotores/accesorios-carro/c/BI_178_ALKOS">
+                    <img alt="Accesorios para auto" src="/medias/accesorio-auto.png?context=bWFzdGVyfGxsYW50YXN8MTk3ODEzfGltYWdlL3BuZ3xsbGFudGFzL2hjMy9oYzkvOTQzMTc1MzY1NDMwMi5wbmd8Y2VmYzY0NzBiMjA2N2ZkODQxZWNjNWMwMWFlMjYwMzAzNDdhOGU4MTEzNGE4ZmM5YjEzNTk2ODNlM2MwNDQ1MQ" />
+                </a>
+            </div>
+            <a href="/accesorios-automotores/accesorios-carro/c/BI_178_ALKOS"> </a>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro titulo_texto">
+                <a href="/motos/c/BI_MOTO_ALKOS?utm_source=alkosto&utm_medium=1-nivel&utm_id=landing+motos">Motos</a>
+            </h2>
+            <a href="/motos/c/BI_MOTO_ALKOS?utm_source=alkosto&utm_medium=1-nivel&utm_id=landing+motos">
+                <img class="icono" src="https://s3.amazonaws.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" />
+            </a>
+
+            <div class="producto">
+                <a href="/motos/c/BI_MOTO_ALKOS?utm_source=alkosto&utm_medium=1-nivel&utm_id=landing+motos">
+                    <img alt="Motos" src="/medias/moto.png?context=bWFzdGVyfGxsYW50YXN8MTA3NDI3fGltYWdlL3BuZ3xsbGFudGFzL2hhNS9oYTgvOTQzMTc1NDE3ODU5MC5wbmd8YTVlNWZlYjYwYWVmYWFiM2FmMmVmYWJlNjk1YzJjOTg0OGI5MWYzYmJkYTExNmRiYjk2OGQ2OGQ5N2Y0ZTJlZg" />
+                </a>
+            </div>
+            <a href="/motos/c/BI_MOTO_ALKOS?utm_source=alkosto&utm_medium=1-nivel&utm_id=landing+motos"> </a>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="sombra caja_sombra card">
+            <h2 class="color_grisoscuro tit_par titulo_texto">
+                <a href="/accesorios-automotores/accesorios-moto/c/BI_180_ALKOS">Cascos</a>
+            </h2>
+            <a href="/accesorios-automotores/accesorios-moto/c/BI_180_ALKOS">
+                <img class="icono" src="https://s3.amazonaws.com/ymarketingcolcomercio/Alkosto/2020/marzo/tv/flecha.svg" /> </a>
+
+            <div class="producto par">
+                <a href="/accesorios-automotores/accesorios-moto/c/BI_180_ALKOS">
+                    <img alt="Cascos" src="/medias/casco.png?context=bWFzdGVyfGxsYW50YXN8NTQwNTc0fGltYWdlL3BuZ3xsbGFudGFzL2gwYi9oMjcvOTQzMTc1NDQ0MDczNC5wbmd8OTE1MTE0ZDM5NzBlNGIxNmQxYjczMGZkZDY2M2IyOTc4NzFiN2I1NDI2NDAwMzNhZjdkYjU3MDdlZGU1NjQxYg" />
+                </a>
+            </div>
+            <a href="/accesorios-automotores/accesorios-moto/c/BI_180_ALKOS"> </a>
+        </div>
+    </div>
+</div>
+
+<div class="cierre"></div>

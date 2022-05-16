@@ -1,0 +1,1090 @@
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js">
+<script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+
+<style>
+    @import url('https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css');
+
+    :root {
+        --alkosto-alert: #dd171b;
+        --alkosto-naranja-oscuro: #b14b25;
+        --alkosto-text1: #444444;
+        --alkosto-text2: #5c5c5c;
+        --alkosto-text3: #959595;
+        --alkosto-naranja: #eb5b25;
+        --alkosto-azul: #004797;
+        --alkosto-fondo-gris: #f5f5f5;
+        --alkosto-deshabilitado: #e0e0e0;
+        --alkosto-azul-claro: #edf1f6;
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+        color: var(--alkosto-azul);
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .cierre {
+        height: 80px;
+    }
+
+    .sub-title-categoria {
+        color: var(--alkosto-azul);
+        margin-bottom: 45px;
+    }
+
+    .sub-title-categoria>i {
+        color: var(--alkosto-naranja);
+        font-size: 12px;
+    }
+
+    .grid-container-sub {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 158px;
+        margin-top: 20px;
+    }
+
+    .ctn-info-grid {
+        box-shadow: 0px 0px 4px #919ba645;
+        text-align: center;
+        height: 130px;
+        position: relative;
+    }
+
+    .ctn-info-grid img {
+        width: 101px;
+        margin-top: -25px;
+    }
+
+    .ctn-info-grid p {
+        color: var(--alkosto-azul);
+        font-weight: bold;
+        width: 101px;
+        margin: 0 auto;
+        margin-top: 2px;
+        line-height: 15px;
+    }
+
+    .ctn-info-grid>p>i {
+        color: var(--alkosto-naranja);
+        position: absolute;
+        margin-left: 22px;
+    }
+
+    .ctn-info-grid span {
+        display: none;
+    }
+
+    .link-productos {
+        display: none;
+    }
+
+    .fondo-fluid {
+        height: 110px;
+        background: var(--alkosto-fondo-gris);
+        text-align: center;
+        color: var(--alkosto-azul);
+        margin-top: 25px;
+    }
+
+    .fondo-fluid h2 {
+        font-weight: bold;
+    }
+
+    .ctn-slider {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: 27px;
+        white-space: nowrap;
+        overflow-x: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ctn-slider img {
+        width: 100px;
+        margin-left: 15px;
+    }
+
+    .ctn-title-h2 {
+        border-bottom: 1px solid #dbdbdb;
+        margin-top: 5px;
+    }
+
+    .ctn-title-h2 h2 {
+        color: var(--alkosto-text1);
+        border-bottom: 2px solid var(--alkosto-naranja);
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+
+    .ctn-banners-lanzamientos {
+        display: flex;
+        width: auto;
+        overflow-x: auto;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    /* .banner-adglare {
+        height: 285px;
+        width: 340px;
+    }
+     */
+
+    .btn-ver-ofertas {
+        background: var(--alkosto-naranja);
+        color: white;
+        width: 298px;
+        height: 56px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        vertical-align: middle;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .btn-ver-ofertas p {
+        line-height: 53px;
+    }
+
+    .fluid-gris {
+        height: auto;
+        background: var(--alkosto-fondo-gris);
+        padding-top: 29px;
+        margin-top: 35px;
+    }
+
+    .fluid-gris h2 {
+        color: var(--alkosto-azul)
+    }
+
+    .btn-borde {
+        width: 260px;
+        height: 56px;
+        border: 1px solid var(--alkosto-naranja);
+        color: var(--alkosto-naranja);
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+        display: none;
+    }
+
+    .btn-borde p {
+        margin-top: 17px;
+    }
+
+    .btn-borde:last-child {
+        margin-top: 27px;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .btn-zona-seo {
+        width: 260px;
+        height: 56px;
+        background: var(--alkosto-naranja);
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .btn-zona-seo p {
+        line-height: 53px;
+    }
+
+    .btn-zona-seo:hover {
+        background: var(--alkosto-naranja-oscuro);
+    }
+
+    .ctn-image-close img {
+        max-width: 100%;
+        margin-top: 25px;
+    }
+
+    /* Sección banners de lanzamiento */
+
+    .banner-lanzmiento {
+        width: 260px;
+        height: 325px;
+        /* height: 405px; */
+        text-align: center;
+        margin-left: 15px;
+        position: relative;
+    }
+
+    .banner-lanzmiento span {
+        font-weight: bold;
+        color: var(--alkosto-text1);
+        display: inherit;
+    }
+
+    .banner-lanzmiento img {
+        margin-bottom: 15px;
+    }
+
+    .label-exclusive {
+        position: absolute;
+        z-index: 2;
+        background: var(--alkosto-naranja);
+        color: white;
+        height: auto;
+        padding: 6px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+
+    /* Fin sección de lanzamientos  */
+
+    .row-promo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .ctn-banners-promo {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .ctn-banners-promo:last-child {
+        margin-top: 40px;
+    }
+
+    .banner-promo {
+        width: 100%;
+        height: 285px;
+        display: inline-block;
+    }
+
+    .ctn-seo {
+        background: var(--alkosto-fondo-gris);
+        overflow: hidden;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        height: auto;
+        padding-bottom: 15px;
+    }
+
+    .ctn-seo img {
+        width: 100%;
+    }
+
+    .ctn-instalciones h3 {
+        text-align: center;
+    }
+
+    .ctn-instalciones p {
+        width: 80%;
+        height: 65px;
+        margin: 0 auto;
+    }
+
+    .ctn-recetas h3 {
+        text-align: center;
+    }
+
+    .ctn-recetas p {
+        width: 80%;
+        height: 65px;
+        margin: 0 auto;
+    }
+
+    .btn-borde-seo {
+        width: 260px;
+        height: 56px;
+        border: 1px solid var(--alkosto-naranja);
+        color: var(--alkosto-naranja);
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+        margin-top: 25px;
+    }
+
+    .btn-borde-seo p {
+        margin-top: 17px;
+    }
+
+    .btn-borde-seo:hover {
+        border: 1px solid var(--alkosto-naranja-oscuro);
+        background: var(--alkosto-naranja-oscuro);
+        color: white;
+    }
+
+    .ctn-logos-instalacion {
+        width: 85%;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .btn-link-instalacion {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 6px 6px #00000036;
+        padding: 10px;
+        margin: 5px 10px;
+        width: 120px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .btn-link-instalacion img {
+        width: 100px;
+    }
+
+    .img-logo-ftp {
+        width: 58px !important;
+    }
+
+    .space-mobile {
+        margin-top: 35px;
+    }
+
+    .boll-icon {
+        background: white;
+        color: var(--alkosto-naranja);
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        top: -38px;
+        left: 50%;
+        margin-left: -38px;
+        font-size: 45px;
+        padding-top: 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .grid-container-sub {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 220px;
+        }
+
+        .ctn-info-grid span {
+            display: block;
+            font-size: 12px;
+            padding: 6px;
+            color: var(--alkosto-text1);
+        }
+
+        .link-productos {
+            position: absolute;
+            bottom: 8px;
+            display: block;
+            left: 50%;
+            margin-left: -50px !important;
+        }
+
+        .ctn-info-grid>p>i {
+            color: transparent;
+        }
+
+        .ctn-info-grid {
+            height: 195px;
+        }
+
+        .link-productos>i {
+            color: var(--alkosto-naranja) !important;
+            margin-left: 4px !important;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .ctn-image-close {
+            padding: 12px;
+            width: 45%;
+            margin: 0 auto;
+        }
+
+        .fluid-gris {
+            padding-bottom: 29px;
+        }
+
+        .btn-borde {
+            width: 198px;
+            margin: 0 5px;
+        }
+
+        .btn-zona-seo {
+            width: 198px;
+            margin: 0 5px;
+        }
+
+        .space-mobile {
+            margin-top: 0px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .grid-container-sub {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 16px;
+        }
+
+        .ctn-slider {
+            width: 70%;
+        }
+
+        .btn-borde {
+            width: 240px;
+        }
+
+        .btn-borde:hover {
+            background: var(--alkosto-naranja);
+            color: white;
+        }
+
+        .btn-zona-seo {
+            width: 240px;
+        }
+
+        .ctn-banners-lanzamientos {
+            justify-content: space-around;
+        }
+
+        .btn-ver-ofertas:hover {
+            background: var(--alkosto-naranja-oscuro);
+        }
+
+        .contenido_elementos {
+            width: 64%;
+        }
+
+        .row-promo {
+            flex-direction: row;
+        }
+
+        .banner-promo {
+            width: 48%;
+            height: auto;
+        }
+
+        .margin-promo {
+            margin-left: 15px;
+        }
+
+        .ctn-recetas {
+            margin-top: 0px;
+        }
+
+        .ctn-banners-promo {
+            margin-top: 30px;
+        }
+
+        .ctn-banners-promo:last-child {
+            margin-top: 30px;
+        }
+
+        .ctn-seo {
+            height: 560px;
+        }
+    }
+</style>
+
+<section class="container">
+    <h1>Electrodomésticos</h1>
+</section>
+
+<section class="container">
+    <!-- AdGlare: AK-ldg-electro-Barra -->
+    <span id=zone638656437></span>
+    <script>
+        (function (r, d, u) {
+            var s = d.createElement(r);
+            s.async = true;
+            u += '&cb=' + Date.now() + Math.random();
+            s.src = u;
+            var n = d.getElementsByTagName(r)[0];
+            n.parentNode.insertBefore(s, n);
+        })('script', document, '//engine.alkst.co/?638656437');
+    </script>
+</section>
+
+<section class="container">
+    <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS">
+        <h2 class="sub-title-categoria">Grandes electrodomésticos
+            <i class="alk-icon-arrow-right-square"></i>
+        </h2>
+    </a>
+
+    <div class="grid-container-sub">
+        <a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/c/BI_0610_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/REFRIGERACION.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wxMTc3N3xpbWFnZS9wbmd8RWxlY3Ryb2RvbcOpc3RpY29zL2hlYi9oOGYvMTA0NzM4MzIzNDk3MjYucG5nfDMyODdhMzUzZWM0OWUxM2UyMDJjOWMxZDhjMDQ2YTI1Y2RjZWVkYzlmNDQxYmY5ZTMzNDIzNTY1MzI5NzJhZjU"
+                        alt="Refrigeración">
+                    <p>Refrigeración
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Neveras, Nevecones, Congeladores, Minibares y más para conservar los alimentos de tu
+                        hogar.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/electrodomesticos/grandes-electrodomesticos/lavado/c/BI_0600_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/LAVADORAS-Y-SECADORAS.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wxMDkxOHxpbWFnZS9wbmd8RWxlY3Ryb2RvbcOpc3RpY29zL2hjYi9oMDEvMTA0NzM4MzIyMTg2NTQucG5nfGFmNjBlN2Q3YjUxZjU2YWI1MTVkNjU3YjQyNDVkMDllMzZjZTA3ZTVhMDQxNjFmMDU3M2FkYWU1ZmEwMmNlYWI"
+                        alt="Lavadoras y secadores">
+                    <p>Lavadoras y secadoras
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Lava, seca y cuida tu ropa con nuestras Lavadoras y Secadoras.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/electrodomesticos/grandes-electrodomesticos/cocina/c/BI_0580_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/COCINA.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3w4OTg3fGltYWdlL3BuZ3xFbGVjdHJvZG9tw6lzdGljb3MvaGJkL2hlNi8xMDQ3MzgzMjA4NzU4Mi5wbmd8MWZiYzcxY2M4ZjRhZWFhMzM5Y2YyYTA1ZmQ1NmYxYzE4ZjNjYzM3YzNkYTU0NmZkNWIzYjIzODJjMzExYzQ4YQ"
+                        alt="Cocina">
+                    <p>Cocina
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Estufas, Hornos, Campanas y Lavavajillas de las mejores marcas.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/electrodomesticos/grandes-electrodomesticos/climatizacion/c/BI_0590_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/CLIMATIZACION.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3w2ODE3fGltYWdlL3BuZ3xFbGVjdHJvZG9tw6lzdGljb3MvaGYyL2gwNi8xMDQ3MzgzMjAyMjA0Ni5wbmd8NmY5NTNiZTE2ODQ2OGM4NTliZDZjYTAxNTk4ZDdhYTZiYzk3NjBmODg5YmY3Y2MxNTE3MjQ5YzA2MDEyNWQ1Mg"
+                        alt="Climatización">
+                    <p>Climatización
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Aires acondicionados, Ventiladores y Calentadores de Agua para climatizar tu ambiente. </span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="container">
+    <a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS">
+        <h2 class="sub-title-categoria">Pequeños electrodomésticos
+            <i class="alk-icon-arrow-right-square"></i>
+        </h2>
+    </a>
+
+    <div class="grid-container-sub">
+        <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/combo-cuidado-personal.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wxNzM5NHxpbWFnZS9wbmd8RWxlY3Ryb2RvbcOpc3RpY29zL2gyYS9oY2MvMTA0NzM4MzI2MTE4NzAucG5nfDJiMTAwZDFhZmI2MzBhNTVkMmM4NTMxZDgzZDYzYzIxODc0NjRiYjRmOTViYTUwMzY5OWU4NGZmMWJmMmNmNWI"
+                        alt="Cuidado personal">
+                    <p>Cuidado personal
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Secadores, Planchas y Rizadores para el Cabello, Afeitadoras y Depiladoras para que cuides de
+                        ti.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/electrodomesticos/pequenos-electrodomesticos/preparacion-alimentos/c/BI_0540_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/preparacion-alimentos.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wzNTg2NnxpbWFnZS9wbmd8RWxlY3Ryb2RvbcOpc3RpY29zL2g5NS9oMWYvMTA0NzM4MzMxMzYxNTgucG5nfGRmOTc3MGFkOTJiMTExNjRmNDAyYzdiMzhkYTc0ZmFhYjZlYzI2ZDY3NzhhMDY2NGViNTE0YWNjODk1OGQ4NGU"
+                        alt="Preparación de alimentos">
+                    <p>Preparación de alimentos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Prepara deliciosas comidas con nuestras Licuadoras, Freidoras de Aire, Hornos microondas,
+                        Cafeteras y más.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/cuidado-hogar.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wzMzAxOHxpbWFnZS9wbmd8RWxlY3Ryb2RvbcOpc3RpY29zL2g0ZC9oYjEvMTA0NzM4MzMwMDUwODYucG5nfGM4NTlkY2M0NDYxNGY1ZTM3OTM4ODRiYTE3OTYxMDNjMTBiMjdlY2M5Nzg5ZGI5NWRkNGQ2NGNjYjk1YzY5ZjY"
+                        alt="Cuidado del hogar">
+                    <p>Cuidado del hogar
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Facilita las tareas del hogar. Planchas de Ropa, Aspiradoras, Hidrolavadoras y Maquinas
+                        Coser.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a
+            href="/electrodomesticos/pequenos-electrodomesticos/preparacion-alimentos/otros-productos-preparacion/c/BI_A03_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/combos-del-hogar.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wyNTAyM3xpbWFnZS9wbmd8RWxlY3Ryb2RvbcOpc3RpY29zL2gzOC9oODMvMTA0NzM4MzI4MDg0NzgucG5nfDQ3YmVkMDE5OWM5Mjg0NmFmNDRkZWY3ODFiN2FkZjIzM2FhMTU4ZmIxY2EzY2M5N2Q1NjgyNWEzMjQwNmNhYmY"
+                        alt="Otros Electrohogar">
+                    <p>Otros Electrohogar
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Hervidores de agua, Vaporizador de alimentos y más.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="container-fluid fondo-fluid">
+    <h2>¡Las mejores marcas en un solo lugar!</h2>
+
+    <k-slider arrows="true" desktop-items="7" mobile-items="3" peek="50" style="--k-slider-background-color: #f5f5f5;">
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3ASAMSUNG">
+                <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/samsung.svg"
+                    alt="Logo Samsung">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3ALG">
+                <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/lg.svg"
+                    alt="logo LG">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3ACHALLENGER">
+                <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/challenger-logo%20.svg"
+                    alt="logo Challenger">
+            </a>
+        </div>
+        <!--div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3ABOSCH">
+                <img src="/medias/Logo-Bosch.svg?context=bWFzdGVyfGxvZ29zLWNvbG9yfDEzMzk4fGltYWdlL3N2Zyt4bWx8bG9nb3MtY29sb3IvaDM2L2g4MC8xMTQwMzk1NDEyNjg3OC5zdmd8ZDNkOGM1MmEyN2ZkYTUyYzE2ODI4YTYzOWY5OThhYzk2OTE3ODg4YTM1MGZkMDk5YmVlMGNkMjhiODY2YzQzMQ" alt="logo Bosch">
+            </a>
+        </div-->
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AMABE">
+                <img class="img-logo-ftp"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/mabe.svg"
+                    alt="logo Mabe">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AHACEB">
+                <img class="img-logo-ftp"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/haceb.svg"
+                    alt="logo Haceb">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3ABOSCH">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/bosch.png"
+                    alt="Bosch">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AWHIRLPOOL">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/whirlpool%2023px.svg"
+                    alt="logo whirlpool">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/marcas/oster/c/oster">
+                <img class="img-logo-ftp"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/oster%2023px.svg"
+                    alt="logo oster">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a
+                href="/marcas/kalley/c/kalley?q=%3Arelevance%3Acategory%3ABI_150_ALKOS%3Acategory%3ABI_151_ALKOS%3Acategory%3ABI_0540_ALKOS%3Acategory%3ABI_0590_ALKOS">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/kalley.svg"
+                    alt="Logo Kalley">
+            </a>
+        </div>
+
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AABBA">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/abba.svg"
+                    alt="logo Abba">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AELECTROLUX">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/electrolux[28].svg"
+                    alt="logo Electrolux">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3APANASONIC">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/panasonic.svg"
+                    alt="logo Panasonic">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3ASUPERIOR">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/superior.svg"
+                    alt="logo superior">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AGE">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/logos%20marcas%20lineal/general%20electric.svg"
+                    alt="logo Generalelectric">
+            </a>
+        </div>
+
+        <div class="k-slider__slide">
+            <a
+                href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3ABLACK%26DECKER">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/black%20and%20decker%2023px.svg"
+                    alt="logo Black and Decker">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a
+                href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS?q=%3Arelevance%3Abrand%3AGAMA#">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/Gama%2023px.svg"
+                    alt="logo Gama">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3AIMUSA">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/imusa%2023px.svg"
+                    alt="logo Imusa">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a
+                href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_ALKOS?q=%3Arelevance%3Abrand%3AIROBOT">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/IRobot%2023px.svg"
+                    alt="logo IRobot">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a
+                href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_ALKOS?q=%3Arelevance%3Abrand%3AKARCHER">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/Karcher%2023px.svg"
+                    alt="logo Karcher">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3ANINJA">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/Ninja%2023px.svg"
+                    alt="logo Ninja">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3APHILIPS">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/Philips%2023px.svg"
+                    alt="logo Philips">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a
+                href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS?q=%3Arelevance%3Abrand%3AREMINGTON#">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/remington%2023px.svg"
+                    alt="logo Remington">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/maquinas-coser/c/BI_A18_ALKOS">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/SINGER%2023px.svg"
+                    alt="logo Generalelectric">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3AUNIVERSAL">
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/universal%2023px.svg"
+                    alt="logo universal">
+            </a>
+        </div>
+
+
+    </k-slider>
+
+</section>
+
+<section class="container">
+    <div class="ctn-banners-lanzamientos">
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-electro-html-1 -->
+            <span id=zone840368415></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?840368415');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-electro-html-2 -->
+            <span id=zone143672462></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?143672462');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-electro-html-3 -->
+            <span id=zone424167486></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?424167486');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-electro-html-4 -->
+            <span id=zone927703053></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?927703053');
+            </script>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="ctn-title-h2">
+        <h2>Promociones destacadas</h2>
+    </div>
+    <div class="row-promo">
+        <div class="ctn-banners-promo">
+            <div class="banner-promo">
+                <!-- AdGlare: AK-ldg-electro-promo-1 -->
+                <span id=zone564563657></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?564563657');
+                </script>
+            </div>
+            <div class="banner-promo margin-promo">
+                <!-- AdGlare: AK-ldg-electro-promo-2 -->
+                <span id=zone441567087></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?441567087');
+                </script>
+            </div>
+
+            <a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS">
+                <div class="btn-ver-ofertas">
+                    <p>Ver ofertas de grandes</p>
+                </div>
+            </a>
+        </div>
+        <div class="ctn-banners-promo">
+            <div class="banner-promo">
+                <!-- AdGlare: AK-ldg-electro-promo-3 -->
+                <span id=zone224601189></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?224601189');
+                </script>
+            </div>
+            <div class="banner-promo margin-promo">
+                <!-- AdGlare: AK-ldg-electro-promo-4 -->
+                <span id=zone880173769></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?880173769');
+                </script>
+            </div>
+
+            <a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS">
+                <div class="btn-ver-ofertas">
+                    <p>Ver ofertas de pequeños</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="container" style="margin-top: 80px;">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="ctn-seo">
+                <div class="boll-icon">
+                    <i class="alk-icon-refigeracion"></i>
+                </div>
+                <div class="ctn-instalciones">
+                    <img src="/medias/IMAGEN-INSTALACIO-LB.png?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wzODkxMnxpbWFnZS9wbmd8RWxlY3Ryb2RvbcOpc3RpY29zL2hjNS9oOGIvMTA0Nzg1MTcwMjY4NDYucG5nfDBmNDU5MDRiY2QxNWI0MjdmYmRjM2JmZmYxOWViOTMyYjMyOGQ5OGQ0NDQ4ODk1ODYwNzVhYjM3ODQ0N2IzNTk"
+                        alt="Instalación gratis">
+                    <h3>Instalación gratis</h3>
+                    <p>Encuentra toda la información sobre el servicio de instalación gratis. Conoce las referencias de
+                        los productos que aplica con sus términos y condiciones de tus marcas favoritas.
+                    </p>
+                    <div class="ctn-logos-instalacion">
+                        <a
+                            href="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/samsung/tyc/Instalacion-Samsung-2022.pdf">
+                            <div class="btn-link-instalacion">
+                                <img src="/medias/samsung.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8MzMyNHxpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaDE3L2hkMi85ODAxMDMwNTk4Njg2LnN2Z3w4YTM3ZGU3YjFkOTBmZDRlMmVmM2M1MTE0ZTBkZThhNDNhNzRjZjZlOThiZDc1OWQzOWIzMWM2ZDlhOTQ5YTcz"
+                                    alt="Logo Samsung">
+                            </div>
+                        </a>
+                        <a
+                            href="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/lg/TYC/Instalacion-Lg-2022.pdf">
+                            <div class="btn-link-instalacion">
+                                <img src="/medias/lg.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8MTg1MnxpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaGI2L2hmMC85ODAxMDMyMTcxNTUwLnN2Z3wxYTdlNDM2YmYwMzBlNzYyZDI0MmFkNGI3MjI1MDhlODFmYTA0N2Y1ODRlZGQ2YzVkZDJmNzUwNjNlM2M0YTdk"
+                                    alt="Logo Lg ">
+                            </div>
+                        </a>
+                        <a
+                            href="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/whirlpool/TYC/Instalacion-Whirlpool-Febrero-2022.pdf">
+                            <div class="btn-link-instalacion ">
+                                <img class="img-logo-ftp "
+                                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/logo-whirlpool.svg "
+                                    alt="Logo Whirlpool ">
+                            </div>
+                        </a>
+                        <a
+                            href="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/HACEB/tyc/Instalacion-Haceb-2022.pdf">
+                            <div class="btn-link-instalacion ">
+                                <img class="img-logo-ftp "
+                                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/logo-haceb.svg "
+                                    alt="Logo Haceb ">
+                            </div>
+                        </a>
+                        <a
+                            href="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/mabe/tyc/Instalacion-Mabe-2022.pdf">
+                            <div class="btn-link-instalacion ">
+                                <img class="img-logo-ftp "
+                                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/mabe-logo.svg "
+                                    alt="Logo mabe ">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 space-mobile ">
+            <div class="ctn-seo ">
+                <div class="boll-icon ">
+                    <i class="alk-icon-cocina "></i>
+                </div>
+                <div class="ctn-recetas ">
+                    <img src="/medias/Imagen-recetas-pag-primer-nivel-hybris.jpeg?context=bWFzdGVyfEVsZWN0cm9kb23DqXN0aWNvc3wxOTY2MHxpbWFnZS9qcGVnfEVsZWN0cm9kb23DqXN0aWNvcy9oNGMvaGJiLzEwNDc4NTE3OTQ0MzUwLmpwZ3w0ZTdhNGYzNTUwYzQ3MzM3MTFjYzEyOTc3M2ViMjFjZmZiZGZiYWUwYzMwMzA2ODUyZDYzMGY3MTQxNTNmYTcy "
+                        alt="Recetas Alkosto ">
+                    <h3>Recetas</h3>
+                    <p>Conoce deliciosas recetas fáciles y prácticas de hacer en tu licuadora, freidora de aire, Horno
+                        tostador y más.</p>
+                    <a href="/recetas ">
+                        <div class="btn-borde-seo ">
+                            <p>Ver recetas</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="cierre"></div>

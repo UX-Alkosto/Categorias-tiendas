@@ -1,0 +1,816 @@
+<link href="/medias/aos.css?context=bWFzdGVyfGNlcm9fZXNfdHJlc3wyODc2Nnx0ZXh0L2Nzc3xjZXJvX2VzX3RyZXMvaGUxL2hlMy85NDA2NTEzOTM4NDYyLmNzc3xhZGNiMGYzY2RlMjIyMjYwYmNjYzExOTAzMjZmYzZhYTc2ZGIzZmI3N2UzMWU5YzE0MzJmY2RlM2E0ZjljMDNj" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css" rel="stylesheet" />
+<style type="text/css">
+    .banner-multi {
+        display: none;
+    }
+    
+     :root {
+        --casa-inteligente-naranja-claro: #eb5b25;
+        --casa-inteligente-naranja-oscuro: #b14b25;
+        --casa-inteligente-azul: #004797;
+        --casa-inteligente-gris-44: #444444;
+        --casa-inteligente-gris-5c: #5c5c5c;
+        --casa-inteligente-gris-95: #959595;
+        --casa-inteligente-gris-e0: #e0e0e0;
+        --casa-inteligente-gris-ed: #edf1f6;
+        --casa-inteligente-gris-f5: #f5f5f5;
+        --casa-inteligente-blanco: #ffffff;
+    }
+    
+    .fondo_casa h1 {
+        font-size: 24px !important;
+        color: var(--casa-inteligente-gris-44);
+        font-weight: bold;
+    }
+    
+    .fondo_casa {
+        background-image: url('/medias/fondo-tejado-update.svg?context=bWFzdGVyfGNhc2EgaW50ZWxpZ2VudGV8ODczM3xpbWFnZS9zdmcreG1sfGNhc2EgaW50ZWxpZ2VudGUvaDUwL2g2ZC8xMDQyNDYzNzk0NzkzNC5zdmd8ZTUzYjU4NTY0NDMzZmFjZjViNzc0ZjAyNzhlN2QzNDYzZDNjYzRhNDY5YjQ0NjA1MDM5NWZlYjZlYWU3MmFiZA');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .llamado_video {
+        width: 600px;
+        height: 225px;
+        background-image: url('/medias/fondo-recuadro-video.svg?context=bWFzdGVyfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peHw1MTZ8aW1hZ2Uvc3ZnK3htbHxjYXNhLWludGVsaWdlbnRlLWt0cm9uaXgvaDIzL2gyZS8xMDAxNTM3NDYzOTEzNC5zdmd8MDE4ZGJmYmQ4MzEwNTVmOTg0NjljMzE0MWRmNDhkZjE4Y2Q0YjhhNDRmOTBiOGRkNmFmMTk0MDIzZTMxNmZlNw');
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        left: 25%;
+        top: 0;
+    }
+    
+    .llamado_video iframe {
+        margin-top: 26px;
+        margin-left: 10px;
+        width: 308px;
+        height: 176px;
+    }
+    
+    .entrada_casa {
+        background-image: url('/medias/vector-personas.svg?context=bWFzdGVyfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peHw0Mzg2OHxpbWFnZS9zdmcreG1sfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peC9oMWEvaDhkLzEwMDE1Mzc0OTM0MDQ2LnN2Z3wxYzQ4ZWY0MmIzMWY3ZWFhZTEwZTI1NGMzZTMyOTM0OWZiYTJhMDdjYjExOTA1NTVmZTI5NGYyOGViYzk5MWU5');
+        background-repeat: no-repeat;
+        background-position-x: 72%;
+        background-position-y: 108px;
+        background-size: 260px;
+    }
+    
+    .categorias_casa {
+        width: 100%;
+        display: flex;
+    }
+    
+    .categorias_casa a {
+        text-decoration: none;
+        width: 17%;
+        display: inline-block;
+        text-align: center;
+        margin-top: 115px;
+        border-right: solid thin var(--casa-inteligente-gris-e0);
+    }
+    
+    .categorias_casa a:last-child {
+        border-right: none;
+    }
+    
+    .categorias_casa a i {
+        font-size: 46px;
+        color: var(--casa-inteligente-azul);
+    }
+    
+    .categorias_casa a i:hover {
+        color: var(--casa-inteligente-naranja-claro);
+        transition: .3s;
+    }
+    
+    .categorias_casa a i span {
+        display: block;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif !Important;
+        margin: 0 auto;
+        padding-top: 10px;
+        width: 150px;
+    }
+    
+    .fondo_gris {
+        background-color: var(--casa-inteligente-gris-f5);
+        width: 100%;
+    }
+    
+    .conec_casa,
+    .equipa_casa,
+    .hogar_iluminado {
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 100% !important;
+    }
+    
+    .conec_casa div,
+    .equipa_casa div,
+    .hogar_iluminado div {
+        width: 50%;
+    }
+    
+    .conec_casa h2,
+    .equipa_casa h2,
+    .hogar_iluminado h2 {
+        font-size: 20px;
+        color: var(--casa-inteligente-azul);
+        font-weight: bold;
+    }
+    
+    .conec_casa p,
+    .equipa_casa p,
+    .hogar_iluminado p {
+        font-size: 14px !important;
+        line-height: 22px;
+        color: var(--casa-inteligente-gris-44);
+    }
+    
+    .conec_casa div:first-child,
+    .hogar_iluminado div:first-child {
+        text-align: left;
+        padding: 0 30px 0 60px;
+        align-self: center;
+    }
+    
+    .equipa_casa div:last-child {
+        text-align: left;
+        padding: 0 60px 0 30px;
+        align-self: center;
+    }
+    
+    .conec_casa a,
+    .conec_casa a:visited,
+    .equipa_casa a,
+    .equipa_casa a:visited,
+    .hogar_iluminado a,
+    .hogar_iluminado a:visited,
+    .call_parlante a,
+    .call_parlante a:visited {
+        color: var(--casa-inteligente-blanco);
+        border-radius: 5px;
+        background-color: var(--casa-inteligente-naranja-claro);
+        border: solid thin var(--casa-inteligente-naranja-claro);
+        font-size: 14px;
+        text-decoration: none;
+        height: 50px;
+        align-items: center;
+        display: inline-flex;
+        text-align: center;
+        padding: 0 60px;
+    }
+    
+    .conec_casa a:hover,
+    .equipa_casa a:hover,
+    .hogar_iluminado a:hover,
+    .call_parlante a:hover {
+        background-color: var(--casa-inteligente-naranja-oscuro);
+        border: solid thin var(--casa-inteligente-naranja-oscuro);
+        transition: .3s;
+        color: var(--casa-inteligente-blanco);
+    }
+    
+    .banner_parlante {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        padding-top: 40px;
+    }
+    
+    .banner_parlante div {
+        width: 45%;
+    }
+    
+    .banner_parlante div:first-child {
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 0 0 40px;
+    }
+    
+    .banner_parlante div:first-child span {
+        font-size: 20px;
+        color: var(--casa-inteligente-gris-44);
+        font-weight: bold;
+    }
+    
+    .banner_parlante div:first-child p {
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--casa-inteligente-gris-44);
+    }
+    
+    .banner_parlante div:first-child span,
+    .banner_parlante div:first-child p,
+    .banner_parlante div:first-child .logos_parlantes {
+        width: 100%;
+    }
+    
+    .banner_parlante div:first-child .logos_parlantes a:hover {
+        opacity: .5;
+        transition: .3s;
+    }
+    
+    .banner_parlante div:nth-child(2) {
+        text-align: center;
+    }
+    
+    .banner_parlante div:last-child {
+        width: 100%;
+    }
+    
+    .call_parlante {
+        margin-top: -120px;
+        text-align: left;
+        margin-bottom: 40px;
+        margin-left: 38px;
+    }
+    
+    .banner_parlante h2 {
+        font-size: 20px;
+        color: var(--casa-inteligente-azul);
+        font-weight: bold;
+    }
+    
+    .conec_casa div img,
+    .equipa_casa div img,
+    .hogar_iluminado div img {
+        width: 100%;
+    }
+    
+    .banner_parlante div:nth-child(2) img {
+        width: 250px;
+    }
+    
+    .pulsate-bck {
+        -webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
+        animation: pulsate-bck 0.5s ease-in-out infinite both;
+    }
+    
+    @-webkit-keyframes pulsate-bck {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes pulsate-bck {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    
+    .mirar_abajo {
+        padding-top: 0;
+        position: absolute;
+        left: 40.5%;
+    }
+    
+    .mirar_abajo a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .mirar_abajo a i {
+        color: var(--casa-inteligente-azul);
+        font-size: 40px;
+    }
+    /* INICIO ESTILOS VITRINA */
+    
+    .vitrina_casa_inteligente {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .vitrina_casa_inteligente div {
+        width: 25%;
+        border: solid thin var(--casa-inteligente-gris-e0);
+        border-radius: 10px;
+        margin: 20px 10px;
+        text-align: center;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap
+    }
+    
+    .vitrina_casa_inteligente div h3.nombre_producto {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--casa-inteligente-azul);
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .vitrina_casa_inteligente div span.precio_producto {
+        display: block;
+        font-size: 17px;
+        font-weight: bold;
+        color: var(--casa-inteligente-naranja-claro);
+        width: 100%;
+    }
+    
+    .vitrina_casa_inteligente div img.imagen_producto {
+        width: 180px;
+        margin: 0 0 20px 0;
+    }
+    
+    .vitrina_casa_inteligente div a.call_producto,
+    .vitrina_casa_inteligente div a.call_producto:visited {
+        display: flex;
+        text-decoration: none;
+        height: 50px;
+        background-color: var(--casa-inteligente-blanco);
+        border: solid thin var(--casa-inteligente-naranja-claro);
+        color: var(--casa-inteligente-naranja-claro);
+        font-size: 14px;
+        border-radius: 5px;
+        width: 200px;
+        margin: 0px auto;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -25px;
+        transition: .3s;
+    }
+    
+    .vitrina_casa_inteligente div a.call_producto:hover {
+        background-color: var(--casa-inteligente-naranja-oscuro);
+        border: solid thin var(--casa-inteligente-naranja-oscuro);
+        color: var(--casa-inteligente-blanco);
+    }
+    /* FIN ESTILOS VITRINA */
+    /* RESPONSIVE */
+    
+    @media screen and (max-width: 1024px) {
+        .entrada_casa {
+            background-position-x: 91%;
+            background-size: 288px;
+        }
+        .categorias_casa a {
+            margin-top: 100px;
+        }
+        .banner_parlante div:first-child span {
+            font-size: 35px;
+        }
+        .mirar_abajo {
+            padding-top: 7px;
+        }
+        .mirar_abajo .pulsate-bck {
+            width: 60px !important;
+            height: 60px !important;
+        }
+    }
+    
+    @media screen and (max-width: 823px) {
+        .conec_casa,
+        .equipa_casa,
+        .hogar_iluminado {
+            padding: 20px 0;
+        }
+        .entrada_casa {
+            background-position-x: 103%;
+            background-size: 225px;
+        }
+        .categorias_casa a i span {
+            width: 85%;
+            margin: 0 auto;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .conec_casa div:first-child,
+        .hogar_iluminado div:first-child {
+            padding: 0 30px 0 20px;
+        }
+        .equipa_casa div:last-child {
+            padding: 0 30px 0 20px;
+        }
+        .banner_parlante div:first-child span {
+            font-size: 32px;
+        }
+        .categorias_casa a {
+            margin-top: 60px;
+        }
+        .mirar_abajo {
+            display: none;
+        }
+        .vitrina_casa_inteligente div img.imagen_producto {
+            width: 150px;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .fondo_casa h1 {
+            margin-left: 20px;
+        }
+        .llamado_video {
+            left: 6%;
+        }
+        .entrada_casa {
+            background-position-x: 100%;
+        }
+        .banner_parlante div:first-child span {
+            font-size: 28px;
+        }
+        .vitrina_casa_inteligente div {
+            width: 30% !important;
+        }
+    }
+    
+    @media only screen and (max-width: 736px) {
+        .vitrina_casa_inteligente div a.call_producto {
+            bottom: -22px;
+        }
+    }
+    
+    @media screen and (max-width: 731px) {
+        .conec_casa p,
+        .equipa_casa p,
+        .hogar_iluminado p {
+            line-height: 20px;
+        }
+        .categorias_casa a {
+            margin-top: 50px;
+        }
+        .hogar_iluminado div:first-child,
+        .conec_casa div:first-child,
+        .hogar_iluminado div:first-child {
+            padding: 0 10px 0 10px;
+        }
+        .vitrina_casa_inteligente {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .vitrina_casa_inteligente div {
+            width: 60% !Important;
+            flex: 0 0 auto;
+            margin: 10px 10px 50px 10px;
+        }
+        .vitrina_casa_inteligente div a.call_producto {
+            bottom: -22px;
+        }
+    }
+    
+    @media screen and (max-width: 667px) {
+        .container {
+            margin: 0;
+        }
+        .fondo_casa {
+            background-image: url('/medias/fondo-tejado-mobile.svg?context=bWFzdGVyfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peHwxMDUzfGltYWdlL3N2Zyt4bWx8Y2FzYS1pbnRlbGlnZW50ZS1rdHJvbml4L2g2NS9oOWQvMTAwMTUzNzQyMTMxNTAuc3ZnfDZhZjg5ZDRlOWRkMmU2ZDdjZThiNGUxOGU3ZjY4NDdmNGJmOWEzY2Q0ZDU2M2U2NGMwMDg1ZDljOWQ0M2E2NTc');
+            background-size: contain;
+            background-position-y: 40px;
+        }
+        .fondo_casa h1 {
+            padding: 0 0 0 20px;
+        }
+        .entrada_casa {
+            background-image: none;
+        }
+        .conec_casa,
+        .equipa_casa,
+        .hogar_iluminado,
+        .banner_parlante {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .conec_casa div,
+        .equipa_casa div,
+        .hogar_iluminado div,
+        .banner_parlante div:first-child,
+        .banner_parlante div:nth-child(2) {
+            width: 100%;
+        }
+        .llamado_video {
+            width: 100%;
+            position: initial;
+            left: 0;
+            top: 0;
+            margin-top: 100px;
+            background-image: none;
+            height: auto;
+        }
+        .llamado_video iframe {
+            width: 95%;
+            height: 357px;
+        }
+        .categorias_casa {
+            flex-wrap: wrap;
+            margin: 30px 0 60px 0;
+        }
+        .categorias_casa a {
+            margin-top: 20px;
+            width: 33%;
+        }
+        .categorias_casa a:nth-child(3) {
+            border: none;
+        }
+        .categorias_casa a i span {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .conec_casa div:first-child,
+        .hogar_iluminado div:first-child {
+            text-align: left;
+            padding: 0 20px 20px 20px;
+            order: 1;
+            margin: 20px 0;
+        }
+        .conec_casa a,
+        .equipa_casa a,
+        .hogar_iluminado a,
+        .call_parlante a {
+            display: flex;
+            height: 54px;
+            justify-content: center;
+            width: 40%;
+            margin: 0 auto;
+        }
+        .equipa_casa div:last-child {
+            padding: 20px 20px 20px 20px;
+        }
+        .banner_parlante div:first-child span {
+            font-size: 30px;
+        }
+        .banner_parlante div:last-child {
+            width: 90% !Important;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .banner_parlante div:first-child {
+            padding: 20px 20px 0 20px;
+        }
+        .banner_parlante {
+            padding-top: 20px;
+        }
+        .banner_parlante div:nth-child(2) img {
+            width: 250px;
+        }
+    }
+    
+    @media screen and (max-width: 540px) {
+        .conec_casa a,
+        .equipa_casa a,
+        .hogar_iluminado a,
+        .call_parlante a {
+            padding: 0 0;
+        }
+    }
+    
+    @media screen and (max-width: 414px) {
+        .banner_parlante {
+            padding-top: 10px;
+        }
+        .banner_parlante div:nth-child(2) img {
+            width: 200px;
+        }
+        .conec_casa a,
+        .equipa_casa a,
+        .hogar_iluminado a,
+        .call_parlante a {
+            /* padding: 0px 35%; */
+            width: auto;
+            margin: 0 auto;
+        }
+        .fondo_casa h1 {
+            padding: 0;
+        }
+        .vitrina_casa_inteligente div {
+            width: 80% !important;
+            margin: 60px 10px;
+        }
+        .vitrina_casa_inteligente div img.imagen_producto {
+            width: 180px;
+            margin: 20px auto;
+        }
+        .conec_casa,
+        .equipa_casa,
+        .hogar_iluminado {
+            padding: 0;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .banner_parlante div:first-child span {
+            font-size: 28px;
+        }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .categorias_casa a i {
+            font-size: 40px;
+        }
+        .conec_casa p,
+        .equipa_casa p,
+        .hogar_iluminado p,
+        .banner_parlante div:first-child p {
+            font-size: 14px !Important;
+            line-height: 20px;
+        }
+        .conec_casa a,
+        .equipa_casa a,
+        .hogar_iluminado a,
+        .call_parlante a {
+            font-size: 14px;
+        }
+        .banner_parlante div:first-child span {
+            font-size: 22px;
+        }
+        .logos_parlantes a img {
+            width: 30%;
+        }
+    }
+</style>
+<div class="fondo_casa">
+    <div class="container entrada_casa">
+        <h1>Casa Inteligente</h1>
+
+        <div class="llamado_video" data-aos="zoom-in-down"><iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/P6NZF6t_Fas"></iframe></div>
+
+        <div class="mirar_abajo pulsate-bck"></div>
+
+        <div class="categorias_casa">
+            <a href="/casa-inteligente-domotica/redes-wifi/c/BI_142_ALKOS">
+                <i class="alk-icon-routers"><span>Redes y Routers</span></i>
+            </a>
+            <a href="/casa-inteligente-domotica/iluminacion-electricidad/c/BI_138_ALKOS">
+                <i class="alk-icon-bombillo-inteligente"><span>Iluminaci&oacute;n</span></i>
+            </a>
+            <a href="/casa-inteligente-domotica/camaras-seguridad/c/BI_136_ALKOS">
+                <i class="alk-icon-camara-seguridad"><span>C&aacute;maras de seguridad</span></i>
+            </a>
+            <a href="/casa-inteligente-domotica/cerraduras-electronicas/c/BI_139_ALKOS">
+                <i class="alk-icon-cerraduras"><span>Cerraduras digitales</span></i>
+            </a>
+            <a href="/audio/audio-hogar/parlantes-subwoofer/c/BI_0021_ALKOS?q=%3Arelevance%3Atipo-diseno-parlante%3AParlante+Inteligente%2FAsistente+de+Voz#">
+                <i class="alk-icon-asistente-voz"><span>Parlantes y asistentes de voz</span></i>
+            </a>
+            <a href="/casa-inteligente-domotica/sensores/c/BI_140_ALKOS">
+                <i class="alk-icon-sensores"><span>Sensores</span></i>
+            </a>
+            <a href="/casa-inteligente-domotica/otros-dispositivos-inteligentes/c/BI_145_ALKOS?q=%3Arelevance%3Abrand%3ADOGNESS">
+                <i class="alk-icon-mascota"><span>Mascotas</span></i>
+            </a>
+        </div>
+    </div>
+    <a id="a" name="Ancla"></a>
+
+    <div class="fondo_gris">
+        <div class="container conec_casa">
+            <div>
+                <h2>Con&eacute;ctate desde casa</h2>
+
+                <p>Extensores de red, router, cables y herramientas. Los mejores productos para una conectividad avanzada.
+                </p>
+                <a href="/casa-inteligente-domotica/redes-wifi/c/BI_142_ALKOS" target="_blank">Ver todos los
+                    productos</a>
+            </div>
+
+            <div><img loading="lazy" alt="Imagen conectate desde casa" src="/medias/img-conectate-casa.png?context=bWFzdGVyfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peHwyNTkzOTB8aW1hZ2UvcG5nfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peC9oMTYvaDE0LzEwMDE1Mzc1Mjk0NDk0LnBuZ3xhM2E1Y2M5YWFhNzFjZDY5Yjk5NGE4MzhjZTE0MGYyYWM3OGNkNzJiMGRlOTA0N2ZmNjkzYTlkMjhkMTNkYTUw"
+                />
+            </div>
+        </div>
+    </div>
+    <!-- Inicio banner productos uno -->
+
+    <div class="container vitrina_casa_inteligente">
+        <div>
+            <h3 class="nombre_producto">Routers</h3>
+            <img loading="lazy" alt="Routers" class="imagen_producto" data-aos="zoom-in" src="/medias/845973070601-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxMjI4MnxpbWFnZS9qcGVnfGltYWdlcy9oYTkvaDBlLzg4NTA3MzkzOTY2MzguanBnfGNiZDkwNmU3ZmMzZmIzMDNjMWQyYTlhMjc4MTY1ZmU3ZGU2NmRhOTc5YjM4M2I3NzdmNTFlNTM4NDcwYWZmYWQ"
+            />
+            <a class="call_producto" href="/casa-inteligente-domotica/redes-wifi/routers/c/BI_5004_ALKOS" target="_blank">Ver productos</a>
+        </div>
+
+        <div>
+            <h3 class="nombre_producto">Extensores de se&ntilde;al</h3>
+            <img loading="lazy" alt="Extensores" class="imagen_producto" data-aos="zoom-in" data-aos-delay="100" src="/medias/845973071875-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxNjU0NXxpbWFnZS9qcGVnfGltYWdlcy9oNjAvaDdlLzg4NTA3NTk0NTA2NTQuanBnfDE4YTg4NmUxNGQ4NTg5MGNmOWMxYzBjZmVhNjI4NGNhZWZmYjRiNjdiNTBkZjM1YjM1MDU4NGNjODljZjcyNWY"
+            />
+            <a class="call_producto" href="/casa-inteligente-domotica/redes-wifi/extensores-senal/c/BI_5005_ALKOS" target="_blank">Ver productos</a>
+        </div>
+
+        <div>
+            <h3 class="nombre_producto">Adaptadores WiFi y Bluetooth</h3>
+            <img loading="lazy" alt="Adaptadores" class="imagen_producto" data-aos="zoom-in" data-aos-delay="200" src="/medias/845973050740-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wzODQ5fGltYWdlL2pwZWd8aW1hZ2VzL2gyNy9oMTgvODg1MDcxNTgwMzY3OC5qcGd8NmQ0MmMzYjRmZmY1NDhjYzE4Y2ExMTRhODMwNGMzNWNiODZmMDYwNjMzZjAxZDY5NWQ2ZjA4YWUyZDBkYjlmMw"
+            />
+            <a class="call_producto" href="/casa-inteligente-domotica/redes-wifi/adaptadores-wifi-bluetooth/c/BI_5007_ALKOS" target="_blank">Ver productos</a>
+        </div>
+    </div>
+    <!-- Fin banner productos uno -->
+
+    <div class="fondo_gris">
+
+        <div class="container banner_parlante">
+            <div>
+                <h2>Hazlo fácil y divertido…</h2>
+
+                <p>Recibe la ayuda que necesitas. Encuentra en nuestras tiendas Alkosto, asistentes de voz y parlantes, "Nunca ha habido una forma más natural de comunicarse con la tecnología que mediante tu voz".</p>
+            </div>
+            <div>
+                <img loading="lazy" alt="Imagen Parlante Bose" src="/medias/parlante.png?context=bWFzdGVyfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peHw4Mzk2NXxpbWFnZS9wbmd8Y2FzYS1pbnRlbGlnZW50ZS1rdHJvbml4L2hjZS9oMzkvMTA0MDUyODI5MDYxNDIucG5nfGU5NDYxZjQ3Njk2N2MyMjU1NDZiMTFjZTBmOTUxMDM5OGM4OWYyODUwNDAzOWM1MGYyN2UxY2FkOGYwYTZhN2E"
+                />
+            </div>
+            <div class="call_parlante">
+                <a href="/audio/audio-hogar/parlantes-subwoofer/c/BI_0021_ALKOS?q=%3Arelevance%3Atipo-diseno-parlante%3AParlante+Inteligente%2FAsistente+de+Voz#" target="_blank">Ver todos los productos</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Inicio baner productos dos -->
+
+    <div class="container vitrina_casa_inteligente">
+        <div>
+            <h3 class="nombre_producto">BOSE</h3>
+            <img loading="lazy" alt="Refrigeración" class="imagen_producto" data-aos="zoom-in" src="/medias/BOSE.png?context=bWFzdGVyfGNhc2EgaW50ZWxpZ2VudGV8NTM2ODR8aW1hZ2UvcG5nfGNhc2EgaW50ZWxpZ2VudGUvaDZjL2gxYy8xMDUzNzU0MjM4NTY5NC5wbmd8MmQxNmM0Y2Y3ZDE4ZWUxNmE2NjkxYWMzODE3YTNiNmJlMGMzODcwYTgyYzFhZTFhZDM2YWI5NTRiNjdjMTU0Mg"
+            />
+            <a class="call_producto" href="/audio/audio-hogar/parlantes-subwoofer/c/BI_0021_ALKOS?q=%3Arelevance%3Atipo-diseno-parlante%3AParlante+Inteligente%2FAsistente+de+Voz%3Abrand%3ABOSE" target="_blank">Ver productos</a>
+        </div>
+
+        <div>
+            <h3 class="nombre_producto">ULTIMATE EARS</h3>
+            <img loading="lazy" alt="Lavado" class="imagen_producto" data-aos="zoom-in" data-aos-delay="100" src="/medias/ULTIMATE-EARS.png?context=bWFzdGVyfGNhc2EgaW50ZWxpZ2VudGV8NjI5MjN8aW1hZ2UvcG5nfGNhc2EgaW50ZWxpZ2VudGUvaDExL2hkYS8xMDUzNzU0NTIwMzc0Mi5wbmd8ZTAxZDVkZDhiODYxMTQwOGYzMzc1YjgyZWYzYWIwZWYyYTRmMTE4Njg1ZjVhYTg1NzllNzFiYTA5NmY4ODNkOQ"
+            />
+            <a class="call_producto" href="/audio/audio-hogar/parlantes-subwoofer/c/BI_0021_ALKOS?q=%3Arelevance%3Atipo-diseno-parlante%3AParlante+Inteligente%2FAsistente+de+Voz%3Abrand%3AULTIMATE+EARS" target="_blank">Ver productos</a>
+        </div>
+
+        <div>
+            <h3 class="nombre_producto">Google</h3>
+            <img loading="lazy" alt="Cocina" class="imagen_producto" data-aos="zoom-in" data-aos-delay="200" src="/medias/GOOGLE.png?context=bWFzdGVyfGNhc2EgaW50ZWxpZ2VudGV8NTY0NjR8aW1hZ2UvcG5nfGNhc2EgaW50ZWxpZ2VudGUvaGQ4L2hkYS8xMDUzNzU0NDM4NDU0Mi5wbmd8NzMyZDQ4MTQzNjY2MzIwMjJiZmZiMmI1NzM3OGFlOWEwNzVlNzg5ZWVjNmEwMTFmZTI5ZTgzMjA3MmM0N2FkOA"
+            />
+            <a class="call_producto" href="audio/audio-hogar/parlantes-subwoofer/c/BI_0021_ALKOS?q=%3Arelevance%3Atipo-diseno-parlante%3AParlante+Inteligente%2FAsistente+de+Voz%3Abrand%3AGOOGLE" target="_blank">Ver productos</a>
+        </div>
+    </div>
+    <!-- Fin banner producto dos -->
+
+    <div class="fondo_gris">
+        <div class="container hogar_iluminado">
+            <div>
+                <h2>Hogar iluminado y seguro</h2>
+
+                <p>C&aacute;maras de seguridad, cerraduras, sensores e iluminaci&oacute;n. Cuida de los tuyos, adquiere los productos necesarios para mantener un espacio seguro.</p>
+                <a href="/casa-inteligente-domotica/iluminacion-electricidad/c/BI_138_ALKOS" target="_blank">Ver
+                        todos
+                        los productos</a>
+            </div>
+
+            <div><img loading="lazy" alt="Imagen hogar iluminado" src="/medias/img-hogar-iluminado.png?context=bWFzdGVyfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peHwyNTc1ODZ8aW1hZ2UvcG5nfGNhc2EtaW50ZWxpZ2VudGUta3Ryb25peC9oMzEvaDU3LzEwMDE1Mzc2NjcwNzUwLnBuZ3w3MWRhZGNhMDM5ZGY1NThmNjQzMzRlOTczOWVjMGQ3MzJiMTRlMTBhM2RkMmM3NjEyNmIzYzBmNzEzNGEzNWVm"
+                />
+            </div>
+        </div>
+    </div>
+    <!-- Inicio baner productos tres -->
+
+    <div class="container vitrina_casa_inteligente">
+        <div>
+            <h3 class="nombre_producto">Iluminaci&oacute;n y electricidad</h3>
+            <img loading="lazy" alt="Iluminación" class="imagen_producto" data-aos="zoom-in" src="/medias/8719514550919-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wyMTI1MXxpbWFnZS9qcGVnfGltYWdlcy9oMWMvaDU2LzEwMzIxNzg3Mjg5NjMwLmpwZ3xmZjFiOGU5NTcxNWUxMTk4OTYyOTliODJmZTA2ZDI0Mzc1MzI1NzY5YWRkNzJjMDgyOGNjNTg2MzEzMmUxZjM0"
+            />
+            <a class="call_producto" href="/casa-inteligente-domotica/iluminacion-electricidad/bombillos-inteligentes/c/BI_5000_ALKOS" target="_blank">Ver productos</a>
+        </div>
+
+        <div>
+            <h3 class="nombre_producto">C&aacute;maras de seguridad</h3>
+            <img loading="lazy" alt="Cámaras de seguridad" class="imagen_producto" data-aos="zoom-in" data-aos-delay="100" src="/medias/798302056251-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxOTU1NXxpbWFnZS9qcGVnfGltYWdlcy9oZDYvaDM5Lzk3MjQ5Njc3ODAzODIuanBnfDViYTBmMDFhN2I3MzY2NThjM2U4MjU2Yzk3MWNkZDBhY2M3NzVkMDE3ZDM4ZTkyZGI4NGM2ODU2NTZlNWEzYzA"
+            />
+            <a class="call_producto" href="/casa-inteligente-domotica/camaras-seguridad/c/BI_136_ALKOS" target="_blank">Ver productos</a>
+        </div>
+
+        <div>
+            <h3 class="nombre_producto">Sensores</h3>
+            <img loading="lazy" alt="Sensores" class="imagen_producto" data-aos="zoom-in" data-aos-delay="200" src="/medias/798302056190-001-310Wx310H?context=bWFzdGVyfGltYWdlc3wxMjgyNnxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaDgzLzk4NzM2NDc4MjkwMjIuanBnfGI5ZjQ0Zjc2ZjUzY2NmNGQxYWUzN2ZiMmM5M2Y3Mjc2YTMyOWZjMzMxNWZmZjJkMjFkNmViOTk1YjExZGY3OWI"
+            />
+            <a class="call_producto" href="/casa-inteligente-domotica/sensores/c/BI_140_ALKOS" target="_blank">Ver
+                    productos</a>
+        </div>
+    </div>
+    <!-- Fin inicio producto tres -->
+
+</div>
+<script src="/medias/aos.js?context=bWFzdGVyfGNlcm9fZXNfdHJlc3wxMzc5OXxhcHBsaWNhdGlvbi94LWphdmFzY3JpcHR8Y2Vyb19lc190cmVzL2gzYi9oZDkvOTQwNjUxNDIwMDYwNi5qc3w4OTM0ZjVlYTBiMGE1MDhmOGIxMDVmNTU4ODYxMjM4OWJhZDQ2M2Y4NzMxNThiOWJjYzk5ZTYyMmE1ZDExMjJl"></script>
+<script>
+    AOS.init();
+</script>

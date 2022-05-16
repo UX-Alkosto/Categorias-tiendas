@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="modulepreload" href="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js">
+    <script type="module" src="https://cdn.jsdelivr.net/gh/ux-alkosto/webcomponents/dist/components.js"></script>
+
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/ux-alkosto/icons/style.min.css');
+        h1 {
+            font-size: 24px;
+        }
+        
+        h2 {
+            font-size: 18px;
+        }
+        
+        h3 {
+            font-size: 16px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .ctn-section-1 {
+            display: flex;
+        }
+        
+        .ctn-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .grid-item {
+            box-shadow: 0px 0px 2px #919ba645;
+            color: var(--primary-color2);
+            font-size: 14px;
+            text-align: center;
+            padding: 12px;
+            height: 90px;
+        }
+        
+        .grid-item span {
+            color: var(--primary-color1);
+            font-size: 33px;
+        }
+        
+        p i {
+            color: var(--primary-color1);
+            font-size: 14px;
+            position: relative;
+            top: 2px;
+            left: -3px;
+        }
+        
+        .fondo-fluid {
+            height: 146px;
+            background: var(--button-primary-background-color-disabled);
+            text-align: center;
+            color: var(--primary-color2);
+            margin-top: 35px;
+            margin-bottom: 45px;
+        }
+        
+        .fondo-fluid h2 {
+            font-weight: bold;
+        }
+        
+        .ctn-section-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+        /* Estilos Ofertas HTML */
+        /* Ofertas pequeñas */
+        
+        .ctn-oferta {
+            box-shadow: 0px 0px 4px #919ba645;
+            display: flex;
+            flex-wrap: wrap;
+            width: 49%;
+            position: relative;
+        }
+        
+        .ctn-oferta span {
+            max-width: 100%;
+        }
+        
+        .ctn-oferta-logo {
+            width: 25%;
+            height: 30px;
+            display: flex;
+            float: left;
+        }
+        
+        .ctn-oferta-logo img {
+            max-width: 100%;
+        }
+        
+        .title-oferta {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--text-color1);
+            text-align: right;
+            float: right;
+            margin: 0px;
+            width: 100%;
+        }
+        
+        .title-oferta span {
+            font-size: 12px;
+            font-weight: regular;
+        }
+        
+        .label-dicount {
+            background: var(--primary-color1);
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            position: absolute;
+            right: 0px;
+            text-align: center;
+            width: 60px;
+            height: 25px;
+        }
+        
+        .ctn-img-category {
+            display: none;
+        }
+        
+        .img-product {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+        
+        .p-link {
+            text-align: center;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        
+        .p-link i {
+            color: var(--primary-color1);
+            font-size: 14px;
+            position: relative;
+            top: 0px;
+            left: -3px;
+        }
+        /* Fin Ofertas pequeñas */
+        /* Oferta big */
+        
+        .ctn-oferta-big {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            position: relative;
+            width: 100%;
+        }
+        
+        .ctn-oferta-big span {
+            max-width: 100%;
+        }
+        
+        .ctn-oferta-big a {
+            width: 100%;
+        }
+        
+        .ctn-feature-list {
+            font-size: 14px;
+            margin: 0px;
+            margin-top: 45px;
+            padding: 0px 15px;
+            color: var(--text-color1);
+        }
+        
+        .ctn-feature-list li {
+            list-style: disc;
+        }
+        
+        .img-product-big {
+            width: 100%;
+        }
+        /* Fin Oferta big */
+        
+        .ctn-title {
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color2);
+            border-bottom: 1px solid #dbdbdb;
+            margin-top: 55px;
+        }
+        
+        .ctn-title h2 {
+            border-bottom: 4px solid var(--primary-color1);
+            margin-bottom: 0px;
+            width: 190px;
+            margin: 0 auto;
+        }
+        
+        .ctn-banners {
+            margin-top: 25px;
+        }
+        
+        .ctn-banner-on-off {
+            width: 100%;
+            height: 345px;
+        }
+        
+        .ctn-scroll-banners {
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-top: 40px;
+        }
+        
+        .banner-world {
+            width: 260px;
+            height: 260px;
+            margin: 5px;
+            display: inline-block;
+        }
+        
+        .ctn-seo {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        
+        .zona-seo {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .zona-seo img {
+            width: 100%;
+        }
+        
+        .ctn-txt-zona-seo {
+            background: #f5f5f5;
+            padding: 24px 10px;
+        }
+        
+        .ctn-txt-zona-seo h2 {
+            color: var(--primary-color2);
+        }
+        
+        .ctn-txt-zona-seo p {
+            color: var(--text-color2);
+        }
+        
+        .btn-guia {
+            background: var(--primary-color1);
+            border: 1px solid var(--primary-color1);
+            text-align: center;
+            color: white !important;
+            font-size: 16px;
+            font-weight: bold;
+            width: 298px;
+            height: 56px;
+            margin: 0 auto;
+            border-radius: 4px;
+            line-height: 51px;
+        }
+        
+        .legal {
+            position: absolute;
+            bottom: 5px;
+            font-size: 10px;
+            text-align: center;
+            width: 100%;
+            color: #333;
+            line-height: 10px;
+            margin-left: -8px;
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .ctn-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .ctn-oferta {
+                width: 23%;
+                height: 196px;
+            }
+            .ctn-oferta-big {
+                width: 50%;
+                margin-top: 0px;
+            }
+            .ctn-oferta-big a {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .title-oferta {
+                font-size: 16px;
+            }
+            .ctn-oferta-big .title-oferta {
+                width: 96%;
+                text-align: left;
+            }
+            .ctn-oferta-big .p-link {
+                bottom: 9px;
+                position: absolute;
+            }
+            .img-product-big {
+                width: 55%;
+                order: 5;
+                top: 0px;
+                position: absolute;
+                right: 0;
+            }
+            .ctn-feature-list {
+                margin-top: 25px;
+                height: 100px;
+            }
+            .ctn-banners {
+                display: flex;
+                justify-content: space-between;
+            }
+            .ctn-banner-on-off {
+                width: 48%;
+            }
+            .ctn-scroll-banners {
+                width: 48%;
+                margin-top: 0px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .banner-world {
+                height: 165px;
+                width: 165px;
+            }
+        }
+        
+        @media only screen and (min-width: 1024px) {
+            .ctn-grid {
+                grid-template-columns: repeat(2, 176px);
+            }
+            .ctn-img-category {
+                width: 70%;
+                display: block;
+                position: relative;
+            }
+            .title-oferta {
+                width: 70%;
+            }
+            .ctn-oferta-logo {
+                width: 48px;
+            }
+            .ctn-banner-on-off {
+                width: 419px;
+                height: 419px;
+                margin-left: 5%;
+            }
+            .banner-world {
+                height: 195px;
+                width: 195px;
+            }
+            .zona-seo img {
+                width: 50%;
+            }
+            .ctn-txt-zona-seo {
+                width: 50%;
+                float: right;
+                margin-top: 60px;
+                text-align: right;
+                padding: 24px 65px;
+            }
+            .circle-gray {
+                background: #F5F5F5;
+                position: absolute;
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+                top: 50%;
+                left: 50%;
+                margin-left: -150px;
+                margin-top: -150px;
+                z-index: -1;
+            }
+            .ctn-img-info {
+                width: 600px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .ctn-img-info img {
+                width: 372px;
+            }
+            .txt-sub-category {
+                text-align: left;
+                width: 360px;
+                margin-top: -55px;
+            }
+            .txt-sub-category h2 {
+                color: var(--primary-color2);
+            }
+            .txt-sub-category p {
+                font-size: 14px;
+            }
+        }
+        
+        @media only screen and (min-width: 1200px) {
+            .zona-seo {
+                width: 1170px;
+                margin: 50px auto;
+            }
+            .ctn-banner-on-off {
+                width: 465px;
+                height: 465px;
+                margin-left: 5%;
+            }
+        }
+        
+        @media only screen and (min-width: 1312px) {
+            .banner-world {
+                height: 225px;
+                width: 225px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Computadores</h1>
+    </div>
+
+    <section class="container ctn-section-1">
+        <div class="ctn-grid">
+            <a href="/computadores-tablets/computadores-portatiles/c/BI_104_KTRON" onmouseover="subPortatil()">
+                <div class="grid-item">
+                    <span class="alk-icon-portatiles"></span>
+                    <p>Computadores portátiles <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/computadores-tablets/computadores-escritorio/c/BI_105_KTRON" onmouseover="subEscritorio()">
+                <div class="grid-item">
+                    <span class="alk-icon-computador"></span>
+                    <p>Computadores de escritorio <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/computadores-tablets/impresion/tintas-toners-cartuchos/c/BI_0220_KTRON" onmouseover="subTintas()">
+                <div class="grid-item">
+                    <span class="alk-icon-tintas"></span>
+                    <p>Tintas <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/computadores-tablets/gaming/c/BI_106_KTRON" onmouseover="subGamer()">
+                <div class="grid-item">
+                    <span class="alk-icon-zona-gamer"></span>
+                    <p>Zona Gamer <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/computadores-tablets/tablets-ipads/c/BI_107_KTRON" onmouseover="subTablets()">
+                <div class="grid-item">
+                    <span class="alk-icon-tablet"></span>
+                    <p>Tablets <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/accesorios-electronica/accesorios-computadores/c/BI_108_KTRON" onmouseover="subAccesorios()">
+                <div class="grid-item">
+                    <span class="alk-icon-accesorios"></span>
+                    <p>Accesorios <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/computadores-tablets/monitores/c/BI_110_KTRON" onmouseover="subMonitores()">
+                <div class="grid-item">
+                    <span class="alk-icon-monitores"></span>
+                    <p>Monitores <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/tv-video/proyectores-videobeam/c/BI_121_KTRON" onmouseover="subProyectores()">
+                <div class="grid-item">
+                    <span class="alk-icon-proyectores"></span>
+                    <p>Proyectores <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/computadores-tablets/impresion/impresoras-escaner-multifuncionales/c/BI_0210_KTRON" onmouseover="subImpresoras()">
+                <div class="grid-item">
+                    <span class="alk-icon-impresora"></span>
+                    <p>Impresoras <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+            <a href="/casa-inteligente-domotica/redes-wifi/c/BI_142_KTRON" onmouseover="subWifi()">
+                <div class="grid-item">
+                    <span class="alk-icon-wifi-signal"></span>
+                    <p>Wifi <i class="alk-icon-derecha"></i></p>
+                </div>
+            </a>
+        </div>
+
+        <div class="ctn-img-category">
+            <div class="circle-gray"></div>
+            <div>
+                <div class="ctn-img-info" id="computadoresPortatiles">
+                    <img src="https://www.ktronix.com/medias/landing-portatiles.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w3MzY4NnxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2hlNy9oMmQvMTA2NDI4MzkwNzY4OTQucG5nfDQ5ZjMzOTc0ZjRiYWMxNTA0MGZiZGJhNDk1YjRjMzM1ZmFkODNlNTZlMzhmYjI1NThkZjRhNWY0MmVmNjhmM2I"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Computadores portátiles</h2>
+                        <p>Encuentra el computador portátil perfecto para ti. Ideales para labores de oficina, tareas de universidad y más.</p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="computadoresEscritorio" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-pc-escritorio.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w3MTAzMnxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2g0MC9oNjYvMTA2NDI4NDM1MzMzNDIucG5nfDM3OTkxNWZkYjA4ZDk4MWVkOTdhMDQzYjU4MjU1ZTBhZjljNDdkMmY4Y2ZhMDQ1YmRhMjMxOWIyZWVmYzcyYTc"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Computadores de escritorio</h2>
+                        <p>Comodidad, funcionalidad y productividad, todo en un solo equipo. Conoce los computadores de escritorio que optimizarán tus tareas y trabajos. </p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="tintas" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-tintas.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w2ODI2M3xpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2g4Mi9oMTAvMTA2Mzk5MzAxMzA0NjIucG5nfGU4ZGYzN2I1NTU2NjJmMTEzNmMzNmQ2MTcxYzMyNGVhZDI4OWMyY2NkOGNjMDMxYzMwYzkzMzVhYjAzNWVhODY"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Tintas</h2>
+                        <p>Tintas, tóners, cartuchos y más complementos para tu impresora o multifuncional los encuentras aquí.</p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="zonaGamer" style="display: none">
+                    <img src="https://www.ktronix.com//medias/landing-pc-gaming.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w2MzAxMXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gwYS9oM2YvMTA2NDI4NDMxMDczNTgucG5nfGYyZGRkMjdmZjc5ODM0ZDlmYmE0NTBiMmJlMGFjZDU5ZmE5YTI1NzdhMDEyYzQ4MTZkNjgxNmI1ZDAxYTBjNDI"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Zona Gamer</h2>
+                        <p>Vive la mejor experiencia con los PC Gamer que tenemos para ti. Encuentre computadores portátiles y computadores de escritorio de alto desempeño</p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="tablets" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-tablets.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w5NDMxOXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2hlYS9oZGMvMTA2NDMwNzUwMDY0OTQucG5nfDU5MTNmOGZmY2M4MTljZDhjNTE2NTU5Y2Y4YzYxNWI3Zjg0OWMyYmZiZjk4NmM3YjkzM2I5YzkyOTQzYTJhZGE"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Tablets</h2>
+                        <p>Ten a la mano toda la información que necesitas en tu nueva Tablet o iPad. Descubre la mejor opción para ti.</p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="accesorios" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-accesorios.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w4MTM1OHxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2g2NS9oZWYvMTA2NDI4NDQ1MTYzODIucG5nfDFiM2ZmZmNlZDM5NGViZGMyMTkwZGNiMzRkMWE0NjI3ZGI3MmI3NjlmMzQ0ZDZlYzA3ZjQ0OWQxZmRhNTBlZjE"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Accesorios</h2>
+                        <p>Dota tu espacio de trabajo con la mejor calidad de accesorios como audífonos, mouse, parlantes, cámaras web, y más. </p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="monitores" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-monitores.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w5MzU3MnxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2hhNC9oNGQvMTA2NDI4NDM3NjI3MTgucG5nfGE0NjZjZjM0NzRjODhjNWNhZjBkOGYyZWI3YTAyNmExMzJlZThiMjNjN2JjNTBmN2ExMDRiNWQ4MDBhZTU5MWU"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Monitores</h2>
+                        <p>En dos pantallas se trabaja mejor que en una, conoce los monitores con los que podrás ampliar tu espacio de trabajo</p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="proyectores" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-videoproyectores.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wzNjQ1NXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gyMC9oOTYvMTA2NDI4MzgyOTA0NjIucG5nfGM4YzFmN2UyZGFkNDQ0ODYwZTY5NGVmMjA5YTU2ZWNmMzY2MWJiMzNiNzgwZDU1NmU5NDA4MWQ5YWMwZDdhYzQ"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Proyectores</h2>
+                        <p>Lleva la experiencia del cine a la comodidad de tu casa con los Video Beam y proyectores que tenemos para ti. </p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="impresoras" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-impresion.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3w0ODE0N3xpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gyYi9oMTUvMTA2NDMwNzM5OTA2ODYucG5nfDY3MDQ0NzdlM2JjYTRkZTVkOWEyYmI1Y2IxNzFmYThlYWI0NzAwZWM5YzI2MWJiNDI1OTkzYTMzYjQ4ZmIyYmE"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Impresoras</h2>
+                        <p>Para oficina, empresa, espacio de estudio o ‘home office’, descubre la impresora o multifuncional que mejor se adapte a tus necesidades.</p>
+                    </div>
+                </div>
+
+                <div class="ctn-img-info" id="wifi" style="display: none">
+                    <img src="https://www.ktronix.com/medias/landing-wifi.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wzODQ4MXxpbWFnZS9wbmd8Y29tcHV0YWRvcmVzL2gzZS9oNWYvMTA2NDI4Mzc3MzM0MDYucG5nfDI5NDZiY2Y3NmUxZjk1MGY3ZDUzZGY5N2UwMGFiNzcwOGU4YjMwNTMzNWVlYzBjNTMzMWVmNzVhYTU2NWFjMjc"
+                        alt="">
+                    <div class="txt-sub-category">
+                        <h2>Wifi</h2>
+                        <p>¿Buscando cómo optimizar tu conexión a Internet? Encuentra routers, adaptadores y extensores de Wifi.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid fondo-fluid">
+        <h2>¡Tus marcas favoritas en un solo lugar!</h2>
+
+        <k-slider arrows="true" desktop-items="7" mobile-items="3" peek="50" style="--k-slider-background-color: #f5f5f5;">
+            <div class="k-slider__slide">
+                <a href="/marcas/hp/c/hp">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-hp-2.png" alt="HP">
+                </a>
+            </div>
+            <div class="k-slider__slide">
+                <a href="/computadores-tablets/computadores-portatiles/c/BI_104_KTRON?q=%3Arelevance%3Abrand%3AAPPLE">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-apple.png" alt="Apple">
+                </a>
+            </div>
+            <div class="k-slider__slide">
+                <a href="/marcas/lenovo/c/lenovo">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-lenovo.png" alt="Lenovo">
+                </a>
+            </div>
+            <div class="k-slider__slide">
+                <a href="/marcas/asus/c/asus">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-asus.png" alt="ASUS">
+                </a>
+            </div>
+            <div class="k-slider__slide">
+                <a href="/marcas/acer/c/acer">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-acer.png" alt="Acer">
+                </a>
+            </div>
+            <div class="k-slider__slide">
+                <a href="/marcas/epson/c/epson">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-epson.png" alt="Epson">
+                </a>
+            </div>
+            <div class="k-slider__slide">
+                <a href="/computadores-tablets/impresion/c/BI_109_KTRON?q=%3Arelevance%3Abrand%3ACANON">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-canon.png" alt="Canon">
+                </a>
+            </div>
+            <div class="k-slider__slide">
+                <a href="/computadores-tablet/computadores-portatiles/c/BI_104_KTRON?q=%3Arelevance%3Abrand%3AHUAWEI">
+                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/computadores/logos-png/logo-huawei-3.png" alt="huawei">
+                </a>
+            </div>
+
+        </k-slider>
+    </section>
+
+    <section class="container ctn-section-3">
+
+        <div class="ctn-oferta">
+            <!-- AdGlare: KT-landing-compu--1 -->
+            <span id=zone643397427></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?643397427');
+            </script>
+        </div>
+
+        <div class="ctn-oferta">
+            <!-- AdGlare: KT-landing-compu--2 -->
+            <span id=zone928333388></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?928333388');
+            </script>
+        </div>
+
+        <div class="ctn-oferta-big">
+            <!-- AdGlare: KT-landing-compu--3 -->
+            <span id=zone910618729></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?910618729');
+            </script>
+        </div>
+
+    </section>
+
+    <section class="container">
+        <div class="ctn-title">
+            <h2>Diseñado a tu medida</h2>
+        </div>
+
+        <div class="ctn-banners">
+            <div class="ctn-banner-on-off">
+                <!-- AdGlare: KT-landing-compu-img-destacada -->
+                <span id=zone375583741></span>
+                <script>
+                    (function(r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?375583741');
+                </script>
+            </div>
+            <div class="ctn-scroll-banners">
+                <div class="banner-world">
+                    <!-- AdGlare: KT-landing-compu-img-1 -->
+                    <span id=zone743536884></span>
+                    <script>
+                        (function(r, d, u) {
+                            var s = d.createElement(r);
+                            s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u;
+                            var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?743536884');
+                    </script>
+                </div>
+                <div class="banner-world">
+                    <!-- AdGlare: KT-landing-compu-img-2 -->
+                    <span id=zone766414017></span>
+                    <script>
+                        (function(r, d, u) {
+                            var s = d.createElement(r);
+                            s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u;
+                            var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?766414017');
+                    </script>
+                </div>
+                <div class="banner-world">
+                    <!-- AdGlare: KT-landing-compu-img-3 -->
+                    <span id=zone863235137></span>
+                    <script>
+                        (function(r, d, u) {
+                            var s = d.createElement(r);
+                            s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u;
+                            var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?863235137');
+                    </script>
+                </div>
+                <div class="banner-world">
+                    <!-- AdGlare: KT-landing-compu-img-4 -->
+                    <span id=zone592101726></span>
+                    <script>
+                        (function(r, d, u) {
+                            var s = d.createElement(r);
+                            s.async = true;
+                            u += '&cb=' + Date.now() + Math.random();
+                            s.src = u;
+                            var n = d.getElementsByTagName(r)[0];
+                            n.parentNode.insertBefore(s, n);
+                        })('script', document, '//engine.alkst.co/?592101726');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ctn-seo">
+        <div class="zona-seo">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="https://www.ktronix.com/medias/img-seo-compu-dsk.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wyNzQwMzJ8aW1hZ2UvcG5nfGNvbXB1dGFkb3Jlcy9oYmIvaDA4LzEwNjMyNTcwMzA2NTkwLnBuZ3w4MDY4ZjYzY2ZhZjlmZGUyNWU0YTYyZmZjNjFlOWE0OTBmODAxNjdkNDhlYzMxNDUwYmU4NmI0MDNjNDFiZmM5">
+                <img src="https://www.ktronix.com/medias/img-seo-computadores.png?context=bWFzdGVyfGNvbXB1dGFkb3Jlc3wxMDUyNDl8aW1hZ2UvcG5nfGNvbXB1dGFkb3Jlcy9oMDMvaGU4LzEwNjMyMzkxMTk2NzAyLnBuZ3xkZTE0OTAyNGYzZTliN2ExNThjODJlMzU5Y2M5YTkyNjQxMWIwMjhmZTY2YTQ5YzcxOWNhMDFkZjU1OTk0Njk1"
+                    alt="">
+            </picture>
+            <div class="ctn-txt-zona-seo">
+                <h2>Conviértete en un experto en computadores, tablets e impresoras</h2>
+                <p>Encuentra en nuestras guías todo lo que necesitas saber sobre computadores portátiles, AIO, computadores de mesa, PC Gamer y complementos como tablets, impresoras, monitores y routers. </p>
+                <a href="/guia-compra/guia-computadores/c/guia-computadores">
+                    <p class="btn-guia">Guía de compra</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+<script>
+    function hiddenSub() {
+        categoriasPorta = document.getElementById('computadoresPortatiles');
+        categoriasPorta.style.display = 'none';
+
+        categoriasComputadoresEscritorio = document.getElementById('computadoresEscritorio');
+        categoriasComputadoresEscritorio.style.display = 'none';
+
+        categoriasTinta = document.getElementById('tintas');
+        categoriasTinta.style.display = 'none';
+
+        categoriasGamer = document.getElementById('zonaGamer');
+        categoriasGamer.style.display = 'none';
+
+        categoriasTablets = document.getElementById('tablets');
+        categoriasTablets.style.display = 'none';
+
+        categoriasAccesorios = document.getElementById('accesorios');
+        categoriasAccesorios.style.display = 'none';
+
+        categoriasMonitores = document.getElementById('monitores');
+        categoriasMonitores.style.display = 'none';
+
+        categoriasProyectores = document.getElementById('proyectores');
+        categoriasProyectores.style.display = 'none';
+
+        categoriasImpresoras = document.getElementById('impresoras');
+        categoriasImpresoras.style.display = 'none';
+
+        categoriasWifi = document.getElementById('wifi');
+        categoriasWifi.style.display = 'none';
+    }
+
+    function subPortatil() {
+        hiddenSub();
+        portatil = document.getElementById('computadoresPortatiles');
+        portatil.style.display = 'block';
+    }
+
+    function subEscritorio() {
+        hiddenSub();
+        escritorio = document.getElementById('computadoresEscritorio');
+        escritorio.style.display = 'block';
+    }
+
+    function subTintas() {
+        hiddenSub();
+        tintas = document.getElementById('tintas');
+        tintas.style.display = 'block';
+    }
+
+    function subGamer() {
+        hiddenSub();
+        gamer = document.getElementById('zonaGamer');
+        gamer.style.display = 'block';
+    }
+
+    function subTablets() {
+        hiddenSub();
+        tablets = document.getElementById('tablets');
+        tablets.style.display = 'block';
+    }
+
+    function subAccesorios() {
+        hiddenSub();
+        accesorios = document.getElementById('accesorios')
+        accesorios.style.display = 'block'
+    }
+
+    function subMonitores() {
+        hiddenSub();
+        monitores = document.getElementById('monitores');
+        monitores.style.display = 'block'
+    }
+
+    function subProyectores() {
+        hiddenSub();
+        proyectores = document.getElementById('proyectores');
+        proyectores.style.display = 'block'
+    }
+
+    function subImpresoras() {
+        hiddenSub();
+        impresoras = document.getElementById('impresoras');
+        impresoras.style.display = 'block'
+    }
+
+    function subWifi() {
+        hiddenSub();
+        wifi = document.getElementById('wifi');
+        wifi.style.display = 'block'
+    }
+</script>

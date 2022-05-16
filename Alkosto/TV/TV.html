@@ -1,0 +1,646 @@
+<style>
+     :root {
+        --alkosto-alert: #dd171b;
+        --alkosto-naranja-oscuro: #b14b25;
+        --alkosto-text1: #444444;
+        --alkosto-text2: #5c5c5c;
+        --alkosto-text3: #959595;
+        --alkosto-naranja: #eb5b25;
+        --alkosto-azul: #004797;
+        --alkosto-fondo-gris: #f5f5f5;
+        --alkosto-deshabilitado: #e0e0e0;
+        --alkosto-azul-claro: #edf1f6;
+    }
+    
+    h1 {
+        font-size: 24px !important;
+    }
+    
+    h2 {
+        font-size: 18px !important;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .grid-container-sub {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 158px;
+        margin-top: 20px;
+    }
+    
+    .ctn-info-grid {
+        box-shadow: 0px 0px 4px #919ba645;
+        text-align: center;
+        height: 130px;
+        position: relative;
+    }
+    
+    .ctn-info-grid img {
+        width: 101px;
+        margin-top: -25px;
+    }
+    
+    .ctn-info-grid p {
+        color: var(--alkosto-azul);
+        font-weight: bold;
+        width: 101px;
+        margin: 0 auto;
+        margin-top: 2px;
+        line-height: 15px;
+    }
+    
+    .ctn-info-grid>p>i {
+        color: var(--alkosto-naranja);
+        position: absolute;
+        margin-left: 22px;
+    }
+    
+    .ctn-info-grid span {
+        display: none;
+    }
+    
+    .link-productos {
+        display: none;
+    }
+    
+    .fondo-fluid {
+        height: 110px;
+        background: var(--alkosto-fondo-gris);
+        text-align: center;
+        color: var(--alkosto-azul);
+        margin-top: 25px;
+    }
+    
+    .fondo-fluid h2 {
+        font-weight: bold;
+    }
+    
+    .ctn-slider {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        margin-top: 27px;
+        white-space: nowrap;
+        overflow-x: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .ctn-slider img {
+        width: 100px;
+        margin-left: 15px;
+    }
+    
+    .ctn-title-h2 {
+        border-bottom: 1px solid #dbdbdb;
+        margin-top: 5px;
+    }
+    
+    .ctn-title-h2 h2 {
+        color: var(--alkosto-text1);
+        border-bottom: 2px solid var(--alkosto-naranja);
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+    
+    .ctn-banners-lanzamientos {
+        display: flex;
+        width: auto;
+        overflow-x: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        /* white-space: nowrap; */
+    }
+    
+    .ctn-banners-adglare {
+        width: auto;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .bn-img-adglare {
+        margin-left: 15px;
+    }
+    
+    .banner-adglare {
+        height: 285px;
+        width: 340px;
+    }
+    
+    .btn-ver-ofertas {
+        background: var(--alkosto-naranja);
+        color: white;
+        width: 298px;
+        height: 56px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        vertical-align: middle;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .btn-ver-ofertas p {
+        line-height: 53px;
+    }
+    
+    .fluid-gris {
+        height: auto;
+        background: var(--alkosto-fondo-gris);
+        padding-top: 29px;
+        margin-top: 35px;
+    }
+    
+    .fluid-gris h2 {
+        color: var(--alkosto-azul)
+    }
+    
+    .btn-borde {
+        width: 260px;
+        height: 56px;
+        border: 1px solid var(--alkosto-naranja);
+        color: var(--alkosto-naranja);
+        text-align: center;
+        border-radius: 4px;
+        margin: 0 auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .btn-borde p {
+        margin-top: 17px;
+    }
+    
+    .btn-borde:last-child {
+        margin-top: 27px;
+        position: absolute;
+        bottom: 20px;
+    }
+    
+    .btn-zona-seo {
+        width: 260px;
+        height: 56px;
+        background: var(--alkosto-naranja);
+        color: white;
+        text-align: center;
+        border-radius: 4px;
+        margin: 10px auto;
+        font-weight: bold;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    
+    .btn-zona-seo p {
+        line-height: 53px;
+    }
+    
+    .btn-zona-seo:hover {
+        background: var(--alkosto-naranja-oscuro);
+    }
+    
+    .ctn-image-close img {
+        max-width: 100%;
+        margin-top: 25px;
+    }
+    /* Sección banners de lanzamiento */
+    
+    .banner-lanzmiento {
+        width: 260px;
+        height: 405px;
+        text-align: center;
+        margin-left: 15px;
+        position: relative;
+    }
+    
+    .banner-lanzmiento span {
+        font-weight: bold;
+        color: var(--alkosto-text1);
+        display: inherit;
+    }
+    
+    .banner-lanzmiento img {
+        margin-bottom: 15px;
+    }
+    
+    .label-exclusive {
+        position: absolute;
+        z-index: 2;
+        background: var(--alkosto-naranja);
+        color: white;
+        height: auto;
+        padding: 6px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+    /* Fin sección de lanzamientos  */
+    
+    @media screen and (min-width: 768px) {
+        .grid-container-sub {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 220px;
+        }
+        .ctn-info-grid span {
+            display: block;
+            font-size: 12px;
+            padding: 6px;
+            color: var(--alkosto-text1);
+        }
+        .link-productos {
+            position: absolute;
+            bottom: 8px;
+            display: block;
+            left: 50%;
+            margin-left: -50px !important;
+        }
+        .ctn-info-grid>p>i {
+            color: transparent;
+        }
+        .ctn-info-grid {
+            height: 195px;
+        }
+        .link-productos>i {
+            color: var(--alkosto-naranja) !important;
+            margin-left: 4px !important;
+        }
+        .flex {
+            display: flex;
+        }
+        .ctn-image-close {
+            padding: 12px;
+            width: 45%;
+            margin: 0 auto;
+        }
+        .fluid-gris {
+            padding-bottom: 29px;
+        }
+        .btn-borde {
+            width: 198px;
+            margin: 0 5px;
+        }
+        .btn-zona-seo {
+            width: 198px;
+            margin: 10px 5px;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .grid-container-sub {
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 16px;
+        }
+        .ctn-slider {
+            width: 70%;
+        }
+        .btn-borde {
+            width: 240px;
+        }
+        v .btn-borde:hover {
+            background: var(--alkosto-naranja);
+            color: white;
+        }
+        .btn-zona-seo {
+            width: 240px;
+        }
+        .ctn-banners-lanzamientos {
+            justify-content: space-around;
+        }
+        .btn-ver-ofertas:hover {
+            background: var(--alkosto-naranja-oscuro);
+        }
+        .contenido_elementos {
+            width: 64%;
+        }
+    }
+</style>
+
+<section class="container">
+    <h1>Televisores</h1>
+</section>
+
+<section class="container" style="height: 100px">
+    <!-- AdGlare: AK-ldg-tv-barra-lanzamientos -->
+    <span id=zone134409797></span>
+    <script>
+        (function(r, d, u) {
+            var s = d.createElement(r);
+            s.async = true;
+            u += '&cb=' + Date.now() + Math.random();
+            s.src = u;
+            var n = d.getElementsByTagName(r)[0];
+            n.parentNode.insertBefore(s, n);
+        })('script', document, '//engine.alkst.co/?134409797');
+    </script>
+</section>
+
+<section class="container">
+    <div class="grid-container-sub">
+        <a href="/tv-video/televisores/c/BI_120_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/subcat-tv.png?context=bWFzdGVyfFRWLWxhbmRpbmd8MTAwNTN8aW1hZ2UvcG5nfFRWLWxhbmRpbmcvaDkxL2gxMS8xMDQ2OTcwOTAyMTIxNC5wbmd8NjYxMjQwZjRkOTA1MjVhYzdhMWY2MzdiOTVkNmEwNzI2ZjhjYmIxNzAwYTY2OWU3YTA2ZWJhYzhkMGFmMDMwNw" alt="Televisores">
+                    <p>Televisores
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra los mejores Televisores - Smart TV para compartir en familiar peliculas y más.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/audio/audio-hogar/barras-sonido/c/BI_0024_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/subcat-barras.png?context=bWFzdGVyfFRWLWxhbmRpbmd8MzkwM3xpbWFnZS9wbmd8VFYtbGFuZGluZy9oOTYvaGFjLzEwNDY5NzEwMzMxOTM0LnBuZ3xlZDYzNzRhZmJiZjFiOGZmNWYyZTU4NjJiYTg2ZTI2ZTU4N2UwNjQ4ZjFhMGUyYmZhZDYwODBlNDIzNDhkYzE0" alt="Barras de sonido">
+                    <p>Barras de sonido
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra las mejores barras de sonido y llena de música cada rincón de tu casa.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/tv-video/reproductores-contenido-digital/c/BI_125_ALKOS?q=%3Arelevance%3A">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/subcat-reprodstreaimg.png?context=bWFzdGVyfFRWLWxhbmRpbmd8MTA0MTl8aW1hZ2UvcG5nfFRWLWxhbmRpbmcvaDU4L2gzNi8xMDQ2OTcxMTM4MDUxMC5wbmd8Yjc1YTkzZmIyZTExOTFiYjkzMmQ3OTAwYzIwOGJhZDU4N2Q1NjU3MWMyMjRlYjM0YTNjYmQxZDM5N2JhNjkwMA" alt="Reproductores Streaming">
+                    <p>Reproductores Streaming
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Disfruta lo mejor del entretenimiento por streaming en tu TV con Roku, Chromecast y Apple TV.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/accesorios-electronica/accesorios-tv-video/c/BI_123_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/subcat-accesorios.png?context=bWFzdGVyfFRWLWxhbmRpbmd8MjMyODh8aW1hZ2UvcG5nfFRWLWxhbmRpbmcvaDBjL2g1OS8xMDQ3MTU5Mjk1MTgzOC5wbmd8OGVhNWM4OGE5ZWEwYzkzYTU2YmM3MDExOTM0Nzg5ZDIwMjU0NTU1NGI3MDAwOGMwYTgzNTFjOGMzYmNlODlkNA" alt="Accesorios">
+                    <p>Accesorios
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Accesorios imperdibles que no deben faltar para tu TV.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/videojuegos/consolas/c/BI_131_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/subcat-consolas.png?context=bWFzdGVyfFRWLWxhbmRpbmd8NTQyM3xpbWFnZS9wbmd8VFYtbGFuZGluZy9oYTQvaGY4LzEwNDY5NzExNjQyNjU0LnBuZ3w1NDhkZmE3MzM1MTY2MTI1ZjJiNWJlZDM2YTZhZjNmYTk0MzRiMWQ4ODk0NDA3ZDJmMDk3ODNiOTkwZDFkYzQ2" alt="Consolas">
+                    <p>Consolas
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra las consolas del momento de las marcas Playstation, Xbox y Nintendo.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a href="/tv-video/pines-virtuales-video/c/BI_124_ALKOS">
+            <div class="grid-item-sub">
+                <div class="ctn-info-grid">
+                    <img src="/medias/subcat-netflix.png?context=bWFzdGVyfFRWLWxhbmRpbmd8OTg1OXxpbWFnZS9wbmd8VFYtbGFuZGluZy9oMjUvaGU2LzEwNDY5NzExNzA4MTkwLnBuZ3w0Mjg5ZWQ0YzhjYjU1ZmE3NmYyYTQwMDFmNjQ0MTc0ZGE4ODQ5OTQ0MmVkMjViMGVkNGUxM2IwYjAzN2QxNDI3" alt="Netflix">
+                    <p>Netflix
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                    <span>Encuentra los pines virtuales para que disfrutes lo mejor de Netflix.</span>
+                    <p class="link-productos">Ver productos
+                        <i class="alk-icon-arrow-right-square"></i>
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="container-fluid fondo-fluid">
+    <h2>¡Las mejores marcas en un solo lugar!</h2>
+
+    <k-slider arrows="true" desktop-items="7" mobile-items="3" peek="50" style="--k-slider-background-color: #f5f5f5;">
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ASAMSUNG#">
+                <img loading="lazy" src="/medias/samsung.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8MzMyNHxpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaDE3L2hkMi85ODAxMDMwNTk4Njg2LnN2Z3w4YTM3ZGU3YjFkOTBmZDRlMmVmM2M1MTE0ZTBkZThhNDNhNzRjZjZlOThiZDc1OWQzOWIzMWM2ZDlhOTQ5YTcz"
+                    alt="Logo Samsung">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ALG#">
+                <img loading="lazy" src="/medias/lg.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8MTg1MnxpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaGI2L2hmMC85ODAxMDMyMTcxNTUwLnN2Z3wxYTdlNDM2YmYwMzBlNzYyZDI0MmFkNGI3MjI1MDhlODFmYTA0N2Y1ODRlZGQ2YzVkZDJmNzUwNjNlM2M0YTdk" alt="logo LG">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3AKALLEY# ">
+                <img loading="lazy" src="/medias/kalley.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8NDUwNnxpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaGEyL2hkOS85ODAxMDM1MDIyMzY2LnN2Z3wwYTYyYjQxYmIwNjA2YTg0M2Q3OGUyZTZhYzBkMmMzYjJjZDNiMTVmNzM1YTgxMzJhMWVkYWMwYzVhYWRiZjk1"
+                    alt="logo Kalley">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ATCL#">
+                <img loading="lazy" src="https://www.alkosto.com/medias/tcl.svg?context=bWFzdGVyfGxvZ29zLWNvbG9yfDEyMzd8aW1hZ2Uvc3ZnK3htbHxsb2dvcy1jb2xvci9oMjgvaGEyLzEwNTUyMzY2NTk2MTI2LnN2Z3xiNmJhMzFjMzNiZDdjMTY0MjAwZDYyZTI2YzRmZDFlZTY1YmI1YzQ4YjIxYTExZjVjMDU2OTg5NjYzYzMwOGYz"
+                    alt="logo TCL">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ACHALLENGER#">
+                <img loading="lazy" src="/medias/CHALLENGER-AZUL.png?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8NjU0MnxpbWFnZS9wbmd8bWFyY2FfdHZfZmlsdHJvcy9oMmEvaGQzLzExNTY1NjEyNzI4MzUwLnBuZ3w2YTJkMDhlYjNjNGY4ZDFmNGY5MGFmM2JmYmI5ZjRhODI3MjRiZGYxZjMzZDM0ZTgyODUxN2Q5OTYyODU0Mzc2"
+                    alt="logo Challenger">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3AHYUNDAI#">
+                <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/img-sap/logos/Hyundai-color-3.svg" alt="logo Hyundai">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3APANASONIC#">
+                <img loading="lazy" src="/medias/panasonic.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8MzE1M3xpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaDYyL2g1Yi85ODAxMDM2NTk1MjMwLnN2Z3w1NzlkNGU3OWViNDcwNTQxMDAzMDZmMzQ2MmRkY2YwMDJkNTIxNDNiOGIwOGVlNzk5N2M4OTA2MjQyOTUyNjU2"
+                    alt="logo Panasonic">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3APHILIPS&page=1&pageSize=25&sort=relevance">
+                <img loading="lazy" src="https://www.alkosto.com/medias/philips.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8MTQ5MXxpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaDBiL2gwOC85ODAxMDM3Nzc0ODc4LnN2Z3xjYTVjMjA0OGJiYzA3NDNlNGI4YjY2OTkzODU4OTZjNGEzNTc0MDRmMmNmOGVjNmY3M2M2MzhiYWJkZWZkMDJi"
+                    alt="logo philips">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ASONY#">
+                <img loading="lazy" src="/medias/sony.svg?context=bWFzdGVyfG1hcmNhX3R2X2ZpbHRyb3N8MjIwOHxpbWFnZS9zdmcreG1sfG1hcmNhX3R2X2ZpbHRyb3MvaDQ3L2gwZS85ODAxMDM4ODg4OTkwLnN2Z3w0ZDIzMjQ0YjdiNDc4OGEyNDQ1YmNiNGM3MTk1MzQ3ZGNlYTNhYjU2MDcwYmM5M2MzYjA3ZTU5NGM4NDdjZTJk"
+                    alt="logo Sony">
+            </a>
+        </div>
+        <div class="k-slider__slide">
+            <a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3AAOC">
+                <img loading="lazy" src="/medias/AOC.svg?context=bWFzdGVyfGNhdGVnb3JpYXR2fDI4MjV8aW1hZ2Uvc3ZnK3htbHxjYXRlZ29yaWF0di9oNWIvaGE4LzExMDk4NDk0ODYxMzQyLnN2Z3wxMzBiMTYzN2Q2N2UzZjNiNTJjMzVkZjczN2VkNDc3YmZlMjk4OThmYTQ3YWM2NWY0N2JjMDA2YjM0OTEzZDdk" alt="logo AOC">
+            </a>
+        </div>
+    </k-slider>
+</section>
+
+<section class="container">
+    <div class="ctn-banners-lanzamientos">
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-tv-html-1 -->
+            <span id=zone193711251></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?193711251');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-tv-html-2 -->
+            <span id=zone919622070></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?919622070');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-tv-html-3 -->
+            <span id=zone362203113></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?362203113');
+            </script>
+        </div>
+        <div class="banner-lanzmiento">
+            <!-- AdGlare: AK-ldg-tv-html-4 -->
+            <span id=zone275905499></span>
+            <script>
+                (function(r, d, u) {
+                    var s = d.createElement(r);
+                    s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u;
+                    var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?275905499');
+            </script>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="ctn-title-h2">
+        <h2>Promociones destacadas</h2>
+    </div>
+    <div class="row ctn-banners-adglare">
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-tv-promo-1 -->
+                <span id=zone377254261></span>
+                <script>
+                    (function(r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?377254261');
+                </script>
+            </div>
+        </div>
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-tv-promo-2 -->
+                <span id=zone520747283></span>
+                <script>
+                    (function(r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?520747283');
+                </script>
+            </div>
+        </div>
+        <div class="bn-img-adglare">
+            <div class="banner-adglare">
+                <!-- AdGlare: AK-ldg-tv-promo-3 -->
+                <span id=zone593543838></span>
+                <script>
+                    (function(r, d, u) {
+                        var s = d.createElement(r);
+                        s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u;
+                        var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?593543838');
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="/tv-video/televisores/c/BI_120_ALKOS">
+        <div class="btn-ver-ofertas">
+            <p>Ver ofertas</p>
+        </div>
+    </a>
+</section>
+
+<section class="container-fluid fluid-gris">
+    <div class="container flex">
+        <div>
+            <h2>Instalamos su TV a domicilio</h2>
+            <p>En Alkosto contamos con un equipo de expertos en instalación de soportes para TV, selecciona el televisor de tu preferencia y solicita el servicio de instalación que se adapte a tus necesidades.</p>
+            <!--a href="/guia-compra/guia-tv/c/guia-tv">
+                <div class="btn-zona-seo">
+                    <p>Guía de compra</p>
+                </div>
+            </a-->
+            <a href="/servicios/instalaciones/c/BI_189_ALKOS?q=%3Arelevance%3Atipo-servicio%3ATelevisores&page=1&pageSize=25&sort=relevance">
+                <div class="btn-zona-seo">
+                    <p>Ver instalaciones</p>
+                </div>
+            </a>
+        </div>
+        <div class="ctn-image-close">
+            <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Ktronix/Dummy-images/landingTV-SEO2.jpg" alt="Expertos en instalaciones">
+        </div>
+    </div>
+</section>
