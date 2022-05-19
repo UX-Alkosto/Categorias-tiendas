@@ -2,17 +2,102 @@
 	h1.h1_content {
     	display: none;
 	}
+	p {
+		font-size:16px;
+	}
 	.breadcrumb-section {
 	    position: absolute;
+	    z-index:2;
 	}
-	.main-text {    
-	    color: white;
-	    max-width: 1170px;
-	    position: absolute;
+	.breadcrumb-section .breadcrumb a, .breadcrumb-section .breadcrumb li span, .breadcrumb-section .breadcrumb li:before{
+		color:white !important;
+	}
+	.hero-section {
+	    position: relative;
+	}
+	.hero-section .owl-dot span {
+		background: transparent !important;
+		border: 1px solid white;	    
+	    height: 18px !important;
+	    width: 18px !important;	    
+	}
+	.hero-section .owl-dots {
+		bottom: -38%;
+	    flex-direction: column;
+	    position: absolute;	    
+	    right: 40px;
+	}
+	.hero-section .owl-dots .active span {
+    	background-color: white !important;
+    	height: 20px !important;
+    	left:-1px;
+    	position:relative;
+	    width: 20px !important;
+	}
+	.linkbuilding {
+	    background: #f5f5f5;
+	}
+	.main-text {
+	    color: white;	    
+	    width: 100%;
 	    left: 50%;
+	    max-width: 1170px;
+	    position: absolute;	    
 	    right: 0;
-	    top: 30%;
-	    transform: translate(-50%, 0);    
+	    top: 35%;
+	    transform: translate(-50%, -30%);
+	}
+	.main-text h1 {
+	    color: white !important;
+	    display: inline-block;
+	    margin-bottom:0;
+	}
+	.main-text k-button {
+		max-width:220px;
+		font-size:16px;
+		font-weight:bold;
+		width:100%;
+	}
+	.main-text p{
+		max-width:440px;
+		margin-bottom:24px;
+	}
+	.main-text span {
+		background: var(--primary-color1);
+		bottom: 5px;
+		display: inline-block;
+	    height: 6px;	    
+	    margin-right: 12px;	    
+	    position: relative;	 
+	    width: 90px;   	    
+	}
+	.main-text #big-text{
+		font-size: 45px;
+		font-weight: bold;	    
+	    line-height: 52px;
+	    margin-bottom:24px;
+	    margin-top: 12px;
+	    max-width: 490px;	    
+	}
+	.processor-card {	    
+	    bottom: 18px;
+	    display:flex;
+	    left: 50%;
+	    max-width: 440px;
+	    position: absolute;
+	    transform: translate(-50%, 0);
+	    z-index: 2;
+	}
+	.processor-card .btn {  
+	    align-items: center;
+	    background: transparent linear-gradient(180deg, #959595C7 0%, #4B4B4B 100%) 0% 0% no-repeat padding-box;
+	    border: 1px solid rgb(255 255 255 / 50%);
+	    border-radius: 0;
+	    display: flex;
+	    height: 110px;
+	    justify-content: center;
+	    margin: 0;
+	    width: 110px;
 	}
 </style>
 <div class="hero-section carousel__rotativeBanner">
@@ -20,34 +105,34 @@
         <div class="banner-adglare">
         	<div class="main-text">            
 				<span></span><h1>Gaming</h1>
-				<p>RETA EL GAMER QUE LLEVAS DENTRO</p>
+				<p id="big-text">RETA EL GAMER QUE LLEVAS DENTRO</p>
 				<p>Conoce las mejores laptops para jugadores profesionales</p>
 				<k-button>Ver Laptops</k-button>
 			</div>
 			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/new-gaming-laptops.jpg" id="main-banner" alt="pc laptop gamer">            
         </div>
         <div class="banner-adglare">
-        	<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/new-gaming-laptops.jpg" alt="gaming" lazy="loading">  
+        	<img src="https://cdn.originpc.com/img/landing/2022/bajheera-5000t/bajheera-5000t-rts.jpg" alt="gaming" lazy="loading">  
         </div>
         <div class="banner-adglare">
-         	<img src="" alt="" lazy="loading">   
+         	<img src="https://cdn.originpc.com/img/home/slides/2022/nvidia-3090ti.jpg" alt="" lazy="loading">   
         </div>
         <div class="banner-adglare">
-         	<img src="" alt="" lazy="loading">   
+         	<img src="https://cdn.originpc.com/img/home/slides/2022/intel-alder-lake-12900KS.jpg" alt="" lazy="loading">   
         </div>
     </div>
     <div class="processor-card">
     	<div class="btn"> 
-    		<img src="" alt="intel" lazy="loading">
+    		<img src="https://www.scan.co.uk/images/products/70/3346833-a.jpg" alt="intel" lazy="loading">
     	</div>
     	<div class="btn"> 
-    		<img src="" alt="ryzen" lazy="loading">
+    		<img src="https://www.scan.co.uk/images/products/70/3346833-a.jpg" alt="ryzen" lazy="loading">
     	</div>
     	<div class="btn"> 
-    		<img src="" alt="nvidia" lazy="loading">
+    		<img src="https://www.scan.co.uk/images/products/70/3346833-a.jpg" alt="nvidia" lazy="loading">
     	</div>
     	<div class="btn"> 
-    		<img src="" alt="radeon" lazy="loading">
+    		<img src="https://www.scan.co.uk/images/products/70/3346833-a.jpg" alt="radeon" lazy="loading">
     	</div>
     </div>
 </div>
@@ -59,15 +144,11 @@
 		</a>
 		<a href="">
 			<img src="" alt="" lazy="loading"> 
-			<p>Portátiles <span>gaming</span></p> 
+			<p>Monitores </p> 
 		</a>
 		<a href="">
 			<img src="" alt="" lazy="loading"> 
-			<p>Portátiles <span>gaming</span></p> 
-		</a>
-		<a href="">
-			<img src="" alt="" lazy="loading"> 
-			<p>Portátiles <span>gaming</span></p> 
+			<p>Accesorios </p> 
 		</a>
 	</div>
 </div>
