@@ -1,9 +1,40 @@
-<style> 
+<style>
+	body {
+		overflow-x:hidden;
+	} 
 	h1.h1_content {
     	display: none;
 	}
 	p {
 		font-size:16px;
+	}
+	section.yCmsContentSlot.section-slot.section-slot--section2C {
+		align-items: center;
+		display:flex;	   
+	    max-width: 1170px;    
+	    margin: 0 auto;	    
+	    width: 100%;
+	}
+	section.yCmsContentSlot.section-slot.section-slot--section4 {   
+	    max-width: 1170px;    
+	    margin: 0 auto;	    
+	    width: 100%;
+	}
+	.section-slot--section2C section.yCmsComponent.section-slot__component:nth-child(1) {
+	    margin-right: 24px;
+	    width: calc(40% + 24px);  	  
+	}
+	.section-slot--section2C section.yCmsComponent.section-slot__component:nth-child(2) {
+	    width: 60%;	    
+	}
+	.brands{
+		background-image: url(https://www.gamereactor.es/media/66/cyberpunk2077sold_3446633b.jpg);
+		margin-top:4em;
+	}
+	.brands h2 {
+	    color: white !important;
+	    margin-top: 2em;
+	    text-align:center;
 	}
 	.breadcrumb-section {
 	    position: absolute;
@@ -12,8 +43,38 @@
 	.breadcrumb-section .breadcrumb a, .breadcrumb-section .breadcrumb li span, .breadcrumb-section .breadcrumb li:before{
 		color:white !important;
 	}
+	.contenido .text :nth-child(3) {
+	    font-size: 32px;
+	    font-weight: bold;
+	    color: var(--primary-color2);
+	}
+	.creadores {	    
+	    align-items: center;
+	    display: flex;
+	    justify-content: space-between;
+	}
+	.creadores img {
+	    width: 100%;
+	    max-width: 600px;
+	}
+	.contenido k-link {
+	    margin-top: 1.25em;
+	}
+	.creadores.destacado {
+	    flex-direction: row-reverse;
+	}
+	.creadores.destacado .text {
+	    text-align: right;
+	}
 	.hero-section {
 	    position: relative;
+	}
+	.hero-section .owl-carousel .owl-nav button.owl-next:before, .hero-section .owl-carousel .owl-nav button.owl-prev:before {
+	    content: "" !important;
+	    background-image: url(https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Arrow.png);
+	    height: 80px;
+	    width: 20px;
+	    opacity: .8;
 	}
 	.hero-section .owl-dot span {
 		background: transparent !important;
@@ -34,8 +95,30 @@
     	position:relative;
 	    width: 20px !important;
 	}
+	.hero-section .owl-carousel .owl-nav button.owl-next, .hero-section .owl-carousel .owl-nav button.owl-prev {
+	    background-color: transparent;
+	}
+	.item.block-item {
+	    background-color: white;
+	}
 	.linkbuilding {
 	    background: #f5f5f5;
+	    margin-bottom:2em;
+	}
+	.linkbuilding a {
+	    color: var(--primary-color2);
+	    margin:.5em 2em;
+	    text-align: center;
+	}
+	.linkbuilding img {
+	   max-width: 150px;
+	}
+	.linkbuilding .container {
+		align-items: center;
+	    display: flex;
+	    justify-content: center;
+	    max-width: 11770px;
+	    width: 100%;       
 	}
 	.main-text {
 	    color: white;	    
@@ -79,6 +162,21 @@
 	    margin-top: 12px;
 	    max-width: 490px;	    
 	}
+	.marco {
+	    border: 4px solid white;
+	    display: flex;
+	    flex-wrap: wrap;
+	    align-items: center;
+	    padding: 16px;
+	    justify-content: space-evenly;
+	    margin-bottom: 4em;
+	}
+	.marco a {
+	    width: 20%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
 	.processor-card {	    
 	    bottom: 18px;
 	    display:flex;
@@ -98,6 +196,87 @@
 	    justify-content: center;
 	    margin: 0;
 	    width: 110px;
+	}
+	.text :nth-child(2) {
+		color: var(--primary-color2);
+		display:inline-block;
+	    font-size: 24px;
+	    font-weight: bold;
+	    margin-bottom:0;	    
+	}
+	.text :nth-child(4) {
+	    max-width: 470px;
+	}
+	.text h2 {
+	    margin-top: 1.5em;
+	    color: var(--primary-color2) !important;
+	}
+	.text k-button{
+		width:220px;
+		font-weight:bold;
+	}
+	.text span {
+	    background: var(--primary-color1);
+	    bottom: 5px;
+	    display: inline-block;
+	    height: 6px;
+	    margin-right: 12px;
+	    position: relative;
+	    width: 45px;
+	}
+	.triangle {
+	    position: absolute;
+	    width: 1130px;
+	    height: 1300px;
+	    z-index: -1;
+	}
+	.triangle.blue{
+		background: transparent radial-gradient(closest-side at 53% 59%, #004797 0%, #0078FF 0%, #042A54 100%) 0% 0% no-repeat padding-box;
+	    clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+	    left: 50%;
+	}
+	.triangle.orange{
+		background: transparent radial-gradient(closest-side at 53% 59%, #004797 0%, #EC7C52 0%, #9E2B00 100%) 0% 0% no-repeat padding-box;
+	    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+	    right: 50%;
+	}
+	#price-bank {	    
+	    background-color: #004797;
+	    border-radius: 4px;
+	    color: white;
+	    font-size: 18px;
+	    margin-bottom:2em;
+	    padding: 0.5em 1em;	    
+	}
+	#price-before {
+	    color: var(--text-color3);
+	    text-decoration: line-through;
+	    font-size: 24px;
+	    line-height: 16px;
+	    margin-bottom:0;
+	    margin-top: 2.5em;
+	}
+	#price-before span {
+	    background: none;
+	    font-size: 16px;	    
+	    position: inherit;
+	    margin-right: 0;
+	    margin-left: 8px;
+	    text-decoration: line-through;
+	    width: inherit;
+	}
+	#price-today {
+	    color: var(--primary-color1);
+	    font-size: 40px;
+	    font-weight:bold;
+	    margin:0;
+	}
+	#price-today span {
+	    background: none;
+	    font-size: 24px;	    
+	    margin-right: 0;
+	    margin-left: 8px;
+	    width: inherit;
 	}
 </style>
 <div class="hero-section carousel__rotativeBanner">
@@ -139,24 +318,27 @@
 <div class="linkbuilding"> 
 	<div class="container"> 
 		<a href="">
-			<img src="" alt="" lazy="loading"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="Portátiles gaming" lazy="loading"> 
 			<p>Portátiles <span>gaming</span></p> 
 		</a>
 		<a href="">
-			<img src="" alt="" lazy="loading"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="Monitores gaming" lazy="loading"> 
 			<p>Monitores </p> 
 		</a>
 		<a href="">
-			<img src="" alt="" lazy="loading"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="Accesorios Gaming" lazy="loading"> 
 			<p>Accesorios </p> 
 		</a>
 	</div>
 </div>
-<div class="container">
+
+<!-- PARTE 2 -->
 	<div class="video-vitrina"> 
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Gm3Ypy_4k88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<p>Aqui va una vitrina</p>
+		<iframe width="460" height="320" src="https://www.youtube.com/embed/Gm3Ypy_4k88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
+
+<!-- PARTE 3 -->
+<div class="container">
 	<div class="creadores contenido"> 
 		<div class="triangle blue"></div>
 		<div class="text"> 
@@ -165,21 +347,24 @@
 			<p>Potentes computadores para tus mejores creaciones, Potentes computadorespara tus mejores creaciones </p>
 			<k-link>Ver más</k-link>
 		</div>
-		<img src="" alt="creadores de contenido" lazy="loading">
+		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="creadores de contenido" lazy="loading">
 	</div>
-	<p>Aqui va otra vitrina</p>
+</div>
+
+<!-- PARTE 4 -->
+<div class="container">
 	<div class="creadores destacado"> 
 		<div class="triangle orange"></div>
 		<div class="text"> 
 			<span></span><p>Destacado del mes</p>
 			<h2>Monitor Widescreen ASUS ROG </h2>
 			<p>Potentes computadores para tus mejores creaciones, Potentes computadorespara tus mejores creaciones Potentes</p>
-			<p id="price-before">$3.399.900 <span>Antes</span></p>
-			<p id="price-today">$2.599.900 <span>Hoy</span></p>
-			<p id="price-bank">$2.000.000 </p>
+			<p id="price-before">$3.399.900<span> Antes</span></p>
+			<p id="price-today">$2.599.900<span>Hoy</span></p>
+			<p id="price-bank">$2.000.000</p>
 			<k-button>Ver producto</k-button>
 		</div>
-		<img src="" alt="" lazy="loading">
+		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="" lazy="loading">
 	</div>
 </div>
 <div class="brands"> 
@@ -187,32 +372,46 @@
 		<h2>Nuestras Marcas</h2>
 		<div class="marco"> 
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 			<a href=""> 
-				<img src="" alt="" lazy="loading">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
 			</a>
 		</div>
 	</div>
 </div>
+<script>
+window.onload = () => {
+        const $carousel = jQuery('.section-slot--section2C .js-related-product-carousel');
+        const carouselData = $carousel.data();
+        const carouselOptions = carouselData['owl.carousel'].options;
+        carouselOptions.responsive = {
+            0: { items: 1 },
+            600: { items: 1 },
+            756: { items: 2 },
+            1025: { items: 3}
+        };
+        $carousel.trigger('refresh.owl.carousel');
+    }
+</script>
