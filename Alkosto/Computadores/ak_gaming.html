@@ -89,7 +89,6 @@
 	    background-image: url(https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Arrow.png);
 	    height: 80px;
 	    width: 20px;
-	    opacity: .8;
 	}
 	.hero-section .owl-dot span {
 		background: transparent !important;
@@ -112,6 +111,10 @@
 	}
 	.hero-section .owl-carousel .owl-nav button.owl-next, .hero-section .owl-carousel .owl-nav button.owl-prev {
 	    background-color: transparent;
+	    opacity:.5;
+	}
+	.hero-section .owl-carousel .owl-nav button.owl-next:hover, .hero-section .owl-carousel .owl-nav button.owl-prev:hover {
+	    opacity: 1;
 	}
 	.hero-section .owl-carousel .owl-nav button.owl-prev{
 		left: 4px;	
@@ -155,13 +158,17 @@
 	    margin-bottom:2em;
 	}
 	.linkbuilding a {
-		border: 1px solid white;
 	    color: var(--primary-color2);
 	    margin:.5em 2em;
 	    text-align: center;
 	}
+	.linkbuilding a:hover img {
+	    transform: scale(1.08);
+	}
 	.linkbuilding img {
+	   margin: 1em 0 0.75em;
 	   max-width: 150px;
+	   transition:.3s ease all;
 	}
 	.linkbuilding .container {
 		align-items: center;
@@ -223,7 +230,7 @@
 	    margin-bottom: 4em;
 	}
 	.marco a {
-	    width: 20%;
+	    width: 25%;
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
@@ -231,7 +238,13 @@
 	.marco a img {
 	    max-width: 150px;
 	    opacity: .75;
+	    transition:.3s ease all;
 	}
+	.marco a:hover img {
+	    transform: scale(1.08);
+	    opacity: 1;
+	}
+	.only-mobile{display:none !important;}
 	.processor-card {	    
 	    bottom: 18px;
 	    display:flex;
@@ -251,6 +264,18 @@
 	    justify-content: center;
 	    margin: 0;
 	    width: 110px;
+	    transition:.3s ease all;
+	}
+	.processor-card .btn:hover {
+	    width: 115px;
+	    height: 115px;
+	    transform: translate(0, -5px);
+	}
+	.processor-card .btn:nth-child(1):hover,.processor-card .btn:nth-child(3):hover {
+	    background: transparent linear-gradient(180deg, #959595C7 0%, #001124 100%) 0% 0% no-repeat padding-box;
+	}
+	.processor-card .btn:nth-child(2):hover,.processor-card .btn:nth-child(4):hover {
+	    background: transparent linear-gradient(180deg, #959595C7 0%, #7B3318 100%) 0% 0% no-repeat padding-box;
 	}
 	.text :nth-child(2) {
 		color: var(--primary-color2);
@@ -367,8 +392,8 @@
 
 	}
 	@media screen and (max-width:991px){
-		.brands {height: 600px;}
-		.brands ~ .container {bottom: 300px;}
+		.brands {height: 400px;}
+		.brands ~ .container {bottom: 420px;}
 		.hero-section {
 		    position: relative;
 		    margin-bottom: 2em;
@@ -396,7 +421,12 @@
 		    max-width: 100%;
 		    position:relative;
 		}
-		.processor-card .btn{width:25%;}
+		.processor-card .btn{width:25% !important;}
+		.processor-card .btn:hover {
+		    height: 113px;
+		    transform: translate(0, -3px);
+		    border: 1px solid rgb(255 255 255 / 100%);
+		}
 		.section-slot--section2C section.yCmsComponent.section-slot__component:nth-child(1) {
 		    margin-bottom: 1.5em;
 		}
@@ -412,22 +442,78 @@
 		}
 		.creadores {flex-direction: column-reverse !important;}
 		.hero-section {margin-top: 0;}
+		.hero-section .owl-dots {
+		    bottom: inherit;
+		    top: 0;
+		    transform: translate(0, -23%);
+		    right: inherit;
+		    left: 0;
+		    padding-left: 4px !important;
+		}
+		.linkbuilding {
+			background:transparent;
+			backdrop-filter: blur(4px);
+		}
 		.linkbuilding a {
+			background: transparent linear-gradient(180deg, rgb(149 149 149 / 60%) 0%, rgb(75 75 75 / 60%) 100%) 0% 0% no-repeat padding-box;
+			border:1px solid white;
+			color: white;
 		    margin: 0;
 		    padding: 0 1.5em;
+		    width:33.33%;		       
 		}
 		.linkbuilding a span {display: none;}
-		.linkbuilding img {width: 100%;}
+		.linkbuilding img {
+			width: 90%;
+			margin:.25em 0;
+		}
 		.linkbuilding .container {padding: 0;}
+		.main-text {
+			bottom: 0;
+		    margin: 0 auto;
+		    padding: 0 15px;
+		    top: inherit;		    
+		    transform: translate(-50%, -10%);
+		}
+		.main-text h1 {
+			align-items:center;
+		    display: flex;
+		    justify-content:center;
+		    margin-bottom: 0;
+		    text-align: center;
+		}
+		.main-text k-button {
+		    margin: 0 auto;
+		    display: block;
+		    line-height: 22px;
+		}
+		.main-text span{
+			bottom:0;
+			width:50px;
+		}
+		.main-text span:nth-child(2) {
+		    margin-left: 12px;
+		    margin-right: 0;
+		}
+		.main-text #big-text {
+    		margin-bottom: 12px;
+		}
+		.main-text #big-text,.main-text p {
+			max-width:100%;
+			text-align: center;
+		}
+		.only-desktop{display:none !important;}
+		.only-mobile{display:block !important;}
+		.owl-carousel.js-adglare-carousel{background-color:var(--text-color1);}
 		.text :nth-child(2) {font-size: 18px;}
 		.text h2 {font-size: 16px !important;}
 		.triangle.blue {
 		    left: 2%;
-		    top: 65em;
+		    top: 72em;
 		}
 		.triangle.orange {
 		    right: 2%;
-		    bottom: 80em;
+		    bottom: 79em;
 		}
 		.video-vitrina {
 		    margin: 0 15px;
@@ -441,21 +527,49 @@
     <div class="owl-carousel rotativeBanner js-adglare-carousel">
         <div class="banner-adglare">
         	<div class="main-text">            
-				<span></span><h1>Gaming</h1>
+				<span class="only-desktop"></span><h1><span class="only-mobile barr"></span>Gaming<span class="only-mobile barr"></span></h1>
 				<p id="big-text">RETA EL GAMER QUE LLEVAS DENTRO</p>
 				<p>Conoce las mejores laptops para jugadores profesionales</p>
 				<k-button>Ver Laptops</k-button>
 			</div>
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/new-gaming-laptops.jpg" id="main-banner" alt="pc laptop gamer">            
+			<img class="only-desktop" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/new-gaming-laptops.jpg" id="main-banner" alt="pc laptop gamer">
+			<img class="only-mobile" src="https://www.pcgamer.ma/modules/tm_rightbanner/views/img/b48389727c24e5603218ee4190b312f53378de31_pc%20Gamer%20banner.jpg " alt="gaming" lazy="loading">             
         </div>
         <div class="banner-adglare">
-        	<img src="https://cdn.originpc.com/img/landing/2022/bajheera-5000t/bajheera-5000t-rts.jpg" alt="gaming" lazy="loading">  
+        	<!-- AdGlare: AK_COMPUTADORES_LANDING_GAMING_1 -->
+			<span id=zone282242308></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?282242308');
+			</script>
         </div>
         <div class="banner-adglare">
-         	<img src="https://cdn.originpc.com/img/home/slides/2022/nvidia-3090ti.jpg" alt="" lazy="loading">   
+         	<!-- AdGlare: AK_COMPUTADORES_LANDING_GAMING_2 -->
+			<span id=zone428053464></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?428053464');
+			</script>    
         </div>
         <div class="banner-adglare">
-         	<img src="https://cdn.originpc.com/img/home/slides/2022/intel-alder-lake-12900KS.jpg" alt="" lazy="loading">   
+         	<!-- AdGlare: AK_COMPUTADORES_LANDING_GAMING_3 -->
+			<span id=zone884847177></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?884847177');
+			</script>   
         </div>
     </div>
     <div class="processor-card">
@@ -476,15 +590,15 @@
 <div class="linkbuilding"> 
 	<div class="container"> 
 		<a href="">
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="Portátiles gaming" lazy="loading"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/icono-comp/icon-porta.png" alt="Portátiles gaming" lazy="loading"> 
 			<p>Portátiles <span>gaming</span></p> 
 		</a>
 		<a href="">
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="Monitores gaming" lazy="loading"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/icono-comp/icon-moni.png" alt="Monitores gaming" lazy="loading"> 
 			<p>Monitores </p> 
 		</a>
 		<a href="">
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="Accesorios Gaming" lazy="loading"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/icono-comp/icon-diade.png" alt="Accesorios Gaming" lazy="loading"> 
 			<p>Accesorios </p> 
 		</a>
 	</div>
@@ -511,19 +625,16 @@
 
 <!-- PARTE 4 -->
 <div class="container">
-	<div class="creadores destacado"> 
-		<div class="triangle orange"></div>
-		<div class="text"> 
-			<span></span><p>Destacado del mes</p>
-			<h2>Monitor Widescreen ASUS ROG </h2>
-			<p>Potentes computadores para tus mejores creaciones, Potentes computadorespara tus mejores creaciones Potentes</p>
-			<p id="price-before">$3.399.900<span> Antes</span></p>
-			<p id="price-today">$2.599.900<span>Hoy</span></p>
-			<p id="price-bank"><img src="https://www.alkosto.com/medias/TCA-mastercard.svg?context=bWFzdGVyfGltYWdlc3wxMTY0OHxpbWFnZS9zdmcreG1sfGltYWdlcy9oMjgvaGZhLzEwNTc1ODU1MDU4OTc0LnN2Z3wzZjJiODBjYjdhMjIzNjk2Y2NmOGY0MjIwM2I4NzQxOTk1ZDIzZjExNGU1MzdjMzU0NWI2YTUxYTJjOGNlMWU5" alt="banco" lazy="loading"> $2.000.000</p>
-			<k-button>Ver producto</k-button>
-		</div>
-		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/Portatil.png" alt="" lazy="loading">
-	</div>
+	<!-- AdGlare: AK_COMPUTADORES_LANDING_GAMING_HTML -->
+	<span id=zone606852174></span>
+	<script>
+	    (function(r,d,u) {
+	        var s = d.createElement(r); s.async = true;
+	        u += '&cb=' + Date.now() + Math.random();       
+	        s.src = u; var n = d.getElementsByTagName(r)[0];
+	        n.parentNode.insertBefore(s, n);
+	    })('script',document,'//engine.alkst.co/?606852174');
+	</script>
 </div>
 <div class="brands"></div> 
 <div class="container"> 
@@ -533,32 +644,29 @@
 		<div class="line"></div>
 		<div class="line"></div>
 		<div class="line"></div>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3AASUS"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/asus.png" alt="asus" lazy="loading">
 		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3AHP"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/hp.png" alt="hp" lazy="loading">
 		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3AACER"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/acer.png" alt="acer" lazy="loading">
 		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3AROG"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/rog.png" alt="rog" lazy="loading">
 		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3AOMEN#"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/omen.png" alt="omen" lazy="loading">
 		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3ALENOVO&page=1&pageSize=25&sort=relevance"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/lenovo.png" alt="lenovo" lazy="loading">
 		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3ALEGION&page=1&pageSize=25&sort=relevance"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/legion.png" alt="legion" lazy="loading">
 		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
-		</a>
-		<a href=""> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/acer.png" alt="" lazy="loading">
+		<a href="/computadores-tablet/gaming/c/BI_106_ALKOS?q=%3Arelevance%3Abrand%3AMSI"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/logos/msi.png" alt="msi" lazy="loading">
 		</a>
 	</div>
 </div>
