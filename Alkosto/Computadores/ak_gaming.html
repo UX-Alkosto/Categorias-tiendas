@@ -307,20 +307,20 @@
 	    width: 45px;
 	}
 	.triangle {
-	    position: absolute;
-	    width: 1130px;
-	    height: 1300px;
-	    z-index: -1;
+    	position: absolute;
+    	width: 51%;
+    	height: 1200px;
+    	z-index: -1;	
 	}
 	.triangle.blue{
 		background: transparent radial-gradient(closest-side at 53% 59%, #004797 0%, #0078FF 0%, #042A54 100%) 0% 0% no-repeat padding-box;
 	    clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
-	    left: 50%;
+	    right:0;
 	}
 	.triangle.orange{
 		background: transparent radial-gradient(closest-side at 53% 59%, #004797 0%, #EC7C52 0%, #9E2B00 100%) 0% 0% no-repeat padding-box;
 	    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
-	    right: 50%;
+	    left: 0;
 	}
 	#price-bank {
 	    background-color: #004797;
@@ -383,6 +383,9 @@
 			margin:0 auto;
 			width:100%;
 		}
+		.triangle {
+	    	height: 900px;	
+		}
 	}
 	@media screen and (max-width:1057px){
 		.brands ~ .container {bottom: 950px;}		
@@ -391,7 +394,7 @@
 		.brands ~ .container {bottom: 650px;}
 		.hero-section .owl-dots {right:0;}
 		.hero-section .owl-nav {display: none;}
-
+		.triangle {	height: 600px;}	
 	}
 	@media screen and (max-width:991px){
 		.brands {height: 400px;}
@@ -466,8 +469,11 @@
 		}
 		.linkbuilding a span {display: none;}
 		.linkbuilding img {
-			width: 90%;
-			margin:.25em 0;
+		    width: 90%;
+		    margin: 0.75em 0 0.3em;
+		}
+		.linkbuilding p {
+		    margin-bottom: 0.3em;
 		}
 		.linkbuilding .container {padding: 0;}
 		.main-text {
@@ -510,19 +516,30 @@
 		.text {margin-top: 1em;}
 		.text :nth-child(2) {font-size: 18px;}
 		.text h2 {font-size: 16px !important;}
+		.triangle{
+			width:100%;
+			height:450px;}
 		.triangle.blue {
-		    left: 2%;
-		    top: 91em;
+		    right:0;
+		    top: 150em;
 		}
 		.triangle.orange {
-		    right: 2%;
-		    bottom: 101em;
+		    left: 0;
+		    bottom: 127em;
 		}
 		.video-vitrina {
 		    margin: 0 15px;
 		}
 		.video-vitrina iframe {
 		    width: 100%;
+		}
+	}
+	@media screen and (max-width:500px){
+		.triangle.blue {
+		    top: 125em;
+		}
+		.triangle.blue {
+		    bottom: 127em;
 		}
 	}
 </style>
@@ -536,7 +553,7 @@
 				<k-button>Ver Laptops</k-button>
 			</div>
 			<img class="only-desktop" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/ppal/AK-PPAL-GAMING-26MAY.jpg" id="main-banner" alt="pc laptop gamer">
-			<img class="only-mobile" src="https://media.aws.alkomprar.comymarketingcolcomercio/Alkosto/2022/gaming/ppal/AK-PPAL-GAMING-26MAY-MOB.jpg" alt="gaming" lazy="loading">             
+			<img class="only-mobile" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/gaming/ppal/AK-PPAL-GAMING-26MAY-MOB.jpg" alt="gaming" lazy="loading">             
         </div>
         <div class="banner-adglare">
         	<!-- AdGlare: AK_COMPUTADORES_LANDING_GAMING_1 -->
