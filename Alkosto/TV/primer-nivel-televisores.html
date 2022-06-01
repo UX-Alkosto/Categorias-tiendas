@@ -11,6 +11,12 @@
 		margin-bottom:1em;
 		text-align:center;
 	}
+	.active .brand-column {
+	    display: block;
+	}
+	.brand-column {
+	    display: none;
+	}
 	.brand {
 	    align-items: center;
 	    background-color: white;
@@ -23,114 +29,169 @@
 	    padding: .5em;
 	    width: auto;	    	    
 	}
-	.brand-column{
-		position: absolute;
-  		z-index: 1;
-  		transition: left .4s cubic-bezier(.47,.13,.15,.89);    
-	}
-	.naver {
-	    position: absolute;
-	    top: 41.5%;
-	    z-index: 2;
-	    color: var(--primary-color2);
-	    background-color: white;
-	    width: 28px;
-	    height: 28px;
-	    cursor: pointer;
-	    border-radius: 100%;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    box-shadow: none;
-	    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, .2));
-	    font-size: 18px;
-	    opacity:.75;
-	    transition:.2s ease opacity;
-	}
-	.naver:hover{
-		opacity:1;
-	}
-	.naver.nav-left{left: -9px;}
-	.naver.nav-right{right: -15px;}
-	.scroll-brands{
-		height:265px;
-		position: relative;
-  		overflow: hidden;
-  		transition: width .4s;
-	}
 	#gray-pill{
-		align-items: center;
+		align-items: flex-start;
 		background-color:#F5F5F5;
 		border-radius: 4px;
-		display: flex;    
+		display: flex;
+		padding:1em 0;    
+	}
+	#gray-pill .col-md-4 img {
+	    opacity: 0;
+	    left: 0;
+	    margin: auto;
+	    right: 0;
+	    position: absolute;
+	    top: 8px;
+	    transition: .25s ease all;
+	    width: 95%;
+	    z-index: -1;
+	}
+	#gray-pill .col-md-4 img.active{
+		z-index:0;
+		opacity:1;
 	}
 	#gray-pill k-link {
 		--primary-color2: var(--price-color);
 	    display: table;
-	    margin: 0.5em auto 0;
-	    position: relative;
-	    top: .5em;	    
+	    margin: 0.5em auto 0;    
 	}
 	#gray-pill .col-md-8 {
 	    position:relative;
 	    padding:0;
 	    width:calc(66.66666667% - 1.5em);
 	}
+	/*-----------------------------BRAND CARRUSEL __________________________*/
+	.scroll-brands .owl-stage {
+        display: flex;
+    }
+   	.scroll-brands button.owl-dot{
+   		display:none;
+   	}
+    .scroll-brands .owl-item.active {
+        text-align: center;
+        opacity: 1;
+        z-index:0;
+    }
+
+    .scroll-brands .owl-item {
+        opacity: 0;
+        transition: .15s ease all;
+        z-index:-1;
+    }
+
+    .scroll-brands .owl-dots {
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .scroll-brands .owl-nav {
+        position: relative;
+        bottom: 150px;
+    }
+
+    .scroll-brands .owl-nav button {
+    	align-items: center;
+	    background-color: white;
+	    border: none;
+	    border-radius: 100%;
+	    box-shadow: 1px 1px 12px rgb(68 68 68 / 20%);
+	    color: var(--primary-color2);
+	    display: flex;
+	    font-size: 26px;
+	    width: 28px;
+	    height: 28px;
+	    opacity: .75;
+	    justify-content: center;
+	    transition:.3 ease all;    
+	}
+	.scroll-brands .owl-nav button:hover{
+		opacity:1;
+	}
+    .scroll-brands .owl-nav button span {
+        position: relative;
+        top: -2px;
+    }
+
+    .scroll-brands button.owl-prev {
+        position: absolute;
+        left: -8px;
+    }
+
+    .scroll-brands button.owl-next {
+        position: absolute;
+        right: -8px;
+    }
 </style>
 <div class="container">
 	<h1>Televisores</h1> 
 	<h2>Elije el televisor ideal para ti</h2>
 	<div class="row" id="gray-pill"> 
-		<div class="col-md-4"> 
-			<img src="https://cdn3.volusion.com/dxylq.nruds/v/vspfiles/photos/03-2116-3T.png" alt="televisor">
+		<div class="col-md-4">
+		 	<img class="active" src="https://cdn3.volusion.com/dxylq.nruds/v/vspfiles/photos/03-2116-3T.png" alt="general">
+			<img src="https://androidayuda.com/wp-content/uploads/2014/09/Apertura-Samsung.jpg" alt="samsung">
+			<img src="https://faragoklima.hu/wp-content/uploads/2020/03/LG-logo.jpg" alt="lg">
+			<img src="https://cdn3.volusion.com/dxylq.nruds/v/vspfiles/photos/03-2116-3T.png" alt="kalley">
+			<img src="https://s.yimg.com/aah/yhst-172533293-9/revell-h-1281-mickey-thompson-s-challenger-i-406-6-m-p-h-speed-record-holder-1-25-3.jpg" alt="challenger">
+			<img src="https://faragoklima.hu/wp-content/uploads/2020/03/Panasonic-logo.jpg" alt="panasonic">
+			<img src="https://lyonstudios.com/wp-content/uploads/2016/09/Hyundai.jpg" alt="hyundai">
+			<img src="https://www.todopurificadoresdeaire.com/wp-content/uploads/2020/11/philips-logotipo-450x350.jpg" alt="phillips">
+			<img src="https://images.squarespace-cdn.com/content/v1/5c9b8e8ea9ab9575d0f99c55/1554388325882-WG6H9S2GKR4FSA94S6RB/Sony.jpg" alt="sony">
+			<img src="https://m.media-amazon.com/images/I/71YL+L4GeKS._AC_SX450_.jpg" alt="AOC">
+			<img src="https://androidayuda.com/wp-content/uploads/2014/10/Xiaomi-Logo-Portada.jpg" alt="xiaomi">
+			<img src="https://tribuneonlineng.com/wp-content/uploads/2018/10/TCL.jpg" alt="TCL">				
 		</div>
 		<div class="col-md-8">
 			<div class="scroll-brands">
 				<div class="brand-column"> 
-					<a href="" id="samsung" class="brand"> 
+					<a onmouseover="HoverImage(this)" href="" id="samsung" class="brand"> 
 						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="samsung">
 					</a>
-					<a href="" id="lg" class="brand"> 
+					<a onmouseover="HoverImage(this)" href="" id="lg" class="brand"> 
 						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="lg">
 					</a>
 				</div>
 				<div class="brand-column"> 
-					<a href="" id="samsung" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="samsung">
+					<a onmouseover="HoverImage(this)" href="" id="kalley" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="kalley">
 					</a>
-					<a href="" id="lg" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="lg">
-					</a>
-				</div>
-				<div class="brand-column"> 
-					<a href="" id="samsung" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="samsung">
-					</a>
-					<a href="" id="lg" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="lg">
+					<a onmouseover="HoverImage(this)" href="" id="challenger" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="challenger">
 					</a>
 				</div>
 				<div class="brand-column"> 
-					<a href="" id="samsung" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="samsung">
+					<a onmouseover="HoverImage(this)" href="" id="panasonic" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="panasonic">
 					</a>
-					<a href="" id="lg" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="lg">
+					<a onmouseover="HoverImage(this)" href="" id="hyundai" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="hyundai">
 					</a>
 				</div>
 				<div class="brand-column"> 
-					<a href="" id="samsung" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="samsung">
+					<a onmouseover="HoverImage(this)" href="" id="phillips" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="phillips">
 					</a>
-					<a href="" id="lg" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="lg">
+					<a onmouseover="HoverImage(this)" href="" id="sony" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="sony">
 					</a>
-				</div>				
+				</div>
+				<div class="brand-column"> 
+					<a onmouseover="HoverImage(this)" href="" id="AOC" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="AOC">
+					</a>
+					<a onmouseover="HoverImage(this)" href="" id="xiaomi" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="xiaomi">
+					</a>
+				</div>
+				<div class="brand-column"> 
+					<a onmouseover="HoverImage(this)" href="" id="TCL" class="brand"> 
+						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="TCL">
+					</a>
+				</div>					
 			</div>
-			<div class="naver nav-right alk-icon-derecha"></div>
-			<div class="naver nav-left alk-icon-izquierda"></div>
 			<k-link href="" icon="alk-icon-derecha">Ver todos los TV</k-link>
 		</div>
+		
 	</div>
 	<div class="row">
 		<h2>Compra por tamaño de pantalla</h2>
@@ -186,178 +247,41 @@
 		<img src="" alt="">
 	</div>
 </div>
-<script>
-var carousel = document.querySelector('#gray-pill .col-md-8');
-var carouselContent = document.querySelector('.scroll-brands');
-var slides = document.querySelectorAll('.brand-column');
-var arrayOfSlides = Array.prototype.slice.call(slides);
-var carouselDisplaying;
-var screenSize;
-setScreenSize();
-var lengthOfSlide;
-
-function addClone() {
-   var lastSlide = carouselContent.lastElementChild.cloneNode(true);
-   lastSlide.style.left = (-lengthOfSlide) + "px";
-   carouselContent.insertBefore(lastSlide, carouselContent.firstChild);
-}
-// addClone();
-
-function removeClone() {
-  var firstSlide = carouselContent.firstElementChild;
-  firstSlide.parentNode.removeChild(firstSlide);
-}
-
-function moveSlidesRight() {
-  var slides = document.querySelectorAll('.brand-column');
-  var slidesArray = Array.prototype.slice.call(slides);
-  var width = 0;
-
-  slidesArray.forEach(function(el, i){
-    el.style.left = width + "px";
-    width += lengthOfSlide;
-  });
-  addClone();
-}
-moveSlidesRight();
-
-function moveSlidesLeft() {
-  var slides = document.querySelectorAll('.brand-column');
-  var slidesArray = Array.prototype.slice.call(slides);
-  slidesArray = slidesArray.reverse();
-  var maxWidth = (slidesArray.length - 1) * lengthOfSlide;
-
-  slidesArray.forEach(function(el, i){
-    maxWidth -= lengthOfSlide;
-    el.style.left = maxWidth + "px";
-  });
-}
-
-window.addEventListener('resize', setScreenSize);
-
-function setScreenSize() {
-  if ( window.innerWidth >= 500 ) {
-    carouselDisplaying = 3;
-  } else if ( window.innerWidth >= 300 ) {
-    carouselDisplaying = 2;
-  } else {
-    carouselDisplaying = 1;
-  }
-  getScreenSize();
-}
-
-function getScreenSize() {
-  var slides = document.querySelectorAll('.brand-column');
-  var slidesArray = Array.prototype.slice.call(slides);
-  lengthOfSlide = ( carousel.offsetWidth  / carouselDisplaying );
-  var initialWidth = -lengthOfSlide;
-  slidesArray.forEach(function(el) {
-    el.style.width = lengthOfSlide + "px";
-    el.style.left = initialWidth + "px";
-    initialWidth += lengthOfSlide;
-  });
-}
-
-
-var rightNav = document.querySelector('.nav-right');
-rightNav.addEventListener('click', moveLeft);
-
-var moving = true;
-function moveRight() {
-  if ( moving ) {
-    moving = false;
-    var lastSlide = carouselContent.lastElementChild;
-    lastSlide.parentNode.removeChild(lastSlide);
-    carouselContent.insertBefore(lastSlide, carouselContent.firstChild);
-    removeClone();
-    var firstSlide = carouselContent.firstElementChild;
-    firstSlide.addEventListener('transitionend', activateAgain);
-    moveSlidesRight();
-  }
-}
-
-function activateAgain() {
-  var firstSlide = carouselContent.firstElementChild;
-  moving = true;
-  firstSlide.removeEventListener('transitionend', activateAgain);
-}
-
-var leftNav = document.querySelector('.nav-left');
-leftNav.addEventListener('click', moveRight);
-
-// var moveLeftAgain = true;
-
-function moveLeft() {
-  if ( moving ) {
-    moving = false;
-    removeClone();
-    var firstSlide = carouselContent.firstElementChild;
-    firstSlide.addEventListener('transitionend', replaceToEnd);
-    moveSlidesLeft();
-  }
-}
-
-function replaceToEnd() {
-  var firstSlide = carouselContent.firstElementChild;
-  firstSlide.parentNode.removeChild(firstSlide);
-  carouselContent.appendChild(firstSlide);
-  firstSlide.style.left = ( (arrayOfSlides.length -1) * lengthOfSlide) + "px";
-  addClone();
-  moving = true;
-  firstSlide.removeEventListener('transitionend', replaceToEnd);
-}
-
-
-
-
-carouselContent.addEventListener('mousedown', seeMovement);
-
-var initialX;
-var initialPos;
-function seeMovement(e) {
-  initialX = e.clientX;
-  getInitialPos();
-  carouselContent.addEventListener('mousemove', slightMove);
-  document.addEventListener('mouseup', moveBasedOnMouse);
-}
-
-function slightMove(e) {
-  if ( moving ) {
-    var movingX = e.clientX;
-    var difference = initialX - movingX;
-    if ( Math.abs(difference) < (lengthOfSlide/4) ) {
-      slightMoveSlides(difference);
-    }  
-  }
-}
-
-function getInitialPos() {
-  var slides = document.querySelectorAll('.brand-column');
-  var slidesArray = Array.prototype.slice.call(slides);
-  initialPos = [];
-  slidesArray.forEach(function(el){
-    var left = Math.floor( parseInt( el.style.left.slice(0, -2 ) ) ); 
-    initialPos.push( left );
-  });
-}
-
-function slightMoveSlides(newX) {
-  var slides = document.querySelectorAll('.brand-column');
-  var slidesArray = Array.prototype.slice.call(slides);
-  slidesArray.forEach(function(el, i){
-    var oldLeft = initialPos[i];
-    el.style.left = (oldLeft + newX) + "px";
-  });
-}
-
-function moveBasedOnMouse(e) { 
-  var finalX = e.clientX;
-  if ( initialX - finalX > 0) {
-    moveRight();
-  } else if ( initialX - finalX < 0 ) {
-    moveLeft();
-  }
-  document.removeEventListener('mouseup', moveBasedOnMouse);
-  carouselContent.removeEventListener('mousemove', slightMove);
-} 
+<script> 
+	const brandImage=document.querySelectorAll('.brand');
+	const brandImageCloned=document.querySelectorAll('.cloned .brand');
+    //for each imput element set the id and make the function
+    function HoverImage (element) {
+    	var getID = element.id;
+	    console.log(getID)
+	    images = document.querySelectorAll('#gray-pill .col-md-4 img');
+	    for (var i = images.length - 1; i >= 0; i--) {
+		    var alt = images[i].getAttribute('alt');
+			    if(alt == getID){
+			        images[i].classList.add('active');
+			    }
+			    else{
+			     images[i].classList.remove('active');
+			    }
+			}
+    };
+window.onload = function () {
+    //Jquery
+   var owl = $(".scroll-brands");
+        owl.owlCarousel({
+            margin: 12,
+            loop: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                1000: {
+                    items: 3,
+                },
+            },
+        });
+    };
 </script>
