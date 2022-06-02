@@ -12,10 +12,13 @@
 		text-align:center;
 	}
 	.active .brand-column {
-	    display: block;
+	    z-index:0;
+	    opacity:1;
+	    transition:.3s ease all;
 	}
 	.brand-column {
-	    display: none;
+	    z-index:-2;
+	    opacity:0;
 	}
 	.brand {
 	    align-items: center;
@@ -25,20 +28,27 @@
 	    display: flex;
 	    height: 120px;
 	    justify-content: center;
-	    margin: 0.75em 0.5em;
+	    margin: 1.25em 0.5em;
 	    padding: .5em;
 	    width: auto;	    	    
 	}
+	#big-text {
+	    color: var(--primary-color2);
+	    font-size: 40px;
+	    font-weight: bold;
+	    line-height: 44px;
+	    max-width: 365px;
+	    margin: 0 auto 1em;
+	}
 	#gray-pill{
-		align-items: flex-start;
-		background-color:#F5F5F5;
+		align-items: flex-start;		
 		border-radius: 4px;
 		display: flex;
 		padding:1em 0;    
 	}
 	#gray-pill .col-md-4 img {
 	    opacity: 0;
-	    left: 0;
+	    left: -8px;
 	    margin: auto;
 	    right: 0;
 	    position: absolute;
@@ -61,6 +71,98 @@
 	    padding:0;
 	    width:calc(66.66666667% - 1.5em);
 	}
+	.conoce-mas {
+	    background-color: #E5ECF4;
+	    padding: 6em 0 3em;
+	}
+	.conoce-mas img {
+	    width: 100%;
+	}
+	.conoce-mas p {
+	    text-align: center;
+	    font-size: 16px;
+	}
+	.conoce-mas .container{
+		margin:0 auto;
+	}
+	.cont{
+		overflow:hidden;
+		position:relative;
+	}
+	.circle {
+	    background-color: #f5f5f5;
+	    border-radius: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 180px;
+	    height: 180px;
+	}
+	.gray-container{
+		background-color:#F5F5F5;
+	}
+	.inches{
+		flex-basis:calc(25% - 12px);
+		text-decoration:none;
+	}
+	.inches:hover {text-decoration:none;}
+	.inches:hover h3{
+		color:var(--primary-color1);
+		text-decoration:none;
+	}
+	.inches:hover img {transform: scale(1.1);}
+	.menu-circular a {text-decoration:none;}
+	.menu-circular a:hover img {
+	    transform: scale(1.2) rotate(2deg);
+	    transform:;
+	}
+	.menu-circular a:hover h3 {
+	    font-weight: 600;
+	    font-size: 18px !important;
+	    color: var(--primary-color1);
+	}
+	.menu-circular h3 {
+	    font-weight: 400;
+	    font-size: 16px !important;
+	    transition:.3s ease all;
+	}
+	.menu-circular img {
+	    width: 100%;
+	    max-width: 110px;
+	    transition:.3s ease all;
+	}
+	.mb-1 {
+	    margin-bottom: 1.5em;
+	}
+	.mb-2 {
+	    margin-bottom: 3em;
+	}
+	.screen-size,.menu-circular {
+	    display: flex;
+	    flex-wrap:wrap;
+	    justify-content: space-between;
+	}
+	.menu-circular {
+	    max-width: 1008px;
+	    margin: 0 auto;
+	}
+	.menu-circular h2 ,.screen-size h2 {flex-basis:100%;}
+	.menu-circular a {
+	    flex-basis: 20%;
+	}
+	.menu-circular a {
+	    flex-basis: calc(20% - 40px);
+	}
+	.menu-circular img {width:100%;}
+	.screen-size h3, .menu-circular h3 {
+	    font-size: 18px;
+	    text-align: center;
+	    transition:.3s ease all;
+	}
+	.screen-size img {
+	    width: 100%;
+	    transition:.3s ease all;
+	}
 	/*-----------------------------BRAND CARRUSEL __________________________*/
 	.scroll-brands .owl-stage {
         display: flex;
@@ -76,8 +178,8 @@
 
     .scroll-brands .owl-item {
         opacity: 0;
-        transition: .15s ease all;
-        z-index:-1;
+        transition: .3s ease opacity;
+        /*z-index:-1;*/
     }
 
     .scroll-brands .owl-dots {
@@ -87,7 +189,7 @@
 
     .scroll-brands .owl-nav {
         position: relative;
-        bottom: 150px;
+        bottom: 155px;
     }
 
     .scroll-brands .owl-nav button {
@@ -103,7 +205,7 @@
 	    height: 28px;
 	    opacity: .75;
 	    justify-content: center;
-	    transition:.3 ease all;    
+	    transition:.3s ease all;    
 	}
 	.scroll-brands .owl-nav button:hover{
 		opacity:1;
@@ -122,108 +224,153 @@
         position: absolute;
         right: -8px;
     }
+	.scroll-brands .owl-stage-outer {
+	    overflow: hidden;
+	}
 </style>
 <div class="container">
 	<h1>Televisores</h1> 
 	<h2>Elije el televisor ideal para ti</h2>
-	<div class="row" id="gray-pill"> 
-		<div class="col-md-4">
-		 	<img class="active" src="https://cdn3.volusion.com/dxylq.nruds/v/vspfiles/photos/03-2116-3T.png" alt="general">
-			<img src="https://androidayuda.com/wp-content/uploads/2014/09/Apertura-Samsung.jpg" alt="samsung">
-			<img src="https://faragoklima.hu/wp-content/uploads/2020/03/LG-logo.jpg" alt="lg">
-			<img src="https://cdn3.volusion.com/dxylq.nruds/v/vspfiles/photos/03-2116-3T.png" alt="kalley">
-			<img src="https://s.yimg.com/aah/yhst-172533293-9/revell-h-1281-mickey-thompson-s-challenger-i-406-6-m-p-h-speed-record-holder-1-25-3.jpg" alt="challenger">
-			<img src="https://faragoklima.hu/wp-content/uploads/2020/03/Panasonic-logo.jpg" alt="panasonic">
-			<img src="https://lyonstudios.com/wp-content/uploads/2016/09/Hyundai.jpg" alt="hyundai">
-			<img src="https://www.todopurificadoresdeaire.com/wp-content/uploads/2020/11/philips-logotipo-450x350.jpg" alt="phillips">
-			<img src="https://images.squarespace-cdn.com/content/v1/5c9b8e8ea9ab9575d0f99c55/1554388325882-WG6H9S2GKR4FSA94S6RB/Sony.jpg" alt="sony">
-			<img src="https://m.media-amazon.com/images/I/71YL+L4GeKS._AC_SX450_.jpg" alt="AOC">
-			<img src="https://androidayuda.com/wp-content/uploads/2014/10/Xiaomi-Logo-Portada.jpg" alt="xiaomi">
-			<img src="https://tribuneonlineng.com/wp-content/uploads/2018/10/TCL.jpg" alt="TCL">				
-		</div>
-		<div class="col-md-8">
-			<div class="scroll-brands">
-				<div class="brand-column"> 
-					<a onmouseover="HoverImage(this)" href="" id="samsung" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="samsung">
-					</a>
-					<a onmouseover="HoverImage(this)" href="" id="lg" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="lg">
-					</a>
-				</div>
-				<div class="brand-column"> 
-					<a onmouseover="HoverImage(this)" href="" id="kalley" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="kalley">
-					</a>
-					<a onmouseover="HoverImage(this)" href="" id="challenger" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="challenger">
-					</a>
-				</div>
-				<div class="brand-column"> 
-					<a onmouseover="HoverImage(this)" href="" id="panasonic" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="panasonic">
-					</a>
-					<a onmouseover="HoverImage(this)" href="" id="hyundai" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="hyundai">
-					</a>
-				</div>
-				<div class="brand-column"> 
-					<a onmouseover="HoverImage(this)" href="" id="phillips" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="phillips">
-					</a>
-					<a onmouseover="HoverImage(this)" href="" id="sony" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="sony">
-					</a>
-				</div>
-				<div class="brand-column"> 
-					<a onmouseover="HoverImage(this)" href="" id="AOC" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="AOC">
-					</a>
-					<a onmouseover="HoverImage(this)" href="" id="xiaomi" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="xiaomi">
-					</a>
-				</div>
-				<div class="brand-column"> 
-					<a onmouseover="HoverImage(this)" href="" id="TCL" class="brand"> 
-						<img src="https://www.kalley.com.co/medias/kalley-logo.png?context=bWFzdGVyfGltYWdlc3w2MTE2fGltYWdlL3BuZ3xpbWFnZXMvaDUyL2gzYy8xMDA2OTEwNjU1Njk1OC5wbmd8OTg2ZmNiNGE4OGQ4YTdkMGUwMTFlYzc3N2NhNjU1YzU3OWExMDBmNGY0OTNmOWEyYTViNjQ4Yjk5OWJlYjk0OQ" alt="TCL">
-					</a>
-				</div>					
+</div>
+<div class="gray-container mb-1">
+	<div class="container">
+		<div class="row" id="gray-pill"> 
+			<div class="col-md-4">
+			 	<img class="active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/TV-INICIAL.png" alt="televisores">
+				<img src="https://androidayuda.com/wp-content/uploads/2014/09/Apertura-Samsung.jpg" alt="samsung">
+				<img src="https://faragoklima.hu/wp-content/uploads/2020/03/LG-logo.jpg" alt="lg">
+				<img src="https://cdn3.volusion.com/dxylq.nruds/v/vspfiles/photos/03-2116-3T.png" alt="kalley">
+				<img src="https://s.yimg.com/aah/yhst-172533293-9/revell-h-1281-mickey-thompson-s-challenger-i-406-6-m-p-h-speed-record-holder-1-25-3.jpg" alt="challenger">
+				<img src="https://faragoklima.hu/wp-content/uploads/2020/03/Panasonic-logo.jpg" alt="panasonic">
+				<img src="https://lyonstudios.com/wp-content/uploads/2016/09/Hyundai.jpg" alt="hyundai">
+				<img src="https://www.todopurificadoresdeaire.com/wp-content/uploads/2020/11/philips-logotipo-450x350.jpg" alt="philips">
+				<img src="https://images.squarespace-cdn.com/content/v1/5c9b8e8ea9ab9575d0f99c55/1554388325882-WG6H9S2GKR4FSA94S6RB/Sony.jpg" alt="sony">
+				<img src="https://m.media-amazon.com/images/I/71YL+L4GeKS._AC_SX450_.jpg" alt="AOC">
+				<img src="https://androidayuda.com/wp-content/uploads/2014/10/Xiaomi-Logo-Portada.jpg" alt="xiaomi">
+				<img src="https://tribuneonlineng.com/wp-content/uploads/2018/10/TCL.jpg" alt="TCL">				
 			</div>
-			<k-link href="" icon="alk-icon-derecha">Ver todos los TV</k-link>
+			<div class="col-md-8">
+				<div class="scroll-brands">
+					<div class="brand-column"> 
+						<a onmouseover="HoverImage(this)" href="" id="samsung" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/samsung.png" alt="samsung">
+						</a>
+						<a onmouseover="HoverImage(this)" href="" id="TCL" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/tcl.png" alt="TCL">
+						</a>
+					</div>
+					<div class="brand-column"> 
+						<a onmouseover="HoverImage(this)" href="" id="lg" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/lg.png" alt="lg">
+						</a>
+						<a onmouseover="HoverImage(this)" href="" id="challenger" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/challenger.png" alt="challenger">
+						</a>
+					</div>
+					<div class="brand-column"> 
+						<a onmouseover="HoverImage(this)" href="" id="kalley" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/kalley.png" alt="kalley">
+						</a>
+						<a onmouseover="HoverImage(this)" href="" id="panasonic" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/panasonic.png" alt="panasonic">
+						</a>
+					</div>
+					<div class="brand-column"> 
+						<a onmouseover="HoverImage(this)" href="" id="hyundai" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/hyundai.png" alt="hyundai">
+						</a>
+						<a onmouseover="HoverImage(this)" href="" id="sony" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/sony.png" alt="sony">
+						</a>
+					</div>
+					<div class="brand-column"> 
+						<a onmouseover="HoverImage(this)" href="" id="philips" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/philips.png" alt="philips">
+						</a>
+						<a onmouseover="HoverImage(this)" href="" id="AOC" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/aoc.png" alt="AOC">
+						</a>
+					</div>
+					<div class="brand-column"> 
+						<a onmouseover="HoverImage(this)" href="" id="xiaomi" class="brand"> 
+							<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/xiaomi.png" alt="xiaomi">
+						</a>
+					</div>					
+				</div>
+				<k-link href="" icon="alk-icon-derecha">Ver todos los TV</k-link>
+			</div>
+			
 		</div>
-		
 	</div>
-	<div class="row">
+</div>
+<div class="container mb-2">
+	<div class="screen-size mb-1">
 		<h2>Compra por tamaño de pantalla</h2>
-		<a href="" class="col-xs-6 col-md-3"> 
-			<img src="" alt="32 pulgadas">
+		<a href="" class="inches">
+		<div class="cont"> 
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-1-b.jpg" alt="32 pulgadas">
+			</div>
+			<h3>TV de 32"</h3>
 		</a>
-		<a href="" class="col-xs-6 col-md-3"> 
-			<img src="" alt="40 pulgadas">
+		<a href="" class="inches">
+			<div class="cont">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-2-b.jpg" alt="40 pulgadas">
+			</div>
+			<h3>TV de 40" - 49"</h3>
 		</a>
-		<a href="" class="col-xs-6 col-md-3"> 
-			<img src="" alt="50 pulgadas">
+		<a href="" class="inches">
+			<div class="cont">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-3-b.jpg" alt="50 pulgadas">
+			</div>
+			<h3>TV de 50" - 59"</h3>
 		</a>
-		<a href="" class="col-xs-6 col-md-3"> 
-			<img src="" alt="60 pulgadas">
+		<a href="" class="inches">
+			<div class="cont">
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-4-b.jpg" alt="60 pulgadas">
+			</div>
+			<h3>TV de 60" +</h3>
 		</a>
 	</div>
 	<div class="menu-circular"> 
-		<h2>Complemeta tu compra</h2>
-		<k-grid> 	
-			<k-circle></k-circle>
-			<k-circle></k-circle>
-			<k-circle></k-circle>
-			<k-circle></k-circle>
-		</k-grid>
+		<h2>Complementa tu compra</h2>
+		<a href="">
+			<div class="circle"> 
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-audio.jpg" lazy="loading" alt="barras audio">
+			</div> 
+			<h3>Barras de audio</h3>
+		</a>
+		<a href="">
+			<div class="circle"> 
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-soporte.jpg" lazy="loading" alt="soportes TV">
+			</div> 
+			<h3>Soportes para TV</h3>
+		</a>
+		<a href="">
+			<div class="circle"> 
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-pines.jpg" lazy="loading" alt="pines">
+			</div> 
+			<h3>Pines</h3>
+		</a>
+		<a href="">
+			<div class="circle"> 
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-stream.jpg" lazy="loading" alt="streaming">
+			</div> 
+			<h3>Streaming</h3>
+		</a>
+		<a href="">
+			<div class="circle"> 
+				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-instalacion.jpg" lazy="loading" alt="instalaciones">
+			</div> 
+			<h3>Instalación</h3>
+		</a>
 	</div>
 </div>
-<div class="conoce-mas">	
-	<div class="container-row"> 
-		<div class="col-md-6"> 
-			<img src="" alt="conoce más">
+<div class="conoce-mas mb-1">	
+	<div class="container row"> 
+		<div class="col-md-7"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/conoce-mas.png" alt="conoce más">
 		</div>
-		<div class="col-md-6"> 
+		<div class="col-md-5"> 
 			<p id="big-text">Conoce más sobre la tecnología de los TV</p>
 			<p>Ten en cuenta antes de comprar tu nueva Tv, las diferentes tecnologías con las que estos están fabricados</p>
 			<div class="button-container"> 
@@ -271,7 +418,10 @@ window.onload = function () {
         owl.owlCarousel({
             margin: 12,
             loop: true,
-            responsive: {
+            items:3,
+            //slideBy: 3,
+            //autoWidth:true,
+            /*responsive: {
                 0: {
                     items: 1,
                 },
@@ -281,7 +431,7 @@ window.onload = function () {
                 1000: {
                     items: 3,
                 },
-            },
+            },*/
         });
     };
 </script>
