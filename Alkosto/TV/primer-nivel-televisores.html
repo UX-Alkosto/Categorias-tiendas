@@ -42,10 +42,9 @@
 	}
 	#big-text {
 	    color: var(--primary-color2);
-	    font-size: 40px;
+	    font-size: 24px;
 	    font-weight: bold;
-	    line-height: 44px;
-	    max-width: 365px;
+	    line-height: 24px;
 	    margin: 0 auto 1em;
 	}
 	#gray-pill{
@@ -83,24 +82,52 @@
 	    padding:0;
 	    width:calc(66.66666667% - 1.5em);
 	}
+	.banner-mobile{display:none;}
 	.box-circular {
-		box-shadow: rgb(0 0 0 / 10%) 0px 2px 3px 2px;
+		background: white;
+	    box-shadow: rgb(0 0 0 / 10%) 0px 2px 3px 2px;
 	    display: flex;
 	    margin: 24px auto 0 auto;
 	    border-radius: 8px;
 	    width: calc(100% - 48px);
-	    padding: 24px;	    
+	    padding: 24px;
+	    position: absolute;
+	    right: 0;
+	    top: 40px;
+	    left: 0;
+	    z-index: 1;	    
+	}
+	.button-container {
+	    margin-bottom: 32px;
+	}
+	.button-container k-button {
+	    width: 140px;
+	    min-height: 40px;
+	    padding: 0 !important;
+	    margin-right: 12px;
 	}
 	.conoce-mas {
-	    background-color: #E5ECF4;
-	    padding: 6em 0 3em;
+	    background: transparent linear-gradient(0deg, #FFFFFF1A 0%, #FFFFFF1A 16%, #0023491A 100%) 0% 0% no-repeat padding-box;;
+	    padding: 9em 48px 3em;
+	    width: 100%;
+	    margin: 0;
+	    border-radius: 8px;
+	    position: relative;
+	    z-index: 0;
+	    top: 76px;
+	    display: flex;
+    	align-items: center;
+	}
+	.conoce-mas iframe {
+	    margin-bottom: 16px;
 	}
 	.conoce-mas img {
-	    width: 100%;
+	    width: 100% !important;
+	    max-height: inherit !important;
 	}
 	.conoce-mas p {
-	    text-align: center;
 	    font-size: 16px;
+	    margin-bottom:36px;
 	}
 	.conoce-mas .container{
 		margin:0 auto;
@@ -168,10 +195,11 @@
 	.screen-size,.menu-circular {
 	    display: flex;
 	    flex-wrap:wrap;
-	    justify-content: space-between;
+	    justify-content: space-between;	    
 	}
 	.menu-circular {
 	    margin: 0 auto;
+	    position:relative;
 	}
 	.menu-circular k-title-underline ,.screen-size k-title-underline {flex-basis:100%;}
 	.menu-circular a {
@@ -184,6 +212,14 @@
 	.menu-circular a:last-child {
 	    border-right: none;
 	}
+	.ofertas {
+	    margin: 32px 0 48px;
+	}
+	.ofertas div {
+	    padding: 0 12px;
+	}
+	.ofertas img{width:100%;}
+	.ofertas k-title-underline {margin-bottom:24px;}
 	.screen-size h3, .menu-circular h3 {
 	    color:var(--primary-color2);
 	    text-align: center;
@@ -263,14 +299,183 @@
 	    justify-content: space-between;
 	    margin-top:24px;
 	}
+	@media screen and (max-width:1279px){
+		.scroll-brands .owl-nav{
+	   		display:block;
+	   		bottom: 115px;
+	   	}
+	}
+	@media screen and (max-width:1007px){
+		h1 {
+		    margin: 1em 0 1em;
+		}
+		.banner-mobile {
+		    display: flex;
+		    justify-content: center;
+		    margin-bottom: 24px;
+		}
+		.banner-mobile img{
+			max-width:520px;
+			width:100%;
+		}
+		.button-container k-button {
+    		width: 90px;
+    		margin-right: 8px;
+    	}
+    	.inches {
+		    flex-basis: inherit;
+		    width: 230px;
+		    margin-right: 12px;
+		}
+		.inches:first-child {
+		    margin-left: 16px;
+		}
+		.inches:last-child{
+			margin-right:16px;
+		}
+    	.ofertas .col-xs-12.col-md-6 {
+		    margin-bottom: 20px;
+		}
+		.menu, .screen {
+		    padding: 0 !important;
+		}
+		.screen-size{
+			 background-color: #f5f5f5;
+			padding:28px 0;
+		}
+		.scroll-inches {
+		    margin: 0;
+		    overflow-x: auto;
+		    overflow-y: hidden;
+		    position: relative;
+		    width: 1007px;
+		    display: grid;
+		    grid-template-columns: repeat(4, 1fr);
+		}
+		.tvs{display:none;}
+		#gray-pill{
+			background-color:white;
+			flex-wrap:wrap;
+			justify-content: center;
+		}
+		#gray-pill .col-md-4 img {
+		    opacity: 1;
+		    left: 0;
+		    position: relative;
+		    right: 0;
+		    top: inherit;
+		    z-index: 0;
+		}
+		#gray-pill .col-md-8 {
+		    width: calc(100% - 1.5em);
+		}		
+	}
+	@media screen and (max-width:767px){
+		#big-text{
+			display:block;
+			text-align:center;
+		}
+		#gray-pill{
+			margin:0;
+		}
+		#gray-pill .col-md-8 {
+		    width: 100%;
+		}
+		.box-circular {
+			flex-wrap:wrap;		   
+		    width: 100%;
+		    margin: 24px 16px 0;		    
+		    position: relative;		    
+		    top: 0;		    
+		}
+		.brand {
+		    height: 72px;
+		    margin: 1.25em 0;
+		}
+		.conoce-mas{
+			border-radius: 0;
+			flex-direction: column;
+			padding: 3em 12px;
+			top:32px;
+		}
+		.conoce-mas k-link {
+		    display: block;
+		    margin: 0 auto;
+		}
+		.conoce-mas p{
+			display:none;
+		}
+		.conoce-mas .col-md-6:last-child {
+		    display: contents;
+		}
+		.menu-circular a {
+    		padding: 12px 0;
+    		flex-basis: calc(100%/3);
+    	}
+    	.menu-circular a:nth-child(1), .menu-circular a:nth-child(2), .menu-circular a:nth-child(3) {
+		    border-bottom: 1px dashed var(--text-color-disabled);
+		}
+		.menu-circular a:nth-child(3) {
+		    border-right: none;
+		}
+		.ofertas {
+		    margin: 32px 10px 48px;
+		}
+		.ofertas .col-xs-12.col-md-6 {
+		    margin-bottom: 12px;
+		}
+		.ofertas div {
+		    padding: 0 6px;
+		}
+		.scroll-brands {
+		    margin-right: 1px;
+		}
+	}
+	@media screen and (max-width:520px){
+		.banner-mobile {
+    		position: relative;
+    		margin-bottom: 24px;
+    	}
+		.banner-mobile img {
+		    left: -16px;
+		    width: calc(100% + 32px);
+		}
+		.box-circular {padding:16px;}
+		.brand {
+		    height: 72px;
+		    margin: 1.25em 0;
+		    padding:0 12px;
+		}
+		.button-container {
+		    margin: 24px 0;
+		}
+		.button-container k-button {
+		    width: 85px;
+		    min-height: 30px;
+		    margin-right: 4px;
+		}
+		.container {
+    		padding: 0 16px;
+    	}
+    	.menu-circular a {
+		    padding: 12px 4px;
+		    flex-basis: calc(99%/3);
+		}
+		.scroll-brands .owl-nav {
+		    bottom: 110px;
+		}
+	}
 </style>
 <div class="container">
-	<h1>Televisores</h1> 
+	<h1>Televisores</h1>
+	<div class="banner-mobile">
+		<img src="https://onlytech.com/wp-content/uploads/2020/12/Amazon-Basics-Fire-TV-520x320.jpg" alt="televisores banner">
+	</div>
 	<k-title-underline type="center">
 		<h2>Marcas televisores</h2> 
 	</k-title-underline>
 	<div class="row" id="gray-pill"> 
-				<div class="col-md-4">
+				<div class="col-md-4 tvs">
 				 	<img class="active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/TV-INICIAL.png" alt="televisores">
 					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/marcas/samsung.png" alt="samsung">
 					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/marcas/lg.png" alt="lg">
@@ -328,41 +533,45 @@
 					</div>
 				</div>			
 	</div>
-	<div class="screen-size mb-1">
-		<k-title-underline type="center">
-			<h2>Tamaños y pulgadas</h2>
-		</k-title-underline>
+</div>
+<div class="container screen">
+	<k-title-underline type="center">
+		<h2>Tamaños y pulgadas</h2>
+	</k-title-underline>
+	<div class="screen-size mb-1">	
 		<div class="scroll-inches">
 			<a href="" class="inches">
 				<div class="cont"> 
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-1-b.jpg" alt="32 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-32.jpg"alt="32 pulgadas">
 				</div>
 				<h3>TV de 32"</h3>
 				<p>Hasta 75 cm de ancho y 50 cms de alto</p>
 			</a>
 			<a href="" class="inches">
 				<div class="cont">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-2-b.jpg" alt="40 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-49.jpg"alt="40 pulgadas">
 				</div>
 				<h3>TV de 40" - 49"</h3>
 				<p>Hasta 109 cm de ancho y 61 cms de alto</p>
 			</a>
 			<a href="" class="inches">
 				<div class="cont">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-3-b.jpg" alt="50 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-59.jpg"alt="50 pulgadas">
 				</div>
 				<h3>TV de 50" - 59"</h3>
 				<p>Hasta 137 cm de ancho y 82 cms de alto</p>
 			</a>
 			<a href="" class="inches">
 				<div class="cont">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/Tamanos-tv-4-b.jpg" alt="60 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-60.jpg"alt="60 pulgadas">
 				</div>
 				<h3>TV de 60" +</h3>
 				<p>Desde 138 cm de ancho y 83 cms de alto en adelante</p>
 			</a>
 		</div>
 	</div>
+</div>
+<div class="container menu">
 	<div class="menu-circular">
 			<k-title-underline type="center"> 
 				<h2>Accessorios y complementos</h2>
@@ -393,36 +602,43 @@
 					<h3>Consolas</h3>
 				</a>
 			</div>
-	</div>
-	<div class="conoce-mas row mb-1">	
-			<div class="col-md-7"> 
-				<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/conoce-mas.png" alt="conoce más">
-			</div>
-			<div class="col-md-5"> 
-				<p id="big-text">Conoce más sobre la tecnología de los TV</p>
-				<p>Ten en cuenta antes de comprar tu nueva Tv, las diferentes tecnologías con las que estos están fabricados</p>
-				<div class="button-container"> 
-					<k-button variant="outline">LED</k-button>
-					<k-button variant="outline">QLED</k-button>
-					<k-button variant="outline">Mini LED</k-button>
+			<div class="conoce-mas row mb-1">	
+				<div class="col-md-6 tab-content"> 
+					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/conoce-mas.png" alt="conoce más">
+					<iframe class="tab-pane" role="tabpanel" id="LED" width="100%" height="315" src="https://www.youtube.com/embed/SDA6JSEfr6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="QLED" width="100%" height="315" src="https://www.youtube.com/embed/dlmw9BI2kcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="MINILED" width="100%" height="315" src="https://www.youtube.com/embed/ZFVv198t208" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-				<k-link href="" icon="alk-icon-derecha">Conoce más</k-link>
+				<div class="col-md-6"> 
+					<p id="big-text">Conoce más sobre la tecnología de los TV</p>
+					<p>Ten en cuenta antes de comprar tu nueva Tv, las diferentes tecnologías con las que estos están fabricados</p>
+					<div class="button-container" role="tablist"> 
+						<k-button data-target="#LED" variant="outline" role="tab" data-toggle="tab">LED</k-button>
+						<k-button data-target="#QLED" variant="outline" role="tab" data-toggle="tab">QLED</k-button>
+						<k-button data-target="#MINILED" variant="outline" role="tab" data-toggle="tab">Mini LED</k-button>
+					</div>
+					<k-link href="" icon="alk-icon-derecha">Conoce más</k-link>
+				</div>
 			</div>
 	</div>
-	<div class=" row"> 
-		<h2>Ofertas y lanzamientos</h2>
+	
+	<div class="ofertas row">
+		<k-title-underline type="center"> 
+			<h2>Ofertas y lanzamientos</h2>
+		</k-title-underline>
 		<div class="col-xs-12 col-md-6"> 
-			<img src="" alt="">
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/oferta-tv-1.jpg" alt="oferta TV">
 		</div>
 		<div class="col-xs-6 col-md-3"> 
-			<img src="" alt="">
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/oferta-tv-2.jpg" alt="oferta TV">
 		</div>
 		<div class="col-xs-6 col-md-3"> 
-			<img src="" alt="">
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/oferta-tv-3.jpg" alt="oferta TV">
 		</div>
 	</div>
 </div>
 <script> 
+	
 	const brandImage=document.querySelectorAll('.brand');
 	const brandImageCloned=document.querySelectorAll('.cloned .brand');
     //for each imput element set the id and make the function
@@ -440,6 +656,7 @@
 			    }
 			}
     };
+ 
 window.onload = function () {
     //Jquery
    var owl = $(".scroll-brands");
@@ -452,14 +669,21 @@ window.onload = function () {
             responsive: {
                 0: {
                     items: 3,
+                    loop:true,
                 },
-                600: {
-                    items: 3,
+                768: {
+                    items: 4,
                 },
-                1000: {
+                1280: {
                     items: 5,
                 },
             },
         });
+	    const newContainer=document.querySelectorAll('.conoce-mas .col-md-6:first-child');
+	    const bigText = document.getElementById('big-text')
+	     if (window.innerWidth < 768) {
+		     $(bigText).detach().prependTo(newContainer)
+		}
     };
+   
 </script>
