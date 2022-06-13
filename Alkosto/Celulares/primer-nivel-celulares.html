@@ -266,6 +266,12 @@
 	    padding: 0 12px;
 	}
 	.ofertas img{width:100%;}
+	.ofertas ins {
+	    overflow: hidden;
+	}
+	.ofertas ins:hover img{
+		transform:scale(1.025);
+	}
 	.ofertas k-title-underline {margin-bottom:24px;}
 	.seguro-gratis{margin-bottom:32px;}
 	.screen-size h3, .menu-circular h3 {
@@ -350,7 +356,7 @@
 	@media screen and (max-width:1279px){
 		.scroll-brands .owl-nav{
 	   		display:block;
-	   		bottom: 115px;
+	   		bottom: 150px;
 	   	}
 	}
 	@media screen and (max-width:1007px){
@@ -365,6 +371,21 @@
 		.banner-mobile img{
 			max-width:520px;
 			width:100%;
+		}
+		.bg_blue{ 
+			height: auto;
+			border-bottom: 24px solid #f5f5f5;
+		}
+		.bg_blue iframe, .bg_blue .col-md-4, .bg_blue .col-md-3{top:0;}
+		.bg_blue iframe {
+			margin-bottom:24px;
+		}
+		.bg_blue img,.bg_blue p,.bg_blue k-button {display:none;}
+		.bg_blue .container {display:block;}
+		.bg_blue #big-text {
+		    margin-top: 24px;
+		    text-align: center;
+		    display: block;
 		}
 		.button-container k-button {
     		width: 90px;
@@ -458,12 +479,12 @@
 		}
 		.menu-circular a {
     		padding: 12px 0;
-    		flex-basis: calc(100%/3);
+    		flex-basis: calc(100%/2);
     	}
-    	.menu-circular a:nth-child(1), .menu-circular a:nth-child(2), .menu-circular a:nth-child(3) {
+    	.menu-circular a:nth-child(1), .menu-circular a:nth-child(2){
 		    border-bottom: 1px dashed var(--text-color-disabled);
 		}
-		.menu-circular a:nth-child(3) {
+		.menu-circular a:nth-child(2),.menu-circular a:nth-child(4) {
 		    border-right: none;
 		}
 		.ofertas {
@@ -488,6 +509,7 @@
 		    left: -16px;
 		    width: calc(100% + 32px);
 		}
+		.bg_blue iframe {height: 200px;}
 		.box-circular {padding:16px;}
 		.brand {
 		    height: 72px;
@@ -498,7 +520,7 @@
 		    margin: 24px 0;
 		}
 		.button-container k-button {
-		    width: 85px;
+		    width: 95px;
 		    min-height: 30px;
 		    margin-right: 4px;
 		}
@@ -507,18 +529,15 @@
     	}
     	.menu-circular a {
 		    padding: 12px 4px;
-		    flex-basis: calc(99%/3);
-		}
-		.scroll-brands .owl-nav {
-		    bottom: 110px;
+		    flex-basis: calc(99%/2);
 		}
 	}
 </style>
 <div class="container">
 	<h1>Celulares</h1>
-	<div class="banner-mobile">
-		<img src="https://onlytech.com/wp-content/uploads/2020/12/Amazon-Basics-Fire-TV-520x320.jpg" alt="televisores banner">
-	</div>
+	<a href="/celulares/telefonos-celulares/c/BI_101_ALKOS" class="banner-mobile">
+		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/AK-GENERAL-CELULARES.jpg" alt="celulares banner">
+	</a>
 	<k-title-underline type="center">
 		<h2>Marcas celulares</h2> 
 	</k-title-underline>
@@ -539,58 +558,58 @@
 				<div class="col-md-8">
 					<div class="scroll-brands">
 						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="samsung" class="brand" type="category-item">
-			                    <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/samsung.png" alt="samsung">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/samsung/c/BI_M017_ALKOS" id="samsung" class="brand" type="category-item">
+			                    <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/SAMSUNG.png" alt="samsung">
 			                </k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="nokia" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/nokia.png" alt="nokia">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/nokia/c/BI_M016_ALKOS" id="nokia" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/NOKIA.png" alt="nokia">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="alcatel" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/alcatel.png" alt="alcatel">
-							</k-card>
-						</div>
-						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="iphone" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/iphone.png" alt="iphone">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="oppo" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/oppo.png" alt="oppo">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="kalley" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/kalley.png" alt="kalley">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/alcatel/c/BI_M001_ALKOS" id="alcatel" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/ALCATEL.png" alt="alcatel">
 							</k-card>
 						</div>
 						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="xiaomi" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/xiaomi.png" alt="xiaomi">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/iphone/c/BI_M009_ALKOS" id="iphone" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/IPHONE.png" alt="iphone">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="realme" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/realme.png" alt="realme">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/oppo/c/BI_M024_ALKOS" id="oppo" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/OPPO.png" alt="oppo">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="huawei" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/huawei.png" alt="huawei">
-							</k-card>
-						</div>
-						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="motorola" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/motorola.png" alt="motorola">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="zte" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/zte.png" alt="zte">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="honor" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/honor.png" alt="honor">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/kalley/c/BI_M010_ALKOS" id="kalley" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/KALLEY.png" alt="kalley">
 							</k-card>
 						</div>
 						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="vivo" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/vivo.png" alt="vivo">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/xiaomi/c/BI_M021_ALKOS" id="xiaomi" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/XIAOMI.png" alt="xiaomi">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="tcl" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/tcl.png" alt="tcl">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/realme/c/BI_M026_ALKOS" id="realme" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/REALME.png" alt="realme">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="tecno" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/tecno.png" alt="tecno">
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/huawei/c/BI_M008_ALKOS" id="huawei" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/HUAWEI.png" alt="huawei">
+							</k-card>
+						</div>
+						<div class="brand-column"> 
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/motorola/c/BI_M015_ALKOS" id="motorola" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/MOTOROLA.png" alt="motorola">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/zte/c/BI_M023_ALKOS" id="zte" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/ZTE.png" alt="zte">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/honor/c/BI_M006_ALKOS" id="honor" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/HONOR.png" alt="honor">
+							</k-card>
+						</div>
+						<div class="brand-column"> 
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/vivo/c/BI_M020_ALKOS" id="vivo" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/VIVO.png" alt="vivo">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/tcl/c/BI_M025_ALKOS" id="tcl" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/TCL.png" alt="tcl">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/tecno/c/BI_M027_ALKOS" id="tecno" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/TECNO.png" alt="tecno">
 							</k-card>
 						</div>				
 					</div>
@@ -603,13 +622,13 @@
 		<div class="col-md-4"> 
 			<p id="big-text">Solo en Alkosto tu celular viene con SEGURO GRATIS</p>
 			<p>Compra tu celular libre y Alkosto te obsequia un seguro gratis, contra daño accidental.</p>
-			<k-button href="">Más información</k-button>
+			<k-button href="/seguros/seguro-celulares/c/seguro-celulares">Más información</k-button>
 		</div>
 		<div class="col-md-2"> 
 			<img src="https://www.dhresource.com/260x260/f2/albu/g4/M00/B7/E7/rBVaEVe9FemAC4JaAAarSWdVkG4638.jpg" lazy="loading">
 		</div>
 		<div class="col-md-6"> 
-			<iframe class="tab-pane" role="tabpanel" id="CAMARAS" width="100%" height="315" src="https://www.youtube.com/embed/SDA6JSEfr6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe width="100%" height="315" src="https://static.demoup.com/video/1432/lfv1huXsFnYJPYwdpTQ4fva8iZsfBR" title="seguro gratis celulares" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
@@ -639,7 +658,7 @@
 			</div>
 			<div class="conoce-mas row mb-1">	
 				<div class="col-md-6 tab-content"> 
-					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/conoce-mas.png" alt="conoce más">
+					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/intro-tecnologias-cel.png" alt="conoce más">
 					<iframe class="tab-pane" role="tabpanel" id="CAMARAS" width="100%" height="315" src="https://www.youtube.com/embed/SDA6JSEfr6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<iframe class="tab-pane" role="tabpanel" id="BATERIA" width="100%" height="315" src="https://www.youtube.com/embed/dlmw9BI2kcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<iframe class="tab-pane" role="tabpanel" id="MEMORIA" width="100%" height="315" src="https://www.youtube.com/embed/ZFVv198t208" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -652,7 +671,7 @@
 						<k-button data-target="#BATERIA" variant="outline" role="tab" data-toggle="tab">BATERÍA</k-button>
 						<k-button data-target="#MEMORIA" variant="outline" role="tab" data-toggle="tab">MEMORÍA</k-button>
 					</div>
-					<k-link href="" icon="alk-icon-derecha">Conoce más</k-link>
+					<k-link href="/guia-compra/guia-celulares/c/guia-celulares" icon="alk-icon-derecha">Conoce más</k-link>
 				</div>
 			</div>
 	</div>
@@ -679,13 +698,13 @@
 			<p id="big-text">Compra en Alkosto y recibe el mismo día</p>
 			<p>Comprando en Alkosto  antes de las 4:00 PM puedes recibir tus compras el mismo día, aplican términos y condiciones.
 			</p>
-			<k-button href="">Más información</k-button>
+			<k-button href="/entregas-devoluciones/entrega-hoy/c/envio-express">Más información</k-button>
 		</div>
 		<div class="col-md-3"> 
 			<img src="https://www.dhresource.com/260x260/f2/albu/g4/M00/B7/E7/rBVaEVe9FemAC4JaAAarSWdVkG4638.jpg" lazy="loading">
 		</div>
 		<div class="col-md-6"> 
-			<iframe class="tab-pane" role="tabpanel" id="CAMARAS" width="100%" height="315" src="https://www.youtube.com/embed/SDA6JSEfr6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="tab-pane" role="tabpanel" width="100%" height="315" src="https://static.demoup.com/video/1432/JstfJoki9Uk7XAejJNsAhEigmKMNZT" title="Entrega Hoy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
@@ -733,7 +752,7 @@ window.onload = function () {
             },
         });
 	    const newContainer=document.querySelectorAll('.conoce-mas .col-md-6:first-child');
-	    const bigText = document.getElementById('big-text')
+	    const bigText = document.querySelectorAll('.conoce-mas #big-text')
 	     if (window.innerWidth < 768) {
 		     $(bigText).detach().prependTo(newContainer)
 		}
