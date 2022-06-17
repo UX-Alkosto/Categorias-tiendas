@@ -73,7 +73,6 @@
 		opacity:1;
 	}
 	#gray-pill k-link {
-		--primary-color2: var(--price-color);
 	    display: table;
 	    margin: 0.5em auto 0;    
 	}
@@ -430,6 +429,9 @@
 			flex-wrap:wrap;
 			justify-content: center;
 		}
+		#gray-pill k-link {
+			display:none;
+		}
 		#gray-pill .col-md-4 img {
 		    opacity: 1;
 		    left: 0;
@@ -440,7 +442,8 @@
 		}
 		#gray-pill .col-md-8 {
 		    width: calc(100% - 1.5em);
-		}		
+		}
+
 	}
 	@media screen and (max-width:767px){
 		#big-text{
@@ -606,6 +609,7 @@
 							</k-card>
 						</div>				
 					</div>
+					<k-link href="/tv-video/televisores/c/BI_120_ALKOS" icon="alk-icon-derecha">Ver todo en TV</k-link>
 				</div>			
 	</div>
 </div>
@@ -755,7 +759,7 @@
 		</div>
 	</div>
 </div>
-<script> 
+<script defer> 
 	
 	const brandImage=document.querySelectorAll('.brand');
 	const brandImageCloned=document.querySelectorAll('.cloned .brand');

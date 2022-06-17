@@ -73,7 +73,6 @@
 		opacity:1;
 	}
 	#gray-pill k-link {
-		--primary-color2: var(--price-color);
 	    display: table;
 	    margin: 0.5em auto 0;    
 	}
@@ -437,6 +436,9 @@
 			flex-wrap:wrap;
 			justify-content: center;
 		}
+		#gray-pill k-link {
+			display:none;
+		}
 		#gray-pill .col-md-4 img {
 		    opacity: 1;
 		    left: 0;
@@ -628,6 +630,7 @@
 							</k-card>
 						</div>				
 					</div>
+					<k-link href="/celulares/telefonos-celulares/c/BI_101_ALKOS" icon="alk-icon-derecha">Ver todo en celulares</k-link>
 				</div>			
 	</div>
 </div>
@@ -686,7 +689,7 @@
 						<k-button data-target="#BATERIA" variant="outline" role="tab" data-toggle="tab">BATERÍA</k-button>
 						<!--k-button data-target="#MEMORIA" variant="outline" role="tab" data-toggle="tab">MEMORÍA</k-button-->
 					</div>
-					<k-link href="/guia-compra/guia-celulares/c/guia-celulares" icon="alk-icon-derecha">Conoce más</k-link>
+					<k-link href="/guia-compra/guia-celulares/c/guia-celulares" icon="alk-icon-derecha">Ver guía completa</k-link>
 				</div>
 			</div>
 	</div>
@@ -734,7 +737,7 @@
 	</div>
 </div>
 
-<div class="entrega-hoy bg_blue"> 
+<!--div class="entrega-hoy bg_blue"> 
 	<div class="container row"> 
 		<div class="col-md-3"> 
 			<p id="big-text">Compra en Alkosto y recibe el mismo día</p>
@@ -749,7 +752,7 @@
 			<iframe width="100%" height="315" src="https://static.demoup.com/video/1432/JstfJoki9Uk7XAejJNsAhEigmKMNZT" title="Entrega Hoy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
-</div>
+</div-->
 
 <div class="container barra"> 
 	<!-- AdGlare: Barra Cel Primer nivel --><span id=zone819166035></span><script>
@@ -762,7 +765,7 @@
 	</script>
 </div>
 
-<script> 
+<script defer> 
 	
 	const brandImage=document.querySelectorAll('.brand');
 	const brandImageCloned=document.querySelectorAll('.cloned .brand');
