@@ -82,6 +82,49 @@
 	    padding:0;
 	    width:calc(66.66666667% - 1.5em);
 	}
+	.bg_blue {
+	    background-color: var(--primary-color2);
+	    border-bottom: 48px solid #f5f5f5;
+	    height: 358px;
+	    margin-top:48px;
+	}
+	.bg_blue iframe {
+	    position: relative;
+	    top: -20px;
+	    height: 350px;
+	}
+	.bg_blue img {
+	    width: 100%;
+	    max-width: 260px;
+	    display: block;
+	    margin: 0 auto;
+	}
+	.bg_blue k-button {
+	    padding: 0;
+	    min-height: 44px;
+	    min-width: 240px;
+	}
+	.bg_blue p {
+	    font-size: 16px;
+	    color: white;
+	    margin-bottom: 40px;
+	}
+	.bg_blue .container {
+	    margin: 0 auto;
+	    display: flex;
+	    align-items: center;
+	}
+	.bg_blue .col-md-3,	.bg_blue .col-md-4 {
+	    position: relative;
+	    top: -24px;
+	}
+	.bg_blue .col-md-6 {
+	    position: relative;
+	}
+	.bg_blue .col-md-4, .bg_blue .col-md-6 {
+	    padding: 0;
+	}
+	.bg_blue #big-text {color:white;}
 	.banner-mobile{display:none;}
 	.box-circular {
 		background: white;
@@ -218,10 +261,20 @@
 	.ofertas div {
 	    padding: 0 12px;
 	}
-	.ofertas img{width:100%;}
+	.ofertas img{
+		width:100%;
+		transition:ease all .3s;
+	}
+	.ofertas ins {
+	    overflow: hidden;
+	}
+	.ofertas ins:hover img{
+		transform:scale(1.025);
+	}
 	.ofertas k-title-underline {margin-bottom:24px;}
 	.screen-size h3, .menu-circular h3 {
 	    color:var(--primary-color2);
+	    font-size:16px;
 	    text-align: center;
 	    transition:.3s ease all;
 	}
@@ -318,6 +371,21 @@
 			max-width:520px;
 			width:100%;
 		}
+		.bg_blue{ 
+			height: auto;
+			border-bottom: 24px solid #f5f5f5;
+		}
+		.bg_blue iframe, .bg_blue .col-md-4, .bg_blue .col-md-3{top:0;}
+		.bg_blue iframe {
+			margin-bottom:24px;
+		}
+		.bg_blue img,.bg_blue p,.bg_blue k-button {display:none;}
+		.bg_blue .container {display:block;}
+		.bg_blue #big-text {
+		    margin-top: 24px;
+		    text-align: center;
+		    display: block;
+		}
 		.button-container k-button {
     		width: 90px;
     		margin-right: 8px;
@@ -335,6 +403,10 @@
 		}
     	.ofertas .col-xs-12.col-md-6 {
 		    margin-bottom: 20px;
+		}
+		.ofertas div:nth-child(3) ins {
+		    margin: 0 auto !important;
+		    display: block !important;
 		}
 		.menu, .screen {
 		    padding: 0 !important;
@@ -381,6 +453,7 @@
 		#gray-pill .col-md-8 {
 		    width: 100%;
 		}
+		.bg_blue{margin-top:12px;}
 		.box-circular {
 			flex-wrap:wrap;		   
 		    width: 100%;
@@ -440,6 +513,7 @@
 		    left: -16px;
 		    width: calc(100% + 32px);
 		}
+		.bg_blue iframe {height: 200px;}
 		.box-circular {padding:16px;}
 		.brand {
 		    height: 72px;
@@ -468,9 +542,9 @@
 </style>
 <div class="container">
 	<h1>Televisores</h1>
-	<div class="banner-mobile">
-		<img src="https://onlytech.com/wp-content/uploads/2020/12/Amazon-Basics-Fire-TV-520x320.jpg" alt="televisores banner">
-	</div>
+	<a href="/tv-video/televisores/c/BI_120_ALKOS" class="banner-mobile">
+		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/cabezote1.jpg" alt="televisores banner">
+	</a>
 	<k-title-underline type="center">
 		<h2>Marcas televisores</h2> 
 	</k-title-underline>
@@ -491,43 +565,44 @@
 				<div class="col-md-8">
 					<div class="scroll-brands">
 						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="samsung" class="brand" type="category-item">
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ASAMSUNG#" id="samsung" class="brand" type="category-item">
 			                    <img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/samsung.png" alt="samsung">
 			                </k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="TCL" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/tcl.png" alt="TCL">
+			                <k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3APHILIPS#" id="philips" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/philips.png" alt="philips">
 							</k-card>
+
 						</div>
 						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="lg" class="brand" type="category-item"> 
+							<k-card onmouseover="HoverImage(this)" href="tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ALG#" id="lg" class="brand" type="category-item"> 
 								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/lg.png" alt="lg">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="challenger" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/challenger.png" alt="challenger">
-							</k-card>
-						</div>
-						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="kalley" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/kalley.png" alt="kalley">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="panasonic" class="brand" type="category-item"> 
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3APANASONIC#" id="panasonic" class="brand" type="category-item"> 
 								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/panasonic.png" alt="panasonic">
 							</k-card>
 						</div>
 						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="hyundai" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/hyundai.png" alt="hyundai">
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3AKALLEY#" id="kalley" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/kalley.png" alt="kalley">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="sony" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/sony.png" alt="sony">
-							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ATCL" id="TCL" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/tcl.png" alt="TCL">
+							</k-card>							
 						</div>
-						<div class="brand-column"> 
-							<k-card onmouseover="HoverImage(this)" href="" id="philips" class="brand" type="category-item"> 
-								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/philips.png" alt="philips">
+						<div class="brand-column">
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ACHALLENGER#" id="challenger" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/challenger.png" alt="challenger">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="" id="xiaomi" class="brand" type="category-item"> 
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3AXIAOMI" id="xiaomi" class="brand" type="category-item"> 
 								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/xiaomi.png" alt="xiaomi">
+							</k-card>							
+						</div>
+						<div class="brand-column">
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3AHYUNDAI#" id="hyundai" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/hyundai.png" alt="hyundai">
+							</k-card>							
+							<k-card onmouseover="HoverImage(this)" href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Abrand%3ASONY&page=1&pageSize=25&sort=relevance" id="sony" class="brand" type="category-item"> 
+								<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/logos/sony.png" alt="sony">
 							</k-card>
 						</div>				
 					</div>
@@ -540,30 +615,30 @@
 	</k-title-underline>
 	<div class="screen-size mb-1">	
 		<div class="scroll-inches">
-			<a href="" class="inches">
+			<a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Amenos+de+32%27+pulgadas#" class="inches">
 				<div class="cont"> 
-						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-32.jpg"alt="32 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-32.png"alt="32 pulgadas">
 				</div>
 				<h3>TV de 32"</h3>
 				<p>Hasta 75 cm de ancho y 50 cms de alto</p>
 			</a>
-			<a href="" class="inches">
+			<a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+40%27+a+49%27+pulgadas#" class="inches">
 				<div class="cont">
-						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-49.jpg"alt="40 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-49.png"alt="40 pulgadas">
 				</div>
 				<h3>TV de 40" - 49"</h3>
 				<p>Hasta 109 cm de ancho y 61 cms de alto</p>
 			</a>
-			<a href="" class="inches">
+			<a href="/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+50%27+a+59%27+pulgadas#" class="inches">
 				<div class="cont">
-						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-59.jpg"alt="50 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-59.png"alt="50 pulgadas">
 				</div>
 				<h3>TV de 50" - 59"</h3>
 				<p>Hasta 137 cm de ancho y 82 cms de alto</p>
 			</a>
-			<a href="" class="inches">
+			<a href=/tv-video/televisores/c/BI_120_ALKOS?q=%3Arelevance%3Atamano-pantalla-tv-pulgadas%3Ade+60%27+pulgadas+y+más#" class="inches">
 				<div class="cont">
-						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-60.jpg"alt="60 pulgadas">
+						<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/tv-60.png"alt="60 pulgadas">
 				</div>
 				<h3>TV de 60" +</h3>
 				<p>Desde 138 cm de ancho y 83 cms de alto en adelante</p>
@@ -577,47 +652,47 @@
 				<h2>Accessorios y complementos</h2>
 			</k-title-underline>
 			<div class="box-circular">
-				<a href="">
+				<a href="/audio/audio-hogar/barras-sonido/c/BI_0024_ALKOS">
 					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-audio.jpg" lazy="loading" alt="barras audio">
 					<h3>Barras de audio</h3>
 				</a>
-				<a href="">
+				<a href="/accesorios-electronica/accesorios-tv-video/bases-soportes-tv/c/BI_0290_ALKOS">
 					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-soporte.jpg" lazy="loading" alt="soportes TV">
 					<h3>Soportes para TV</h3>
 				</a>
-				<a href=""> 
+				<a href="/tv-video/pines-virtuales-video/c/BI_124_ALKOS"> 
 					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-pines.jpg" lazy="loading" alt="pines"> 
 					<h3>Pines</h3>
 				</a>
-				<a href="">
+				<a href="/tv-video/reproductores-contenido-digital/c/BI_125_ALKOS?q=%3Arelevance%3A">
 					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-stream.jpg" lazy="loading" alt="streaming">				
 					<h3>Streaming</h3>
 				</a>
-				<a href="">				
+				<a href="/servicios/instalaciones/c/BI_189_ALKOS?q=%3Arelevance%3Atipo-servicio%3ATelevisores&page=1&pageSize=25&sort=relevance">				
 					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-instalacion.jpg" lazy="loading" alt="instalaciones">				 
 					<h3>Instalación</h3>
 				</a>
-				<a href="">				
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-instalacion.jpg" lazy="loading" alt="Consolas">				 
+				<a href="/videojuegos/consolas/c/BI_131_ALKOS">				
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/complementos/complemento-consolas-2.png" lazy="loading" alt="Consolas">				 
 					<h3>Consolas</h3>
 				</a>
 			</div>
 			<div class="conoce-mas row mb-1">	
 				<div class="col-md-6 tab-content"> 
 					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/conoce-mas.png" alt="conoce más">
-					<iframe class="tab-pane" role="tabpanel" id="LED" width="100%" height="315" src="https://www.youtube.com/embed/SDA6JSEfr6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<iframe class="tab-pane" role="tabpanel" id="QLED" width="100%" height="315" src="https://www.youtube.com/embed/dlmw9BI2kcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<iframe class="tab-pane" role="tabpanel" id="MINILED" width="100%" height="315" src="https://www.youtube.com/embed/ZFVv198t208" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="OLED" width="100%" height="315" src="https://static.demoup.com/video/1433/e3G1m3dgOHdQQLPUs0XtBhLYhMKTX4" title="OLED video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="NANOCELL" width="100%" height="315" src="https://static.demoup.com/video/1433/ajBNfhYtuovZbrSUXYEZdHZCUr8x7c" title="Nanocell video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="MINILED" width="100%" height="315" src="https://static.demoup.com/video/1433/AJRbZfU70AAhinkc2JlJ1RMRzrqoKx" title="MiniLED video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 				<div class="col-md-6"> 
 					<p id="big-text">Conoce más sobre la tecnología de los TV</p>
 					<p>Ten en cuenta antes de comprar tu nueva Tv, las diferentes tecnologías con las que estos están fabricados</p>
-					<div class="button-container" role="tablist"> 
-						<k-button data-target="#LED" variant="outline" role="tab" data-toggle="tab">LED</k-button>
-						<k-button data-target="#QLED" variant="outline" role="tab" data-toggle="tab">QLED</k-button>
+					<div class="button-container" role="tablist">
 						<k-button data-target="#MINILED" variant="outline" role="tab" data-toggle="tab">Mini LED</k-button>
+						<k-button data-target="#NANOCELL" variant="outline" role="tab" data-toggle="tab">Nanocell</k-button> 
+						<k-button data-target="#OLED" variant="outline" role="tab" data-toggle="tab">OLED</k-button>				
 					</div>
-					<k-link href="" icon="alk-icon-derecha">Conoce más</k-link>
+					<!--k-link href="/guia-compra/guia-tv/c/guia-tv" icon="alk-icon-derecha">Conoce más</k-link-->
 				</div>
 			</div>
 	</div>
@@ -627,13 +702,56 @@
 			<h2>Ofertas y lanzamientos</h2>
 		</k-title-underline>
 		<div class="col-xs-12 col-md-6"> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/oferta-tv-1.jpg" alt="oferta TV">
+			<!-- AdGlare: AK-TV-PRIMERNIVEL-OFERTA-DESTACADA -->
+			<span id=zone322681779></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?322681779');
+			</script>
 		</div>
-		<div class="col-xs-6 col-md-3"> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/oferta-tv-2.jpg" alt="oferta TV">
+		<div class="col-xs-12 col-md-3"> 
+			<!-- AdGlare: AK-TV-PRIMERNIVEL-OFERTA-1 -->
+			<span id=zone416453792></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?416453792');
+			</script>
 		</div>
-		<div class="col-xs-6 col-md-3"> 
-			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/TV/primernivel/oferta-tv-3.jpg" alt="oferta TV">
+		<div class="tvs col-xs-6 col-md-3"> 
+			<!-- AdGlare: AK-TV-PRIMERNIVEL-OFERTA-2 -->
+			<span id=zone174333725></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?174333725');
+			</script>
+		</div>
+	</div>
+</div>
+<div class="entrega-hoy bg_blue"> 
+	<div class="container row"> 
+		<div class="col-md-3"> 
+			<p id="big-text">En Alkosto tu envío es GRATIS</p>
+			<p>Comprando en Alkosto tienes envó totalmente gratis a tu domicilio en 600 municipios de Colombia
+			</p>
+			<k-button href="/entregas-devoluciones/envio-gratis/c/envio-gratis">Más información</k-button>
+		</div>
+		<div class="col-md-3"> 
+			<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/ENVIO-GRATIS.png" lazy="loading">
+		</div>
+		<div class="col-md-6"> 
+			<iframe width="100%" height="315" src="//static.demoup.com/video/1432/KxGVKeqCUDhdCJHOEl4lFGrzpwh05V" title="Envío gratis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
