@@ -8,6 +8,7 @@
 		text-align:center;
 	}
 	p {font-size:14px;}
+	k-slider {margin-top:30px;}
 	k-title-underline {
 		--k-title-underline-border-color: transparent;
 	    margin-bottom: 0;
@@ -174,16 +175,16 @@
 	    border-radius: 100%;
 	    box-shadow: rgb(0 0 0 / 10%) 0px 2px 3px 2px;
 	    display: flex;	    
-	    height: 120px;	    
+	    height: 140px;	    
 	    justify-content: center; 
-	    margin-bottom: 8px;
-	    width: 120px;
+	    margin-bottom: 12px;
+	    width: 140px;
 	}
     
 	.circle-container img {
 		transition:.3s ease all;
 	    width: 100%;
-	    max-width: 85px;
+	    max-width: 100px;
 	}
 	.conoce-mas {
 	    background: transparent linear-gradient(0deg, #FFFFFF1A 0%, #FFFFFF1A 16%, #0023491A 100%) 0% 0% no-repeat padding-box;;
@@ -526,17 +527,11 @@
 </style>
 <div class="container">
 	<h1>Computadores</h1>
-	<a href="/computadores-tablet/computadores-portatiles/c/BI_104_ALKOS" class="banner-mobile">
-		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/general-compu-13junio.jpg" alt="celulares banner">
-	</a>
 	<k-title-underline type="center">
 		<h2>Todo en computo</h2> 
 	</k-title-underline>
 	<div class="row" id="gray-pill"> 
-				<div class="col-md-4 tvs">
-				 	<img class="active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/BODEGON-INFORMATICA.png" alt="computadores">
-				</div>
-				<div class="col-md-8 circle-container">
+				<div class="col-md-12 circle-container">
 					<a href="/computadores-tablet/computadores-portatiles/c/BI_104_ALKOS">	
 						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/PORTATILES.png" lazy="loading" alt="Computadores portátiles"></div>
 						<p>Computadores portátiles</p>
@@ -563,7 +558,55 @@
 					</a>
 				</div>			
 	</div>
-	<k-slider arrows="true" desktop-items="8" mobile-items="3" peek="60" items-space="20" style="--k-slider-background-color: white;">
+</div>
+
+<div class="container menu">
+	<div class="menu-circular">
+			<k-title-underline type="center"> 
+				<h2>Accesorios y complementos</h2>
+			</k-title-underline>
+			<div class="box-circular">
+				<a href="/computadores-tablet/impresion/tintas-toner-cartuchos/c/BI_0220_ALKOS">
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/TINTAS.png" lazy="loading" alt="audífonos">
+					<h3>Tintas</h3>
+				</a>
+				<a href="/accesorios-electronica/accesorios-computadores/licencias-software/c/BI_0150_ALKOS?q=%3Arelevance%3Abrand%3AMICROSOFT#">
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/OFFICE.png" lazy="loading" alt="accesorios celulares">
+					<h3>Microsoft Office</h3>
+				</a>
+				<a href="/accesorios-electronica/accesorios-computadores/c/BI_108_ALKOS"> 
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/ACCESORIOS.png" lazy="loading" alt="smartwatch"> 
+					<h3>Accesorios</h3>
+				</a>
+				<a href="/tv-video/proyectores-videobeam/c/BI_121_ALKOS">
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/PROYECTORES.png" lazy="loading" alt="spotify">				
+					<h3>Proyectores</h3>
+				</a>
+				<a href="/casa-inteligente-domotica/redes-wifi/c/BI_142_ALKOS">
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/WIFI.png" lazy="loading" alt="spotify">				
+					<h3>Wifi</h3>
+				</a>
+			</div>
+			<div class="conoce-mas row mb-1">	
+				<div class="col-md-6 tab-content"> 
+					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/intro-tecnologias-compu.png" alt="conoce más">
+					<iframe class="tab-pane" role="tabpanel" id="DISCODURO" width="100%" height="315" src="//static.demoup.com/video/1433/qZBBNfTDYLyUNW55hjwz9mYH1q0BO8" title="Disco Duro HDD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="MEMORIA" width="100%" height="315" src="//static.demoup.com/video/1433/Px1CBBDNo9d9Kq9pQkiG11v69TSw58" title="Memoria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="PROCESADOR" width="100%" height="315" src="//static.demoup.com/video/1433/L57Ith9zW699r6HaK8n0KoXWQxBi2O" title="procesador" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-6"> 
+					<p id="big-text">¿Sabes cuáles son los componentes más importantes de tu PC?</p>
+					<p>Aquí te contamos cuales son los componentes mas importantes a tener en cuenta en tu PC</p>
+					<div class="button-container" role="tablist"> 
+						<k-button data-target="#DISCODURO" variant="outline" role="tab" data-toggle="tab">DISCO DURO</k-button>
+						<k-button data-target="#MEMORIA" variant="outline" role="tab" data-toggle="tab">MEMORÍA RAM</k-button>
+						<k-button data-target="#PROCESADOR" variant="outline" role="tab" data-toggle="tab">PROCESADOR</k-button>
+					</div>
+					<k-link href="/guia-compra/guia-computadores/c/guia-computadores" icon="alk-icon-derecha">Ver guía completa</k-link>
+				</div>
+			</div>
+	</div>
+	<k-slider arrows="true" desktop-items="5" mobile-items="1" peek="50" style="--k-slider-background-color: white;">
         <div class="k-slider__slide">
         	<a href="/marcas/hp/c/hp">
             	<img loading="lazy" alt="HP" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/logos/HP.png" />
@@ -615,54 +658,6 @@
             </a>
         </div>     
     </k-slider>
-</div>
-
-<div class="container menu">
-	<div class="menu-circular">
-			<k-title-underline type="center"> 
-				<h2>Accesorios y complementos</h2>
-			</k-title-underline>
-			<div class="box-circular">
-				<a href="/computadores-tablet/impresion/tintas-toner-cartuchos/c/BI_0220_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/TINTAS.png" lazy="loading" alt="audífonos">
-					<h3>Tintas</h3>
-				</a>
-				<a href="/accesorios-electronica/accesorios-computadores/licencias-software/c/BI_0150_ALKOS?q=%3Arelevance%3Abrand%3AMICROSOFT#">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/OFFICE.png" lazy="loading" alt="accesorios celulares">
-					<h3>Microsoft Office</h3>
-				</a>
-				<a href="/accesorios-electronica/accesorios-computadores/c/BI_108_ALKOS"> 
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/ACCESORIOS.png" lazy="loading" alt="smartwatch"> 
-					<h3>Accesorios</h3>
-				</a>
-				<a href="/tv-video/proyectores-videobeam/c/BI_121_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/PROYECTORES.png" lazy="loading" alt="spotify">				
-					<h3>Proyectores</h3>
-				</a>
-				<a href="/casa-inteligente-domotica/redes-wifi/c/BI_142_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/WIFI.png" lazy="loading" alt="spotify">				
-					<h3>Wifi</h3>
-				</a>
-			</div>
-			<div class="conoce-mas row mb-1">	
-				<div class="col-md-6 tab-content"> 
-					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/intro-tecnologias-compu.png" alt="conoce más">
-					<iframe class="tab-pane" role="tabpanel" id="DISCODURO" width="100%" height="315" src="//static.demoup.com/video/1433/qZBBNfTDYLyUNW55hjwz9mYH1q0BO8" title="Disco Duro HDD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<iframe class="tab-pane" role="tabpanel" id="MEMORIA" width="100%" height="315" src="//static.demoup.com/video/1433/Px1CBBDNo9d9Kq9pQkiG11v69TSw58" title="Memoria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<iframe class="tab-pane" role="tabpanel" id="PROCESADOR" width="100%" height="315" src="//static.demoup.com/video/1433/L57Ith9zW699r6HaK8n0KoXWQxBi2O" title="procesador" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div class="col-md-6"> 
-					<p id="big-text">¿Sabes cuáles son los componentes más importantes de tu PC?</p>
-					<p>Aquí te contamos cuales son los componentes mas importantes a tener en cuenta en tu PC</p>
-					<div class="button-container" role="tablist"> 
-						<k-button data-target="#DISCODURO" variant="outline" role="tab" data-toggle="tab">DISCO DURO</k-button>
-						<k-button data-target="#MEMORIA" variant="outline" role="tab" data-toggle="tab">MEMORÍA RAM</k-button>
-						<k-button data-target="#PROCESADOR" variant="outline" role="tab" data-toggle="tab">PROCESADOR</k-button>
-					</div>
-					<k-link href="/guia-compra/guia-computadores/c/guia-computadores" icon="alk-icon-derecha">Ver guía completa</k-link>
-				</div>
-			</div>
-	</div>
 </div>
 <div class="entrega-hoy bg_blue"> 
 	<div class="container row"> 
