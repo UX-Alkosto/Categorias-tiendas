@@ -12,15 +12,6 @@
 		--k-title-underline-border-color: transparent;
 	    margin-bottom: 0;
 	}
-	.active .brand-column {
-	    z-index:0;
-	    opacity:1;
-	    transition:.3s ease all;
-	}
-	.brand-column {
-	    z-index:-2;
-	    opacity:0;
-	}
 	.brand {
 	    align-items: center;
 	    background-color: white;
@@ -29,9 +20,8 @@
 	    display: flex;
 	    height: 80px;
 	    justify-content: center;
-	    margin: 1.25em 0.5em;
 	    padding: 0 24px;
-	    width: auto;	    	    
+	    width: 100%;
 	}
 	.brand img {
 	    width: 100%;
@@ -84,6 +74,9 @@
 	.banner-mobile{display:none;}
 	.barra {
 		margin:24px auto;
+		min-height:150px;
+		display: flex;
+    	justify-content: center;
 	}
 	.bg_blue {
 	    background-color: var(--primary-color2);
@@ -263,6 +256,7 @@
 	}
 	.ofertas {
 	    margin: 32px 0 56px;
+	    min-height:380px;
 	}
 	.ofertas div {
 	    padding: 0 12px;
@@ -288,81 +282,18 @@
 	    width: 100%;
 	    transition:.3s ease all;
 	}
+	.scroll-brands {
+	    display: grid;
+	    grid-template-columns: repeat(5, 1fr);
+	    grid-gap: 16px;
+	    padding: 0 12px;
+	    margin: 16px 0;
+	}
 	/*-----------------------------BRAND CARRUSEL __________________________*/
-	.scroll-brands .owl-stage {
-        display: flex;
-    }
-   	.scroll-brands button.owl-dot{
-   		display:none;
-   	}
-    .scroll-brands .owl-item.active {
-        text-align: center;
-        opacity: 1;
-        z-index:0;
-    }
-
-    .scroll-brands .owl-item {
-        opacity: 0;
-        transition: .3s ease opacity;
-        /*z-index:-1;*/
-    }
-
-    .scroll-brands .owl-dots {
-        text-align: center;
-        margin-top: 1em;
-    }
-
-    .scroll-brands .owl-nav {
-        position: relative;
-        bottom: 155px;
-        display:none;
-    }
-
-    .scroll-brands .owl-nav button {
-    	align-items: center;
-	    background-color: white;
-	    border: none;
-	    border-radius: 100%;
-	    box-shadow: 1px 1px 12px rgb(68 68 68 / 20%);
-	    color: var(--primary-color2);
-	    display: flex;
-	    font-size: 26px;
-	    width: 28px;
-	    height: 28px;
-	    opacity: .75;
-	    justify-content: center;
-	    transition:.3s ease all;    
-	}
-	.scroll-brands .owl-nav button:hover{
-		opacity:1;
-	}
-    .scroll-brands .owl-nav button span {
-        position: relative;
-        top: -2px;
-    }
-
-    .scroll-brands button.owl-prev {
-        position: absolute;
-        left: -8px;
-    }
-
-    .scroll-brands button.owl-next {
-        position: absolute;
-        right: -8px;
-    }
-	.scroll-brands .owl-stage-outer {
-	    overflow: hidden;
-	}
 	.scroll-inches {
 	    display: flex;
 	    justify-content: space-between;
 	    margin-top:24px;
-	}
-	@media screen and (max-width:1279px){
-		.scroll-brands .owl-nav{
-	   		display:block;
-	   		bottom: 150px;
-	   	}
 	}
 	@media screen and (max-width:1007px){
 		h1 {
@@ -376,6 +307,9 @@
 		.banner-mobile img{
 			max-width:520px;
 			width:100%;
+		}
+		.barra{
+			min-height:80px;
 		}
 		.bg_blue{ 
 			height: auto;
@@ -462,6 +396,9 @@
 		#gray-pill .col-md-8 {
 		    width: 100%;
 		}
+		.barra ins {
+		    width: 100% !important;
+		}
 		.box-circular {
 			flex-wrap:wrap;		   
 		    width: 100%;
@@ -471,7 +408,6 @@
 		}
 		.brand {
 		    height: 72px;
-		    margin: 1.25em 0;
 		}
 		.conoce-mas{
 			border-radius: 0;
@@ -509,7 +445,8 @@
 		    padding: 0 6px;
 		}
 		.scroll-brands {
-		    margin-right: 1px;
+		    grid-template-columns: repeat(4, 1fr);
+		    padding:0;
 		}
 	}
 	@media screen and (max-width:520px){
@@ -525,7 +462,6 @@
 		.box-circular {padding:16px;}
 		.brand {
 		    height: 72px;
-		    margin: 1.25em 0;
 		    padding:0 12px;
 		}
 		.button-container {
@@ -543,6 +479,9 @@
 		    padding: 12px 4px;
 		    flex-basis: calc(99%/2);
 		}
+		.scroll-brands {
+		    grid-template-columns: repeat(3, 1fr);
+		}
 	}
 </style>
 <div class="container">
@@ -555,26 +494,26 @@
 	</k-title-underline>
 	<div class="row" id="gray-pill"> 
 				<div class="col-md-4 tvs">
-				 	<img class="active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/CELULARES.png" alt="celulares">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/ALCATEL.png" alt="alcatel">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/HONOR.png" alt="honor">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/HUAWEI.png" alt="huawei">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/IPHONE.png" alt="iphone">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/KALLEY.png" alt="kalley">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/MOTOROLA.png" alt="motorola">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/NOKIA.png" alt="nokia">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/OPPO.png" alt="oppo">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/REALME.png" alt="realme">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/SAMSUNG.png" alt="samsung">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/TCL.png" alt="tcl">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/TECNO.png" alt="tecno">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/VIVO.png" alt="vivo">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/XIAOMI.png" alt="xiaomi">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/ZTE.png" alt="zte">		
+				 	<img class="active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/CELULARES-min.png" alt="celulares">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/ALCATEL-min.png" alt="alcatel">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/HONOR-min.png" alt="honor">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/HUAWEI-min.png" alt="huawei">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/IPHONE-min.png" alt="iphone">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/KALLEY-min.png" alt="kalley">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/MOTOROLA-min.png" alt="motorola">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/NOKIA-min.png" alt="nokia">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/OPPO-min.png" alt="oppo">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/REALME-min.png" alt="realme">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/SAMSUNG-min.png" alt="samsung">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/TCL-min.png" alt="tcl">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/TECNO-min.png" alt="tecno">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/VIVO-min.png" alt="vivo">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/XIAOMI-min.png" alt="xiaomi">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/ZTE-min.png" alt="zte">		
 				</div>
 				<div class="col-md-8">
 					<div class="scroll-brands">
-						<div class="brand-column"> 
+						
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/samsung/c/BI_M017_ALKOS" id="samsung" class="brand" type="category-item">
 			                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/SAMSUNG.png" alt="samsung">
 			                </k-card>
@@ -584,8 +523,8 @@
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/alcatel/c/BI_M001_ALKOS" id="alcatel" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/ALCATEL.png" alt="alcatel">
 							</k-card>
-						</div>
-						<div class="brand-column"> 
+						
+						
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/iphone/c/BI_M009_ALKOS" id="iphone" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/IPHONE.png" alt="iphone">
 							</k-card>
@@ -595,8 +534,8 @@
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/kalley/c/BI_M010_ALKOS" id="kalley" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/KALLEY.png" alt="kalley">
 							</k-card>
-						</div>
-						<div class="brand-column"> 
+						
+						
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/xiaomi/c/BI_M021_ALKOS" id="xiaomi" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/XIAOMI.png" alt="xiaomi">
 							</k-card>
@@ -606,8 +545,8 @@
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/huawei/c/BI_M008_ALKOS" id="huawei" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/HUAWEI.png" alt="huawei">
 							</k-card>
-						</div>
-						<div class="brand-column"> 
+						
+						
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/motorola/c/BI_M015_ALKOS" id="motorola" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/MOTOROLA.png" alt="motorola">
 							</k-card>
@@ -617,8 +556,7 @@
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/honor/c/BI_M006_ALKOS" id="honor" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/HONOR.png" alt="honor">
 							</k-card>
-						</div>
-						<div class="brand-column"> 
+						
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/vivo/c/BI_M020_ALKOS" id="vivo" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/VIVO.png" alt="vivo">
 							</k-card>
@@ -628,7 +566,7 @@
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/tecno/c/BI_M027_ALKOS" id="tecno" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/TECNO.png" alt="tecno">
 							</k-card>
-						</div>				
+										
 					</div>
 					<k-link href="/celulares/telefonos-celulares/c/BI_101_ALKOS" icon="alk-icon-derecha">Ver todo en celulares</k-link>
 				</div>			
@@ -643,7 +581,7 @@
 			<k-button href="/seguros/seguro-celulares/c/seguro-celulares">Más información</k-button>
 		</div>
 		<div class="col-md-2"> 
-			<img alt="seguro gratis" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/PERRO-SEGURO.png" loading="lazy">
+			<img alt="seguro gratis" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/PERRO-SEGURO-min.png" loading="lazy">
 		</div>
 		<div class="col-md-6"> 
 			<iframe loading="lazy" width="100%" height="315" src="https://static.demoup.com/video/1432/lfv1huXsFnYJPYwdpTQ4fva8iZsfBR" title="seguro gratis celulares" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -658,25 +596,25 @@
 			</k-title-underline>
 			<div class="box-circular">
 				<a href="/audio/audifonos/c/BI_111_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/AUDIFONOS.png" loading="lazy" alt="audífonos">
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/AUDIFONOS-min.png" loading="lazy" alt="audífonos">
 					<h3>Audífonos</h3>
 				</a>
 				<a href="/accesorios-electronica/accesorios-celulares-tabletas/c/BI_102_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/ACCESORIOS.png" loading="lazy" alt="accesorios celulares">
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/ACCESORIOS-min.png" loading="lazy" alt="accesorios celulares">
 					<h3>Accesorios para celulares</h3>
 				</a>
 				<a href="/smartwatch/c/BI_SMAW_ALKOS"> 
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/SMARTWATCH.png" loading="lazy" alt="smartwatch"> 
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/SMARTWATCH-min.png" loading="lazy" alt="smartwatch"> 
 					<h3>Smartwatch</h3>
 				</a>
 				<a href="/audio/pines-virtuales-audio/c/BI_119_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/SPOTIFY.png" loading="lazy" alt="spotify">				
+					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/complementos2/SPOTIFY-min.png" loading="lazy" alt="spotify">				
 					<h3>Spotify</h3>
 				</a>
 			</div>
 			<div class="conoce-mas row mb-1">	
 				<div class="col-md-6 tab-content"> 
-					<img loading="lazy" role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/intro-tecnologias-cel.png" alt="conoce más">
+					<img loading="lazy" role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/intro-tecnologias-cel-min.png" alt="conoce más">
 					<iframe loading="lazy" class="tab-pane" role="tabpanel" id="CAMARAS" width="100%" height="315" src="//static.demoup.com/video/1432/88lDFE4lrE6wD3Zj5HyOvUCSZ5v1Qd" title="Camáras" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<iframe loading="lazy" class="tab-pane" role="tabpanel" id="BATERIA" width="100%" height="315" src="//static.demoup.com/video/1432/8dV3B6V34GxzAb5hEIBKVrK255sMjv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<!--iframe class="tab-pane" role="tabpanel" id="MEMORIA" width="100%" height="315" src="https://www.youtube.com/embed/ZFVv198t208" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
@@ -746,7 +684,7 @@
 			<k-button href="/entregas-devoluciones/entrega-hoy/c/envio-express">Más información</k-button>
 		</div>
 		<div class="col-md-3"> 
-			<img alt="entrega hoy"src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/ENTREGA-HOY.png" loading="lazy">
+			<img alt="entrega hoy"src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/ENTREGA-HOY-min.png" loading="lazy">
 		</div>
 		<div class="col-md-6"> 
 			<iframe loading="lazy"width="100%" height="315" src="https://static.demoup.com/video/1432/JstfJoki9Uk7XAejJNsAhEigmKMNZT" title="Entrega Hoy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -786,27 +724,6 @@
     };
  
 window.onload = function () {
-    //Jquery
-   var owl = $(".scroll-brands");
-        owl.owlCarousel({
-            margin: 12,
-            //loop: fasls,
-            items:3,
-            //slideBy: 3,
-            //autoWidth:true,
-            responsive: {
-                0: {
-                    items: 3,
-                    loop:true,
-                },
-                768: {
-                    items: 4,
-                },
-                1280: {
-                    items: 5,
-                },
-            },
-        });
 	    const newContainer=document.querySelectorAll('.conoce-mas .col-md-6:first-child');
 	    const bigText = document.querySelectorAll('.conoce-mas #big-text')
 	     if (window.innerWidth < 768) {
