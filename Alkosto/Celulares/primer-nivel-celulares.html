@@ -456,6 +456,7 @@
     	}
 		.banner-mobile img {
 		    left: -16px;
+		    min-height:230px;
 		    width: calc(100% + 32px);
 		}
 		.bg_blue iframe {height: 200px;}
@@ -472,12 +473,19 @@
 		    min-height: 30px;
 		    margin-right: 4px;
 		}
+		.conoce-mas img {
+		    min-height: 185px;
+		}
 		.container {
     		padding: 0 16px;
     	}
     	.menu-circular a {
 		    padding: 12px 4px;
 		    flex-basis: calc(99%/2);
+		}
+		.ofertas {
+		    margin: 24px 10px;
+		    min-height: 615px;
 		}
 		.scroll-brands {
 		    grid-template-columns: repeat(3, 1fr);
@@ -502,7 +510,7 @@
 					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/KALLEY-min.png" alt="kalley">
 					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/MOTOROLA-min.png" alt="motorola">
 					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/NOKIA-min.png" alt="nokia">
-					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/OPPO-min.png" alt="oppo">
+					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/OPPO-min-2.png" alt="oppo">
 					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/REALME-min.png" alt="realme">
 					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/SAMSUNG-min.png" alt="samsung">
 					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/TCL-min.png" alt="tcl">
@@ -512,61 +520,52 @@
 					<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/ZTE-min.png" alt="zte">		
 				</div>
 				<div class="col-md-8">
-					<div class="scroll-brands">
-						
+					<div class="scroll-brands">						
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/samsung/c/BI_M017_ALKOS" id="samsung" class="brand" type="category-item">
 			                    <img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/SAMSUNG.png" alt="samsung">
 			                </k-card>
+			                <k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/iphone/c/BI_M009_ALKOS" id="iphone" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/IPHONE.png" alt="iphone">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/xiaomi/c/BI_M021_ALKOS" id="xiaomi" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/XIAOMI.png" alt="xiaomi">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/motorola/c/BI_M015_ALKOS" id="motorola" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/MOTOROLA.png" alt="motorola">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/vivo/c/BI_M020_ALKOS" id="vivo" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/VIVO.png" alt="vivo">
+							</k-card>						
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/nokia/c/BI_M016_ALKOS" id="nokia" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/NOKIA.png" alt="nokia">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/alcatel/c/BI_M001_ALKOS" id="alcatel" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/ALCATEL.png" alt="alcatel">
-							</k-card>
-						
-						
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/iphone/c/BI_M009_ALKOS" id="iphone" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/IPHONE.png" alt="iphone">
 							</k-card>
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/oppo/c/BI_M024_ALKOS" id="oppo" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/OPPO.png" alt="oppo">
 							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/kalley/c/BI_M010_ALKOS" id="kalley" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/KALLEY.png" alt="kalley">
-							</k-card>
-						
-						
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/xiaomi/c/BI_M021_ALKOS" id="xiaomi" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/XIAOMI.png" alt="xiaomi">
-							</k-card>
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/realme/c/BI_M026_ALKOS" id="realme" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/REALME.png" alt="realme">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/huawei/c/BI_M008_ALKOS" id="huawei" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/HUAWEI.png" alt="huawei">
-							</k-card>
-						
-						
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/motorola/c/BI_M015_ALKOS" id="motorola" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/MOTOROLA.png" alt="motorola">
 							</k-card>
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/zte/c/BI_M023_ALKOS" id="zte" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/ZTE.png" alt="zte">
 							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/tcl/c/BI_M025_ALKOS" id="tcl" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/TCL.png" alt="tcl">
+							</k-card>							
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/alcatel/c/BI_M001_ALKOS" id="alcatel" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/ALCATEL.png" alt="alcatel">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/kalley/c/BI_M010_ALKOS" id="kalley" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/KALLEY.png" alt="kalley">
+							</k-card>
+							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/huawei/c/BI_M008_ALKOS" id="huawei" class="brand" type="category-item"> 
+								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/HUAWEI.png" alt="huawei">
+							</k-card>
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/honor/c/BI_M006_ALKOS" id="honor" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/HONOR.png" alt="honor">
 							</k-card>
-						
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/vivo/c/BI_M020_ALKOS" id="vivo" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/VIVO.png" alt="vivo">
-							</k-card>
-							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/tcl/c/BI_M025_ALKOS" id="tcl" class="brand" type="category-item"> 
-								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/TCL.png" alt="tcl">
-							</k-card>
 							<k-card onmouseover="HoverImage(this)" href="/celulares/telefonos-celulares/tecno/c/BI_M027_ALKOS" id="tecno" class="brand" type="category-item"> 
 								<img loading="lazy" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/celulares/primernivel/logos2/TECNO.png" alt="tecno">
-							</k-card>
-										
+							</k-card>					
 					</div>
 					<k-link href="/celulares/telefonos-celulares/c/BI_101_ALKOS" icon="alk-icon-derecha">Ver todo en celulares</k-link>
 				</div>			
