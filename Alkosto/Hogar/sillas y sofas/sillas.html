@@ -1,0 +1,228 @@
+<style type="text/css">
+	k-icon {
+		--k-icon-color:var(--primary-color1);
+		font-size:24px;
+	}
+	.owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+    
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+    
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+    .sin-padding{
+        padding: 0;
+    }
+    @media(min-width:768px){
+        .iconos-categoria a img{
+            width: 19% !important;
+        }
+        .iconos-categoria{
+            width: 25% !important;
+            padding: 5px 0 0 0 !important;
+        }
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtros_tipo {
+        display: flex;
+    }
+    @media(min-width: 768px){
+        .filtros_tipo{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+    
+    .filtros_tipo a span {
+        display: block;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 4px 0px;
+    }
+    .filtros_tipo div a img {
+        width: 30px;
+    }   
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+        .ocultar_mobile {
+            display: none;
+        }
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    .centrar{
+        display: flex;
+        justify-content: center;
+    }
+    .filtros {
+        margin: 20px 0px;
+    }
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+    .filtro_tamano {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 30px;
+    }
+    .filtro_tamano div {
+        width: 17%;
+        text-align: center;
+        padding: 6px 0;
+        margin: 5px;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        }
+    .filtro_tamano div a img{
+        width: 90%;
+    }
+    .filtro_tamano div a {
+        display: block;
+        text-decoration: none;
+        color: #444444;
+        margin: 0 auto;
+    }
+    .filtro_tamano div a span {
+        display: block;
+        padding: 4px 0px;
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 769px) {
+        .filtro_tamano {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    @media only screen and (max-width: 576px) {
+        .filtro_tamano {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: unset;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        .filtro_tamano div {
+            width: 50%;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        .filtro_tamano div a img {
+            width: 70px;
+            padding: 5px 0;
+        }
+        .iconos-categoria a img{
+            width: 25px !important;
+            padding: 5px 0 0 0 !important;
+        }
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+    @media(min-width:1080px){
+        .filete{
+            border-right: 1px solid #444444;
+            padding: 0;
+        }
+    }
+</style>
+<!--INICIO FILTROS-->
+<div class="row">
+	<div class="container">
+		<div class="col-md-12 filtros">
+			<h3>Filtrar por Categor&iacute;a</h3>
+
+			<div class="filtros_tipo">
+				<div><a href="/muebles/sillas/sillas-oficina/c/BI_0708_ALKOS">
+					<k-icon icon="alk-icon-silla"></k-icon>
+					<span>Sillas de Oficina</span></a></div>
+
+				<div><a href="/muebles/sillas/sillas-gamer/c/BI_0714_ALKOS">
+					<k-icon icon="alk-icon-sillon"></k-icon>
+					<span>Sillas Gamer</span></a></div>
+
+				<div><a href="/muebles/sillas/sillas-diseno-comedor/c/BI_0709_ALKOS">
+					<k-icon icon="alk-icon-silla"></k-icon>
+					<span>Sillas de Dise&ntilde;o</span></a></div>
+
+				<div><a href="/muebles/sillas/sillas-bar/c/BI_0710_ALKOS">
+					<k-icon icon="alk-icon-mesa"></k-icon>
+					<span>Sillas de Bar</span></a></div>
+
+				<div><a href="/muebles/sillas/sillas-plasticas/c/BI_0712_ALKOS">
+					<k-icon icon="alk-icon-exterior"></k-icon>
+					<span>Sillas Pl&aacute;sticas</span></a></div>
+			</div>
+		</div>
+	</div>
+</div>
