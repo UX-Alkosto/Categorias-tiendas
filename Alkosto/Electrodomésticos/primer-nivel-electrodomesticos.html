@@ -155,6 +155,7 @@
 	}
 	.circle-container {
 	    display: flex;
+	    flex-wrap:wrap;
 	    justify-content: space-between;
 	    padding: 24px 0 16px !important;
 	}
@@ -165,9 +166,11 @@
 		align-items: center;
 	    color: var(--text-color1);
 	    display: flex;
+	    flex-basis: calc(100%/6);
 	    flex-direction: column;
+	    margin-bottom: 1em;
 	    text-align: center;
-	    width: 100%;
+	    width: 100%;	
 	}
 	.circle-container div {
 		align-items: center;
@@ -253,6 +256,43 @@
 	    color: var(--text-color1);
 	    max-width:170px;
 	}
+	.interes-img {
+		display:block;
+	    margin: 24px auto;
+	    width: 100%;
+	}
+	.intereses {
+		background: transparent linear-gradient(180deg, #FFFFFF1A 0%, #FFFFFF1A 16%, #0023491A 100%) 0% 0% no-repeat padding-box;
+	    border-radius: 8px;
+	   	display:flex;
+	   	justify-content: space-between;
+	    margin: 24px auto;
+	    padding: 0 20px;	    
+	}
+	.intereses div {
+	    flex-basis: calc(50% - 16px);
+	    padding: 0 4px;
+	}
+	.intereses k-button{
+		display: flex;
+	    margin: 40px auto 0;
+	    min-height: 48px !important;
+	    padding: 0;
+	    width: 200px;	    
+	}
+	.intereses k-card{
+	    height: 48px;
+	    padding: 0;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	.intereses k-grid {
+	    margin-bottom: 24px;
+	}
+	.intereses p {
+	    margin-bottom: 24px;
+	}
 	.menu-circular a:hover img {
 	    transform: scale(1.05) rotate(1deg);
 	}
@@ -295,23 +335,6 @@
 	.menu-circular a:last-child {
 	    border-right: none;
 	}
-	.ofertas {
-	    margin: 32px auto 56px;
-	}
-	.ofertas div {
-	    padding: 0 12px;
-	}
-	.ofertas img{
-		width:100%;
-		transition: .3s ease all;
-	}
-	.ofertas ins {
-	    overflow: hidden;
-	}
-	.ofertas ins:hover img{
-		transform:scale(1.025);
-	}
-	.ofertas k-title-underline {margin-bottom:24px;}
 	.seguro-gratis{margin-bottom:32px;}
 	.screen-size h3, .menu-circular h3 {
 	    color:var(--primary-color2);
@@ -418,6 +441,9 @@
 		}		
 	}
 	@media screen and (max-width:767px){
+		k-slider {
+		    margin: 0;
+		}
 		#big-text{
 			display:block;
 			text-align:center;
@@ -435,6 +461,9 @@
 		    position: relative;		    
 		    top: 0;	
 		    justify-content: center;	    
+		}
+		.bg_blue{
+			margin-bottom:20px;
 		}
 		.brand {
 		    height: 72px;
@@ -460,6 +489,16 @@
 		}
 		.conoce-mas .col-md-6:last-child {
 		    display: contents;
+		}
+		.intereses{
+			flex-wrap: wrap;
+		}
+		.intereses div {
+		    flex-basis: 100%;
+		}
+		.intereses k-button {
+		    display: flex;
+		    margin: 24px auto;
 		}
 		.menu-circular a {
     		padding: 12px 0;
@@ -526,9 +565,9 @@
 	}
 </style>
 <div class="container">
-	<h1>Computadores</h1>
+	<h1>Electodomésticos</h1>
 	<k-title-underline type="center">
-		<h2>Todo en computo</h2> 
+		<h2>Electrodomésticos para tu hogar</h2> 
 	</k-title-underline>
 	<div class="row" id="gray-pill"> 
 				<div class="col-md-12 circle-container">
@@ -581,54 +620,6 @@
 						<p>Combos</p>
 					</a>
 				</div>			
-	</div>
-</div>
-
-<div class="container menu">
-	<div class="menu-circular">
-			<k-title-underline type="center"> 
-				<h2>Accesorios y complementos</h2>
-			</k-title-underline>
-			<div class="box-circular">
-				<a href="/computadores-tablet/impresion/tintas-toner-cartuchos/c/BI_0220_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/TINTAS.png" lazy="loading" alt="audífonos">
-					<h3>Tintas</h3>
-				</a>
-				<a href="/accesorios-electronica/accesorios-computadores/licencias-software/c/BI_0150_ALKOS?q=%3Arelevance%3Abrand%3AMICROSOFT#">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/OFFICE.png" lazy="loading" alt="accesorios celulares">
-					<h3>Microsoft Office</h3>
-				</a>
-				<a href="/accesorios-electronica/accesorios-computadores/c/BI_108_ALKOS"> 
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/ACCESORIOS.png" lazy="loading" alt="smartwatch"> 
-					<h3>Accesorios</h3>
-				</a>
-				<a href="/tv-video/proyectores-videobeam/c/BI_121_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/PROYECTORES.png" lazy="loading" alt="spotify">				
-					<h3>Proyectores</h3>
-				</a>
-				<a href="/casa-inteligente-domotica/redes-wifi/c/BI_142_ALKOS">
-					<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/complementos/WIFI.png" lazy="loading" alt="spotify">				
-					<h3>Wifi</h3>
-				</a>
-			</div>
-			<div class="conoce-mas row mb-1">	
-				<div class="col-md-6 tab-content"> 
-					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/intro-tecnologias-compu.png" alt="conoce más">
-					<!--iframe class="tab-pane" role="tabpanel" id="DISCODURO" width="100%" height="315" src="//static.demoup.com/video/1433/qZBBNfTDYLyUNW55hjwz9mYH1q0BO8" title="Disco Duro HDD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
-					<!--iframe class="tab-pane" role="tabpanel" id="MEMORIA" width="100%" height="315" src="//static.demoup.com/video/1433/Px1CBBDNo9d9Kq9pQkiG11v69TSw58" title="Memoria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
-					<!--iframe class="tab-pane" role="tabpanel" id="PROCESADOR" width="100%" height="315" src="//static.demoup.com/video/1433/L57Ith9zW699r6HaK8n0KoXWQxBi2O" title="procesador" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
-				</div>
-				<div class="col-md-6"> 
-					<p id="big-text">¿Sabes cuáles son los componentes más importantes de tu PC?</p>
-					<p>Aquí te contamos cuales son los componentes mas importantes a tener en cuenta en tu PC</p>
-					<!--div class="button-container" role="tablist"> 
-						<k-button data-target="#DISCODURO" variant="outline" role="tab" data-toggle="tab">DISCO DURO</k-button>
-						<k-button data-target="#MEMORIA" variant="outline" role="tab" data-toggle="tab">MEMORÍA RAM</k-button>
-						<k-button data-target="#PROCESADOR" variant="outline" role="tab" data-toggle="tab">PROCESADOR</k-button>
-					</div-->
-					<k-link href="/guia-compra/guia-computadores/c/guia-computadores" icon="alk-icon-derecha">Ver guía completa</k-link>
-				</div>
-			</div>
 	</div>
 	<k-slider arrows="true" desktop-items="5" mobile-items="1" peek="50" style="--k-slider-background-color: white;">
         <div class="k-slider__slide">
@@ -699,56 +690,48 @@
 		</div>
 	</div>
 </div>
-<div class="ofertas container row">
-		<k-title-underline type="center"> 
-			<h2>Ofertas y lanzamientos</h2>
-		</k-title-underline>
-		<div class="col-xs-12 col-md-6"> 
-			<!-- AdGlare: AK-COMP-PRIMERNIVEL-OFERTA-DESTACADA -->
-			<span id=zone246845435></span>
-			<script>
-			    (function(r,d,u) {
-			        var s = d.createElement(r); s.async = true;
-			        u += '&cb=' + Date.now() + Math.random();       
-			        s.src = u; var n = d.getElementsByTagName(r)[0];
-			        n.parentNode.insertBefore(s, n);
-			    })('script',document,'//engine.alkst.co/?246845435');
-			</script>
-		</div>
-		<div class="col-xs-12 col-md-3"> 
-			<!-- AdGlare: AK-COMP-PRIMERNIVEL-OFERTA-1 -->
-			<span id=zone717349081></span>
-			<script>
-			    (function(r,d,u) {
-			        var s = d.createElement(r); s.async = true;
-			        u += '&cb=' + Date.now() + Math.random();       
-			        s.src = u; var n = d.getElementsByTagName(r)[0];
-			        n.parentNode.insertBefore(s, n);
-			    })('script',document,'//engine.alkst.co/?717349081');
-			</script>
-		</div>
-		<div class="col-xs-6 col-md-3 tvs"> 
-			<!-- AdGlare: AK-COMP-PRIMERNIVEL-OFERTA-2 -->
-			<span id=zone238829899></span>
-			<script>
-			    (function(r,d,u) {
-			        var s = d.createElement(r); s.async = true;
-			        u += '&cb=' + Date.now() + Math.random();       
-			        s.src = u; var n = d.getElementsByTagName(r)[0];
-			        n.parentNode.insertBefore(s, n);
-			    })('script',document,'//engine.alkst.co/?238829899');
-			</script>
-		</div>
+<div class="container intereses"> 
+	<div class="instalacion"> 
+		<k-title-underline type="center" ><h2>Instalación gratis</h2></k-title-underline>
+		<img class="interes-img" src="https://i.cbc.ca/1.2923974.1507316997!/fileImage/httpImage/can-you-lift-your-feet-honey.jpg" alt="Instalación gratis">
+		<p>Conoce las referencias de los productos que aplican, con sus términos y condiciones de tus marcas favoritas:</p>
+		<k-grid desktop-columns="3" width="400"> 
+			<k-card>
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/logos/ACER.png"
+                    alt="" width="100" height="100" />
+            </k-card>
+            <k-card>
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/logos/ACER.png"
+                    alt="" width="100" height="100" />
+            </k-card>
+            <k-card>
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/logos/ACER.png"
+                    alt="" width="100" height="100" />
+            </k-card>
+            <k-card>
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/logos/ACER.png"
+                    alt="" width="100" height="100" />
+            </k-card>
+            <k-card>
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/logos/ACER.png"
+                    alt="" width="100" height="100" />
+            </k-card>
+            <k-card>
+                <img loading="lazy"
+                    src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/computadores/primernivel/logos/ACER.png"
+                    alt="" width="100" height="100" />
+            </k-card>
+		</k-grid>
+	</div>
+	<div class="recetas"> 
+		<k-title-underline type="center"><h2>Recetas</h2></k-title-underline>
+		<img class="interes-img" src="https://i.cbc.ca/1.2923974.1507316997!/fileImage/httpImage/can-you-lift-your-feet-honey.jpg" alt="recetas">
+		<p>Prepara las mejores recetas con tus nuevos electrodomésticos y sorprende a tu familia, encuentra aquí como usarlos y hacer platillos fantásticos.</p>
+		<k-button variant="outline">Ver recetas</k-button>
+	</div>
 </div>
-
-<script>  
-window.onload = function () {
-    //Jquery
-	    const newContainer=document.querySelectorAll('.conoce-mas .col-md-6:first-child');
-	    const bigText = document.querySelectorAll('.conoce-mas #big-text')
-	     if (window.innerWidth < 768) {
-		     $(bigText).detach().prependTo(newContainer)
-		}
-    };
-   
-</script>
