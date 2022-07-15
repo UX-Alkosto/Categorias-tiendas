@@ -1,0 +1,147 @@
+<style type="text/css">
+	.owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+
+    /*OTROS ESTILOS*/
+
+    .filtros {
+        margin: 20px 0px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+
+    .filtros_tipo {
+        display: flex;
+    }
+
+    .filtros_tipo div {
+        text-align: center;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        margin: 10px 20px;
+        padding: 5px 0px 5px 0px;
+        width: 40%;
+    }
+
+    .filtros_tipo a {
+        display: block;
+        color: #444444;
+        text-decoration: none;
+    }
+
+    .filtros_tipo a span {
+        display: block;
+        font-size: 13px;
+        padding: 4px 0px;
+    }
+
+    .filtros_tipo div a img {
+        width: 30px;
+    }
+
+    @media only screen and (max-width: 576px) {
+        .filtros_tipo {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        .filtros_tipo div a img {
+            width: 40px;
+        }
+
+        .filtros_tipo div {
+            width: 50%;
+            padding: 5px 0px 5px 0px;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros_tipo a span {
+            padding: 4px 0px;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+    }
+</style>
+<!-- Filtros -->
+<div class="row">
+    <div class="container">
+        <div class="col-md-12 filtros">
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="4" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/organizacion-aseo/cajas-organizadoras/c/BI_1110_ALKOS"
+                        title="Cajas Organizadoras" type="category-item">
+                        <k-icon icon="alk-icon-caja-organizador"></k-icon>
+                        <p>Cajas Organizadoras</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/organizacion-aseo/canecas-basureros/c/BI_1111_ALKOS"
+                        title="Canecas y papeleras<" type="category-item">
+                        <k-icon icon="alk-icon-caneca"></k-icon>
+                        <p>Canecas y papeleras</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/organizacion-aseo/mesas-planchar-tendederos/c/BI_1114_ALKOS"
+                        title="Mesas de planchar" type="category-item">
+                        <k-icon icon="alk-icon-mesa-planchar"></k-icon>
+                        <p>Mesas de planchar</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card href="/hogar/organizacion-aseo/multiestantes-cajoneras/c/BI_1112_ALKOS"
+                        title="Multiestantes y cajoneras" type="category-item">
+                        <k-icon icon="alk-icon-cajonera"></k-icon>
+                        <p>Multiestantes y cajoneras</p>
+                    </k-card>
+                </div>
+            </k-slider>
+        </div>
+    </div>
+</div>

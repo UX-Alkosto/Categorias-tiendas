@@ -1,0 +1,78 @@
+<style type="text/css">
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    .carousel__rotativeBanner .banner-adglare {
+        width: 100%;
+    }
+
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: var(--primary-color2);
+    }
+
+    @media screen and (max-width: 1007px) {
+        .component__banner {
+            display: block !important;
+        }
+    }
+    /*OTROS ESTILOS*/
+
+
+    @media only screen and (max-width: 576px) {
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+    }
+</style>
+
+<!--INICIO FILTROS-->
+<div class="row">
+    <div class="container">
+        <div class="col-md-12 filtros">
+            <h3>Filtrar por Categoría</h3>
+            <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="2" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/bano/toallas/c/BI_0840_ALKOS"
+                        title="Toallas baño" type="category-item">
+                        <k-icon icon="alk-icon-toalla"></k-icon>
+                        <p>Toallas</p>
+                    </k-card>
+                </div>
+                <div class="k-slider__slide">
+                    <k-card
+                        href="/hogar/bano/tapetes-bano/c/BI_0830_ALKOS"
+                        title="Tapetes de Baño" type="category-item">
+                        <k-icon icon="alk-icon-tapete-bano" style="font-size: 35px"></k-icon>
+                        <p>Tapetes Baño</p>
+                    </k-card>
+                </div>
+            </k-slider>
+        </div>
+    </div>
+</div>
