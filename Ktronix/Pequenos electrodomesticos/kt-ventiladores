@@ -1,0 +1,230 @@
+<style type="text/css">.owl-carousel.js-adglare-carousel .owl-nav .owl-prev span,
+    .owl-carousel.js-adglare-carousel .owl-nav .owl-next span {
+        top: 23px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev span,
+    .owl-carousel .owl-nav .owl-next span {
+        line-height: 20px !important;
+    }
+
+    .owl-carousel .owl-nav .owl-prev,
+    .owl-carousel .owl-nav .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50px !important;
+    }
+
+    @media screen and (max-width: 1007px) {
+
+        .component__banner {
+            display: block !important;
+        }
+
+    }
+
+    /*OTROS ESTILOS*/
+
+    .filtros {
+        margin: 20px 0px;
+    }
+
+    .filtros h3 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: #003780;
+    }
+
+    .filtro_marca {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .filtro_tamano {
+        display: flex;
+        border-right: solid thin #003780;
+        padding: 0px 20px 0px 0px;
+    }
+
+    .filtro_marca div {
+        width: 16%;
+        height: 40px;
+        margin: 5px 8px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+    }
+
+    .filtro_marca div a {
+        display: block;
+    }
+
+    .filtro_marca div a:hover img {
+        filter: grayscale(100%);
+    }
+
+    .filtro_marca div a img {
+        display: block;
+        width: 100%;
+        padding: 12px 0px;
+        margin: 0 auto;
+    }
+
+    .filtro_tamano div {
+        width: 25%;
+        text-align: center;
+        margin: 10px;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -webkit-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        -moz-box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.23);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .filtro_tamano div a {
+        display: block;
+        text-decoration: none;
+        color: #444444;
+        margin: 0 auto;
+    }
+
+    .filtro_tamano div a span {
+        display: block;
+        padding: 4px 0px;
+        font-size: 13px;
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        .filtro_tamano {
+            border: none;
+        }
+
+        .filtro_marca div {
+            width: 16%;
+        }
+
+        .filtro_marca div a img {
+            padding: 10px 0px;
+            margin: 0 auto;
+        }
+
+        .filtro_tamano {
+            padding: 0px 10px 0px 0px;
+        }
+
+    }
+
+    @media only screen and (max-width: 576px) {
+
+        .filtro_tamano {
+            border: none;
+            padding: 0px;
+        }
+
+        .filtro_marca,
+        .filtro_tamano {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        .filtro_marca div,
+        .filtro_tamano div {
+            width: 50%;
+            flex: 0 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .filtro_marca div {
+            height: auto;
+        }
+
+        .filtro_tamano div {
+            height: auto;
+        }
+
+        .filtro_marca div a img {
+            width: 80%;
+            padding: 6px 0px !Important;
+        }
+
+        .filtro_tamano div a img {
+            width: 30px !important;
+            padding-top: 5px;
+        }
+
+        .filtros h3 {
+            font-size: 16px;
+            margin: 5px 0px;
+        }
+
+        .ocultar_mobile {
+            display: none;
+        }
+
+        .filtros-sin-scroll {
+            flex-wrap: nowrap !important;
+            overflow-x: inherit !important;
+            -webkit-overflow-scrolling: inherit !important;
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            padding: 0px !important;
+        }
+
+        .filtros-sin-scroll div {
+            width: 95% !important;
+            flex: 0 0 auto !important;
+            margin-bottom: 15px !important;
+        }
+    }
+</style>
+<div class="row hidden-xs">
+<div class="container">
+<div class="col-12" style="margin-bottom: 10px;"></div>
+</div>
+</div>
+
+<div class="row">
+<div class="container">
+<div class="col-xs-12 col-md-12">
+<div class="col-xs-12 col-md-12 no-padding component__banner">
+<div class="carousel__rotativeBanner">
+<div class="owl-carousel rotativeBanner js-adglare-carousel">
+<div class="banner-adglare"><!-- AdGlare: KT-categoria-ventiladores-1 --><script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?816135943');
+                            </script></div>
+
+<div class="banner-adglare"><!-- AdGlare: KT-categoria-ventiladores-2 --><script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?553723368');
+                            </script></div>
+
+<div class="banner-adglare"><!-- AdGlare: KT-categoria-ventiladores-3 --><script>
+                                (function (r, d, u) {
+                                    var s = d.createElement(r); s.async = true;
+                                    u += '&cb=' + Date.now() + Math.random();
+                                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                                    n.parentNode.insertBefore(s, n);
+                                })('script', document, '//engine.alkst.co/?250597366');
+                            </script></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
