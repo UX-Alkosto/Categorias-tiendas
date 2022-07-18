@@ -165,28 +165,37 @@
         
     </div>
 </div>
-<!--INICIO FILTROS-->
-<div class="row">
-    <div class="container">
-        <div class="col-md-12 filtros">
-            <h3>Filtrar por categoría</h3>
-            <div class="filtros_tipo">
-                <div>
-                    <a href="/computadores-tablets/impresion/impresoras-escaner-multifuncionales/c/BI_0210_KTRON"><img
-                            src="/medias/multifuncional.svg?context=bWFzdGVyfGljb25vc19maWx0cm9zX2ltcHJlc29yYXN8MjAyM3xpbWFnZS9zdmcreG1sfGljb25vc19maWx0bHJvc19pbXByZXNvcmFzL2gxOC9oOTUvOTgwNTc0NjA0NDk1OC5zdmd8ODEzOTU0ZGZkODAzMDQzNTRlZjgzNmU1Y2Q2NTA0NGJlOTkxOWRiZmJhYzJkOGJiZDlmMGVjNjYyZjhhYjBkYw"
-                            alt="Multifuncionales"><span>Multifuncionales</span></a>
-                </div>
-                <div>
-                    <a href="/computadores-tablets/impresion/tintas-toners-cartuchos/c/BI_0220_KTRON"><img
-                            src="/medias/toner.svg?context=bWFzdGVyfGljb25vc19maWx0cm9zX2ltcHJlc29yYXN8MTU5NXxpbWFnZS9zdmcreG1sfGljb25vc19maWx0bHJvc19pbXByZXNvcmFzL2gxNi9oNTEvOTgwNTc1MjEzOTgwNi5zdmd8NTM1ZDc4YjQyZGQyYjI0MWZmMjdkOTI1NjhkNWIyNDA1MDY1NzI0ZGYyNjU2OWRkZmZiN2NkZGZlYWQ4ZWI1Yw"
-                            alt="Cartuchos y tóneres"><span>Cartuchos y Tóneres</span></a>
-                </div>
-                <div>
-                    <a href="/computadores-tablets/impresion/c/BI_0230_KTRON"><img
-                            src="/medias/resma.svg?context=bWFzdGVyfGljb25vc19maWx0cm9zX2ltcHJlc29yYXN8MjQzM3xpbWFnZS9zdmcreG1sfGljb25vc19maWx0bHJvc19pbXByZXNvcmFzL2gxNy9oODgvOTgwNTk2NTAwMDczNC5zdmd8YTZiNGRhNTY1ZDEyNDZhNDJhOTMxYzhlMTRiNTA4Y2U1MjcwMTJhMzg1NTEwOWY0YmFkYTFiMjM4NTRmNjA5ZQ"
-                            alt="Resmas"><span>Resmas de papel</span></a>
-                </div>
+<!-- Inicio filtros -->
+    <div class="row">
+        <div class="container">
+            <div class="col-md-12 filtros">
+                <h3>Filtrar por Categoría</h3>
+                <k-slider desktop-arrows="false" mobile-arrows="true" desktop-items="3" mobile-items="2"  style="--k-icon-color: var(--primary-color1)";>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/computadores-tablets/impresion/impresoras-escaner-multifuncionales/c/BI_0210_KTRON"
+                            title="Multifuncionales" type="category-item">
+                            <k-icon icon="alk-icon-multifuncional"></k-icon>
+                            <p>Multifuncionales</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/computadores-tablets/impresion/tintas-toners-cartuchos/c/BI_0220_KTRON"
+                            title="Cartuchos y Tóneres" type="category-item">
+                            <k-icon icon="alk-icon-tintas"></k-icon>
+                            <p>Cartuchos y Tóneres</p>
+                        </k-card>
+                    </div>
+                    <div class="k-slider__slide">
+                        <k-card
+                            href="/computadores-tablets/impresion/c/BI_0230_KTRON"
+                            title="Resmas de papel" type="category-item">
+                            <k-icon icon="alk-icon-resma-papel"></k-icon>
+                            <p>Resmas de papel</p>
+                        </k-card>
+                    </div>
+                </k-slider>
             </div>
         </div>
     </div>
-</div>

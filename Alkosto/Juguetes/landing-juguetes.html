@@ -1,0 +1,605 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .alk-mancheta {
+        text-align: center;
+        border-bottom: solid 1px #e0e0e0;
+        height: 25px;
+        margin-bottom: 48px;
+        margin-top: 48px;
+    }
+
+    .alk-mancheta h3 {
+        font-size: 16px;
+        padding: 0 8px 4px;
+        border-bottom: solid 2px var(--primary-color1);
+        color: var(--primary-color2);
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+        top: 1px;
+    }
+
+    .ak-fondo-gris-desktop {
+        background: var(--button-primary-background-color-disabled);
+        padding: 0 16px 16px;
+    }
+
+    .home-ak-contenedor {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .margin-bottom {
+        margin-bottom: 48px;
+    }
+
+    .padding-top {
+        padding-top: 8px;
+    }
+
+    .padding-bottom {
+        padding-bottom: 48px;
+    }
+
+    .grilla-juguetes {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 16px 32px;
+    }
+
+    .ak-grilla-juguetes-category {
+        cursor: pointer;
+        color: var(--text-color1);
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .k-product-contenedor {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        line-height: 95px;
+        background: var(--alert-background-color);
+        margin: 0 auto 16px auto;
+        text-align: center;
+        transition: transform .4s;
+        border: solid 1px #E0E0E0;
+    }
+
+    .k-product-contenedor:hover {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .k-product-contenedor img {
+        padding: 0;
+        width: 110px;
+        height: auto;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+
+    .ak-edades-grilla {
+        font-family: 'Fredoka One', cursive;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 16px 32px;
+    }
+
+    .ak-eddades-listado {
+        text-align: center;
+        background: url(/medias/Componente-30-7.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8Mjc5M3xpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oNmQvaDFiLzEyODQyNTQ4MDM1NjE0LnBuZ3wwYjRhM2JlYTA2MjdjZGVmNDNiY2Y1MTZlOTZmMzQ2NzM0ODU5MzM3MWM0ZmVhN2YyZTliYzc5NTI1MThkZGE3) no-repeat center top;
+        color: white;
+        font-size: 28px;
+        height: 140px;
+        line-height: 28px;
+        padding-top: 44px;
+        transition: transform .4s;
+        background-size: contain;
+    }
+
+    .ak-eddades-listado:hover {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .ak-marcas-grilla {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 16px 32px;
+    }
+
+    .ak-marcas-listado-grilla {
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 16%);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 16%);
+        background: white;
+        border-radius: 8px;
+        padding: 8px;
+        text-align: center;
+        transition: transform .4s;
+    }
+
+    .ak-marcas-listado-grilla:hover {
+        -ms-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .ak-banners-cont {
+        text-align: center;
+    }
+
+    .ak-banner-cont-izq {
+        display: inline-block;
+        vertical-align: top;
+        width: 62%;
+    }
+
+    .ak-banner-cont-izq-banner-full {
+        height: 225px;
+        margin-bottom: 8px;
+    }
+
+    .ak-banner-cont-izq-banner-medio {
+        display: inline-block;
+        width: 49.7%;
+        vertical-align: top;
+        height: 234px;
+    }
+
+    .ak-banner-cont-der {
+        display: inline-block;
+        vertical-align: top;
+        height: 467px;
+    }
+
+    .ak-barra {
+        height: 80px;
+    }
+
+    .cta{
+        margin-top: 32px;
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+
+        .home-ak-contenedor {
+            width: 95%;
+            max-width: 1024px;
+        }
+
+        .grilla-juguetes,
+        .ak-marcas-grilla {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .ak-banner-cont-izq-banner-full {
+            height: 166px;
+            margin-bottom: 8px;
+        }
+
+        .ak-banner-cont-izq-banner-medio {
+            height: 186px;
+        }
+
+        .ak-banner-cont-der {
+            display: inline-block;
+            vertical-align: top;
+            height: 350px;
+            width: 37.2%;
+        }
+
+
+    }
+
+    @media only screen and (max-width: 640px) {
+
+        .grilla-juguetes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 16px;
+        }
+
+        .k-product-contenedor {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            line-height: 95px;
+            background: var(--alert-background-color);
+            margin: 0 auto 16px auto;
+            text-align: center;
+            transition: transform .4s;
+            border: solid 1px #E0E0E0;
+        }
+
+        .k-product-contenedor img {
+            padding: 0;
+            width: 60px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: -14px;
+        }
+
+        .ak-edades-grilla {
+            font-family: 'Fredoka One', cursive;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 16px;
+        }
+
+        .ak-eddades-listado {
+            height: 160px;
+            background-size: contain;
+        }
+
+        .ak-marcas-grilla {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 16px;
+        }
+
+        .home-ak-contenedor {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .ak-marcas-listado-grilla img {
+            height: 48px;
+        }
+
+        .ak-banner-cont-izq {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        .ak-banner-cont-izq-banner-full {
+            height: 110px;
+            margin-bottom: 8px;
+        }
+
+        .ak-banner-cont-izq-banner-medio {
+            width: 100%;
+            height: 234px;
+            margin-bottom: 8px;
+        }
+
+        .ak-banner-cont-der {
+            display: inline-block;
+            vertical-align: top;
+            height: 385px;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+
+        .ak-barra {
+            margin-bottom: 32px !important;
+            height: 70px;
+        }
+
+    }
+
+    @media only screen and (max-width: 320px) {
+
+        .grilla-juguetes {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
+
+
+
+
+<div class="ak-fondo-gris-desktop margin-bottom">
+    <div class="home-ak-contenedor padding-top padding-bottom">
+        <div class="alk-mancheta">
+            <h3>Selecciona una categoría</h3>
+        </div>
+
+        <div class="grilla-juguetes">
+            <a href="/juguetes/juguetes-bebe/c/BI_613_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8619.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NjI1N3xpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMmEvaGU4LzEyODM1MDkxNzc1NTE4LnBuZ3wzN2MzY2Y0YjY4OWYyNWFhZjExMGM2ZGYzZDJmYjI0YzUzZTM2ZmZiNjRlNWIzMWVmMTUxNDhlYzJlZTY5OTg4a"
+                            alt="Juguetes Bebés">
+                    </div>
+                    Juguetes Bebés
+                </div>
+            </a>
+            <a href="/juguetes/pistas-carros/c/BI_605_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8620.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NzQyMXxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oN2IvaGVhLzEyODM4ODA3NjMzOTUwLnBuZ3xiYzY4YWU0ZDYzOWI4MDhhZTVkMjgwZmQyMzY3M2Y4MmY1MzdhNTdjYmQ1YjFlZmRjYjZlOTQ4YWE3YTdhNzQy"
+                            alt="Pistas y Carros">
+                    </div>
+                    Pistas y Carros
+                </div>
+            </a>
+            <a href="/juguetes/juegos-deportes-exterior/c/BI_615_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/deportes.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MTY2NTZ8aW1hZ2UvcG5nfGxhbmRpbmctanVndWV0ZXMvaDViL2gxYi8xMzMwOTE2MzQzODExMC5wbmd8NjUyNjYwYmYyMWFkNjNlMDRlOGM2YzZhZTQzYzYyOWJlNTUyMmM5ZDI5MDE3ZDRkYzA1OWYyMWM5NTZkNTc4OQ"
+                            alt="Juegos y Deportes de Exterior">
+                    </div>
+                    Juegos y Deportes de Exterior
+                </div>
+            </a>
+            <a href="/juguetes/figuras-accion/c/BI_607_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8622.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NjQxOHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMDIvaDY2LzEyODM4ODA4NDIwMzgyLnBuZ3w5MDhiNzBkNjJjYzVjZGY2OTVmMjEwOWM3M2I1ZjM2NGIzOWY3Mjg1MDdlYmY5OTkzNGM2NmFhOGE5MDI5NWVk"
+                            alt="Figuras de Acción">
+                    </div>
+                    Figuras de Acción
+                </div>
+            </a>
+            <a href="/juguetes/juegos-mesa-rompecabezas/c/BI_612_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8623.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NzMyMnxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oYjgvaDI2LzEyODM4ODA4ODEzNTk4LnBuZ3xkZjU2NTdjNTg2OGVhYTE2YWFhYTFjZjcwNWY1ZWEzMmNmYmZhMjIwMTRmODhkNjljNDZlZjIyYWRlNWMyNjM1"
+                            alt="Juegos de Mesa y Rompecabezas">
+                    </div>
+                    Juegos de Mesa y Rompecabezas
+                </div>
+            </a>
+            <a href="/juguetes/juegos-rol/c/BI_609_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8624.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NjQ3MXxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oNWUvaDNjLzEyODM4ODA4ODc5MTM0LnBuZ3w0MGI5YzIyNTczYTk4NmRmYzI3ZWFmYzZjOTAwNjRhODZmMTBjNGIxNTI2MzdhY2U1MDZhYjcwNjkwOWIwY2Fia"
+                            alt="Juegos de Rol">
+                    </div>
+                    Juegos de Rol
+                </div>
+            </a>
+            <a href="/juguetes/lego-bloques-armar/c/BI_608_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8625.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NjY1N3xpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oZDcvaDRhLzEyODM4ODE0NTgwNzY2LnBuZ3w5NzY4N2Y4OTkzZWVjZTRhMTY1Mjg1YmRiNzBmZWQyNDVhYzI0ZjQ3NTk1OTRmNjE0ZDYxMTE0ZTAyMGI5N2I1"
+                            alt="Lego y Bloques de armar">
+                    </div>
+                    Lego y Bloques de armar
+                </div>
+            </a>
+            <a href="/juguetes/plastilina-manualidades/c/BI_602_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8626.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NjQzMHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oYzQvaGZkLzEyODM4ODE0Nzc3Mzc0LnBuZ3xhMTkwOTk3ZDMxZTQ3NTc5NGQzMDljMTE1MzRlOGFiOWRmYzBjNjMwM2Q5NjgzMDgxMTIzMGRhZDVjZTU1YTM1"
+                            alt="Plastilina y Manualidades">
+                    </div>
+                    Plastilina y Manualidades
+                </div>
+            </a>
+            <a href="/juguetes/munecas-sus-accesorios/c/BI_611_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/barbie.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8ODQ5OXxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMTEvaDQ3LzEzMzA5MTYyMzU2NzY2LnBuZ3xjYjI1ZTFmMTNiZTA2MTAxNzBlN2ZlZjAwMTk1NTM0M2Q3ZWQxOWZlNzYyOTM0MjNiZjY3YWM5ODhiMTE1NDMx"
+                            alt="Muñecas y sus Accesorios">
+                    </div>
+                    Muñecas y sus Accesorios
+                </div>
+            </a>
+            <a href="/juguetes/lanzadores-pistolas-nerf/c/BI_616_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8628.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NDc4MnxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oZDcvaDE3LzEyODM4ODE1NTYzODA2LnBuZ3wzMmI4Y2FlMmJjYmNlZWI4NTAzOGZmZDRlY2MxNmQ2MThiMmFmZWU4Y2I2YmZjNWFjYTY4MGU4MzhkZjNjOGY5"
+                            alt="Lanzadores y Pistolas Nerf">
+                    </div>
+                    Lanzadores y Pistolas Nerf
+                </div>
+            </a>
+            <a href="/juguetes/peluches/c/BI_604_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8629.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8OTI1MnxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMzQvaDMyLzEyODM4ODE1Njk0ODc4LnBuZ3w2NzVmMTcwYzhkNmRiNjA1YjhlZTIwYTVhODkzZjU0ZGM2YTlhYTZkMzdjZmIxYTljOTdmMDNmOTdjYjcxZDQ0"
+                            alt="Peluches">
+                    </div>
+                    Peluches
+                </div>
+            </a>
+            <a href="/videojuegos/coleccionables/c/BI_134_ALKOS">
+                <div class="ak-grilla-juguetes-category">
+                    <div class="k-product-contenedor">
+                        <img src="/medias/Grupo-8630.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8Nzc2OHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oZDAvaDBlLzEyODM4ODE2Mjg0NzAyLnBuZ3xkODUyNzdiMmIwZGIwMTc1YmQyYjAzMzk3Mzg3YzhkN2Q4Y2Y0NTY2OGVmODJhZmIzODVjNzdiYTcyZDliM2Ew"
+                            alt="Coleccionables">
+                    </div>
+                    Coleccionables
+                </div>
+            </a>
+        </div>
+        <div class="cta">
+            <center>
+                <a href="#ver-todo">Ver todas las categorías <i class="ico-font alk-icon-derecha"></i></a>
+            </center>
+        </div>
+    </div>
+</div>
+
+<div class="home-ak-contenedor margin-bottom">
+    <div class="alk-mancheta">
+        <h3>Selecciona la edad</h3>
+    </div>
+    <div class="ak-edades-grilla">
+        <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Arango-edad-juguetes%3A0+a+2+a%C3%B1os">
+            <div class="ak-eddades-listado">
+                0-2<br /> años
+            </div>
+        </a>
+        <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Arango-edad-juguetes%3A3+a+5+a%C3%B1os">
+            <div class="ak-eddades-listado">
+                3-5<br /> años
+            </div>
+        </a>
+        <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Arango-edad-juguetes%3A6+a+8+a%C3%B1os">
+            <div class="ak-eddades-listado">
+                6-8<br /> años
+            </div>
+        </a>
+        <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Arango-edad-juguetes%3AMayor+a+9+a%C3%B1os">
+            <div class="ak-eddades-listado">
+                9+<br /> años
+            </div>
+        </a>
+    </div>
+    <div class="cta">
+        <center>
+            <a href="#ver-todo">Ver todas las edades <i class="ico-font alk-icon-derecha"></i></a>
+        </center>
+    </div>
+</div>
+
+<div class="home-ak-contenedor margin-bottom">
+    <div class="alk-mancheta">
+        <h3>Selecciona la marca</h3>
+    </div>
+    <div class="ak-marcas-grilla">
+        <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3AWINFUN">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/Enmascarar-grupo-15.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MTg4NnxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMTAvaDM0LzEzMjk0NDU0ODMzMTgyLnBuZ3wxNzM3ZWZhM2M3NzllMmYwMmJkNjJlOTcxZTBmMGVhZGQ2Yzc0N2YyNzAxMTMzZmQ4MTM3ZDY0ZGEzZTUyNDJh"
+                    alt="Winfun" />
+            </div>
+        </a>
+        <a href="/marcas/barbie/c/barbie">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/2021-Barbie-logo.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MzUyNHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMzAvaGM5LzEzMjk0NDA0NDM1OTk4LnBuZ3w1MjJkMzYxNDMyOTE2Y2Y2OGNkMjcwNzk1NDVjM2NjZjAxMTk2Njg3ZmU3Y2M1MWU1MjI0ZTQyMDU0MDU0OGVi"
+                    alt="Barbie" />
+            </div>
+        </a>
+        <a href="/marcas/lol/c/lol">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/LOL-Brand-Logo-01-2-.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MjY5NHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oYWYvaGMzLzEzMjk0NDU2OTMwMzM0LnBuZ3xmMzJkMDFmODgwZDEwM2JhZjljN2FkNTRlZmNiZmNmNTNlYzM4Y2IwYTQxMmRlOTc0NGMwNjQ3NDk4ZjQ4Nzcw"
+                    alt="LOL" />
+            </div>
+        </a>
+        <a href="/marcas/ronda/c/ronda">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/Enmascarar-grupo-14.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MzcwNHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMzEvaDc2LzEzMjk0NDU0NjM2NTc0LnBuZ3w2NTYzNTAyMTM3ZDAwNWMyMTU5NTYwNDhlNTY1NThiODBmZDliNDgxYTk2MjA2NGI2Nzk4MWE0Y2E3MGQ5MDk4"
+                    alt="Ronda" />
+            </div>
+        </a>
+        <a href="/marcas/lego/c/lego">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/LEGO-440x250.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MTA1OHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oNzQvaDk0LzEzMjk0NDU1MDk1MzI2LnBuZ3w3ZmY5MWYyOTAxNTUxMzFjYzE1OGVkYmU3NTlmN2JhOGIxMTAxYTE3ZTRhNzk1YjE5NDJmZTQwOWU3OTk4NTlj"
+                    alt="Lego" />
+            </div>
+        </a>
+        <a href="/marcas/monopoly/c/monopoly">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/pngwing.com.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MzY3MHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oNjcvaDU4LzEzMjk0NDU1NTU0MDc4LnBuZ3w0YWY4NzA5ODFjNjUzN2Q2MmVkZjJjYWY2ZmVkOTVlODQ5YmUyMjBiNmZiNjUwZDQ2YzQyODhhZDk0NDVjM2Zj"
+                    alt="Monopoly" />
+            </div>
+        </a>
+        <a href="/marcas/fisher-price/c/fisher-price">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/2021-Fisher-Price-logo.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NDExNHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oNmMvaDFhLzEzMjk0NDA0ODk0NzUwLnBuZ3w3ZTE2YzZiNDg0MTc3ODU1NDNkYTAyY2VhMjUzOThlOTBlYTM0NzhlZGIzMzU0MTJjY2JhNThkMWJjMDAzMWJi"
+                    alt="Fisherprice" />
+            </div>
+        </a>
+        <a href="/juguetes/lanzadores-pistolas-nerf/c/BI_616_ALKOS?q=%3Arelevance%3Abrand%3ANERF">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/Enmascarar-grupo-12.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MzEyNHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oYTEvaGE0LzEzMjk0NDA3MTIyOTc0LnBuZ3w1NjQ4YzM5M2NlMTFmMWJjMmZkYjY4YjZhNTk0MDVmODY2NDQzODNjOGY1Yjk0NmEzNDk0NDQ2YjEzYzI5N2Zk"
+                    alt="Nerf" />
+            </div>
+        </a>
+        <a href="/marcas/play-doh/c/play-doh">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/Enmascarar-grupo-13.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8Mzc4NnxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oNmMvaGQzLzEzMjk0NDA3Mzg1MTE4LnBuZ3xkODk1ZDA1Njk5MmMwZjcyMzAzNTQ0ZWJhYjZhMTI4MTY0NzIwMjA4NzBkYTlkYTM3ZDYwMDViOGQxNDgxMjAx"
+                    alt="playdoh" />
+            </div>
+        </a>
+        <a href="/marcas/hot-wheels/c/hotwheels">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/2021-HotWheels-logo.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8NDU4MHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oMjEvaGRmLzEzMjk0NDA1NTUwMTEwLnBuZ3wzMzVmN2ZmYTQ0MTUzNDE3M2Q5NjdhMDdjOTEzZTQyY2IyMGRiM2I0MTRmYjAwOTE2NmQzNjZmYTYzOTkzNzFh"
+                    alt="HotWheels" />
+            </div>
+        </a>
+        <a href="/marcas/marvel/c/marvel">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/pngwing.com-4-.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MTk2N3xpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oYTQvaDdiLzEzMjk0NDU1MjkxOTM0LnBuZ3w4MWE5MGFiYzI5MmIwZTdkZjgyMjgzMjIwODE5MjEyYzE1ZTk3OGRlMWVkYjkwMjExNDE0YzRmODQ2NTVlZDFj"
+                    alt="Marvel" />
+            </div>
+        </a>
+        <a href="/juguetes/c/BI_JUGUE_ALKOS?q=%3Arelevance%3Abrand%3ADC+COMICS">
+            <div class="ak-marcas-listado-grilla">
+                <img src="/medias/DC-Logo-01.png?context=bWFzdGVyfGxhbmRpbmctanVndWV0ZXN8MTE3NHxpbWFnZS9wbmd8bGFuZGluZy1qdWd1ZXRlcy9oYjgvaGFkLzEzMjk0NDA2Nzk1Mjk0LnBuZ3w3ODVjZjFiMWNiMjFmOGJlZmZiZjljZjlhNzQ2NTUyZjBlZjllNjAyNWUzNDg1MjA1ZjIwNjRjYTBmNjljNTQ5"
+                    alt="DC" />
+            </div>
+        </a>
+    </div>
+    <div class="cta">
+        <center>
+            <a href="#ver-todo">Ver todas las marcas <i class="ico-font alk-icon-derecha"></i></a>
+        </center>
+    </div>
+</div>
+
+<div class="home-ak-contenedor margin-bottom">
+    <div class="alk-mancheta">
+        <h3>Novedades y destacados</h3>
+    </div>
+    <div class="ak-banners-cont">
+        <div class="ak-banner-cont-izq">
+            <div class="ak-banner-cont-izq-banner-full">
+                <!-- AdGlare: ak-landing-juguetes-p1 -->
+                <span id=zone651441361></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?651441361');
+                </script>
+            </div>
+            <div class="ak-banner-cont-izq-banner-medio">
+                <!-- AdGlare: ak-landing-juguetes-p2 -->
+                <span id=zone909033849></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?909033849');
+                </script>
+            </div>
+            <div class="ak-banner-cont-izq-banner-medio">
+                <!-- AdGlare: ak-landing-juguetes-p3 -->
+                <span id=zone687615919></span>
+                <script>
+                    (function (r, d, u) {
+                        var s = d.createElement(r); s.async = true;
+                        u += '&cb=' + Date.now() + Math.random();
+                        s.src = u; var n = d.getElementsByTagName(r)[0];
+                        n.parentNode.insertBefore(s, n);
+                    })('script', document, '//engine.alkst.co/?687615919');
+                </script>
+            </div>
+        </div>
+        <div class="ak-banner-cont-der">
+            <!-- AdGlare: ak-landing-juguetes-p4 -->
+            <span id=zone597264747></span>
+            <script>
+                (function (r, d, u) {
+                    var s = d.createElement(r); s.async = true;
+                    u += '&cb=' + Date.now() + Math.random();
+                    s.src = u; var n = d.getElementsByTagName(r)[0];
+                    n.parentNode.insertBefore(s, n);
+                })('script', document, '//engine.alkst.co/?597264747');
+            </script>
+        </div>
+    </div>
+
+</div>
+
+<div id="ver-todo"></div>
