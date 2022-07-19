@@ -8,10 +8,7 @@
 		text-align:center;
 	}
 	p {font-size:14px;}
-	k-slider {margin-top:30px;}
-	.k-slider__slide img {
-		min-height:75px;
-	}
+	k-slider {margin-top:30px;max-height: 93px;}
 	k-title-underline {
 		--k-title-underline-border-color: transparent;
 	    margin-bottom: 0;
@@ -89,9 +86,8 @@
 	.banner-mobile{display:none;}
 	.bg_blue {
 	    background-color: var(--primary-color2);
-	    border-bottom: 48px solid #f5f5f5;
-	    height: 358px;
-	    margin-top:60px;
+	    height: 312px;
+	    margin-top: 24px;
 	}
 	.bg_blue iframe {
 	    position: relative;
@@ -130,7 +126,41 @@
 	    padding: 0;
 	}
 	.bg_blue #big-text {color:white;}
-
+	.bg-image {
+	    background: url(https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/fondo-recetas-2.jpg);
+	    background-size: cover;
+	    padding: 96px 0 24px;	    
+	    margin: 0 auto;
+	}
+	.bg-image k-button {
+	    min-width: 230px;
+	    min-height: 48px;
+	}
+	.bg-image p {
+	    font-size: 16px;
+	    margin-bottom: 30px;
+	    max-width:440px;
+	}
+	.bg-image p span {
+	    font-weight: bold;
+	    color: var(--primary-color1);
+	}
+	.bg-image .container {
+	    margin: 24px auto;
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	}
+	.bg-image img {
+	    margin-right: 20px;
+	}
+	.bg-image .container div {
+	    margin-left: 20px;
+	}
+	.bg-image img, .bg-image .container div {
+	    flex-basis: calc(50% - 20px);
+	    width: 100%;
+	}
 	.box-circular {
 		background: white;
 	    box-shadow: rgb(0 0 0 / 10%) 0px 2px 3px 2px;
@@ -148,17 +178,17 @@
 	.button-container {
 	    margin-bottom: 32px;
 	}
-	.button-container k-button {
-	    width: 100%;
-	    max-width: 140px;
-	    min-height: 40px;
+	.button-container k-button {	    
+	    line-height: 18px;	   
 	    padding: 0 !important;
 	    margin-right: 12px;
 	    margin-bottom: 8px;
+	    max-width: 140px;
+	    min-height: 48px;
+	    width: 100%;
 	}
 	.circle-container {
 	    display: flex;
-	    flex-wrap:wrap;
 	    justify-content: space-between;
 	    padding: 24px 0 16px !important;
 	}
@@ -169,11 +199,9 @@
 		align-items: center;
 	    color: var(--text-color1);
 	    display: flex;
-	    flex-basis: calc(100%/6);
 	    flex-direction: column;
-	    margin-bottom: 1em;
 	    text-align: center;
-	    width: 100%;	
+	    width: 100%;
 	}
 	.circle-container div {
 		align-items: center;
@@ -194,13 +222,13 @@
 	}
 	.conoce-mas {
 	    background: transparent linear-gradient(0deg, #FFFFFF1A 0%, #FFFFFF1A 16%, #0023491A 100%) 0% 0% no-repeat padding-box;;
-	    padding: 9em 48px 3em;
+	    padding: 3em 48px;
 	    width: 100%;
 	    margin: 0;
 	    border-radius: 8px;
 	    position: relative;
 	    z-index: 0;
-	    top: 76px;
+	    top: 0;
 	    display: flex;
     	align-items: center;
 	}
@@ -259,43 +287,6 @@
 	    color: var(--text-color1);
 	    max-width:170px;
 	}
-	.interes-img {
-		display:block;
-	    margin: 24px auto;
-	    width: 100%;
-	}
-	.intereses {
-		background: transparent linear-gradient(180deg, #FFFFFF1A 0%, #FFFFFF1A 16%, #0023491A 100%) 0% 0% no-repeat padding-box;
-	    border-radius: 8px;
-	   	display:flex;
-	   	justify-content: space-between;
-	    margin: 24px auto;
-	    padding: 0 20px;	    
-	}
-	.intereses div {
-	    flex-basis: calc(50% - 16px);
-	    padding: 0 4px;
-	}
-	.intereses k-button{
-		display: flex;
-	    margin: 40px auto 0;
-	    min-height: 48px !important;
-	    padding: 0;
-	    width: 200px;	    
-	}
-	.intereses k-card{
-	    height: 48px;
-	    padding: 0;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	}
-	.intereses k-grid {
-	    margin-bottom: 24px;
-	}
-	.intereses p {
-	    margin-bottom: 24px;
-	}
 	.menu-circular a:hover img {
 	    transform: scale(1.05) rotate(1deg);
 	}
@@ -338,6 +329,24 @@
 	.menu-circular a:last-child {
 	    border-right: none;
 	}
+	.ofertas {
+	    margin: 32px auto 56px;
+	    min-height:380px;
+	}
+	.ofertas div {
+	    padding: 0 12px;
+	}
+	.ofertas img{
+		width:100%;
+		transition: .3s ease all;
+	}
+	.ofertas ins {
+	    overflow: hidden;
+	}
+	.ofertas ins:hover img{
+		transform:scale(1.025);
+	}
+	.ofertas k-title-underline {margin-bottom:24px;}
 	.seguro-gratis{margin-bottom:32px;}
 	.screen-size h3, .menu-circular h3 {
 	    color:var(--primary-color2);
@@ -387,6 +396,25 @@
 		    margin-top: 24px;
 		    text-align: center;
 		    display: block;
+		}
+		.bg-image .container {
+		    justify-content: center;
+		    flex-wrap: wrap;
+		}
+		.bg-image img, .bg-image .container div {
+		    flex-basis: 100%;
+		}
+		.bg-image img {
+		    margin: 0 auto 24px;
+		}
+		.bg-image k-button {
+		    display: block;
+		    max-width: 300px;
+		    margin: 0 auto;
+		}
+		.bg-image p {
+		    margin: 0 auto 24px;
+		    max-width: initial;
 		}
 		.button-container k-button {
     		margin-right: 8px;
@@ -444,9 +472,6 @@
 		}		
 	}
 	@media screen and (max-width:767px){
-		k-slider {
-		    margin: 0;
-		}
 		#big-text{
 			display:block;
 			text-align:center;
@@ -464,9 +489,6 @@
 		    position: relative;		    
 		    top: 0;	
 		    justify-content: center;	    
-		}
-		.bg_blue{
-			margin-bottom:20px;
 		}
 		.brand {
 		    height: 72px;
@@ -492,16 +514,6 @@
 		}
 		.conoce-mas .col-md-6:last-child {
 		    display: contents;
-		}
-		.intereses{
-			flex-wrap: wrap;
-		}
-		.intereses div {
-		    flex-basis: 100%;
-		}
-		.intereses k-button {
-		    display: flex;
-		    margin: 24px auto;
 		}
 		.menu-circular a {
     		padding: 12px 0;
@@ -544,6 +556,7 @@
 		}
 		.button-container {
 		    margin: 24px 0;
+		    flex-wrap:wrap;
 		}
 		.button-container k-button {
 		    padding: 0 12px !important;
@@ -568,12 +581,12 @@
 	}
 </style>
 <div class="container">
-	<h1>Electrodomésticos</h1>
+	<h1>Grandes electrodomésticos</h1>
 	<k-title-underline type="center">
-		<h2>Electrodomésticos para tu hogar</h2> 
+		<h2>Grandes electrodomésticos para tu hogar</h2> 
 	</k-title-underline>
 	<div class="row" id="gray-pill"> 
-				<div class="col-md-12 circle-container">
+		<div class="col-md-12 circle-container">
 					<a href="/electrodomesticos/grandes-electrodomesticos/refrigeracion/c/BI_0610_ALKOS">	
 						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/refrigeracion.png" lazy="loading" alt="refrigeración"></div>
 						<p>Refrigeración</p>
@@ -598,39 +611,10 @@
 						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/hornos-de-empotre.png" lazy="loading" alt="Hornos de Empotre"></div>
 						<p>Hornos de Empotre</p>
 					</a>
-					<a href="/electrodomesticos/pequenos-electrodomesticos/preparacion-alimentos/c/BI_0540_ALKOS">	
-						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/preparacion-de-alimentos.png" lazy="loading" alt="Preparación de Alimentos"></div>
-						<p>Preparación de Alimentos</p>
-					</a>
-					<a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_ALKOS">	
-						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/cuidado-del-hogar.png" lazy="loading" alt="Cuidado del Hogar"></div>
-						<p>Cuidado del Hogar</p>
-					</a>
-					<a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS">	
-						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/cuidado-personal.png" lazy="loading" alt="Cuidado Personal"></div>
-						<p>Cuidado Personal</p>
-					</a>
-					<a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/aspiradoras-hidrolavadoras/c/BI_A16_ALKOS">	
-						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/cuidado-pisos.png" lazy="loading" alt="Cuidado del Piso"></div>
-						<p>Cuidado del Piso</p>
-					</a>
-					<a href="/electrodomesticos/grandes-electrodomesticos/climatizacion/ventiladores-enfriadores-calefactores-ambiente/c/BI_A25_ALKOS">	
-						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/ventiladores.png" lazy="loading" alt="Ventiladores"></div>
-						<p>Ventiladores</p>
-					</a>
-					<a href="/pequenos-electrodomesticos/cuidado-del-hogar/combos-del-hogar/c/BI_A51_ALKOS">	
-						<div><img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/cateogorias/combos.png" lazy="loading" alt="Combos"></div>
-						<p>Combos</p>
-					</a>
-				</div>			
+		</div>			
 	</div>
 	<k-slider arrows="true" desktop-items="5" mobile-items="1" peek="50" style="--k-slider-background-color: white;">
-		<div class="k-slider__slide">
-        	<a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AMABE">
-            	<img loading="lazy" alt="mabe" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/mabe.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
+		 <div class="k-slider__slide">
         	<a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3ASAMSUNG">
             	<img loading="lazy" alt="samsung" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/samsung.png" />
             </a>
@@ -641,13 +625,8 @@
             </a>
         </div>
         <div class="k-slider__slide">
-        	<a href="/marcas/oster/c/oster">
-            	<img loading="lazy" alt="oster" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/oster.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3AIMUSA">
-            	<img loading="lazy" alt="imusa" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/imusa-2.png" />
+        	<a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AMABE">
+            	<img loading="lazy" alt="mabe" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/mabe.png" />
             </a>
         </div>
         <div class="k-slider__slide">
@@ -666,16 +645,6 @@
             </a>
         </div>
         <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3ABLACK%26DECKER">
-            	<img loading="lazy" alt="black decker" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/black-decker-2.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS?q=%3Arelevance%3Abrand%3AREMINGTON#">
-            	<img loading="lazy" alt="remington" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/remington.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
         	<a href="/marcas/kalley/c/kalley?q=%3Arelevance%3Acategory%3ABI_150_ALKOS%3Acategory%3ABI_151_ALKOS%3Acategory%3ABI_0540_ALKOS%3Acategory%3ABI_0590_ALKOS">
             	<img loading="lazy" alt="kalley" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/kalley.png" />
             </a>
@@ -691,51 +660,34 @@
             </a>
         </div>
         <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3AXIAOMI">
-            	<img loading="lazy" alt="xiaomi" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/xiaomi.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3APHILIPS">
-            	<img loading="lazy" alt="philips" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/philips.png" />
-            </a>
-        </div>
-         <div class="k-slider__slide">
         	<a href="/electrodomesticos/grandes-electrodomesticos/c/BI_151_ALKOS?q=%3Arelevance%3Abrand%3AGE">
             	<img loading="lazy" alt="general electric" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/generalelectric.png" />
             </a>
-        </div>        
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/maquinas-coser/c/BI_A18_ALKOS">
-            	<img loading="lazy" alt="singer" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/singer.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-personal/c/BI_0530_ALKOS?q=%3Arelevance%3Abrand%3AGAMA#">
-            	<img loading="lazy" alt="gama" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/gama.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3AWAHL">
-            	<img loading="lazy" alt="wahl" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/wahl-2.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/cuidado-del-hogar/c/BI_0560_ALKOS?q=%3Arelevance%3Abrand%3AIROBOT">
-            	<img loading="lazy" alt="irobot" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/irobot.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/grandes-electrodomesticos/climatizacion/ventiladores-enfriadores-calefactores-ambiente/c/BI_A25_ALKOS?q=%3Arelevance%3Abrand%3ASAMURAI">
-            	<img loading="lazy" alt="samurai" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/samurai.png" />
-            </a>
-        </div>
-        <div class="k-slider__slide">
-        	<a href="/electrodomesticos/pequenos-electrodomesticos/c/BI_150_ALKOS?q=%3Arelevance%3Abrand%3ANINJA">
-            	<img loading="lazy" alt="ninja" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/logos/ninja.png" />
-            </a>
         </div> 
     </k-slider>
+</div>
+
+<div class="container menu">
+	<div class="menu-circular">			
+		<div class="conoce-mas row mb-1">	
+				<div class="col-md-6 tab-content"> 
+					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/intro-tecnologias-electro.png" alt="conoce más">
+					<iframe class="tab-pane" role="tabpanel" id="ESTUFAS" width="100%" height="315" src="//static.demoup.com/video/1433/HXHxhL1opcLD3ScbOfmdmtHpoKDVDY" title="estufas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="HORNOS" width="100%" height="315" src="://static.demoup.com/video/1433/smaKbTZQwouDTchbnlUKZTdc6I18dp" title="hornos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="tab-pane" role="tabpanel" id="CAMPANAS" width="100%" height="315" src="//static.demoup.com/video/1433/IXojCJiKvEgB4cHu3j9QAFoblunb8e" title="campanas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-6"> 
+					<p id="big-text">¿Sabes cuáles son los complementos perfectos para tu cocina?</p>
+					<p>Aquí te contamos cuales son los mejores complementos para tener una cocina de ensueño para tu hogar</p>
+					<div class="button-container" role="tablist"> 
+						<k-button data-target="#ESTUFAS" variant="outline" role="tab" data-toggle="tab">ESTUFAS</k-button>
+						<k-button data-target="#HORNOS" variant="outline" role="tab" data-toggle="tab">HORNOS</k-button>
+						<k-button data-target="#CAMPANAS" variant="outline" role="tab" data-toggle="tab">CAMPANAS</k-button>
+					</div>
+					<k-link href="/guia-compra/guia-computadores/c/guia-computadores" icon="alk-icon-derecha">Ver guía completa</k-link>
+				</div>
+		</div>
+	</div>
 </div>
 <div class="entrega-hoy bg_blue"> 
 	<div class="container row"> 
@@ -753,10 +705,13 @@
 		</div>
 	</div>
 </div>
-<div class="container intereses"> 
-	<div class="instalacion"> 
-		<k-title-underline type="center" ><h2>Instalación gratis</h2></k-title-underline>
-		<img class="interes-img" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/instalaciones.jpg" alt="Instalación gratis">
+<div class="bg-image">
+	<k-title-underline type="center"> 
+		<h2>Instalación gratis</h2>
+	</k-title-underline>
+	<div class="container"> 
+		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/recetas.jpg" alt="recetas">
+		<div>
 		<p>Conoce las referencias de los productos que aplican, con sus términos y condiciones de tus marcas favoritas:</p>
 		<k-grid desktop-columns="3" width="400"> 
 			<k-card href="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/linea-blanca/T&C/Instalacion-Samsung-2022.pdf">
@@ -790,11 +745,57 @@
                     alt="instalacion electrolux" width="100" height="100" />
             </k-card>
 		</k-grid>
-	</div>
-	<div class="recetas"> 
-		<k-title-underline type="center"><h2>Recetas</h2></k-title-underline>
-		<img class="interes-img" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/recetas.jpg" alt="recetas">
-		<p>Prepara las mejores recetas con tus nuevos electrodomésticos y sorprende a tu familia, encuentra aquí como usarlos y hacer platillos fantásticos.</p>
-		<k-button variant="outline" href="/recetas">Ver recetas</k-button>
+		</div>
 	</div>
 </div>
+<div class="ofertas container row">
+		<k-title-underline type="center"> 
+			<h2>Ofertas y lanzamientos</h2>
+		</k-title-underline>
+		<div class="col-xs-12 col-md-6"> 
+			<!-- AdGlare: AK-PEQUENOS-PRIMERNIVEL-OFERTA-DESTACADA   -->
+			<span id=zone268749700></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?268749700');
+			</script>
+		</div>
+		<div class="col-xs-12 col-md-3"> 
+			<!-- AdGlare: AK-PEQUENOS-PRIMERNIVEL-OFERTA-1   -->
+			<span id=zone346293539></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?346293539');
+			</script>
+		</div>
+		<div class="col-xs-6 col-md-3 tvs"> 
+			<!-- AdGlare: AK-PEQUENOS-PRIMERNIVEL-OFERTA-2   -->
+			<span id=zone896579816></span>
+			<script>
+			    (function(r,d,u) {
+			        var s = d.createElement(r); s.async = true;
+			        u += '&cb=' + Date.now() + Math.random();       
+			        s.src = u; var n = d.getElementsByTagName(r)[0];
+			        n.parentNode.insertBefore(s, n);
+			    })('script',document,'//engine.alkst.co/?896579816');
+			</script>
+		</div>
+</div>
+<script>  
+	window.onload = function () {
+	    //Jquery
+		    const newContainer=document.querySelectorAll('.conoce-mas .col-md-6:first-child');
+		    const bigText = document.querySelectorAll('.conoce-mas #big-text')
+		     if (window.innerWidth < 768) {
+			     $(bigText).detach().prependTo(newContainer)
+			}
+	    };   
+</script>
