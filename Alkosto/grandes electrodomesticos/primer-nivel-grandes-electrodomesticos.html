@@ -127,7 +127,7 @@
 	}
 	.bg_blue #big-text {color:white;}
 	.bg-image {
-	    background: url(https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/fondo-recetas-2.jpg);
+	    background: url(https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/fondo-instalacion.jpg);
 	    background-size: cover;
 	    padding: 96px 0 24px;	    
 	    margin: 0 auto;
@@ -135,6 +135,9 @@
 	.bg-image k-button {
 	    min-width: 230px;
 	    min-height: 48px;
+	}
+	.bg-image k-grid {
+	    margin: 0 0 24px;
 	}
 	.bg-image p {
 	    font-size: 16px;
@@ -357,7 +360,15 @@
 	    width: 100%;
 	    transition:.3s ease all;
 	}
-	
+	.tab-content div {
+	    position: relative;
+	}
+	.tab-content div k-link {
+		bottom: 18px;
+		min-width: 177px;
+	    position: absolute;
+	    right: -210px;    
+	}
 	@media screen and (max-width:1279px){
 		.circle-container { flex-wrap: wrap;}
 		.circle-container a {width: calc(100%/3);}
@@ -396,6 +407,15 @@
 		    margin-top: 24px;
 		    text-align: center;
 		    display: block;
+		}
+		.bg-image {
+		    background-position: -210px;
+		}
+		.bg-image k-card img {
+		    margin-bottom: 0;
+		}
+		.bg-image k-grid {
+		    margin: 0 auto;
 		}
 		.bg-image .container {
 		    justify-content: center;
@@ -482,6 +502,12 @@
 		#gray-pill .col-md-8 {
 		    width: 100%;
 		}
+		.bg-image {
+		    background: url(https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/fondo-instalaciones-mob.jpg);
+		    background-position: -91px;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		}
 		.box-circular {
 			flex-wrap:wrap;		   
 		    width: 100%;
@@ -537,6 +563,14 @@
 		.scroll-brands {
 		    margin-right: 1px;
 		}
+		.tab-content div k-link {
+			bottom: -98px;
+		    margin-left: auto;
+		    margin-right: auto;
+		    left: 0;
+		    right: 0;
+		    text-align: center;
+		}
 	}
 	@media screen and (max-width:520px){
 		.banner-mobile {
@@ -578,6 +612,14 @@
 		    padding: 12px 4px;
 		    flex-basis: calc(99%/3);
 		}
+		.tab-content div k-link {
+    		bottom: -130px;
+    	}
+	}
+	@media screen and (max-width:455px){
+		.tab-content div k-link {
+		    bottom: -164px;
+		}	
 	}
 </style>
 <div class="container">
@@ -672,9 +714,18 @@
 		<div class="conoce-mas row mb-1">	
 				<div class="col-md-6 tab-content"> 
 					<img role="tabpanel" id="default" class="tab-pane active" src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/intro-tecnologias-electro.png" alt="conoce más">
-					<iframe class="tab-pane" role="tabpanel" id="ESTUFAS" width="100%" height="315" src="//static.demoup.com/video/1433/HXHxhL1opcLD3ScbOfmdmtHpoKDVDY" title="estufas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<iframe class="tab-pane" role="tabpanel" id="HORNOS" width="100%" height="315" src="://static.demoup.com/video/1433/smaKbTZQwouDTchbnlUKZTdc6I18dp" title="hornos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<iframe class="tab-pane" role="tabpanel" id="CAMPANAS" width="100%" height="315" src="//static.demoup.com/video/1433/IXojCJiKvEgB4cHu3j9QAFoblunb8e" title="campanas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="tab-pane" role="tabpanel" id="ESTUFAS">
+						<iframe  width="100%" height="315" src="//static.demoup.com/video/1433/HXHxhL1opcLD3ScbOfmdmtHpoKDVDY" title="estufas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<k-link href="/guia-compra/guia-estufa/c/guia-estufa" icon="alk-icon-derecha">Ver guía de estufas</k-link>
+					</div>
+					<div class="tab-pane" role="tabpanel" id="HORNOS"> 
+						<iframe  width="100%" height="315" src="//static.demoup.com/video/1433/smaKbTZQwouDTchbnlUKZTdc6I18dp" title="hornos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<k-link href="/guia-compra/guia-horno/c/guia-horno" icon="alk-icon-derecha">Ver guía de hornos</k-link>
+					</div>
+					<!--div class="tab-pane" role="tabpanel" id="CAMPANAS">
+						<iframe class="tab-pane" role="tabpanel" id="CAMPANAS" width="100%" height="315" src="//static.demoup.com/video/1433/IXojCJiKvEgB4cHu3j9QAFoblunb8e" title="campanas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<k-link href="/guia-compra/guia-campana-extractora/c/guia-campana-extractora" icon="alk-icon-derecha">Ver guía de campanas</k-link>
+					</div-->
 				</div>
 				<div class="col-md-6"> 
 					<p id="big-text">¿Sabes cuáles son los complementos perfectos para tu cocina?</p>
@@ -682,9 +733,8 @@
 					<div class="button-container" role="tablist"> 
 						<k-button data-target="#ESTUFAS" variant="outline" role="tab" data-toggle="tab">ESTUFAS</k-button>
 						<k-button data-target="#HORNOS" variant="outline" role="tab" data-toggle="tab">HORNOS</k-button>
-						<k-button data-target="#CAMPANAS" variant="outline" role="tab" data-toggle="tab">CAMPANAS</k-button>
-					</div>
-					<k-link href="/guia-compra/guia-computadores/c/guia-computadores" icon="alk-icon-derecha">Ver guía completa</k-link>
+						<!--k-button data-target="#CAMPANAS" variant="outline" role="tab" data-toggle="tab">CAMPANAS</k-button-->
+					</div>					
 				</div>
 		</div>
 	</div>
@@ -710,7 +760,7 @@
 		<h2>Instalación gratis</h2>
 	</k-title-underline>
 	<div class="container"> 
-		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/recetas.jpg" alt="recetas">
+		<img src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/electrodomesticos/instalaciones.jpg" alt="recetas">
 		<div>
 		<p>Conoce las referencias de los productos que aplican, con sus términos y condiciones de tus marcas favoritas:</p>
 		<k-grid desktop-columns="3" width="400"> 
@@ -753,39 +803,39 @@
 			<h2>Ofertas y lanzamientos</h2>
 		</k-title-underline>
 		<div class="col-xs-12 col-md-6"> 
-			<!-- AdGlare: AK-PEQUENOS-PRIMERNIVEL-OFERTA-DESTACADA   -->
-			<span id=zone268749700></span>
+			<!-- AdGlare: AK-GRANDES-PRIMERNIVEL-OFERTA-DESTACADA   -->
+			<span id=zone527624689></span>
 			<script>
 			    (function(r,d,u) {
 			        var s = d.createElement(r); s.async = true;
 			        u += '&cb=' + Date.now() + Math.random();       
 			        s.src = u; var n = d.getElementsByTagName(r)[0];
 			        n.parentNode.insertBefore(s, n);
-			    })('script',document,'//engine.alkst.co/?268749700');
+			    })('script',document,'//engine.alkst.co/?527624689');
 			</script>
 		</div>
 		<div class="col-xs-12 col-md-3"> 
-			<!-- AdGlare: AK-PEQUENOS-PRIMERNIVEL-OFERTA-1   -->
-			<span id=zone346293539></span>
+			<!-- AdGlare: AK-GRANDES-PRIMERNIVEL-OFERTA-1   -->
+			<span id=zone789511928></span>
 			<script>
 			    (function(r,d,u) {
 			        var s = d.createElement(r); s.async = true;
 			        u += '&cb=' + Date.now() + Math.random();       
 			        s.src = u; var n = d.getElementsByTagName(r)[0];
 			        n.parentNode.insertBefore(s, n);
-			    })('script',document,'//engine.alkst.co/?346293539');
+			    })('script',document,'//engine.alkst.co/?789511928');
 			</script>
 		</div>
 		<div class="col-xs-6 col-md-3 tvs"> 
-			<!-- AdGlare: AK-PEQUENOS-PRIMERNIVEL-OFERTA-2   -->
-			<span id=zone896579816></span>
+			<!-- AdGlare: AK-GRANDES-PRIMERNIVEL-OFERTA-2   -->
+			<span id=zone986699087></span>
 			<script>
 			    (function(r,d,u) {
 			        var s = d.createElement(r); s.async = true;
 			        u += '&cb=' + Date.now() + Math.random();       
 			        s.src = u; var n = d.getElementsByTagName(r)[0];
 			        n.parentNode.insertBefore(s, n);
-			    })('script',document,'//engine.alkst.co/?896579816');
+			    })('script',document,'//engine.alkst.co/?986699087');
 			</script>
 		</div>
 </div>
